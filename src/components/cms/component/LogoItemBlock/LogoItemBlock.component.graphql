@@ -1,0 +1,4 @@
+fragment LogoItemBlockData on LogoItemBlock {
+  src
+  alt
+}

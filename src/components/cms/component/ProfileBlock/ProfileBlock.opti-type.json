@@ -1,0 +1,59 @@
+{
+  "key": "ProfileBlock",
+  "displayName": "Profile Block",
+  "description": "",
+  "baseType": "component",
+  "sortOrder": 0,
+  "mayContainTypes": [],
+  "mediaFileExtensions": [],
+  "compositionBehaviors": [
+    "sectionEnabled",
+    "elementEnabled"
+  ],
+  "properties": {
+    "imageSrc": {
+      "type": "string",
+      "format": "shortString",
+      "displayName": "Image Src",
+      "description": "",
+      "localized": false,
+      "required": false,
+      "group": "Information",
+      "sortOrder": 0,
+      "editorSettings": {}
+    },
+    "name": {
+      "type": "string",
+      "format": "shortString",
+      "displayName": "Name",
+      "description": "",
+      "localized": true,
+      "required": false,
+      "group": "Information",
+      "sortOrder": 0,
+      "editorSettings": {}
+    },
+    "title": {
+      "type": "string",
+      "format": "shortString",
+      "displayName": "Title",
+      "description": "",
+      "localized": true,
+      "required": false,
+      "group": "Information",
+      "sortOrder": 10,
+      "editorSettings": {}
+    },
+    "bio": {
+      "type": "string",
+      "format": "shortString",
+      "displayName": "Bio",
+      "description": "",
+      "localized": true,
+      "required": false,
+      "group": "Information",
+      "sortOrder": 20,
+      "editorSettings": {}
+    }
+  }
+}

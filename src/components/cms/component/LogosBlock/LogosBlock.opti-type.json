@@ -1,0 +1,29 @@
+{
+  "key": "LogosBlock",
+  "displayName": "Logos Block",
+  "description": "",
+  "baseType": "component",
+  "sortOrder": 0,
+  "mayContainTypes": [],
+  "mediaFileExtensions": [],
+  "compositionBehaviors": [],
+  "properties": {
+    "logos": {
+      "type": "array",
+      "displayName": "Logos",
+      "description": "",
+      "localized": false,
+      "required": false,
+      "group": "Information",
+      "sortOrder": 0,
+      "editorSettings": {},
+      "items": {
+        "type": "content",
+        "allowedTypes": [
+          "LogoItemBlock"
+        ],
+        "restrictedTypes": []
+      }
+    }
+  }
+}

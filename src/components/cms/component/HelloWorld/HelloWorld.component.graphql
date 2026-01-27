@@ -1,0 +1,4 @@
+fragment HelloWorldData on HelloWorld {
+  message
+  detailedmessage
+}

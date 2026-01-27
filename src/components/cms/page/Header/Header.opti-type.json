@@ -1,0 +1,64 @@
+{
+  "key": "Header",
+  "displayName": "Header",
+  "description": "",
+  "baseType": "page",
+  "sortOrder": 0,
+  "mayContainTypes": [
+    "*"
+  ],
+  "mediaFileExtensions": [],
+  "compositionBehaviors": [],
+  "properties": {
+    "logo": {
+      "type": "string",
+      "format": "shortString",
+      "displayName": "Logo",
+      "description": "",
+      "localized": false,
+      "required": false,
+      "group": "Information",
+      "sortOrder": 0,
+      "editorSettings": {}
+    },
+    "navItems": {
+      "type": "array",
+      "displayName": "Nav Items",
+      "description": "",
+      "localized": true,
+      "required": false,
+      "group": "Information",
+      "sortOrder": 10,
+      "editorSettings": {},
+      "items": {
+        "type": "content",
+        "allowedTypes": [
+          "NavItem"
+        ],
+        "restrictedTypes": []
+      }
+    },
+    "ctaText": {
+      "type": "string",
+      "format": "shortString",
+      "displayName": "CTA Text",
+      "description": "",
+      "localized": true,
+      "required": false,
+      "group": "Information",
+      "sortOrder": 20,
+      "editorSettings": {}
+    },
+    "ctaHref": {
+      "type": "string",
+      "format": "shortString",
+      "displayName": "CTA Href",
+      "description": "",
+      "localized": true,
+      "required": false,
+      "group": "Information",
+      "sortOrder": 30,
+      "editorSettings": {}
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "key": "TestimonialsBlock",
+  "displayName": "Testimonials Block",
+  "description": "",
+  "baseType": "component",
+  "sortOrder": 0,
+  "mayContainTypes": [],
+  "mediaFileExtensions": [],
+  "compositionBehaviors": [],
+  "properties": {
+    "title": {
+      "type": "string",
+      "format": "shortString",
+      "displayName": "Title",
+      "description": "",
+      "localized": true,
+      "required": false,
+      "group": "Information",
+      "sortOrder": 0,
+      "editorSettings": {}
+    },
+    "testimonials": {
+      "type": "array",
+      "displayName": "Testimonials",
+      "description": "",
+      "localized": true,
+      "required": false,
+      "group": "Information",
+      "sortOrder": 10,
+      "editorSettings": {},
+      "items": {
+        "type": "content",
+        "allowedTypes": [
+          "TestimonialItemBlock"
+        ],
+        "restrictedTypes": []
+      }
+    }
+  }
+}

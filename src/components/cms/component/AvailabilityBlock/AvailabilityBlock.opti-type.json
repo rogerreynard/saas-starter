@@ -1,0 +1,37 @@
+{
+  "key": "AvailabilityBlock",
+  "displayName": "Availability Block",
+  "description": "",
+  "baseType": "component",
+  "sortOrder": 0,
+  "mayContainTypes": [],
+  "mediaFileExtensions": [],
+  "compositionBehaviors": [],
+  "properties": {
+    "availability": {
+      "type": "string",
+      "format": "shortString",
+      "displayName": "Availability",
+      "description": "",
+      "localized": true,
+      "required": false,
+      "group": "Information",
+      "sortOrder": 0,
+      "editorSettings": {}
+    },
+    "projectTypes": {
+      "type": "array",
+      "displayName": "Project Types",
+      "description": "",
+      "localized": true,
+      "required": false,
+      "group": "Information",
+      "sortOrder": 10,
+      "editorSettings": {},
+      "items": {
+        "type": "string",
+        "format": "shortString"
+      }
+    }
+  }
+}

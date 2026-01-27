@@ -1,0 +1,6 @@
+fragment ProfileBlockData on ProfileBlock {
+  imageSrc
+  name
+  title
+  bio
+}

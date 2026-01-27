@@ -1,0 +1,37 @@
+{
+  "key": "StoryBlock",
+  "displayName": "Story Block",
+  "description": "",
+  "baseType": "component",
+  "sortOrder": 0,
+  "mayContainTypes": [],
+  "mediaFileExtensions": [],
+  "compositionBehaviors": [],
+  "properties": {
+    "story": {
+      "type": "string",
+      "format": "shortString",
+      "displayName": "Story",
+      "description": "",
+      "localized": true,
+      "required": false,
+      "group": "Information",
+      "sortOrder": 0,
+      "editorSettings": {}
+    },
+    "highlights": {
+      "type": "array",
+      "displayName": "Highlights",
+      "description": "",
+      "localized": true,
+      "required": false,
+      "group": "Information",
+      "sortOrder": 10,
+      "editorSettings": {},
+      "items": {
+        "type": "string",
+        "format": "shortString"
+      }
+    }
+  }
+}

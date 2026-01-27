@@ -1,0 +1,174 @@
+[
+  {
+    "propertyName": "title",
+    "propertyType": "string"
+  },
+  {
+    "propertyName": "items",
+    "propertyType": "content"
+  },
+  {
+    "propertyName": "shortDescription",
+    "propertyType": "string"
+  },
+  {
+    "propertyName": "keywords",
+    "propertyType": "string"
+  },
+  {
+    "propertyName": "blocks",
+    "propertyType": "content"
+  },
+  {
+    "propertyName": "imageSrc",
+    "propertyType": "string"
+  },
+  {
+    "propertyName": "name",
+    "propertyType": "string"
+  },
+  {
+    "propertyName": "bio",
+    "propertyType": "string"
+  },
+  {
+    "propertyName": "description",
+    "propertyType": "string"
+  },
+  {
+    "propertyName": "imageUrl",
+    "propertyType": "string"
+  },
+  {
+    "propertyName": "link",
+    "propertyType": "string"
+  },
+  {
+    "propertyName": "message",
+    "propertyType": "string"
+  },
+  {
+    "propertyName": "detailedmessage",
+    "propertyType": "string"
+  },
+  {
+    "propertyName": "stringTest",
+    "propertyType": "string"
+  },
+  {
+    "propertyName": "fullName",
+    "propertyType": "string"
+  },
+  {
+    "propertyName": "position",
+    "propertyType": "string"
+  },
+  {
+    "propertyName": "content",
+    "propertyType": "string"
+  },
+  {
+    "propertyName": "avatarSrc",
+    "propertyType": "string"
+  },
+  {
+    "propertyName": "story",
+    "propertyType": "string"
+  },
+  {
+    "propertyName": "highlights",
+    "propertyType": "string"
+  },
+  {
+    "propertyName": "testimonials",
+    "propertyType": "content"
+  },
+  {
+    "propertyName": "platform",
+    "propertyType": "string"
+  },
+  {
+    "propertyName": "href",
+    "propertyType": "string"
+  },
+  {
+    "propertyName": "availability",
+    "propertyType": "string"
+  },
+  {
+    "propertyName": "projectTypes",
+    "propertyType": "string"
+  },
+  {
+    "propertyName": "links",
+    "propertyType": "content"
+  },
+  {
+    "propertyName": "logo",
+    "propertyType": "string"
+  },
+  {
+    "propertyName": "navItems",
+    "propertyType": "content"
+  },
+  {
+    "propertyName": "ctaText",
+    "propertyType": "string"
+  },
+  {
+    "propertyName": "ctaHref",
+    "propertyType": "string"
+  },
+  {
+    "propertyName": "copyrightText",
+    "propertyType": "string"
+  },
+  {
+    "propertyName": "columns",
+    "propertyType": "content"
+  },
+  {
+    "propertyName": "socialLinks",
+    "propertyType": "content"
+  },
+  {
+    "propertyName": "src",
+    "propertyType": "string"
+  },
+  {
+    "propertyName": "alt",
+    "propertyType": "string"
+  },
+  {
+    "propertyName": "logos",
+    "propertyType": "content"
+  },
+  {
+    "propertyName": "label",
+    "propertyType": "string"
+  },
+  {
+    "propertyName": "icon",
+    "propertyType": "string"
+  },
+  {
+    "propertyName": "services",
+    "propertyType": "content"
+  },
+  {
+    "propertyName": "subtitle",
+    "propertyType": "string"
+  },
+  {
+    "propertyName": "showDecoration",
+    "propertyType": "boolean"
+  },
+  {
+    "propertyName": "decorationColorsPrimary",
+    "propertyType": "string"
+  },
+  {
+    "propertyName": "decorationColorsSecondary",
+    "propertyType": "string"
+  }
+]

@@ -1,0 +1,34 @@
+{
+  "key": "LogoItemBlock",
+  "displayName": "Logo Item Block",
+  "description": "",
+  "baseType": "component",
+  "sortOrder": 0,
+  "mayContainTypes": [],
+  "mediaFileExtensions": [],
+  "compositionBehaviors": [],
+  "properties": {
+    "src": {
+      "type": "string",
+      "format": "shortString",
+      "displayName": "Src",
+      "description": "",
+      "localized": false,
+      "required": false,
+      "group": "Information",
+      "sortOrder": 0,
+      "editorSettings": {}
+    },
+    "alt": {
+      "type": "string",
+      "format": "shortString",
+      "displayName": "Alt",
+      "description": "",
+      "localized": false,
+      "required": false,
+      "group": "Information",
+      "sortOrder": 20,
+      "editorSettings": {}
+    }
+  }
+}

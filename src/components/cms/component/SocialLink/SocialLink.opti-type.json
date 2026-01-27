@@ -1,0 +1,54 @@
+{
+  "key": "SocialLink",
+  "displayName": "Social Link",
+  "description": "",
+  "baseType": "component",
+  "sortOrder": 0,
+  "mayContainTypes": [],
+  "mediaFileExtensions": [],
+  "compositionBehaviors": [],
+  "properties": {
+    "platform": {
+      "type": "string",
+      "format": "selectOne",
+      "displayName": "Platform",
+      "description": "",
+      "localized": false,
+      "required": true,
+      "group": "Information",
+      "sortOrder": 0,
+      "editorSettings": {},
+      "enum": {
+        "values": [
+          {
+            "displayName": "Twitter",
+            "value": "twitter"
+          },
+          {
+            "displayName": "Instagram",
+            "value": "instagram"
+          },
+          {
+            "displayName": "LinkedIn",
+            "value": "linkedin"
+          },
+          {
+            "displayName": "GitHub",
+            "value": "github"
+          }
+        ]
+      }
+    },
+    "href": {
+      "type": "string",
+      "format": "shortString",
+      "displayName": "Href",
+      "description": "",
+      "localized": false,
+      "required": false,
+      "group": "Information",
+      "sortOrder": 10,
+      "editorSettings": {}
+    }
+  }
+}

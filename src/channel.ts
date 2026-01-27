@@ -1,7 +1,7 @@
 import ChannelRepository from '@remkoj/optimizely-graph-client/channels'
 
 // Determine the CMS URL
-const cms_url = process.env.OPTIMIZELY_CMS_URL ?? 'https://example.cms.optimizely.com';
+const cms_url = process.env.OPTIMIZELY_CMS_URL ?? 'https://app-rba101saasx6b3qt002.cms.optimizely.com';
 
 // Read the URLs from the environment
 const netlifyUrl = process.env.URL;

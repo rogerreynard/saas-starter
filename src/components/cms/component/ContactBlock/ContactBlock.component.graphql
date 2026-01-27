@@ -1,0 +1,4 @@
+fragment ContactBlockData on ContactBlock {
+  title
+  description
+}

@@ -1,0 +1,66 @@
+{
+  "key": "HeroBlock",
+  "displayName": "Hero Block",
+  "description": "",
+  "baseType": "component",
+  "sortOrder": 0,
+  "mayContainTypes": [],
+  "mediaFileExtensions": [],
+  "compositionBehaviors": [],
+  "properties": {
+    "title": {
+      "type": "string",
+      "format": "shortString",
+      "displayName": "Title",
+      "description": "",
+      "localized": true,
+      "required": false,
+      "group": "Information",
+      "sortOrder": 0,
+      "editorSettings": {}
+    },
+    "subtitle": {
+      "type": "string",
+      "format": "shortString",
+      "displayName": "Subtitle",
+      "description": "",
+      "localized": true,
+      "required": false,
+      "group": "Information",
+      "sortOrder": 20,
+      "editorSettings": {}
+    },
+    "showDecoration": {
+      "type": "boolean",
+      "displayName": "Show Decoration",
+      "description": "",
+      "localized": false,
+      "required": false,
+      "group": "Information",
+      "sortOrder": 25,
+      "editorSettings": {}
+    },
+    "decorationColorsPrimary": {
+      "type": "string",
+      "format": "shortString",
+      "displayName": "Decoration Colors Primary",
+      "description": "",
+      "localized": false,
+      "required": false,
+      "group": "Information",
+      "sortOrder": 30,
+      "editorSettings": {}
+    },
+    "decorationColorsSecondary": {
+      "type": "string",
+      "format": "shortString",
+      "displayName": "Decoration Colors Secondary",
+      "description": "",
+      "localized": false,
+      "required": false,
+      "group": "Information",
+      "sortOrder": 30,
+      "editorSettings": {}
+    }
+  }
+}

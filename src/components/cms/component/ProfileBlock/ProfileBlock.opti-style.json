@@ -1,0 +1,27 @@
+{
+  "key": "ProfileBlock",
+  "displayName": "Profile Block",
+  "contentType": "ProfileBlock",
+  "isDefault": true,
+  "settings": {
+    "colorScheme": {
+      "displayName": "Color scheme",
+      "editor": "select",
+      "sortOrder": 10,
+      "choices": {
+        "default": {
+          "displayName": "Default",
+          "sortOrder": 10
+        },
+        "primary": {
+          "displayName": "Primary",
+          "sortOrder": 20
+        },
+        "secondary": {
+          "displayName": "Secondary",
+          "sortOrder": 30
+        }
+      }
+    }
+  }
+}

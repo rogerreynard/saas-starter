@@ -1,0 +1,34 @@
+{
+  "key": "NavItem",
+  "displayName": "Nav Item",
+  "description": "",
+  "baseType": "component",
+  "sortOrder": 0,
+  "mayContainTypes": [],
+  "mediaFileExtensions": [],
+  "compositionBehaviors": [],
+  "properties": {
+    "label": {
+      "type": "string",
+      "format": "shortString",
+      "displayName": "Label",
+      "description": "",
+      "localized": true,
+      "required": false,
+      "group": "Information",
+      "sortOrder": 0,
+      "editorSettings": {}
+    },
+    "href": {
+      "type": "string",
+      "format": "shortString",
+      "displayName": "Href",
+      "description": "",
+      "localized": false,
+      "required": false,
+      "group": "Information",
+      "sortOrder": 10,
+      "editorSettings": {}
+    }
+  }
+}

@@ -1,0 +1,6 @@
+fragment HeaderData on Header {
+  logo
+  navItems { ...BlockData }
+  ctaText
+  ctaHref
+}

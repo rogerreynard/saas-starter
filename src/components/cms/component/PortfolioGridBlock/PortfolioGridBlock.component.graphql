@@ -1,0 +1,4 @@
+fragment PortfolioGridBlockData on PortfolioGridBlock {
+  title
+  items { ...IContentListItem }
+}

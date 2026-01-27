@@ -1,0 +1,58 @@
+{
+  "key": "Footer",
+  "displayName": "Footer",
+  "description": "",
+  "baseType": "page",
+  "sortOrder": 0,
+  "mayContainTypes": [
+    "*"
+  ],
+  "mediaFileExtensions": [],
+  "compositionBehaviors": [],
+  "properties": {
+    "copyrightText": {
+      "type": "string",
+      "displayName": "Copyright Text",
+      "description": "",
+      "localized": false,
+      "required": false,
+      "group": "Information",
+      "sortOrder": 0,
+      "editorSettings": {}
+    },
+    "columns": {
+      "type": "array",
+      "displayName": "Columns",
+      "description": "",
+      "localized": true,
+      "required": false,
+      "group": "Information",
+      "sortOrder": 10,
+      "editorSettings": {},
+      "items": {
+        "type": "content",
+        "allowedTypes": [
+          "FooterColumn"
+        ],
+        "restrictedTypes": []
+      }
+    },
+    "socialLinks": {
+      "type": "array",
+      "displayName": "Social Links",
+      "description": "",
+      "localized": true,
+      "required": false,
+      "group": "Information",
+      "sortOrder": 20,
+      "editorSettings": {},
+      "items": {
+        "type": "content",
+        "allowedTypes": [
+          "SocialLink"
+        ],
+        "restrictedTypes": []
+      }
+    }
+  }
+}

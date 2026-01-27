@@ -1,0 +1,4 @@
+fragment FooterColumnData on FooterColumn {
+  title
+  links { ...IContentListItem }
+}

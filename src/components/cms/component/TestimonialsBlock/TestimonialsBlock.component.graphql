@@ -1,0 +1,4 @@
+fragment TestimonialsBlockData on TestimonialsBlock {
+  title
+  testimonials { ...IContentListItem }
+}

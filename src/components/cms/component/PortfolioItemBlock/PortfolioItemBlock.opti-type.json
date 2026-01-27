@@ -1,0 +1,55 @@
+{
+  "key": "PortfolioItemBlock",
+  "displayName": "Portfolio Item",
+  "description": "",
+  "baseType": "component",
+  "sortOrder": 0,
+  "mayContainTypes": [],
+  "mediaFileExtensions": [],
+  "compositionBehaviors": [],
+  "properties": {
+    "title": {
+      "type": "string",
+      "format": "shortString",
+      "displayName": "Title",
+      "description": "",
+      "localized": true,
+      "required": false,
+      "group": "Information",
+      "sortOrder": 0,
+      "editorSettings": {}
+    },
+    "description": {
+      "type": "string",
+      "displayName": "Description",
+      "description": "",
+      "localized": true,
+      "required": false,
+      "group": "Information",
+      "sortOrder": 10,
+      "editorSettings": {}
+    },
+    "imageUrl": {
+      "type": "string",
+      "format": "shortString",
+      "displayName": "Image Url",
+      "description": "",
+      "localized": false,
+      "required": false,
+      "group": "Information",
+      "sortOrder": 30,
+      "editorSettings": {}
+    },
+    "link": {
+      "type": "string",
+      "format": "shortString",
+      "displayName": "Link",
+      "description": "",
+      "localized": false,
+      "required": false,
+      "group": "Information",
+      "sortOrder": 40,
+      "editorSettings": {}
+    }
+  }
+}

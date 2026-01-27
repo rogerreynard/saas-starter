@@ -39,3 +39,6 @@ next-env.d.ts
 
 # IDE Config
 .vscode
+/.vs
+/.vs/slnx.sqlite
+/.vs/slnx.sqlite-journal

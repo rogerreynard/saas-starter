@@ -1,0 +1,5 @@
+fragment FooterData on Footer {
+  copyrightText
+  columns { ...BlockData }
+  socialLinks { ...BlockData }
+}

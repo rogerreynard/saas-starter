@@ -1,0 +1,7 @@
+fragment HeroBlockData on HeroBlock {
+  title
+  subtitle
+  showDecoration
+  decorationColorsPrimary
+  decorationColorsSecondary
+}

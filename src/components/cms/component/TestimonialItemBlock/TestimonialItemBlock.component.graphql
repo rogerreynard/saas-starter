@@ -1,0 +1,6 @@
+fragment TestimonialItemBlockData on TestimonialItemBlock {
+  fullName
+  position
+  content
+  avatarSrc
+}

@@ -1,0 +1,6 @@
+fragment SEOExperienceData on SEOExperience {
+  title
+  shortDescription
+  keywords
+  ...ExperienceData
+}

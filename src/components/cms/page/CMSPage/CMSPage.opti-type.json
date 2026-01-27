@@ -1,0 +1,70 @@
+{
+  "key": "CMSPage",
+  "displayName": "CMS Page",
+  "description": "",
+  "baseType": "page",
+  "sortOrder": 0,
+  "mayContainTypes": [
+    "*"
+  ],
+  "mediaFileExtensions": [],
+  "compositionBehaviors": [],
+  "properties": {
+    "title": {
+      "type": "string",
+      "format": "shortString",
+      "displayName": "Title",
+      "description": "",
+      "localized": true,
+      "required": false,
+      "group": "Information",
+      "sortOrder": 0,
+      "editorSettings": {}
+    },
+    "shortDescription": {
+      "type": "string",
+      "displayName": "Short Description",
+      "description": "",
+      "localized": true,
+      "required": false,
+      "group": "Information",
+      "sortOrder": 10,
+      "editorSettings": {}
+    },
+    "keywords": {
+      "type": "string",
+      "displayName": "Keywords",
+      "description": "",
+      "localized": true,
+      "required": false,
+      "group": "Information",
+      "sortOrder": 20,
+      "editorSettings": {}
+    },
+    "blocks": {
+      "type": "array",
+      "displayName": "Blocks",
+      "description": "",
+      "localized": true,
+      "required": false,
+      "group": "Information",
+      "sortOrder": 30,
+      "editorSettings": {},
+      "items": {
+        "type": "content",
+        "allowedTypes": [
+          "ContactBlock",
+          "TestimonialsBlock",
+          "HeroBlock",
+          "LogosBlock",
+          "PortfolioGridBlock",
+          "ServicesBlock",
+          "AvailabilityBlock",
+          "ProfileBlock",
+          "StoryBlock"
+        ],
+        "restrictedTypes": []
+      }
+    }
+  }
+}

@@ -2,6 +2,19 @@ import type * as Schema from "./graphql";
 import type { GraphQLClient, RequestOptions } from 'graphql-request';
 import gql from 'graphql-tag';
 type GraphQLClientRequestHeaders = RequestOptions['requestHeaders'];
+export const CompositionNodeDataFragmentDoc = gql`
+    fragment CompositionNodeData on ICompositionNode {
+  name: displayName
+  layoutType: nodeType
+  type
+  key
+  template: displayTemplateKey
+  settings: displaySettings {
+    key
+    value
+  }
+}
+    `;
 export const LinkDataFragmentDoc = gql`
     fragment LinkData on ContentUrl {
   type
@@ -29,37 +42,6 @@ export const IContentDataFragmentDoc = gql`
   _type: __typename
 }
     `;
-export const PageDataFragmentDoc = gql`
-    fragment PageData on _IContent {
-  ...IContentData
-}
-    `;
-export const ReferenceDataFragmentDoc = gql`
-    fragment ReferenceData on ContentReference {
-  key
-  url {
-    ...LinkData
-  }
-}
-    `;
-export const IContentListItemFragmentDoc = gql`
-    fragment IContentListItem on _IContent {
-  ...IContentData
-}
-    `;
-export const CompositionNodeDataFragmentDoc = gql`
-    fragment CompositionNodeData on ICompositionNode {
-  name: displayName
-  layoutType: nodeType
-  type
-  key
-  template: displayTemplateKey
-  settings: displaySettings {
-    key
-    value
-  }
-}
-    `;
 export const BlockDataFragmentDoc = gql`
     fragment BlockData on _IComponent {
   ...IContentData
@@ -78,11 +60,168 @@ export const ElementDataFragmentDoc = gql`
   ...IElementData
 }
     `;
+export const AvailabilityBlockDataFragmentDoc = gql`
+    fragment AvailabilityBlockData on AvailabilityBlock {
+  availability
+  projectTypes
+}
+    `;
+export const ContactBlockDataFragmentDoc = gql`
+    fragment ContactBlockData on ContactBlock {
+  title
+  description
+}
+    `;
+export const IContentListItemFragmentDoc = gql`
+    fragment IContentListItem on _IContent {
+  ...IContentData
+}
+    `;
+export const FooterColumnDataFragmentDoc = gql`
+    fragment FooterColumnData on FooterColumn {
+  title
+  links {
+    ...IContentListItem
+  }
+}
+    `;
+export const HelloWorldDataFragmentDoc = gql`
+    fragment HelloWorldData on HelloWorld {
+  message
+  detailedmessage
+}
+    `;
+export const HeroBlockDataFragmentDoc = gql`
+    fragment HeroBlockData on HeroBlock {
+  title
+  subtitle
+  showDecoration
+  decorationColorsPrimary
+  decorationColorsSecondary
+}
+    `;
+export const LogoItemBlockDataFragmentDoc = gql`
+    fragment LogoItemBlockData on LogoItemBlock {
+  src
+  alt
+}
+    `;
+export const LogosBlockDataFragmentDoc = gql`
+    fragment LogosBlockData on LogosBlock {
+  logos {
+    ...IContentListItem
+  }
+}
+    `;
+export const NavItemDataFragmentDoc = gql`
+    fragment NavItemData on NavItem {
+  label
+  href
+}
+    `;
+export const PortfolioGridBlockDataFragmentDoc = gql`
+    fragment PortfolioGridBlockData on PortfolioGridBlock {
+  title
+  items {
+    ...IContentListItem
+  }
+}
+    `;
+export const PortfolioItemBlockDataFragmentDoc = gql`
+    fragment PortfolioItemBlockData on PortfolioItemBlock {
+  title
+  description
+  imageUrl
+  link
+}
+    `;
+export const ProfileBlockDataFragmentDoc = gql`
+    fragment ProfileBlockData on ProfileBlock {
+  imageSrc
+  name
+  title
+  bio
+}
+    `;
+export const ServiceItemDataFragmentDoc = gql`
+    fragment ServiceItemData on ServiceItem {
+  title
+  description
+  icon
+}
+    `;
+export const ServicesBlockDataFragmentDoc = gql`
+    fragment ServicesBlockData on ServicesBlock {
+  services {
+    ...IContentListItem
+  }
+}
+    `;
+export const SocialLinkDataFragmentDoc = gql`
+    fragment SocialLinkData on SocialLink {
+  platform
+  href
+}
+    `;
+export const StoryBlockDataFragmentDoc = gql`
+    fragment StoryBlockData on StoryBlock {
+  story
+  highlights
+}
+    `;
+export const TedTestBlockDataFragmentDoc = gql`
+    fragment TedTestBlockData on TedTestBlock {
+  stringTest
+}
+    `;
+export const TestimonialItemDataFragmentDoc = gql`
+    fragment TestimonialItemData on TestimonialItem {
+  fullName
+  position
+  content
+  avatarSrc
+}
+    `;
+export const TestimonialItemBlockDataFragmentDoc = gql`
+    fragment TestimonialItemBlockData on TestimonialItemBlock {
+  fullName
+  position
+  content
+  avatarSrc
+}
+    `;
+export const TestimonialsBlockDataFragmentDoc = gql`
+    fragment TestimonialsBlockData on TestimonialsBlock {
+  title
+  testimonials {
+    ...IContentListItem
+  }
+}
+    `;
 export const CompositionComponentNodeDataFragmentDoc = gql`
     fragment CompositionComponentNodeData on ICompositionComponentNode {
   component {
     ...BlockData
     ...ElementData
+    ...AvailabilityBlockData
+    ...ContactBlockData
+    ...FooterColumnData
+    ...HelloWorldData
+    ...HeroBlockData
+    ...LogoItemBlockData
+    ...LogosBlockData
+    ...NavItemData
+    ...PortfolioGridBlockData
+    ...PortfolioItemBlockData
+    ...ProfileBlockData
+    ...ServiceItemData
+    ...ServicesBlockData
+    ...SocialLinkData
+    ...StoryBlockData
+    ...TedTestBlockData
+    ...TestimonialItemData
+    ...TestimonialItemBlockData
+    ...TestimonialsBlockData
   }
 }
     `;
@@ -119,14 +258,215 @@ export const ExperienceDataFragmentDoc = gql`
   }
 }
     `;
-export const LinkItemDataFragmentDoc = gql`
-    fragment LinkItemData on Link {
+export const BlankExperienceDataFragmentDoc = gql`
+    fragment BlankExperienceData on BlankExperience {
+  ...ExperienceData
+}
+    `;
+export const SEOExperienceDataFragmentDoc = gql`
+    fragment SEOExperienceData on SEOExperience {
   title
-  text
-  target
-  url {
-    ...LinkData
+  shortDescription
+  keywords
+  ...ExperienceData
+}
+    `;
+export const ImageMediaDataFragmentDoc = gql`
+    fragment ImageMediaData on ImageMedia {
+  empty: _metadata {
+    key
   }
+}
+    `;
+export const GenericMediaDataFragmentDoc = gql`
+    fragment GenericMediaData on GenericMedia {
+  empty: _metadata {
+    key
+  }
+}
+    `;
+export const GenericMedia123DataFragmentDoc = gql`
+    fragment GenericMedia123Data on GenericMedia123 {
+  empty: _metadata {
+    key
+  }
+}
+    `;
+export const CMSPageDataFragmentDoc = gql`
+    fragment CMSPageData on CMSPage {
+  title
+  shortDescription
+  keywords
+  blocks {
+    ...BlockData
+    ...AvailabilityBlockData
+    ...ContactBlockData
+    ...FooterColumnData
+    ...HelloWorldData
+    ...HeroBlockData
+    ...LogoItemBlockData
+    ...LogosBlockData
+    ...NavItemData
+    ...PortfolioGridBlockData
+    ...PortfolioItemBlockData
+    ...ProfileBlockData
+    ...ServiceItemData
+    ...ServicesBlockData
+    ...SocialLinkData
+    ...StoryBlockData
+    ...TedTestBlockData
+    ...TestimonialItemData
+    ...TestimonialItemBlockData
+    ...TestimonialsBlockData
+  }
+}
+    `;
+export const FooterDataFragmentDoc = gql`
+    fragment FooterData on Footer {
+  copyrightText
+  columns {
+    ...BlockData
+    ...AvailabilityBlockData
+    ...ContactBlockData
+    ...FooterColumnData
+    ...HelloWorldData
+    ...HeroBlockData
+    ...LogoItemBlockData
+    ...LogosBlockData
+    ...NavItemData
+    ...PortfolioGridBlockData
+    ...PortfolioItemBlockData
+    ...ProfileBlockData
+    ...ServiceItemData
+    ...ServicesBlockData
+    ...SocialLinkData
+    ...StoryBlockData
+    ...TedTestBlockData
+    ...TestimonialItemData
+    ...TestimonialItemBlockData
+    ...TestimonialsBlockData
+  }
+  socialLinks {
+    ...BlockData
+    ...AvailabilityBlockData
+    ...ContactBlockData
+    ...FooterColumnData
+    ...HelloWorldData
+    ...HeroBlockData
+    ...LogoItemBlockData
+    ...LogosBlockData
+    ...NavItemData
+    ...PortfolioGridBlockData
+    ...PortfolioItemBlockData
+    ...ProfileBlockData
+    ...ServiceItemData
+    ...ServicesBlockData
+    ...SocialLinkData
+    ...StoryBlockData
+    ...TedTestBlockData
+    ...TestimonialItemData
+    ...TestimonialItemBlockData
+    ...TestimonialsBlockData
+  }
+}
+    `;
+export const HeaderDataFragmentDoc = gql`
+    fragment HeaderData on Header {
+  logo
+  navItems {
+    ...BlockData
+    ...AvailabilityBlockData
+    ...ContactBlockData
+    ...FooterColumnData
+    ...HelloWorldData
+    ...HeroBlockData
+    ...LogoItemBlockData
+    ...LogosBlockData
+    ...NavItemData
+    ...PortfolioGridBlockData
+    ...PortfolioItemBlockData
+    ...ProfileBlockData
+    ...ServiceItemData
+    ...ServicesBlockData
+    ...SocialLinkData
+    ...StoryBlockData
+    ...TedTestBlockData
+    ...TestimonialItemData
+    ...TestimonialItemBlockData
+    ...TestimonialsBlockData
+  }
+  ctaText
+  ctaHref
+}
+    `;
+export const HomePageDataFragmentDoc = gql`
+    fragment HomePageData on HomePage {
+  title
+  shortDescription
+  keywords
+  blocks {
+    ...BlockData
+    ...AvailabilityBlockData
+    ...ContactBlockData
+    ...FooterColumnData
+    ...HelloWorldData
+    ...HeroBlockData
+    ...LogoItemBlockData
+    ...LogosBlockData
+    ...NavItemData
+    ...PortfolioGridBlockData
+    ...PortfolioItemBlockData
+    ...ProfileBlockData
+    ...ServiceItemData
+    ...ServicesBlockData
+    ...SocialLinkData
+    ...StoryBlockData
+    ...TedTestBlockData
+    ...TestimonialItemData
+    ...TestimonialItemBlockData
+    ...TestimonialsBlockData
+  }
+}
+    `;
+export const StartPageDataFragmentDoc = gql`
+    fragment StartPageData on StartPage {
+  title
+  shortDescription
+  keywords
+  blocks {
+    ...BlockData
+    ...AvailabilityBlockData
+    ...ContactBlockData
+    ...FooterColumnData
+    ...HelloWorldData
+    ...HeroBlockData
+    ...LogoItemBlockData
+    ...LogosBlockData
+    ...NavItemData
+    ...PortfolioGridBlockData
+    ...PortfolioItemBlockData
+    ...ProfileBlockData
+    ...ServiceItemData
+    ...ServicesBlockData
+    ...SocialLinkData
+    ...StoryBlockData
+    ...TedTestBlockData
+    ...TestimonialItemData
+    ...TestimonialItemBlockData
+    ...TestimonialsBlockData
+  }
+}
+    `;
+export const VideoMediaDataFragmentDoc = gql`
+    fragment VideoMediaData on VideoMedia {
+  empty: _metadata {
+    key
+  }
+}
+    `;
+export const PageDataFragmentDoc = gql`
+    fragment PageData on _IContent {
+  ...IContentData
 }
     `;
 export const getContentByIdDocument = gql`
@@ -141,6 +481,32 @@ export const getContentByIdDocument = gql`
       ...IContentData
       ...BlockData
       ...PageData
+      ...AvailabilityBlockData
+      ...ContactBlockData
+      ...FooterColumnData
+      ...HelloWorldData
+      ...HeroBlockData
+      ...LogoItemBlockData
+      ...LogosBlockData
+      ...NavItemData
+      ...PortfolioGridBlockData
+      ...PortfolioItemBlockData
+      ...ProfileBlockData
+      ...ServiceItemData
+      ...ServicesBlockData
+      ...SocialLinkData
+      ...StoryBlockData
+      ...TedTestBlockData
+      ...TestimonialItemData
+      ...TestimonialItemBlockData
+      ...TestimonialsBlockData
+      ...BlankExperienceData
+      ...SEOExperienceData
+      ...CMSPageData
+      ...FooterData
+      ...HeaderData
+      ...HomePageData
+      ...StartPageData
     }
   }
 }
@@ -148,7 +514,39 @@ export const getContentByIdDocument = gql`
 ${IContentInfoFragmentDoc}
 ${LinkDataFragmentDoc}
 ${BlockDataFragmentDoc}
-${PageDataFragmentDoc}`;
+${PageDataFragmentDoc}
+${AvailabilityBlockDataFragmentDoc}
+${ContactBlockDataFragmentDoc}
+${FooterColumnDataFragmentDoc}
+${IContentListItemFragmentDoc}
+${HelloWorldDataFragmentDoc}
+${HeroBlockDataFragmentDoc}
+${LogoItemBlockDataFragmentDoc}
+${LogosBlockDataFragmentDoc}
+${NavItemDataFragmentDoc}
+${PortfolioGridBlockDataFragmentDoc}
+${PortfolioItemBlockDataFragmentDoc}
+${ProfileBlockDataFragmentDoc}
+${ServiceItemDataFragmentDoc}
+${ServicesBlockDataFragmentDoc}
+${SocialLinkDataFragmentDoc}
+${StoryBlockDataFragmentDoc}
+${TedTestBlockDataFragmentDoc}
+${TestimonialItemDataFragmentDoc}
+${TestimonialItemBlockDataFragmentDoc}
+${TestimonialsBlockDataFragmentDoc}
+${BlankExperienceDataFragmentDoc}
+${ExperienceDataFragmentDoc}
+${CompositionNodeDataFragmentDoc}
+${CompositionComponentNodeDataFragmentDoc}
+${ElementDataFragmentDoc}
+${IElementDataFragmentDoc}
+${SEOExperienceDataFragmentDoc}
+${CMSPageDataFragmentDoc}
+${FooterDataFragmentDoc}
+${HeaderDataFragmentDoc}
+${HomePageDataFragmentDoc}
+${StartPageDataFragmentDoc}`;
 export const getContentByPathDocument = gql`
     query getContentByPath($path: [String!]!, $locale: [Locales!], $siteId: String, $changeset: String = null) {
   content: _Content(
@@ -159,13 +557,53 @@ export const getContentByPathDocument = gql`
     items: item {
       ...IContentData
       ...PageData
+      ...BlankExperienceData
+      ...SEOExperienceData
+      ...CMSPageData
+      ...FooterData
+      ...HeaderData
+      ...HomePageData
+      ...StartPageData
     }
   }
 }
     ${IContentDataFragmentDoc}
 ${IContentInfoFragmentDoc}
 ${LinkDataFragmentDoc}
-${PageDataFragmentDoc}`;
+${PageDataFragmentDoc}
+${BlankExperienceDataFragmentDoc}
+${ExperienceDataFragmentDoc}
+${CompositionNodeDataFragmentDoc}
+${CompositionComponentNodeDataFragmentDoc}
+${BlockDataFragmentDoc}
+${ElementDataFragmentDoc}
+${IElementDataFragmentDoc}
+${AvailabilityBlockDataFragmentDoc}
+${ContactBlockDataFragmentDoc}
+${FooterColumnDataFragmentDoc}
+${IContentListItemFragmentDoc}
+${HelloWorldDataFragmentDoc}
+${HeroBlockDataFragmentDoc}
+${LogoItemBlockDataFragmentDoc}
+${LogosBlockDataFragmentDoc}
+${NavItemDataFragmentDoc}
+${PortfolioGridBlockDataFragmentDoc}
+${PortfolioItemBlockDataFragmentDoc}
+${ProfileBlockDataFragmentDoc}
+${ServiceItemDataFragmentDoc}
+${ServicesBlockDataFragmentDoc}
+${SocialLinkDataFragmentDoc}
+${StoryBlockDataFragmentDoc}
+${TedTestBlockDataFragmentDoc}
+${TestimonialItemDataFragmentDoc}
+${TestimonialItemBlockDataFragmentDoc}
+${TestimonialsBlockDataFragmentDoc}
+${SEOExperienceDataFragmentDoc}
+${CMSPageDataFragmentDoc}
+${FooterDataFragmentDoc}
+${HeaderDataFragmentDoc}
+${HomePageDataFragmentDoc}
+${StartPageDataFragmentDoc}`;
 export const getContentTypeDocument = gql`
     query getContentType($key: String!, $version: String, $locale: [Locales!], $path: String = "-", $domain: String) {
   content: _Content(

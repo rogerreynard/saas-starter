@@ -1,0 +1,47 @@
+{
+  "key": "SEOExperience",
+  "displayName": "SEO Experience",
+  "description": "",
+  "baseType": "experience",
+  "sortOrder": 0,
+  "mayContainTypes": [
+    "*"
+  ],
+  "mediaFileExtensions": [],
+  "compositionBehaviors": [],
+  "properties": {
+    "title": {
+      "type": "string",
+      "format": "shortString",
+      "displayName": "Title",
+      "description": "",
+      "localized": false,
+      "required": false,
+      "group": "Information",
+      "sortOrder": 0,
+      "editorSettings": {}
+    },
+    "shortDescription": {
+      "type": "string",
+      "format": "shortString",
+      "displayName": "Short Description",
+      "description": "",
+      "localized": false,
+      "required": false,
+      "group": "Information",
+      "sortOrder": 10,
+      "editorSettings": {}
+    },
+    "keywords": {
+      "type": "string",
+      "format": "shortString",
+      "displayName": "Keywords",
+      "description": "",
+      "localized": false,
+      "required": false,
+      "group": "Information",
+      "sortOrder": 30,
+      "editorSettings": {}
+    }
+  }
+}

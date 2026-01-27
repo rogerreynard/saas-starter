@@ -1,0 +1,67 @@
+{
+  "key": "HomePage",
+  "displayName": "Home Page",
+  "description": "Home Page",
+  "baseType": "page",
+  "sortOrder": 0,
+  "mayContainTypes": [
+    "*"
+  ],
+  "mediaFileExtensions": [],
+  "compositionBehaviors": [],
+  "properties": {
+    "title": {
+      "type": "string",
+      "displayName": "Title",
+      "description": "",
+      "localized": true,
+      "required": false,
+      "group": "Information",
+      "sortOrder": 0,
+      "editorSettings": {}
+    },
+    "shortDescription": {
+      "type": "string",
+      "displayName": "Short Description",
+      "description": "",
+      "localized": true,
+      "required": false,
+      "group": "Information",
+      "sortOrder": 10,
+      "editorSettings": {}
+    },
+    "keywords": {
+      "type": "string",
+      "displayName": "Keywords",
+      "description": "",
+      "localized": true,
+      "required": false,
+      "group": "Information",
+      "sortOrder": 30,
+      "editorSettings": {}
+    },
+    "blocks": {
+      "type": "array",
+      "displayName": "Blocks",
+      "description": "",
+      "localized": true,
+      "required": false,
+      "group": "Information",
+      "sortOrder": 40,
+      "editorSettings": {},
+      "items": {
+        "type": "content",
+        "allowedTypes": [
+          "ContactBlock",
+          "ServicesBlock",
+          "HeroBlock",
+          "PortfolioGridBlock",
+          "LogosBlock",
+          "TestimonialsBlock",
+          "HelloWorld"
+        ],
+        "restrictedTypes": []
+      }
+    }
+  }
+}

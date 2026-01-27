@@ -1,0 +1,29 @@
+{
+  "key": "ServicesBlock",
+  "displayName": "Services Block",
+  "description": "",
+  "baseType": "component",
+  "sortOrder": 0,
+  "mayContainTypes": [],
+  "mediaFileExtensions": [],
+  "compositionBehaviors": [],
+  "properties": {
+    "services": {
+      "type": "array",
+      "displayName": "Services",
+      "description": "",
+      "localized": true,
+      "required": false,
+      "group": "Information",
+      "sortOrder": 0,
+      "editorSettings": {},
+      "items": {
+        "type": "content",
+        "allowedTypes": [
+          "ServiceItem"
+        ],
+        "restrictedTypes": []
+      }
+    }
+  }
+}

@@ -1,0 +1,3 @@
+fragment LogosBlockData on LogosBlock {
+  logos { ...IContentListItem }
+}

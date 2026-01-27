@@ -1,0 +1,6 @@
+fragment CMSPageData on CMSPage {
+  title
+  shortDescription
+  keywords
+  blocks { ...BlockData }
+}

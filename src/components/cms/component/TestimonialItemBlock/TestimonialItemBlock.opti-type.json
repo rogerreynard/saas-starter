@@ -1,0 +1,55 @@
+{
+  "key": "TestimonialItemBlock",
+  "displayName": "Testimonial Item Block",
+  "description": "",
+  "baseType": "component",
+  "sortOrder": 0,
+  "mayContainTypes": [],
+  "mediaFileExtensions": [],
+  "compositionBehaviors": [],
+  "properties": {
+    "fullName": {
+      "type": "string",
+      "format": "shortString",
+      "displayName": "Full Name",
+      "description": "",
+      "localized": true,
+      "required": false,
+      "group": "Information",
+      "sortOrder": 0,
+      "editorSettings": {}
+    },
+    "position": {
+      "type": "string",
+      "format": "shortString",
+      "displayName": "Position",
+      "description": "",
+      "localized": true,
+      "required": false,
+      "group": "Information",
+      "sortOrder": 20,
+      "editorSettings": {}
+    },
+    "content": {
+      "type": "string",
+      "displayName": "Content",
+      "description": "",
+      "localized": true,
+      "required": false,
+      "group": "Information",
+      "sortOrder": 29,
+      "editorSettings": {}
+    },
+    "avatarSrc": {
+      "type": "string",
+      "format": "shortString",
+      "displayName": "Avatar Src",
+      "description": "",
+      "localized": false,
+      "required": false,
+      "group": "Information",
+      "sortOrder": 40,
+      "editorSettings": {}
+    }
+  }
+}

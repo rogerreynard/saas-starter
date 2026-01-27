@@ -1,0 +1,6 @@
+fragment PortfolioItemBlockData on PortfolioItemBlock {
+  title
+  description
+  imageUrl
+  link
+}

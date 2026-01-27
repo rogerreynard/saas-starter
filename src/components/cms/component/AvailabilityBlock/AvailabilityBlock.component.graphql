@@ -1,0 +1,4 @@
+fragment AvailabilityBlockData on AvailabilityBlock {
+  availability
+  projectTypes
+}

@@ -1,0 +1,6 @@
+fragment HomePageData on HomePage {
+  title
+  shortDescription
+  keywords
+  blocks { ...BlockData }
+}
