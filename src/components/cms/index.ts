@@ -4,6 +4,7 @@ import { type ComponentTypeDictionary } from '@remkoj/optimizely-cms-react';
 
 import NodeComponent from './node';
 import ComponentFactory from './component';
+import ElementFactory from './element';
 import ExperienceFactory from './experience';
 import ImageFactory from './image';
 import MediaFactory from './media';
@@ -17,6 +18,7 @@ export const CmsFactory : ComponentTypeDictionary = [
     component: NodeComponent
   },
   ...ComponentFactory,
+  ...ElementFactory,
   ...ExperienceFactory,
   ...ImageFactory,
   ...MediaFactory,
