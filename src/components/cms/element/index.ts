@@ -1,16 +1,16 @@
 import { type ComponentTypeDictionary } from '@remkoj/optimizely-cms-react';
 
-import ButtonElementComponent from './ButtonElement';
+import CTAElementComponent from './CTAElement';
 import HeadingElementComponent from './HeadingElement';
 import ImageElementComponent from './ImageElement';
 import ParagraphElementComponent from './ParagraphElement';
-import TextElementComponent from './TextElement';
+import RichTextElementComponent from './RichTextElement';
 
 // Build dictionary
 export const ElementFactory: ComponentTypeDictionary = [
     {
-        type: 'ButtonElement',
-        component: ButtonElementComponent
+        type: 'CTAElement',
+        component: CTAElementComponent
     },
     {
         type: 'HeadingElement',
@@ -25,8 +25,8 @@ export const ElementFactory: ComponentTypeDictionary = [
         component: ParagraphElementComponent
     },
     {
-        type: 'TextElement',
-        component: TextElementComponent
+        type: 'RichTextElement',
+        component: RichTextElementComponent
     }
 ];
 
