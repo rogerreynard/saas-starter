@@ -42,7 +42,6 @@ const { CmsPage, generateMetadata, generateStaticParams } = createPage(
       });
       // Check if we're in request mode and draftMode is enabled
       if (scope == "request" && draftMode().isEnabled) {
-        console.log('🔱 Next.JS DraftMode enabled')
         // If we're not authenticated, switch to HMAC authentication
         if (client.currentAuthMode === AuthMode.Public)
           client.updateAuthentication(AuthMode.HMAC);

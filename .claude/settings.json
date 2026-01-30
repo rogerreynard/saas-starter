@@ -1,0 +1,5 @@
+{
+  "enabledPlugins": {
+    "optimizely@cms-analyzers-marketplace": true
+  }
+}

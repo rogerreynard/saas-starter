@@ -1,19 +1,24 @@
 import type { MetadataRoute } from "next"
 import { RouteResolver } from "@remkoj/optimizely-graph-client"
+import { getSiteUrl } from "@/lib/domain"
 
 export default async function sitemap() : Promise<MetadataRoute.Sitemap>
 {
-    const domain = process.env.NEXT_PUBLIC_SITE_DOMAIN ?? process.env.SITE_DOMAIN ?? process.env.VERCEL_PROJECT_PRODUCTION_URL ?? 'localhost'
-    const scheme = domain && (domain.startsWith("localhost") || domain.endsWith(".local")) ? 'http' : 'https'
-    const host = domain ? new URL(`${scheme}://${domain}`) : undefined
-    const resolver = new RouteResolver()
-    const routes = await resolver.getRoutes();
-    return routes.map(r => { return {
-        url: new URL(r.url.pathname, host ?? r.url).href,
-        lastModified: r.changed ?? new Date(),
-        changeFrequency: "daily",
-        priority: 1
-    }})
+    const host = getSiteUrl();
+
+    try {
+        const resolver = new RouteResolver()
+        const routes = await resolver.getRoutes();
+        return routes.map(r => ({
+            url: new URL(r.url.pathname, host).href,
+            lastModified: r.changed ?? new Date(),
+            changeFrequency: "daily",
+            priority: 1
+        }))
+    } catch (error) {
+        console.error('Failed to generate sitemap:', error);
+        return [];
+    }
 }
 
 export const revalidate = 21600 // Revalidate at a minimum every 6 hours

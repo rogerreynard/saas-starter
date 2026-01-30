@@ -1,6 +1,0 @@
-fragment TestimonialItemData on TestimonialItem {
-  fullName
-  position
-  content
-  avatarSrc
-}

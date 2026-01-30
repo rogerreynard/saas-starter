@@ -1,0 +1,38 @@
+{
+  "version": "1.0",
+  "generated": "2026-01-30T00:00:00Z",
+  "project": "optimizely-saas-starter",
+  "platform": "Optimizely CMS SaaS (Headless)",
+  "framework": "Next.js 14",
+  "sdkVersion": "5.2.0",
+  "skills": [
+    {
+      "name": "optimizely-content-types",
+      "path": "optimizely-content-types/SKILL.md",
+      "patterns": 7,
+      "examples": 12
+    },
+    {
+      "name": "optimizely-components",
+      "path": "optimizely-components/SKILL.md",
+      "patterns": 4,
+      "examples": 8
+    },
+    {
+      "name": "optimizely-graphql",
+      "path": "optimizely-graphql/SKILL.md",
+      "patterns": 5,
+      "examples": 7
+    },
+    {
+      "name": "project-conventions",
+      "path": "project-conventions/SKILL.md",
+      "patterns": 8,
+      "examples": 10
+    }
+  ],
+  "totals": {
+    "patterns": 24,
+    "examples": 37
+  }
+}

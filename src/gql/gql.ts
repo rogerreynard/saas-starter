@@ -29,15 +29,12 @@ type Documents = {
     "fragment ServicesBlockData on ServicesBlock {\n  services {\n    ...IContentListItem\n  }\n}": typeof types.ServicesBlockDataFragmentDoc,
     "fragment SocialLinkData on SocialLink {\n  platform\n  href\n}": typeof types.SocialLinkDataFragmentDoc,
     "fragment StoryBlockData on StoryBlock {\n  story\n  highlights\n}": typeof types.StoryBlockDataFragmentDoc,
-    "fragment TedTestBlockData on TedTestBlock {\n  stringTest\n}": typeof types.TedTestBlockDataFragmentDoc,
-    "fragment TestimonialItemData on TestimonialItem {\n  fullName\n  position\n  content\n  avatarSrc\n}": typeof types.TestimonialItemDataFragmentDoc,
     "fragment TestimonialItemBlockData on TestimonialItemBlock {\n  fullName\n  position\n  content\n  avatarSrc\n}": typeof types.TestimonialItemBlockDataFragmentDoc,
     "fragment TestimonialsBlockData on TestimonialsBlock {\n  title\n  testimonials {\n    ...IContentListItem\n  }\n}": typeof types.TestimonialsBlockDataFragmentDoc,
     "fragment BlankExperienceData on BlankExperience {\n  ...ExperienceData\n}": typeof types.BlankExperienceDataFragmentDoc,
     "fragment SEOExperienceData on SEOExperience {\n  title\n  shortDescription\n  keywords\n  ...ExperienceData\n}": typeof types.SEOExperienceDataFragmentDoc,
     "fragment ImageMediaData on ImageMedia {\n  empty: _metadata {\n    key\n  }\n}": typeof types.ImageMediaDataFragmentDoc,
     "fragment GenericMediaData on GenericMedia {\n  empty: _metadata {\n    key\n  }\n}": typeof types.GenericMediaDataFragmentDoc,
-    "fragment GenericMedia123Data on GenericMedia123 {\n  empty: _metadata {\n    key\n  }\n}": typeof types.GenericMedia123DataFragmentDoc,
     "fragment CMSPageData on CMSPage {\n  title\n  shortDescription\n  keywords\n  blocks {\n    ...BlockData\n  }\n}": typeof types.CMSPageDataFragmentDoc,
     "fragment FooterData on Footer {\n  copyrightText\n  columns {\n    ...BlockData\n  }\n  socialLinks {\n    ...BlockData\n  }\n}": typeof types.FooterDataFragmentDoc,
     "fragment HeaderData on Header {\n  logo\n  navItems {\n    ...BlockData\n  }\n  ctaText\n  ctaHref\n}": typeof types.HeaderDataFragmentDoc,
@@ -63,15 +60,12 @@ const documents: Documents = {
     "fragment ServicesBlockData on ServicesBlock {\n  services {\n    ...IContentListItem\n  }\n}": types.ServicesBlockDataFragmentDoc,
     "fragment SocialLinkData on SocialLink {\n  platform\n  href\n}": types.SocialLinkDataFragmentDoc,
     "fragment StoryBlockData on StoryBlock {\n  story\n  highlights\n}": types.StoryBlockDataFragmentDoc,
-    "fragment TedTestBlockData on TedTestBlock {\n  stringTest\n}": types.TedTestBlockDataFragmentDoc,
-    "fragment TestimonialItemData on TestimonialItem {\n  fullName\n  position\n  content\n  avatarSrc\n}": types.TestimonialItemDataFragmentDoc,
     "fragment TestimonialItemBlockData on TestimonialItemBlock {\n  fullName\n  position\n  content\n  avatarSrc\n}": types.TestimonialItemBlockDataFragmentDoc,
     "fragment TestimonialsBlockData on TestimonialsBlock {\n  title\n  testimonials {\n    ...IContentListItem\n  }\n}": types.TestimonialsBlockDataFragmentDoc,
     "fragment BlankExperienceData on BlankExperience {\n  ...ExperienceData\n}": types.BlankExperienceDataFragmentDoc,
     "fragment SEOExperienceData on SEOExperience {\n  title\n  shortDescription\n  keywords\n  ...ExperienceData\n}": types.SEOExperienceDataFragmentDoc,
     "fragment ImageMediaData on ImageMedia {\n  empty: _metadata {\n    key\n  }\n}": types.ImageMediaDataFragmentDoc,
     "fragment GenericMediaData on GenericMedia {\n  empty: _metadata {\n    key\n  }\n}": types.GenericMediaDataFragmentDoc,
-    "fragment GenericMedia123Data on GenericMedia123 {\n  empty: _metadata {\n    key\n  }\n}": types.GenericMedia123DataFragmentDoc,
     "fragment CMSPageData on CMSPage {\n  title\n  shortDescription\n  keywords\n  blocks {\n    ...BlockData\n  }\n}": types.CMSPageDataFragmentDoc,
     "fragment FooterData on Footer {\n  copyrightText\n  columns {\n    ...BlockData\n  }\n  socialLinks {\n    ...BlockData\n  }\n}": types.FooterDataFragmentDoc,
     "fragment HeaderData on Header {\n  logo\n  navItems {\n    ...BlockData\n  }\n  ctaText\n  ctaHref\n}": types.HeaderDataFragmentDoc,
@@ -159,14 +153,6 @@ export function gql(source: "fragment StoryBlockData on StoryBlock {\n  story\n 
 /**
  * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */
-export function gql(source: "fragment TedTestBlockData on TedTestBlock {\n  stringTest\n}"): (typeof documents)["fragment TedTestBlockData on TedTestBlock {\n  stringTest\n}"];
-/**
- * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
- */
-export function gql(source: "fragment TestimonialItemData on TestimonialItem {\n  fullName\n  position\n  content\n  avatarSrc\n}"): (typeof documents)["fragment TestimonialItemData on TestimonialItem {\n  fullName\n  position\n  content\n  avatarSrc\n}"];
-/**
- * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
- */
 export function gql(source: "fragment TestimonialItemBlockData on TestimonialItemBlock {\n  fullName\n  position\n  content\n  avatarSrc\n}"): (typeof documents)["fragment TestimonialItemBlockData on TestimonialItemBlock {\n  fullName\n  position\n  content\n  avatarSrc\n}"];
 /**
  * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
@@ -188,10 +174,6 @@ export function gql(source: "fragment ImageMediaData on ImageMedia {\n  empty: _
  * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */
 export function gql(source: "fragment GenericMediaData on GenericMedia {\n  empty: _metadata {\n    key\n  }\n}"): (typeof documents)["fragment GenericMediaData on GenericMedia {\n  empty: _metadata {\n    key\n  }\n}"];
-/**
- * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
- */
-export function gql(source: "fragment GenericMedia123Data on GenericMedia123 {\n  empty: _metadata {\n    key\n  }\n}"): (typeof documents)["fragment GenericMedia123Data on GenericMedia123 {\n  empty: _metadata {\n    key\n  }\n}"];
 /**
  * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */

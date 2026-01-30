@@ -21,6 +21,159 @@ export type Scalars = {
   JSON: { input: any; output: any; }
 };
 
+export type AnotherGreatPage = IData & _IContent & _IItem & _IPage & {
+  __typename?: 'AnotherGreatPage';
+  SEO?: Maybe<PageSeoSettingsProperty>;
+  /** @deprecated Use `_link` field instead */
+  _children?: Maybe<QueryRef>;
+  _deleted?: Maybe<Scalars['Bool']['output']>;
+  _fulltext?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  _id?: Maybe<Scalars['String']['output']>;
+  _itemMetadata?: Maybe<_Metadata>;
+  _json?: Maybe<Scalars['JSON']['output']>;
+  _link?: Maybe<QueryRef>;
+  _metadata?: Maybe<IContentMetadata>;
+  _modified?: Maybe<Scalars['Date']['output']>;
+  _score?: Maybe<Scalars['Float']['output']>;
+  _track?: Maybe<Scalars['String']['output']>;
+};
+
+
+export type AnotherGreatPage_fulltextArgs = {
+  highlight?: InputMaybe<HighlightOptions>;
+};
+
+
+export type AnotherGreatPage_linkArgs = {
+  type?: InputMaybe<LinkTypes>;
+};
+
+export type AnotherGreatPageAutocomplete = {
+  __typename?: 'AnotherGreatPageAutocomplete';
+  SEO?: Maybe<PageSeoSettingsPropertyAutocomplete>;
+  _itemMetadata?: Maybe<_MetadataAutocomplete>;
+  _metadata?: Maybe<IContentMetadataAutocomplete>;
+};
+
+export type AnotherGreatPageFacet = {
+  __typename?: 'AnotherGreatPageFacet';
+  SEO?: Maybe<PageSeoSettingsPropertyFacet>;
+  _itemMetadata?: Maybe<_MetadataFacet>;
+  _metadata?: Maybe<IContentMetadataFacet>;
+};
+
+export type AnotherGreatPageOrderByInput = {
+  SEO?: InputMaybe<PageSeoSettingsPropertyOrderByInput>;
+  _itemMetadata?: InputMaybe<_MetadataOrderByInput>;
+  _metadata?: InputMaybe<IContentMetadataOrderByInput>;
+  _minimumScore?: InputMaybe<Scalars['Float']['input']>;
+  _modified?: InputMaybe<OrderBy>;
+  _ranking?: InputMaybe<Ranking>;
+  /** The value needs to be a positive value, but cannot exceed the maximum value of an integer. In case it is exceeded, the maximum of an integer is used. In case of a negative value, semantic search will be disabled. */
+  _semanticWeight?: InputMaybe<Scalars['Float']['input']>;
+};
+
+export type AnotherGreatPageOutput = {
+  __typename?: 'AnotherGreatPageOutput';
+  autocomplete?: Maybe<AnotherGreatPageAutocomplete>;
+  cursor?: Maybe<Scalars['String']['output']>;
+  facets?: Maybe<AnotherGreatPageFacet>;
+  item?: Maybe<AnotherGreatPage>;
+  items?: Maybe<Array<Maybe<AnotherGreatPage>>>;
+  total?: Maybe<Scalars['Int']['output']>;
+};
+
+
+export type AnotherGreatPageOutputtotalArgs = {
+  all?: InputMaybe<Scalars['Boolean']['input']>;
+};
+
+export type AnotherGreatPageWhereInput = {
+  SEO?: InputMaybe<PageSeoSettingsPropertyWhereInput>;
+  _and?: InputMaybe<Array<InputMaybe<AnotherGreatPageWhereInput>>>;
+  _fulltext?: InputMaybe<SearchableStringFilterInput>;
+  _itemMetadata?: InputMaybe<_MetadataWhereInput>;
+  _metadata?: InputMaybe<IContentMetadataWhereInput>;
+  _modified?: InputMaybe<DateFilterInput>;
+  _not?: InputMaybe<Array<InputMaybe<AnotherGreatPageWhereInput>>>;
+  _or?: InputMaybe<Array<InputMaybe<AnotherGreatPageWhereInput>>>;
+};
+
+export type ArticleListElement = IData & _IComponent & _IContent & _IItem & {
+  __typename?: 'ArticleListElement';
+  /** @deprecated Use `_link` field instead */
+  _children?: Maybe<QueryRef>;
+  _deleted?: Maybe<Scalars['Bool']['output']>;
+  _fulltext?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  _id?: Maybe<Scalars['String']['output']>;
+  _itemMetadata?: Maybe<_Metadata>;
+  _json?: Maybe<Scalars['JSON']['output']>;
+  _link?: Maybe<QueryRef>;
+  _metadata?: Maybe<IContentMetadata>;
+  _modified?: Maybe<Scalars['Date']['output']>;
+  _score?: Maybe<Scalars['Float']['output']>;
+  _track?: Maybe<Scalars['String']['output']>;
+  articleListCount?: Maybe<Scalars['Int']['output']>;
+  topics?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+};
+
+
+export type ArticleListElement_fulltextArgs = {
+  highlight?: InputMaybe<HighlightOptions>;
+};
+
+
+export type ArticleListElement_linkArgs = {
+  type?: InputMaybe<LinkTypes>;
+};
+
+export type ArticleListElementAutocomplete = {
+  __typename?: 'ArticleListElementAutocomplete';
+  _itemMetadata?: Maybe<_MetadataAutocomplete>;
+  _metadata?: Maybe<IContentMetadataAutocomplete>;
+};
+
+export type ArticleListElementFacet = {
+  __typename?: 'ArticleListElementFacet';
+  _itemMetadata?: Maybe<_MetadataFacet>;
+  _metadata?: Maybe<IContentMetadataFacet>;
+};
+
+export type ArticleListElementOrderByInput = {
+  _itemMetadata?: InputMaybe<_MetadataOrderByInput>;
+  _metadata?: InputMaybe<IContentMetadataOrderByInput>;
+  _minimumScore?: InputMaybe<Scalars['Float']['input']>;
+  _modified?: InputMaybe<OrderBy>;
+  _ranking?: InputMaybe<Ranking>;
+  /** The value needs to be a positive value, but cannot exceed the maximum value of an integer. In case it is exceeded, the maximum of an integer is used. In case of a negative value, semantic search will be disabled. */
+  _semanticWeight?: InputMaybe<Scalars['Float']['input']>;
+};
+
+export type ArticleListElementOutput = {
+  __typename?: 'ArticleListElementOutput';
+  autocomplete?: Maybe<ArticleListElementAutocomplete>;
+  cursor?: Maybe<Scalars['String']['output']>;
+  facets?: Maybe<ArticleListElementFacet>;
+  item?: Maybe<ArticleListElement>;
+  items?: Maybe<Array<Maybe<ArticleListElement>>>;
+  total?: Maybe<Scalars['Int']['output']>;
+};
+
+
+export type ArticleListElementOutputtotalArgs = {
+  all?: InputMaybe<Scalars['Boolean']['input']>;
+};
+
+export type ArticleListElementWhereInput = {
+  _and?: InputMaybe<Array<InputMaybe<ArticleListElementWhereInput>>>;
+  _fulltext?: InputMaybe<SearchableStringFilterInput>;
+  _itemMetadata?: InputMaybe<_MetadataWhereInput>;
+  _metadata?: InputMaybe<IContentMetadataWhereInput>;
+  _modified?: InputMaybe<DateFilterInput>;
+  _not?: InputMaybe<Array<InputMaybe<ArticleListElementWhereInput>>>;
+  _or?: InputMaybe<Array<InputMaybe<ArticleListElementWhereInput>>>;
+};
+
 export type AvailabilityBlock = IData & _IComponent & _IContent & _IItem & {
   __typename?: 'AvailabilityBlock';
   /** @deprecated Use `_link` field instead */
@@ -98,6 +251,7 @@ export type AvailabilityBlockWhereInput = {
 
 export type BlankExperience = IData & _IContent & _IExperience & _IItem & _IPage & {
   __typename?: 'BlankExperience';
+  BlankExperienceSeoSettings?: Maybe<PageSeoSettingsProperty>;
   /** @deprecated Use `_link` field instead */
   _children?: Maybe<QueryRef>;
   _deleted?: Maybe<Scalars['Bool']['output']>;
@@ -125,6 +279,7 @@ export type BlankExperience_linkArgs = {
 
 export type BlankExperienceAutocomplete = {
   __typename?: 'BlankExperienceAutocomplete';
+  BlankExperienceSeoSettings?: Maybe<PageSeoSettingsPropertyAutocomplete>;
   _itemMetadata?: Maybe<_MetadataAutocomplete>;
   _metadata?: Maybe<IContentMetadataAutocomplete>;
   composition?: Maybe<CompositionStructureNodeAutocomplete>;
@@ -132,12 +287,14 @@ export type BlankExperienceAutocomplete = {
 
 export type BlankExperienceFacet = {
   __typename?: 'BlankExperienceFacet';
+  BlankExperienceSeoSettings?: Maybe<PageSeoSettingsPropertyFacet>;
   _itemMetadata?: Maybe<_MetadataFacet>;
   _metadata?: Maybe<IContentMetadataFacet>;
   composition?: Maybe<CompositionStructureNodeFacet>;
 };
 
 export type BlankExperienceOrderByInput = {
+  BlankExperienceSeoSettings?: InputMaybe<PageSeoSettingsPropertyOrderByInput>;
   _itemMetadata?: InputMaybe<_MetadataOrderByInput>;
   _metadata?: InputMaybe<IContentMetadataOrderByInput>;
   _minimumScore?: InputMaybe<Scalars['Float']['input']>;
@@ -164,6 +321,7 @@ export type BlankExperienceOutputtotalArgs = {
 };
 
 export type BlankExperienceWhereInput = {
+  BlankExperienceSeoSettings?: InputMaybe<PageSeoSettingsPropertyWhereInput>;
   _and?: InputMaybe<Array<InputMaybe<BlankExperienceWhereInput>>>;
   _fulltext?: InputMaybe<SearchableStringFilterInput>;
   _itemMetadata?: InputMaybe<_MetadataWhereInput>;
@@ -252,6 +410,370 @@ export type BlankSectionWhereInput = {
   composition?: InputMaybe<CompositionStructureNodeWhereInput>;
 };
 
+export type BlogPostPage = IData & _IContent & _IItem & _IPage & {
+  __typename?: 'BlogPostPage';
+  ArticleAuthor?: Maybe<Scalars['String']['output']>;
+  ArticleSubHeading?: Maybe<Scalars['String']['output']>;
+  BlogPostBody?: Maybe<SearchableRichText>;
+  BlogPostPromoImage?: Maybe<ContentReference>;
+  Heading?: Maybe<Scalars['String']['output']>;
+  SeoSettings?: Maybe<PageSeoSettingsProperty>;
+  Topic?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  /** @deprecated Use `_link` field instead */
+  _children?: Maybe<QueryRef>;
+  _deleted?: Maybe<Scalars['Bool']['output']>;
+  _fulltext?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  _id?: Maybe<Scalars['String']['output']>;
+  _itemMetadata?: Maybe<_Metadata>;
+  _json?: Maybe<Scalars['JSON']['output']>;
+  _link?: Maybe<QueryRef>;
+  _metadata?: Maybe<IContentMetadata>;
+  _modified?: Maybe<Scalars['Date']['output']>;
+  _score?: Maybe<Scalars['Float']['output']>;
+  _track?: Maybe<Scalars['String']['output']>;
+  body2?: Maybe<Scalars['String']['output']>;
+  continueReading?: Maybe<Array<Maybe<_IContent>>>;
+};
+
+
+export type BlogPostPageArticleAuthorArgs = {
+  highlight?: InputMaybe<HighlightOptions>;
+};
+
+
+export type BlogPostPageArticleSubHeadingArgs = {
+  highlight?: InputMaybe<HighlightOptions>;
+};
+
+
+export type BlogPostPageHeadingArgs = {
+  highlight?: InputMaybe<HighlightOptions>;
+};
+
+
+export type BlogPostPageTopicArgs = {
+  highlight?: InputMaybe<HighlightOptions>;
+};
+
+
+export type BlogPostPage_fulltextArgs = {
+  highlight?: InputMaybe<HighlightOptions>;
+};
+
+
+export type BlogPostPage_linkArgs = {
+  type?: InputMaybe<LinkTypes>;
+};
+
+export type BlogPostPageAutocomplete = {
+  __typename?: 'BlogPostPageAutocomplete';
+  BlogPostPromoImage?: Maybe<ContentReferenceAutocomplete>;
+  SeoSettings?: Maybe<PageSeoSettingsPropertyAutocomplete>;
+  _itemMetadata?: Maybe<_MetadataAutocomplete>;
+  _metadata?: Maybe<IContentMetadataAutocomplete>;
+  continueReading?: Maybe<_IContentAutocomplete>;
+};
+
+export type BlogPostPageFacet = {
+  __typename?: 'BlogPostPageFacet';
+  ArticleAuthor?: Maybe<Array<Maybe<StringFacet>>>;
+  ArticleSubHeading?: Maybe<Array<Maybe<StringFacet>>>;
+  BlogPostBody?: Maybe<SearchableRichTextFacet>;
+  BlogPostPromoImage?: Maybe<ContentReferenceFacet>;
+  Heading?: Maybe<Array<Maybe<StringFacet>>>;
+  SeoSettings?: Maybe<PageSeoSettingsPropertyFacet>;
+  Topic?: Maybe<Array<Maybe<StringFacet>>>;
+  _itemMetadata?: Maybe<_MetadataFacet>;
+  _metadata?: Maybe<IContentMetadataFacet>;
+  continueReading?: Maybe<_IContentFacet>;
+};
+
+
+export type BlogPostPageFacetArticleAuthorArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type BlogPostPageFacetArticleSubHeadingArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type BlogPostPageFacetHeadingArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type BlogPostPageFacetTopicArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+export type BlogPostPageOrderByInput = {
+  ArticleAuthor?: InputMaybe<OrderBy>;
+  ArticleSubHeading?: InputMaybe<OrderBy>;
+  BlogPostBody?: InputMaybe<SearchableRichTextOrderByInput>;
+  BlogPostPromoImage?: InputMaybe<ContentReferenceOrderByInput>;
+  Heading?: InputMaybe<OrderBy>;
+  SeoSettings?: InputMaybe<PageSeoSettingsPropertyOrderByInput>;
+  Topic?: InputMaybe<OrderBy>;
+  _itemMetadata?: InputMaybe<_MetadataOrderByInput>;
+  _metadata?: InputMaybe<IContentMetadataOrderByInput>;
+  _minimumScore?: InputMaybe<Scalars['Float']['input']>;
+  _modified?: InputMaybe<OrderBy>;
+  _ranking?: InputMaybe<Ranking>;
+  /** The value needs to be a positive value, but cannot exceed the maximum value of an integer. In case it is exceeded, the maximum of an integer is used. In case of a negative value, semantic search will be disabled. */
+  _semanticWeight?: InputMaybe<Scalars['Float']['input']>;
+  continueReading?: InputMaybe<_IContentOrderByInput>;
+};
+
+export type BlogPostPageOutput = {
+  __typename?: 'BlogPostPageOutput';
+  autocomplete?: Maybe<BlogPostPageAutocomplete>;
+  cursor?: Maybe<Scalars['String']['output']>;
+  facets?: Maybe<BlogPostPageFacet>;
+  item?: Maybe<BlogPostPage>;
+  items?: Maybe<Array<Maybe<BlogPostPage>>>;
+  total?: Maybe<Scalars['Int']['output']>;
+};
+
+
+export type BlogPostPageOutputtotalArgs = {
+  all?: InputMaybe<Scalars['Boolean']['input']>;
+};
+
+export type BlogPostPageWhereInput = {
+  ArticleAuthor?: InputMaybe<SearchableStringFilterInput>;
+  ArticleSubHeading?: InputMaybe<SearchableStringFilterInput>;
+  BlogPostBody?: InputMaybe<SearchableRichTextWhereInput>;
+  BlogPostPromoImage?: InputMaybe<ContentReferenceWhereInput>;
+  Heading?: InputMaybe<SearchableStringFilterInput>;
+  SeoSettings?: InputMaybe<PageSeoSettingsPropertyWhereInput>;
+  Topic?: InputMaybe<SearchableStringFilterInput>;
+  _and?: InputMaybe<Array<InputMaybe<BlogPostPageWhereInput>>>;
+  _fulltext?: InputMaybe<SearchableStringFilterInput>;
+  _itemMetadata?: InputMaybe<_MetadataWhereInput>;
+  _metadata?: InputMaybe<IContentMetadataWhereInput>;
+  _modified?: InputMaybe<DateFilterInput>;
+  _not?: InputMaybe<Array<InputMaybe<BlogPostPageWhereInput>>>;
+  _or?: InputMaybe<Array<InputMaybe<BlogPostPageWhereInput>>>;
+  continueReading?: InputMaybe<_IContentWhereInput>;
+};
+
+export type BlogSectionExperience = IData & _IContent & _IExperience & _IItem & _IPage & {
+  __typename?: 'BlogSectionExperience';
+  /** @deprecated Use `_link` field instead */
+  _children?: Maybe<QueryRef>;
+  _deleted?: Maybe<Scalars['Bool']['output']>;
+  _fulltext?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  _id?: Maybe<Scalars['String']['output']>;
+  _itemMetadata?: Maybe<_Metadata>;
+  _json?: Maybe<Scalars['JSON']['output']>;
+  _link?: Maybe<QueryRef>;
+  _metadata?: Maybe<IContentMetadata>;
+  _modified?: Maybe<Scalars['Date']['output']>;
+  _score?: Maybe<Scalars['Float']['output']>;
+  _track?: Maybe<Scalars['String']['output']>;
+  composition?: Maybe<CompositionStructureNode>;
+  seo_data?: Maybe<PageSeoSettingsProperty>;
+};
+
+
+export type BlogSectionExperience_fulltextArgs = {
+  highlight?: InputMaybe<HighlightOptions>;
+};
+
+
+export type BlogSectionExperience_linkArgs = {
+  type?: InputMaybe<LinkTypes>;
+};
+
+export type BlogSectionExperienceAutocomplete = {
+  __typename?: 'BlogSectionExperienceAutocomplete';
+  _itemMetadata?: Maybe<_MetadataAutocomplete>;
+  _metadata?: Maybe<IContentMetadataAutocomplete>;
+  composition?: Maybe<CompositionStructureNodeAutocomplete>;
+  seo_data?: Maybe<PageSeoSettingsPropertyAutocomplete>;
+};
+
+export type BlogSectionExperienceFacet = {
+  __typename?: 'BlogSectionExperienceFacet';
+  _itemMetadata?: Maybe<_MetadataFacet>;
+  _metadata?: Maybe<IContentMetadataFacet>;
+  composition?: Maybe<CompositionStructureNodeFacet>;
+  seo_data?: Maybe<PageSeoSettingsPropertyFacet>;
+};
+
+export type BlogSectionExperienceOrderByInput = {
+  _itemMetadata?: InputMaybe<_MetadataOrderByInput>;
+  _metadata?: InputMaybe<IContentMetadataOrderByInput>;
+  _minimumScore?: InputMaybe<Scalars['Float']['input']>;
+  _modified?: InputMaybe<OrderBy>;
+  _ranking?: InputMaybe<Ranking>;
+  /** The value needs to be a positive value, but cannot exceed the maximum value of an integer. In case it is exceeded, the maximum of an integer is used. In case of a negative value, semantic search will be disabled. */
+  _semanticWeight?: InputMaybe<Scalars['Float']['input']>;
+  composition?: InputMaybe<CompositionStructureNodeOrderByInput>;
+  seo_data?: InputMaybe<PageSeoSettingsPropertyOrderByInput>;
+};
+
+export type BlogSectionExperienceOutput = {
+  __typename?: 'BlogSectionExperienceOutput';
+  autocomplete?: Maybe<BlogSectionExperienceAutocomplete>;
+  cursor?: Maybe<Scalars['String']['output']>;
+  facets?: Maybe<BlogSectionExperienceFacet>;
+  item?: Maybe<BlogSectionExperience>;
+  items?: Maybe<Array<Maybe<BlogSectionExperience>>>;
+  total?: Maybe<Scalars['Int']['output']>;
+};
+
+
+export type BlogSectionExperienceOutputtotalArgs = {
+  all?: InputMaybe<Scalars['Boolean']['input']>;
+};
+
+export type BlogSectionExperienceWhereInput = {
+  _and?: InputMaybe<Array<InputMaybe<BlogSectionExperienceWhereInput>>>;
+  _fulltext?: InputMaybe<SearchableStringFilterInput>;
+  _itemMetadata?: InputMaybe<_MetadataWhereInput>;
+  _metadata?: InputMaybe<IContentMetadataWhereInput>;
+  _modified?: InputMaybe<DateFilterInput>;
+  _not?: InputMaybe<Array<InputMaybe<BlogSectionExperienceWhereInput>>>;
+  _or?: InputMaybe<Array<InputMaybe<BlogSectionExperienceWhereInput>>>;
+  composition?: InputMaybe<CompositionStructureNodeWhereInput>;
+  seo_data?: InputMaybe<PageSeoSettingsPropertyWhereInput>;
+};
+
+export type BoolFilterInput = {
+  /** `boost` influences the weight of a field by boosting a match with a number (default: 1) — counts more towards the eventual relevance score which can be projected with `_score` — at query time. Note that `boost` cannot be a negative number. */
+  boost?: InputMaybe<Scalars['Int']['input']>;
+  /** `eq` matches on an exact value, but the value is case-insensitive. */
+  eq?: InputMaybe<Scalars['Boolean']['input']>;
+  /** `exist` matches results that have this field. */
+  exist?: InputMaybe<Scalars['Boolean']['input']>;
+  /** `not_eq` retrieves results not matching with an exact (but case-insensitive) value. */
+  notEq?: InputMaybe<Scalars['Boolean']['input']>;
+};
+
+export type ButtonBlock = IData & _IComponent & _IContent & _IItem & {
+  __typename?: 'ButtonBlock';
+  ButtonClass?: Maybe<Scalars['String']['output']>;
+  ButtonText?: Maybe<Scalars['String']['output']>;
+  ButtonType?: Maybe<Scalars['String']['output']>;
+  ButtonUrl?: Maybe<ContentUrl>;
+  ButtonVariant?: Maybe<Scalars['String']['output']>;
+  /** @deprecated Use `_link` field instead */
+  _children?: Maybe<QueryRef>;
+  _deleted?: Maybe<Scalars['Bool']['output']>;
+  _fulltext?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  _id?: Maybe<Scalars['String']['output']>;
+  _itemMetadata?: Maybe<_Metadata>;
+  _json?: Maybe<Scalars['JSON']['output']>;
+  _link?: Maybe<QueryRef>;
+  _metadata?: Maybe<IContentMetadata>;
+  _modified?: Maybe<Scalars['Date']['output']>;
+  _score?: Maybe<Scalars['Float']['output']>;
+  _track?: Maybe<Scalars['String']['output']>;
+};
+
+
+export type ButtonBlock_fulltextArgs = {
+  highlight?: InputMaybe<HighlightOptions>;
+};
+
+
+export type ButtonBlock_linkArgs = {
+  type?: InputMaybe<LinkTypes>;
+};
+
+export type ButtonBlockAutocomplete = {
+  __typename?: 'ButtonBlockAutocomplete';
+  ButtonUrl?: Maybe<ContentUrlAutocomplete>;
+  _itemMetadata?: Maybe<_MetadataAutocomplete>;
+  _metadata?: Maybe<IContentMetadataAutocomplete>;
+};
+
+export type ButtonBlockFacet = {
+  __typename?: 'ButtonBlockFacet';
+  ButtonUrl?: Maybe<ContentUrlFacet>;
+  _itemMetadata?: Maybe<_MetadataFacet>;
+  _metadata?: Maybe<IContentMetadataFacet>;
+};
+
+export type ButtonBlockOrderByInput = {
+  ButtonUrl?: InputMaybe<ContentUrlOrderByInput>;
+  _itemMetadata?: InputMaybe<_MetadataOrderByInput>;
+  _metadata?: InputMaybe<IContentMetadataOrderByInput>;
+  _minimumScore?: InputMaybe<Scalars['Float']['input']>;
+  _modified?: InputMaybe<OrderBy>;
+  _ranking?: InputMaybe<Ranking>;
+  /** The value needs to be a positive value, but cannot exceed the maximum value of an integer. In case it is exceeded, the maximum of an integer is used. In case of a negative value, semantic search will be disabled. */
+  _semanticWeight?: InputMaybe<Scalars['Float']['input']>;
+};
+
+export type ButtonBlockOutput = {
+  __typename?: 'ButtonBlockOutput';
+  autocomplete?: Maybe<ButtonBlockAutocomplete>;
+  cursor?: Maybe<Scalars['String']['output']>;
+  facets?: Maybe<ButtonBlockFacet>;
+  item?: Maybe<ButtonBlock>;
+  items?: Maybe<Array<Maybe<ButtonBlock>>>;
+  total?: Maybe<Scalars['Int']['output']>;
+};
+
+
+export type ButtonBlockOutputtotalArgs = {
+  all?: InputMaybe<Scalars['Boolean']['input']>;
+};
+
+export type ButtonBlockProperty = {
+  __typename?: 'ButtonBlockProperty';
+  ButtonClass?: Maybe<Scalars['String']['output']>;
+  ButtonText?: Maybe<Scalars['String']['output']>;
+  ButtonType?: Maybe<Scalars['String']['output']>;
+  ButtonUrl?: Maybe<ContentUrl>;
+  ButtonVariant?: Maybe<Scalars['String']['output']>;
+};
+
+export type ButtonBlockPropertyAutocomplete = {
+  __typename?: 'ButtonBlockPropertyAutocomplete';
+  ButtonUrl?: Maybe<ContentUrlAutocomplete>;
+};
+
+export type ButtonBlockPropertyFacet = {
+  __typename?: 'ButtonBlockPropertyFacet';
+  ButtonUrl?: Maybe<ContentUrlFacet>;
+};
+
+export type ButtonBlockPropertyOrderByInput = {
+  ButtonUrl?: InputMaybe<ContentUrlOrderByInput>;
+};
+
+export type ButtonBlockPropertyWhereInput = {
+  ButtonUrl?: InputMaybe<ContentUrlWhereInput>;
+};
+
+export type ButtonBlockWhereInput = {
+  ButtonUrl?: InputMaybe<ContentUrlWhereInput>;
+  _and?: InputMaybe<Array<InputMaybe<ButtonBlockWhereInput>>>;
+  _fulltext?: InputMaybe<SearchableStringFilterInput>;
+  _itemMetadata?: InputMaybe<_MetadataWhereInput>;
+  _metadata?: InputMaybe<IContentMetadataWhereInput>;
+  _modified?: InputMaybe<DateFilterInput>;
+  _not?: InputMaybe<Array<InputMaybe<ButtonBlockWhereInput>>>;
+  _or?: InputMaybe<Array<InputMaybe<ButtonBlockWhereInput>>>;
+};
+
 export type CMSPage = IData & _IContent & _IItem & _IPage & {
   __typename?: 'CMSPage';
   /** @deprecated Use `_link` field instead */
@@ -331,6 +853,179 @@ export type CMSPageWhereInput = {
   _not?: InputMaybe<Array<InputMaybe<CMSPageWhereInput>>>;
   _or?: InputMaybe<Array<InputMaybe<CMSPageWhereInput>>>;
   blocks?: InputMaybe<_IContentWhereInput>;
+};
+
+export type CTAElement = IData & _IComponent & _IContent & _IItem & {
+  __typename?: 'CTAElement';
+  Link?: Maybe<ContentUrl>;
+  Text?: Maybe<Scalars['String']['output']>;
+  /** @deprecated Use `_link` field instead */
+  _children?: Maybe<QueryRef>;
+  _deleted?: Maybe<Scalars['Bool']['output']>;
+  _fulltext?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  _id?: Maybe<Scalars['String']['output']>;
+  _itemMetadata?: Maybe<_Metadata>;
+  _json?: Maybe<Scalars['JSON']['output']>;
+  _link?: Maybe<QueryRef>;
+  _metadata?: Maybe<IContentMetadata>;
+  _modified?: Maybe<Scalars['Date']['output']>;
+  _score?: Maybe<Scalars['Float']['output']>;
+  _track?: Maybe<Scalars['String']['output']>;
+};
+
+
+export type CTAElementTextArgs = {
+  highlight?: InputMaybe<HighlightOptions>;
+};
+
+
+export type CTAElement_fulltextArgs = {
+  highlight?: InputMaybe<HighlightOptions>;
+};
+
+
+export type CTAElement_linkArgs = {
+  type?: InputMaybe<LinkTypes>;
+};
+
+export type CTAElementAutocomplete = {
+  __typename?: 'CTAElementAutocomplete';
+  Link?: Maybe<ContentUrlAutocomplete>;
+  _itemMetadata?: Maybe<_MetadataAutocomplete>;
+  _metadata?: Maybe<IContentMetadataAutocomplete>;
+};
+
+export type CTAElementFacet = {
+  __typename?: 'CTAElementFacet';
+  Link?: Maybe<ContentUrlFacet>;
+  Text?: Maybe<Array<Maybe<StringFacet>>>;
+  _itemMetadata?: Maybe<_MetadataFacet>;
+  _metadata?: Maybe<IContentMetadataFacet>;
+};
+
+
+export type CTAElementFacetTextArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+export type CTAElementOrderByInput = {
+  Link?: InputMaybe<ContentUrlOrderByInput>;
+  Text?: InputMaybe<OrderBy>;
+  _itemMetadata?: InputMaybe<_MetadataOrderByInput>;
+  _metadata?: InputMaybe<IContentMetadataOrderByInput>;
+  _minimumScore?: InputMaybe<Scalars['Float']['input']>;
+  _modified?: InputMaybe<OrderBy>;
+  _ranking?: InputMaybe<Ranking>;
+  /** The value needs to be a positive value, but cannot exceed the maximum value of an integer. In case it is exceeded, the maximum of an integer is used. In case of a negative value, semantic search will be disabled. */
+  _semanticWeight?: InputMaybe<Scalars['Float']['input']>;
+};
+
+export type CTAElementOutput = {
+  __typename?: 'CTAElementOutput';
+  autocomplete?: Maybe<CTAElementAutocomplete>;
+  cursor?: Maybe<Scalars['String']['output']>;
+  facets?: Maybe<CTAElementFacet>;
+  item?: Maybe<CTAElement>;
+  items?: Maybe<Array<Maybe<CTAElement>>>;
+  total?: Maybe<Scalars['Int']['output']>;
+};
+
+
+export type CTAElementOutputtotalArgs = {
+  all?: InputMaybe<Scalars['Boolean']['input']>;
+};
+
+export type CTAElementWhereInput = {
+  Link?: InputMaybe<ContentUrlWhereInput>;
+  Text?: InputMaybe<SearchableStringFilterInput>;
+  _and?: InputMaybe<Array<InputMaybe<CTAElementWhereInput>>>;
+  _fulltext?: InputMaybe<SearchableStringFilterInput>;
+  _itemMetadata?: InputMaybe<_MetadataWhereInput>;
+  _metadata?: InputMaybe<IContentMetadataWhereInput>;
+  _modified?: InputMaybe<DateFilterInput>;
+  _not?: InputMaybe<Array<InputMaybe<CTAElementWhereInput>>>;
+  _or?: InputMaybe<Array<InputMaybe<CTAElementWhereInput>>>;
+};
+
+export type CarouselBlock = IData & _IComponent & _IContent & _IItem & {
+  __typename?: 'CarouselBlock';
+  CarouselItemsContentArea?: Maybe<Array<Maybe<_IContent>>>;
+  /** @deprecated Use `_link` field instead */
+  _children?: Maybe<QueryRef>;
+  _deleted?: Maybe<Scalars['Bool']['output']>;
+  _fulltext?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  _id?: Maybe<Scalars['String']['output']>;
+  _itemMetadata?: Maybe<_Metadata>;
+  _json?: Maybe<Scalars['JSON']['output']>;
+  _link?: Maybe<QueryRef>;
+  _metadata?: Maybe<IContentMetadata>;
+  _modified?: Maybe<Scalars['Date']['output']>;
+  _score?: Maybe<Scalars['Float']['output']>;
+  _track?: Maybe<Scalars['String']['output']>;
+};
+
+
+export type CarouselBlock_fulltextArgs = {
+  highlight?: InputMaybe<HighlightOptions>;
+};
+
+
+export type CarouselBlock_linkArgs = {
+  type?: InputMaybe<LinkTypes>;
+};
+
+export type CarouselBlockAutocomplete = {
+  __typename?: 'CarouselBlockAutocomplete';
+  CarouselItemsContentArea?: Maybe<_IContentAutocomplete>;
+  _itemMetadata?: Maybe<_MetadataAutocomplete>;
+  _metadata?: Maybe<IContentMetadataAutocomplete>;
+};
+
+export type CarouselBlockFacet = {
+  __typename?: 'CarouselBlockFacet';
+  CarouselItemsContentArea?: Maybe<_IContentFacet>;
+  _itemMetadata?: Maybe<_MetadataFacet>;
+  _metadata?: Maybe<IContentMetadataFacet>;
+};
+
+export type CarouselBlockOrderByInput = {
+  CarouselItemsContentArea?: InputMaybe<_IContentOrderByInput>;
+  _itemMetadata?: InputMaybe<_MetadataOrderByInput>;
+  _metadata?: InputMaybe<IContentMetadataOrderByInput>;
+  _minimumScore?: InputMaybe<Scalars['Float']['input']>;
+  _modified?: InputMaybe<OrderBy>;
+  _ranking?: InputMaybe<Ranking>;
+  /** The value needs to be a positive value, but cannot exceed the maximum value of an integer. In case it is exceeded, the maximum of an integer is used. In case of a negative value, semantic search will be disabled. */
+  _semanticWeight?: InputMaybe<Scalars['Float']['input']>;
+};
+
+export type CarouselBlockOutput = {
+  __typename?: 'CarouselBlockOutput';
+  autocomplete?: Maybe<CarouselBlockAutocomplete>;
+  cursor?: Maybe<Scalars['String']['output']>;
+  facets?: Maybe<CarouselBlockFacet>;
+  item?: Maybe<CarouselBlock>;
+  items?: Maybe<Array<Maybe<CarouselBlock>>>;
+  total?: Maybe<Scalars['Int']['output']>;
+};
+
+
+export type CarouselBlockOutputtotalArgs = {
+  all?: InputMaybe<Scalars['Boolean']['input']>;
+};
+
+export type CarouselBlockWhereInput = {
+  CarouselItemsContentArea?: InputMaybe<_IContentWhereInput>;
+  _and?: InputMaybe<Array<InputMaybe<CarouselBlockWhereInput>>>;
+  _fulltext?: InputMaybe<SearchableStringFilterInput>;
+  _itemMetadata?: InputMaybe<_MetadataWhereInput>;
+  _metadata?: InputMaybe<IContentMetadataWhereInput>;
+  _modified?: InputMaybe<DateFilterInput>;
+  _not?: InputMaybe<Array<InputMaybe<CarouselBlockWhereInput>>>;
+  _or?: InputMaybe<Array<InputMaybe<CarouselBlockWhereInput>>>;
 };
 
 export type CompositionComponentNode = ICompositionComponentNode & ICompositionNode & {
@@ -656,6 +1351,132 @@ export type ContentMetadatadisplayNameArgs = {
   highlight?: InputMaybe<HighlightOptions>;
 };
 
+export type ContentRecsElement = IData & _IComponent & _IContent & _IItem & {
+  __typename?: 'ContentRecsElement';
+  ElementDeliveryApiKey?: Maybe<Scalars['String']['output']>;
+  ElementRecommendationCount?: Maybe<Scalars['Int']['output']>;
+  /** @deprecated Use `_link` field instead */
+  _children?: Maybe<QueryRef>;
+  _deleted?: Maybe<Scalars['Bool']['output']>;
+  _fulltext?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  _id?: Maybe<Scalars['String']['output']>;
+  _itemMetadata?: Maybe<_Metadata>;
+  _json?: Maybe<Scalars['JSON']['output']>;
+  _link?: Maybe<QueryRef>;
+  _metadata?: Maybe<IContentMetadata>;
+  _modified?: Maybe<Scalars['Date']['output']>;
+  _score?: Maybe<Scalars['Float']['output']>;
+  _track?: Maybe<Scalars['String']['output']>;
+};
+
+
+export type ContentRecsElement_fulltextArgs = {
+  highlight?: InputMaybe<HighlightOptions>;
+};
+
+
+export type ContentRecsElement_linkArgs = {
+  type?: InputMaybe<LinkTypes>;
+};
+
+export type ContentRecsElementAutocomplete = {
+  __typename?: 'ContentRecsElementAutocomplete';
+  _itemMetadata?: Maybe<_MetadataAutocomplete>;
+  _metadata?: Maybe<IContentMetadataAutocomplete>;
+};
+
+export type ContentRecsElementFacet = {
+  __typename?: 'ContentRecsElementFacet';
+  _itemMetadata?: Maybe<_MetadataFacet>;
+  _metadata?: Maybe<IContentMetadataFacet>;
+};
+
+export type ContentRecsElementOrderByInput = {
+  _itemMetadata?: InputMaybe<_MetadataOrderByInput>;
+  _metadata?: InputMaybe<IContentMetadataOrderByInput>;
+  _minimumScore?: InputMaybe<Scalars['Float']['input']>;
+  _modified?: InputMaybe<OrderBy>;
+  _ranking?: InputMaybe<Ranking>;
+  /** The value needs to be a positive value, but cannot exceed the maximum value of an integer. In case it is exceeded, the maximum of an integer is used. In case of a negative value, semantic search will be disabled. */
+  _semanticWeight?: InputMaybe<Scalars['Float']['input']>;
+};
+
+export type ContentRecsElementOutput = {
+  __typename?: 'ContentRecsElementOutput';
+  autocomplete?: Maybe<ContentRecsElementAutocomplete>;
+  cursor?: Maybe<Scalars['String']['output']>;
+  facets?: Maybe<ContentRecsElementFacet>;
+  item?: Maybe<ContentRecsElement>;
+  items?: Maybe<Array<Maybe<ContentRecsElement>>>;
+  total?: Maybe<Scalars['Int']['output']>;
+};
+
+
+export type ContentRecsElementOutputtotalArgs = {
+  all?: InputMaybe<Scalars['Boolean']['input']>;
+};
+
+export type ContentRecsElementWhereInput = {
+  _and?: InputMaybe<Array<InputMaybe<ContentRecsElementWhereInput>>>;
+  _fulltext?: InputMaybe<SearchableStringFilterInput>;
+  _itemMetadata?: InputMaybe<_MetadataWhereInput>;
+  _metadata?: InputMaybe<IContentMetadataWhereInput>;
+  _modified?: InputMaybe<DateFilterInput>;
+  _not?: InputMaybe<Array<InputMaybe<ContentRecsElementWhereInput>>>;
+  _or?: InputMaybe<Array<InputMaybe<ContentRecsElementWhereInput>>>;
+};
+
+export type ContentReference = {
+  __typename?: 'ContentReference';
+  /**
+   * `reference`
+   * |          |        |      |
+   * | -------: | ------ | :--- |
+   * | **type** | &nbsp; | `Data` |
+   * | **id**   | &nbsp; | `_id` |
+   *
+   */
+  item?: Maybe<IData>;
+  key?: Maybe<Scalars['String']['output']>;
+  url?: Maybe<ContentUrl>;
+};
+
+export type ContentReferenceAutocomplete = {
+  __typename?: 'ContentReferenceAutocomplete';
+  key?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  url?: Maybe<ContentUrlAutocomplete>;
+};
+
+
+export type ContentReferenceAutocompletekeyArgs = {
+  limit?: Scalars['Int']['input'];
+  value: Scalars['String']['input'];
+};
+
+export type ContentReferenceFacet = {
+  __typename?: 'ContentReferenceFacet';
+  key?: Maybe<Array<Maybe<StringFacet>>>;
+  url?: Maybe<ContentUrlFacet>;
+};
+
+
+export type ContentReferenceFacetkeyArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+export type ContentReferenceOrderByInput = {
+  key?: InputMaybe<OrderBy>;
+  url?: InputMaybe<ContentUrlOrderByInput>;
+};
+
+export type ContentReferenceWhereInput = {
+  key?: InputMaybe<StringFilterInput>;
+  url?: InputMaybe<ContentUrlWhereInput>;
+};
+
 export type ContentUrl = {
   __typename?: 'ContentUrl';
   base?: Maybe<Scalars['String']['output']>;
@@ -786,6 +1607,98 @@ export type ContentUrlWhereInput = {
   hierarchical?: InputMaybe<StringFilterInput>;
   internal?: InputMaybe<StringFilterInput>;
   type?: InputMaybe<StringFilterInput>;
+};
+
+export type ContinueReadingComponent = IData & _IComponent & _IContent & _IItem & {
+  __typename?: 'ContinueReadingComponent';
+  /** @deprecated Use `_link` field instead */
+  _children?: Maybe<QueryRef>;
+  _deleted?: Maybe<Scalars['Bool']['output']>;
+  _fulltext?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  _id?: Maybe<Scalars['String']['output']>;
+  _itemMetadata?: Maybe<_Metadata>;
+  _json?: Maybe<Scalars['JSON']['output']>;
+  _link?: Maybe<QueryRef>;
+  _metadata?: Maybe<IContentMetadata>;
+  _modified?: Maybe<Scalars['Date']['output']>;
+  _score?: Maybe<Scalars['Float']['output']>;
+  _track?: Maybe<Scalars['String']['output']>;
+  content?: Maybe<Array<Maybe<_IContent>>>;
+  heading?: Maybe<Scalars['String']['output']>;
+  shared?: Maybe<Scalars['Boolean']['output']>;
+  topline?: Maybe<Scalars['String']['output']>;
+};
+
+
+export type ContinueReadingComponent_fulltextArgs = {
+  highlight?: InputMaybe<HighlightOptions>;
+};
+
+
+export type ContinueReadingComponent_linkArgs = {
+  type?: InputMaybe<LinkTypes>;
+};
+
+export type ContinueReadingComponentAutocomplete = {
+  __typename?: 'ContinueReadingComponentAutocomplete';
+  _itemMetadata?: Maybe<_MetadataAutocomplete>;
+  _metadata?: Maybe<IContentMetadataAutocomplete>;
+  content?: Maybe<_IContentAutocomplete>;
+};
+
+export type ContinueReadingComponentFacet = {
+  __typename?: 'ContinueReadingComponentFacet';
+  _itemMetadata?: Maybe<_MetadataFacet>;
+  _metadata?: Maybe<IContentMetadataFacet>;
+  content?: Maybe<_IContentFacet>;
+  shared?: Maybe<Array<Maybe<StringFacet>>>;
+};
+
+
+export type ContinueReadingComponentFacetsharedArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+export type ContinueReadingComponentOrderByInput = {
+  _itemMetadata?: InputMaybe<_MetadataOrderByInput>;
+  _metadata?: InputMaybe<IContentMetadataOrderByInput>;
+  _minimumScore?: InputMaybe<Scalars['Float']['input']>;
+  _modified?: InputMaybe<OrderBy>;
+  _ranking?: InputMaybe<Ranking>;
+  /** The value needs to be a positive value, but cannot exceed the maximum value of an integer. In case it is exceeded, the maximum of an integer is used. In case of a negative value, semantic search will be disabled. */
+  _semanticWeight?: InputMaybe<Scalars['Float']['input']>;
+  content?: InputMaybe<_IContentOrderByInput>;
+  shared?: InputMaybe<OrderBy>;
+};
+
+export type ContinueReadingComponentOutput = {
+  __typename?: 'ContinueReadingComponentOutput';
+  autocomplete?: Maybe<ContinueReadingComponentAutocomplete>;
+  cursor?: Maybe<Scalars['String']['output']>;
+  facets?: Maybe<ContinueReadingComponentFacet>;
+  item?: Maybe<ContinueReadingComponent>;
+  items?: Maybe<Array<Maybe<ContinueReadingComponent>>>;
+  total?: Maybe<Scalars['Int']['output']>;
+};
+
+
+export type ContinueReadingComponentOutputtotalArgs = {
+  all?: InputMaybe<Scalars['Boolean']['input']>;
+};
+
+export type ContinueReadingComponentWhereInput = {
+  _and?: InputMaybe<Array<InputMaybe<ContinueReadingComponentWhereInput>>>;
+  _fulltext?: InputMaybe<SearchableStringFilterInput>;
+  _itemMetadata?: InputMaybe<_MetadataWhereInput>;
+  _metadata?: InputMaybe<IContentMetadataWhereInput>;
+  _modified?: InputMaybe<DateFilterInput>;
+  _not?: InputMaybe<Array<InputMaybe<ContinueReadingComponentWhereInput>>>;
+  _or?: InputMaybe<Array<InputMaybe<ContinueReadingComponentWhereInput>>>;
+  content?: InputMaybe<_IContentWhereInput>;
+  shared?: InputMaybe<BoolFilterInput>;
 };
 
 export type Data = IData & {
@@ -1322,6 +2235,96 @@ export type HeaderWhereInput = {
   navItems?: InputMaybe<_IContentWhereInput>;
 };
 
+export type HeadingElement = IData & _IComponent & _IContent & _IItem & {
+  __typename?: 'HeadingElement';
+  /** @deprecated Use `_link` field instead */
+  _children?: Maybe<QueryRef>;
+  _deleted?: Maybe<Scalars['Bool']['output']>;
+  _fulltext?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  _id?: Maybe<Scalars['String']['output']>;
+  _itemMetadata?: Maybe<_Metadata>;
+  _json?: Maybe<Scalars['JSON']['output']>;
+  _link?: Maybe<QueryRef>;
+  _metadata?: Maybe<IContentMetadata>;
+  _modified?: Maybe<Scalars['Date']['output']>;
+  _score?: Maybe<Scalars['Float']['output']>;
+  _track?: Maybe<Scalars['String']['output']>;
+  headingText?: Maybe<Scalars['String']['output']>;
+};
+
+
+export type HeadingElement_fulltextArgs = {
+  highlight?: InputMaybe<HighlightOptions>;
+};
+
+
+export type HeadingElement_linkArgs = {
+  type?: InputMaybe<LinkTypes>;
+};
+
+
+export type HeadingElementheadingTextArgs = {
+  highlight?: InputMaybe<HighlightOptions>;
+};
+
+export type HeadingElementAutocomplete = {
+  __typename?: 'HeadingElementAutocomplete';
+  _itemMetadata?: Maybe<_MetadataAutocomplete>;
+  _metadata?: Maybe<IContentMetadataAutocomplete>;
+};
+
+export type HeadingElementFacet = {
+  __typename?: 'HeadingElementFacet';
+  _itemMetadata?: Maybe<_MetadataFacet>;
+  _metadata?: Maybe<IContentMetadataFacet>;
+  headingText?: Maybe<Array<Maybe<StringFacet>>>;
+};
+
+
+export type HeadingElementFacetheadingTextArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+export type HeadingElementOrderByInput = {
+  _itemMetadata?: InputMaybe<_MetadataOrderByInput>;
+  _metadata?: InputMaybe<IContentMetadataOrderByInput>;
+  _minimumScore?: InputMaybe<Scalars['Float']['input']>;
+  _modified?: InputMaybe<OrderBy>;
+  _ranking?: InputMaybe<Ranking>;
+  /** The value needs to be a positive value, but cannot exceed the maximum value of an integer. In case it is exceeded, the maximum of an integer is used. In case of a negative value, semantic search will be disabled. */
+  _semanticWeight?: InputMaybe<Scalars['Float']['input']>;
+  headingText?: InputMaybe<OrderBy>;
+};
+
+export type HeadingElementOutput = {
+  __typename?: 'HeadingElementOutput';
+  autocomplete?: Maybe<HeadingElementAutocomplete>;
+  cursor?: Maybe<Scalars['String']['output']>;
+  facets?: Maybe<HeadingElementFacet>;
+  item?: Maybe<HeadingElement>;
+  items?: Maybe<Array<Maybe<HeadingElement>>>;
+  total?: Maybe<Scalars['Int']['output']>;
+};
+
+
+export type HeadingElementOutputtotalArgs = {
+  all?: InputMaybe<Scalars['Boolean']['input']>;
+};
+
+export type HeadingElementWhereInput = {
+  _and?: InputMaybe<Array<InputMaybe<HeadingElementWhereInput>>>;
+  _fulltext?: InputMaybe<SearchableStringFilterInput>;
+  _itemMetadata?: InputMaybe<_MetadataWhereInput>;
+  _metadata?: InputMaybe<IContentMetadataWhereInput>;
+  _modified?: InputMaybe<DateFilterInput>;
+  _not?: InputMaybe<Array<InputMaybe<HeadingElementWhereInput>>>;
+  _or?: InputMaybe<Array<InputMaybe<HeadingElementWhereInput>>>;
+  headingText?: InputMaybe<SearchableStringFilterInput>;
+};
+
 export type HelloWorld = IData & _IComponent & _IContent & _IItem & {
   __typename?: 'HelloWorld';
   /** @deprecated Use `_link` field instead */
@@ -1399,6 +2402,14 @@ export type HelloWorldWhereInput = {
 
 export type HeroBlock = IData & _IComponent & _IContent & _IItem & {
   __typename?: 'HeroBlock';
+  Description?: Maybe<RichText>;
+  Eyebrow?: Maybe<Scalars['String']['output']>;
+  Heading?: Maybe<Scalars['String']['output']>;
+  HeroButton?: Maybe<ButtonBlockProperty>;
+  HeroColor?: Maybe<Scalars['String']['output']>;
+  HeroImage?: Maybe<ContentReference>;
+  Icon?: Maybe<Scalars['String']['output']>;
+  SubHeading?: Maybe<Scalars['String']['output']>;
   /** @deprecated Use `_link` field instead */
   _children?: Maybe<QueryRef>;
   _deleted?: Maybe<Scalars['Bool']['output']>;
@@ -1430,17 +2441,26 @@ export type HeroBlock_linkArgs = {
 
 export type HeroBlockAutocomplete = {
   __typename?: 'HeroBlockAutocomplete';
+  Description?: Maybe<RichTextAutocomplete>;
+  HeroButton?: Maybe<ButtonBlockPropertyAutocomplete>;
+  HeroImage?: Maybe<ContentReferenceAutocomplete>;
   _itemMetadata?: Maybe<_MetadataAutocomplete>;
   _metadata?: Maybe<IContentMetadataAutocomplete>;
 };
 
 export type HeroBlockFacet = {
   __typename?: 'HeroBlockFacet';
+  Description?: Maybe<RichTextFacet>;
+  HeroButton?: Maybe<ButtonBlockPropertyFacet>;
+  HeroImage?: Maybe<ContentReferenceFacet>;
   _itemMetadata?: Maybe<_MetadataFacet>;
   _metadata?: Maybe<IContentMetadataFacet>;
 };
 
 export type HeroBlockOrderByInput = {
+  Description?: InputMaybe<RichTextOrderByInput>;
+  HeroButton?: InputMaybe<ButtonBlockPropertyOrderByInput>;
+  HeroImage?: InputMaybe<ContentReferenceOrderByInput>;
   _itemMetadata?: InputMaybe<_MetadataOrderByInput>;
   _metadata?: InputMaybe<IContentMetadataOrderByInput>;
   _minimumScore?: InputMaybe<Scalars['Float']['input']>;
@@ -1466,6 +2486,9 @@ export type HeroBlockOutputtotalArgs = {
 };
 
 export type HeroBlockWhereInput = {
+  Description?: InputMaybe<RichTextWhereInput>;
+  HeroButton?: InputMaybe<ButtonBlockPropertyWhereInput>;
+  HeroImage?: InputMaybe<ContentReferenceWhereInput>;
   _and?: InputMaybe<Array<InputMaybe<HeroBlockWhereInput>>>;
   _fulltext?: InputMaybe<SearchableStringFilterInput>;
   _itemMetadata?: InputMaybe<_MetadataWhereInput>;
@@ -2070,8 +3093,88 @@ export type IMediaMetadatadisplayNameArgs = {
   highlight?: InputMaybe<HighlightOptions>;
 };
 
+export type ImageElement = IData & _IComponent & _IContent & _IItem & {
+  __typename?: 'ImageElement';
+  /** @deprecated Use `_link` field instead */
+  _children?: Maybe<QueryRef>;
+  _deleted?: Maybe<Scalars['Bool']['output']>;
+  _fulltext?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  _id?: Maybe<Scalars['String']['output']>;
+  _itemMetadata?: Maybe<_Metadata>;
+  _json?: Maybe<Scalars['JSON']['output']>;
+  _link?: Maybe<QueryRef>;
+  _metadata?: Maybe<IContentMetadata>;
+  _modified?: Maybe<Scalars['Date']['output']>;
+  _score?: Maybe<Scalars['Float']['output']>;
+  _track?: Maybe<Scalars['String']['output']>;
+  altText?: Maybe<Scalars['String']['output']>;
+  imageLink?: Maybe<ContentReference>;
+};
+
+
+export type ImageElement_fulltextArgs = {
+  highlight?: InputMaybe<HighlightOptions>;
+};
+
+
+export type ImageElement_linkArgs = {
+  type?: InputMaybe<LinkTypes>;
+};
+
+export type ImageElementAutocomplete = {
+  __typename?: 'ImageElementAutocomplete';
+  _itemMetadata?: Maybe<_MetadataAutocomplete>;
+  _metadata?: Maybe<IContentMetadataAutocomplete>;
+  imageLink?: Maybe<ContentReferenceAutocomplete>;
+};
+
+export type ImageElementFacet = {
+  __typename?: 'ImageElementFacet';
+  _itemMetadata?: Maybe<_MetadataFacet>;
+  _metadata?: Maybe<IContentMetadataFacet>;
+  imageLink?: Maybe<ContentReferenceFacet>;
+};
+
+export type ImageElementOrderByInput = {
+  _itemMetadata?: InputMaybe<_MetadataOrderByInput>;
+  _metadata?: InputMaybe<IContentMetadataOrderByInput>;
+  _minimumScore?: InputMaybe<Scalars['Float']['input']>;
+  _modified?: InputMaybe<OrderBy>;
+  _ranking?: InputMaybe<Ranking>;
+  /** The value needs to be a positive value, but cannot exceed the maximum value of an integer. In case it is exceeded, the maximum of an integer is used. In case of a negative value, semantic search will be disabled. */
+  _semanticWeight?: InputMaybe<Scalars['Float']['input']>;
+  imageLink?: InputMaybe<ContentReferenceOrderByInput>;
+};
+
+export type ImageElementOutput = {
+  __typename?: 'ImageElementOutput';
+  autocomplete?: Maybe<ImageElementAutocomplete>;
+  cursor?: Maybe<Scalars['String']['output']>;
+  facets?: Maybe<ImageElementFacet>;
+  item?: Maybe<ImageElement>;
+  items?: Maybe<Array<Maybe<ImageElement>>>;
+  total?: Maybe<Scalars['Int']['output']>;
+};
+
+
+export type ImageElementOutputtotalArgs = {
+  all?: InputMaybe<Scalars['Boolean']['input']>;
+};
+
+export type ImageElementWhereInput = {
+  _and?: InputMaybe<Array<InputMaybe<ImageElementWhereInput>>>;
+  _fulltext?: InputMaybe<SearchableStringFilterInput>;
+  _itemMetadata?: InputMaybe<_MetadataWhereInput>;
+  _metadata?: InputMaybe<IContentMetadataWhereInput>;
+  _modified?: InputMaybe<DateFilterInput>;
+  _not?: InputMaybe<Array<InputMaybe<ImageElementWhereInput>>>;
+  _or?: InputMaybe<Array<InputMaybe<ImageElementWhereInput>>>;
+  imageLink?: InputMaybe<ContentReferenceWhereInput>;
+};
+
 export type ImageMedia = IData & _IAssetItem & _IContent & _IImage & _IImageItem & _IItem & _IMedia & {
   __typename?: 'ImageMedia';
+  AltText?: Maybe<Scalars['String']['output']>;
   _assetMetadata?: Maybe<_AssetMetadata>;
   /** @deprecated Use `_link` field instead */
   _children?: Maybe<QueryRef>;
@@ -2232,9 +3335,287 @@ export type ItemMetadatadisplayNameArgs = {
   highlight?: InputMaybe<HighlightOptions>;
 };
 
+export type LandingPage = IData & _IContent & _IItem & _IPage & {
+  __typename?: 'LandingPage';
+  MainContentArea?: Maybe<Array<Maybe<_IContent>>>;
+  SeoSettings?: Maybe<PageSeoSettingsProperty>;
+  TopContentArea?: Maybe<Array<Maybe<_IContent>>>;
+  /** @deprecated Use `_link` field instead */
+  _children?: Maybe<QueryRef>;
+  _deleted?: Maybe<Scalars['Bool']['output']>;
+  _fulltext?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  _id?: Maybe<Scalars['String']['output']>;
+  _itemMetadata?: Maybe<_Metadata>;
+  _json?: Maybe<Scalars['JSON']['output']>;
+  _link?: Maybe<QueryRef>;
+  _metadata?: Maybe<IContentMetadata>;
+  _modified?: Maybe<Scalars['Date']['output']>;
+  _score?: Maybe<Scalars['Float']['output']>;
+  _track?: Maybe<Scalars['String']['output']>;
+};
+
+
+export type LandingPage_fulltextArgs = {
+  highlight?: InputMaybe<HighlightOptions>;
+};
+
+
+export type LandingPage_linkArgs = {
+  type?: InputMaybe<LinkTypes>;
+};
+
+export type LandingPageAutocomplete = {
+  __typename?: 'LandingPageAutocomplete';
+  MainContentArea?: Maybe<_IContentAutocomplete>;
+  SeoSettings?: Maybe<PageSeoSettingsPropertyAutocomplete>;
+  TopContentArea?: Maybe<_IContentAutocomplete>;
+  _itemMetadata?: Maybe<_MetadataAutocomplete>;
+  _metadata?: Maybe<IContentMetadataAutocomplete>;
+};
+
+export type LandingPageFacet = {
+  __typename?: 'LandingPageFacet';
+  MainContentArea?: Maybe<_IContentFacet>;
+  SeoSettings?: Maybe<PageSeoSettingsPropertyFacet>;
+  TopContentArea?: Maybe<_IContentFacet>;
+  _itemMetadata?: Maybe<_MetadataFacet>;
+  _metadata?: Maybe<IContentMetadataFacet>;
+};
+
+export type LandingPageOrderByInput = {
+  MainContentArea?: InputMaybe<_IContentOrderByInput>;
+  SeoSettings?: InputMaybe<PageSeoSettingsPropertyOrderByInput>;
+  TopContentArea?: InputMaybe<_IContentOrderByInput>;
+  _itemMetadata?: InputMaybe<_MetadataOrderByInput>;
+  _metadata?: InputMaybe<IContentMetadataOrderByInput>;
+  _minimumScore?: InputMaybe<Scalars['Float']['input']>;
+  _modified?: InputMaybe<OrderBy>;
+  _ranking?: InputMaybe<Ranking>;
+  /** The value needs to be a positive value, but cannot exceed the maximum value of an integer. In case it is exceeded, the maximum of an integer is used. In case of a negative value, semantic search will be disabled. */
+  _semanticWeight?: InputMaybe<Scalars['Float']['input']>;
+};
+
+export type LandingPageOutput = {
+  __typename?: 'LandingPageOutput';
+  autocomplete?: Maybe<LandingPageAutocomplete>;
+  cursor?: Maybe<Scalars['String']['output']>;
+  facets?: Maybe<LandingPageFacet>;
+  item?: Maybe<LandingPage>;
+  items?: Maybe<Array<Maybe<LandingPage>>>;
+  total?: Maybe<Scalars['Int']['output']>;
+};
+
+
+export type LandingPageOutputtotalArgs = {
+  all?: InputMaybe<Scalars['Boolean']['input']>;
+};
+
+export type LandingPageWhereInput = {
+  MainContentArea?: InputMaybe<_IContentWhereInput>;
+  SeoSettings?: InputMaybe<PageSeoSettingsPropertyWhereInput>;
+  TopContentArea?: InputMaybe<_IContentWhereInput>;
+  _and?: InputMaybe<Array<InputMaybe<LandingPageWhereInput>>>;
+  _fulltext?: InputMaybe<SearchableStringFilterInput>;
+  _itemMetadata?: InputMaybe<_MetadataWhereInput>;
+  _metadata?: InputMaybe<IContentMetadataWhereInput>;
+  _modified?: InputMaybe<DateFilterInput>;
+  _not?: InputMaybe<Array<InputMaybe<LandingPageWhereInput>>>;
+  _or?: InputMaybe<Array<InputMaybe<LandingPageWhereInput>>>;
+};
+
+export type LayoutSettingsBlock = IData & _IComponent & _IContent & _IItem & {
+  __typename?: 'LayoutSettingsBlock';
+  /** @deprecated Use `_link` field instead */
+  _children?: Maybe<QueryRef>;
+  _deleted?: Maybe<Scalars['Bool']['output']>;
+  _fulltext?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  _id?: Maybe<Scalars['String']['output']>;
+  _itemMetadata?: Maybe<_Metadata>;
+  _json?: Maybe<Scalars['JSON']['output']>;
+  _link?: Maybe<QueryRef>;
+  _metadata?: Maybe<IContentMetadata>;
+  _modified?: Maybe<Scalars['Date']['output']>;
+  _score?: Maybe<Scalars['Float']['output']>;
+  _track?: Maybe<Scalars['String']['output']>;
+  appIdentifiers?: Maybe<Scalars['String']['output']>;
+  contactInfo?: Maybe<RichText>;
+  contactInfoHeading?: Maybe<Scalars['String']['output']>;
+  copyright?: Maybe<Scalars['String']['output']>;
+  footerMenus?: Maybe<Array<Maybe<_IContent>>>;
+  legalLinks?: Maybe<Array<Maybe<Link>>>;
+  mainMenu?: Maybe<Array<Maybe<_IContent>>>;
+  serviceButtons?: Maybe<Array<Maybe<_IContent>>>;
+};
+
+
+export type LayoutSettingsBlock_fulltextArgs = {
+  highlight?: InputMaybe<HighlightOptions>;
+};
+
+
+export type LayoutSettingsBlock_linkArgs = {
+  type?: InputMaybe<LinkTypes>;
+};
+
+export type LayoutSettingsBlockAutocomplete = {
+  __typename?: 'LayoutSettingsBlockAutocomplete';
+  _itemMetadata?: Maybe<_MetadataAutocomplete>;
+  _metadata?: Maybe<IContentMetadataAutocomplete>;
+  appIdentifiers?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  contactInfo?: Maybe<RichTextAutocomplete>;
+  footerMenus?: Maybe<_IContentAutocomplete>;
+  legalLinks?: Maybe<LinkAutocomplete>;
+  mainMenu?: Maybe<_IContentAutocomplete>;
+  serviceButtons?: Maybe<_IContentAutocomplete>;
+};
+
+
+export type LayoutSettingsBlockAutocompleteappIdentifiersArgs = {
+  limit?: Scalars['Int']['input'];
+  value: Scalars['String']['input'];
+};
+
+export type LayoutSettingsBlockFacet = {
+  __typename?: 'LayoutSettingsBlockFacet';
+  _itemMetadata?: Maybe<_MetadataFacet>;
+  _metadata?: Maybe<IContentMetadataFacet>;
+  appIdentifiers?: Maybe<Array<Maybe<StringFacet>>>;
+  contactInfo?: Maybe<RichTextFacet>;
+  footerMenus?: Maybe<_IContentFacet>;
+  legalLinks?: Maybe<LinkFacet>;
+  mainMenu?: Maybe<_IContentFacet>;
+  serviceButtons?: Maybe<_IContentFacet>;
+};
+
+
+export type LayoutSettingsBlockFacetappIdentifiersArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+export type LayoutSettingsBlockOrderByInput = {
+  _itemMetadata?: InputMaybe<_MetadataOrderByInput>;
+  _metadata?: InputMaybe<IContentMetadataOrderByInput>;
+  _minimumScore?: InputMaybe<Scalars['Float']['input']>;
+  _modified?: InputMaybe<OrderBy>;
+  _ranking?: InputMaybe<Ranking>;
+  /** The value needs to be a positive value, but cannot exceed the maximum value of an integer. In case it is exceeded, the maximum of an integer is used. In case of a negative value, semantic search will be disabled. */
+  _semanticWeight?: InputMaybe<Scalars['Float']['input']>;
+  appIdentifiers?: InputMaybe<OrderBy>;
+  contactInfo?: InputMaybe<RichTextOrderByInput>;
+  footerMenus?: InputMaybe<_IContentOrderByInput>;
+  legalLinks?: InputMaybe<LinkOrderByInput>;
+  mainMenu?: InputMaybe<_IContentOrderByInput>;
+  serviceButtons?: InputMaybe<_IContentOrderByInput>;
+};
+
+export type LayoutSettingsBlockOutput = {
+  __typename?: 'LayoutSettingsBlockOutput';
+  autocomplete?: Maybe<LayoutSettingsBlockAutocomplete>;
+  cursor?: Maybe<Scalars['String']['output']>;
+  facets?: Maybe<LayoutSettingsBlockFacet>;
+  item?: Maybe<LayoutSettingsBlock>;
+  items?: Maybe<Array<Maybe<LayoutSettingsBlock>>>;
+  total?: Maybe<Scalars['Int']['output']>;
+};
+
+
+export type LayoutSettingsBlockOutputtotalArgs = {
+  all?: InputMaybe<Scalars['Boolean']['input']>;
+};
+
+export type LayoutSettingsBlockWhereInput = {
+  _and?: InputMaybe<Array<InputMaybe<LayoutSettingsBlockWhereInput>>>;
+  _fulltext?: InputMaybe<SearchableStringFilterInput>;
+  _itemMetadata?: InputMaybe<_MetadataWhereInput>;
+  _metadata?: InputMaybe<IContentMetadataWhereInput>;
+  _modified?: InputMaybe<DateFilterInput>;
+  _not?: InputMaybe<Array<InputMaybe<LayoutSettingsBlockWhereInput>>>;
+  _or?: InputMaybe<Array<InputMaybe<LayoutSettingsBlockWhereInput>>>;
+  appIdentifiers?: InputMaybe<StringFilterInput>;
+  contactInfo?: InputMaybe<RichTextWhereInput>;
+  footerMenus?: InputMaybe<_IContentWhereInput>;
+  legalLinks?: InputMaybe<LinkWhereInput>;
+  mainMenu?: InputMaybe<_IContentWhereInput>;
+  serviceButtons?: InputMaybe<_IContentWhereInput>;
+};
+
+export type Link = {
+  __typename?: 'Link';
+  target?: Maybe<Scalars['String']['output']>;
+  text?: Maybe<Scalars['String']['output']>;
+  title?: Maybe<Scalars['String']['output']>;
+  url?: Maybe<ContentUrl>;
+};
+
+
+export type LinktextArgs = {
+  highlight?: InputMaybe<HighlightOptions>;
+};
+
+export type LinkAutocomplete = {
+  __typename?: 'LinkAutocomplete';
+  target?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  title?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  url?: Maybe<ContentUrlAutocomplete>;
+};
+
+
+export type LinkAutocompletetargetArgs = {
+  limit?: Scalars['Int']['input'];
+  value: Scalars['String']['input'];
+};
+
+
+export type LinkAutocompletetitleArgs = {
+  limit?: Scalars['Int']['input'];
+  value: Scalars['String']['input'];
+};
+
 export type LinkConfig = {
   from?: InputMaybe<Scalars['String']['input']>;
   to?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type LinkFacet = {
+  __typename?: 'LinkFacet';
+  target?: Maybe<Array<Maybe<StringFacet>>>;
+  text?: Maybe<Array<Maybe<StringFacet>>>;
+  title?: Maybe<Array<Maybe<StringFacet>>>;
+  url?: Maybe<ContentUrlFacet>;
+};
+
+
+export type LinkFacettargetArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type LinkFacettextArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type LinkFacettitleArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+export type LinkOrderByInput = {
+  target?: InputMaybe<OrderBy>;
+  text?: InputMaybe<OrderBy>;
+  title?: InputMaybe<OrderBy>;
+  url?: InputMaybe<ContentUrlOrderByInput>;
 };
 
 export enum LinkTypes {
@@ -2271,6 +3652,13 @@ export enum LinkTypes {
    */
   PATH = 'PATH'
 }
+
+export type LinkWhereInput = {
+  target?: InputMaybe<StringFilterInput>;
+  text?: InputMaybe<SearchableStringFilterInput>;
+  title?: InputMaybe<StringFilterInput>;
+  url?: InputMaybe<ContentUrlWhereInput>;
+};
 
 export enum Locales {
   ALL = 'ALL',
@@ -2472,6 +3860,169 @@ export type MediaMetadatadisplayNameArgs = {
   highlight?: InputMaybe<HighlightOptions>;
 };
 
+export type MegaMenuGroupBlock = IData & _IComponent & _IContent & _IItem & {
+  __typename?: 'MegaMenuGroupBlock';
+  MegaMenuContentArea?: Maybe<Array<Maybe<_IContent>>>;
+  MegaMenuUrl?: Maybe<ContentUrl>;
+  MenuMenuHeading?: Maybe<Scalars['String']['output']>;
+  /** @deprecated Use `_link` field instead */
+  _children?: Maybe<QueryRef>;
+  _deleted?: Maybe<Scalars['Bool']['output']>;
+  _fulltext?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  _id?: Maybe<Scalars['String']['output']>;
+  _itemMetadata?: Maybe<_Metadata>;
+  _json?: Maybe<Scalars['JSON']['output']>;
+  _link?: Maybe<QueryRef>;
+  _metadata?: Maybe<IContentMetadata>;
+  _modified?: Maybe<Scalars['Date']['output']>;
+  _score?: Maybe<Scalars['Float']['output']>;
+  _track?: Maybe<Scalars['String']['output']>;
+};
+
+
+export type MegaMenuGroupBlock_fulltextArgs = {
+  highlight?: InputMaybe<HighlightOptions>;
+};
+
+
+export type MegaMenuGroupBlock_linkArgs = {
+  type?: InputMaybe<LinkTypes>;
+};
+
+export type MegaMenuGroupBlockAutocomplete = {
+  __typename?: 'MegaMenuGroupBlockAutocomplete';
+  MegaMenuContentArea?: Maybe<_IContentAutocomplete>;
+  MegaMenuUrl?: Maybe<ContentUrlAutocomplete>;
+  _itemMetadata?: Maybe<_MetadataAutocomplete>;
+  _metadata?: Maybe<IContentMetadataAutocomplete>;
+};
+
+export type MegaMenuGroupBlockFacet = {
+  __typename?: 'MegaMenuGroupBlockFacet';
+  MegaMenuContentArea?: Maybe<_IContentFacet>;
+  MegaMenuUrl?: Maybe<ContentUrlFacet>;
+  _itemMetadata?: Maybe<_MetadataFacet>;
+  _metadata?: Maybe<IContentMetadataFacet>;
+};
+
+export type MegaMenuGroupBlockOrderByInput = {
+  MegaMenuContentArea?: InputMaybe<_IContentOrderByInput>;
+  MegaMenuUrl?: InputMaybe<ContentUrlOrderByInput>;
+  _itemMetadata?: InputMaybe<_MetadataOrderByInput>;
+  _metadata?: InputMaybe<IContentMetadataOrderByInput>;
+  _minimumScore?: InputMaybe<Scalars['Float']['input']>;
+  _modified?: InputMaybe<OrderBy>;
+  _ranking?: InputMaybe<Ranking>;
+  /** The value needs to be a positive value, but cannot exceed the maximum value of an integer. In case it is exceeded, the maximum of an integer is used. In case of a negative value, semantic search will be disabled. */
+  _semanticWeight?: InputMaybe<Scalars['Float']['input']>;
+};
+
+export type MegaMenuGroupBlockOutput = {
+  __typename?: 'MegaMenuGroupBlockOutput';
+  autocomplete?: Maybe<MegaMenuGroupBlockAutocomplete>;
+  cursor?: Maybe<Scalars['String']['output']>;
+  facets?: Maybe<MegaMenuGroupBlockFacet>;
+  item?: Maybe<MegaMenuGroupBlock>;
+  items?: Maybe<Array<Maybe<MegaMenuGroupBlock>>>;
+  total?: Maybe<Scalars['Int']['output']>;
+};
+
+
+export type MegaMenuGroupBlockOutputtotalArgs = {
+  all?: InputMaybe<Scalars['Boolean']['input']>;
+};
+
+export type MegaMenuGroupBlockWhereInput = {
+  MegaMenuContentArea?: InputMaybe<_IContentWhereInput>;
+  MegaMenuUrl?: InputMaybe<ContentUrlWhereInput>;
+  _and?: InputMaybe<Array<InputMaybe<MegaMenuGroupBlockWhereInput>>>;
+  _fulltext?: InputMaybe<SearchableStringFilterInput>;
+  _itemMetadata?: InputMaybe<_MetadataWhereInput>;
+  _metadata?: InputMaybe<IContentMetadataWhereInput>;
+  _modified?: InputMaybe<DateFilterInput>;
+  _not?: InputMaybe<Array<InputMaybe<MegaMenuGroupBlockWhereInput>>>;
+  _or?: InputMaybe<Array<InputMaybe<MegaMenuGroupBlockWhereInput>>>;
+};
+
+export type MenuNavigationBlock = IData & _IComponent & _IContent & _IItem & {
+  __typename?: 'MenuNavigationBlock';
+  MenuNavigationHeading?: Maybe<Scalars['String']['output']>;
+  NavigationLinks?: Maybe<Array<Maybe<Link>>>;
+  /** @deprecated Use `_link` field instead */
+  _children?: Maybe<QueryRef>;
+  _deleted?: Maybe<Scalars['Bool']['output']>;
+  _fulltext?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  _id?: Maybe<Scalars['String']['output']>;
+  _itemMetadata?: Maybe<_Metadata>;
+  _json?: Maybe<Scalars['JSON']['output']>;
+  _link?: Maybe<QueryRef>;
+  _metadata?: Maybe<IContentMetadata>;
+  _modified?: Maybe<Scalars['Date']['output']>;
+  _score?: Maybe<Scalars['Float']['output']>;
+  _track?: Maybe<Scalars['String']['output']>;
+};
+
+
+export type MenuNavigationBlock_fulltextArgs = {
+  highlight?: InputMaybe<HighlightOptions>;
+};
+
+
+export type MenuNavigationBlock_linkArgs = {
+  type?: InputMaybe<LinkTypes>;
+};
+
+export type MenuNavigationBlockAutocomplete = {
+  __typename?: 'MenuNavigationBlockAutocomplete';
+  NavigationLinks?: Maybe<LinkAutocomplete>;
+  _itemMetadata?: Maybe<_MetadataAutocomplete>;
+  _metadata?: Maybe<IContentMetadataAutocomplete>;
+};
+
+export type MenuNavigationBlockFacet = {
+  __typename?: 'MenuNavigationBlockFacet';
+  NavigationLinks?: Maybe<LinkFacet>;
+  _itemMetadata?: Maybe<_MetadataFacet>;
+  _metadata?: Maybe<IContentMetadataFacet>;
+};
+
+export type MenuNavigationBlockOrderByInput = {
+  NavigationLinks?: InputMaybe<LinkOrderByInput>;
+  _itemMetadata?: InputMaybe<_MetadataOrderByInput>;
+  _metadata?: InputMaybe<IContentMetadataOrderByInput>;
+  _minimumScore?: InputMaybe<Scalars['Float']['input']>;
+  _modified?: InputMaybe<OrderBy>;
+  _ranking?: InputMaybe<Ranking>;
+  /** The value needs to be a positive value, but cannot exceed the maximum value of an integer. In case it is exceeded, the maximum of an integer is used. In case of a negative value, semantic search will be disabled. */
+  _semanticWeight?: InputMaybe<Scalars['Float']['input']>;
+};
+
+export type MenuNavigationBlockOutput = {
+  __typename?: 'MenuNavigationBlockOutput';
+  autocomplete?: Maybe<MenuNavigationBlockAutocomplete>;
+  cursor?: Maybe<Scalars['String']['output']>;
+  facets?: Maybe<MenuNavigationBlockFacet>;
+  item?: Maybe<MenuNavigationBlock>;
+  items?: Maybe<Array<Maybe<MenuNavigationBlock>>>;
+  total?: Maybe<Scalars['Int']['output']>;
+};
+
+
+export type MenuNavigationBlockOutputtotalArgs = {
+  all?: InputMaybe<Scalars['Boolean']['input']>;
+};
+
+export type MenuNavigationBlockWhereInput = {
+  NavigationLinks?: InputMaybe<LinkWhereInput>;
+  _and?: InputMaybe<Array<InputMaybe<MenuNavigationBlockWhereInput>>>;
+  _fulltext?: InputMaybe<SearchableStringFilterInput>;
+  _itemMetadata?: InputMaybe<_MetadataWhereInput>;
+  _metadata?: InputMaybe<IContentMetadataWhereInput>;
+  _modified?: InputMaybe<DateFilterInput>;
+  _not?: InputMaybe<Array<InputMaybe<MenuNavigationBlockWhereInput>>>;
+  _or?: InputMaybe<Array<InputMaybe<MenuNavigationBlockWhereInput>>>;
+};
+
 export type NavItem = IData & _IComponent & _IContent & _IItem & {
   __typename?: 'NavItem';
   /** @deprecated Use `_link` field instead */
@@ -2559,6 +4110,80 @@ export type NumberFactor = {
   value?: InputMaybe<Scalars['Float']['input']>;
 };
 
+export type OdpEmbedBlock = IData & _IComponent & _IContent & _IItem & {
+  __typename?: 'OdpEmbedBlock';
+  ContentId?: Maybe<Scalars['String']['output']>;
+  /** @deprecated Use `_link` field instead */
+  _children?: Maybe<QueryRef>;
+  _deleted?: Maybe<Scalars['Bool']['output']>;
+  _fulltext?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  _id?: Maybe<Scalars['String']['output']>;
+  _itemMetadata?: Maybe<_Metadata>;
+  _json?: Maybe<Scalars['JSON']['output']>;
+  _link?: Maybe<QueryRef>;
+  _metadata?: Maybe<IContentMetadata>;
+  _modified?: Maybe<Scalars['Date']['output']>;
+  _score?: Maybe<Scalars['Float']['output']>;
+  _track?: Maybe<Scalars['String']['output']>;
+};
+
+
+export type OdpEmbedBlock_fulltextArgs = {
+  highlight?: InputMaybe<HighlightOptions>;
+};
+
+
+export type OdpEmbedBlock_linkArgs = {
+  type?: InputMaybe<LinkTypes>;
+};
+
+export type OdpEmbedBlockAutocomplete = {
+  __typename?: 'OdpEmbedBlockAutocomplete';
+  _itemMetadata?: Maybe<_MetadataAutocomplete>;
+  _metadata?: Maybe<IContentMetadataAutocomplete>;
+};
+
+export type OdpEmbedBlockFacet = {
+  __typename?: 'OdpEmbedBlockFacet';
+  _itemMetadata?: Maybe<_MetadataFacet>;
+  _metadata?: Maybe<IContentMetadataFacet>;
+};
+
+export type OdpEmbedBlockOrderByInput = {
+  _itemMetadata?: InputMaybe<_MetadataOrderByInput>;
+  _metadata?: InputMaybe<IContentMetadataOrderByInput>;
+  _minimumScore?: InputMaybe<Scalars['Float']['input']>;
+  _modified?: InputMaybe<OrderBy>;
+  _ranking?: InputMaybe<Ranking>;
+  /** The value needs to be a positive value, but cannot exceed the maximum value of an integer. In case it is exceeded, the maximum of an integer is used. In case of a negative value, semantic search will be disabled. */
+  _semanticWeight?: InputMaybe<Scalars['Float']['input']>;
+};
+
+export type OdpEmbedBlockOutput = {
+  __typename?: 'OdpEmbedBlockOutput';
+  autocomplete?: Maybe<OdpEmbedBlockAutocomplete>;
+  cursor?: Maybe<Scalars['String']['output']>;
+  facets?: Maybe<OdpEmbedBlockFacet>;
+  item?: Maybe<OdpEmbedBlock>;
+  items?: Maybe<Array<Maybe<OdpEmbedBlock>>>;
+  total?: Maybe<Scalars['Int']['output']>;
+};
+
+
+export type OdpEmbedBlockOutputtotalArgs = {
+  all?: InputMaybe<Scalars['Boolean']['input']>;
+};
+
+export type OdpEmbedBlockWhereInput = {
+  _and?: InputMaybe<Array<InputMaybe<OdpEmbedBlockWhereInput>>>;
+  _fulltext?: InputMaybe<SearchableStringFilterInput>;
+  _itemMetadata?: InputMaybe<_MetadataWhereInput>;
+  _metadata?: InputMaybe<IContentMetadataWhereInput>;
+  _modified?: InputMaybe<DateFilterInput>;
+  _not?: InputMaybe<Array<InputMaybe<OdpEmbedBlockWhereInput>>>;
+  _or?: InputMaybe<Array<InputMaybe<OdpEmbedBlockWhereInput>>>;
+};
+
 export enum OrderBy {
   ASC = 'ASC',
   DESC = 'DESC'
@@ -2568,6 +4193,320 @@ export enum OrderByFacetType {
   COUNT = 'COUNT',
   VALUE = 'VALUE'
 }
+
+export type PageSeoSettings = IData & _IComponent & _IContent & _IItem & {
+  __typename?: 'PageSeoSettings';
+  GraphType?: Maybe<Scalars['String']['output']>;
+  MetaDescription?: Maybe<Scalars['String']['output']>;
+  MetaKeywords?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  MetaTitle?: Maybe<Scalars['String']['output']>;
+  SharingImage?: Maybe<ContentReference>;
+  /** @deprecated Use `_link` field instead */
+  _children?: Maybe<QueryRef>;
+  _deleted?: Maybe<Scalars['Bool']['output']>;
+  _fulltext?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  _id?: Maybe<Scalars['String']['output']>;
+  _itemMetadata?: Maybe<_Metadata>;
+  _json?: Maybe<Scalars['JSON']['output']>;
+  _link?: Maybe<QueryRef>;
+  _metadata?: Maybe<IContentMetadata>;
+  _modified?: Maybe<Scalars['Date']['output']>;
+  _score?: Maybe<Scalars['Float']['output']>;
+  _track?: Maybe<Scalars['String']['output']>;
+};
+
+
+export type PageSeoSettingsGraphTypeArgs = {
+  highlight?: InputMaybe<HighlightOptions>;
+};
+
+
+export type PageSeoSettingsMetaDescriptionArgs = {
+  highlight?: InputMaybe<HighlightOptions>;
+};
+
+
+export type PageSeoSettingsMetaKeywordsArgs = {
+  highlight?: InputMaybe<HighlightOptions>;
+};
+
+
+export type PageSeoSettingsMetaTitleArgs = {
+  highlight?: InputMaybe<HighlightOptions>;
+};
+
+
+export type PageSeoSettings_fulltextArgs = {
+  highlight?: InputMaybe<HighlightOptions>;
+};
+
+
+export type PageSeoSettings_linkArgs = {
+  type?: InputMaybe<LinkTypes>;
+};
+
+export type PageSeoSettingsAutocomplete = {
+  __typename?: 'PageSeoSettingsAutocomplete';
+  SharingImage?: Maybe<ContentReferenceAutocomplete>;
+  _itemMetadata?: Maybe<_MetadataAutocomplete>;
+  _metadata?: Maybe<IContentMetadataAutocomplete>;
+};
+
+export type PageSeoSettingsFacet = {
+  __typename?: 'PageSeoSettingsFacet';
+  GraphType?: Maybe<Array<Maybe<StringFacet>>>;
+  MetaDescription?: Maybe<Array<Maybe<StringFacet>>>;
+  MetaKeywords?: Maybe<Array<Maybe<StringFacet>>>;
+  MetaTitle?: Maybe<Array<Maybe<StringFacet>>>;
+  SharingImage?: Maybe<ContentReferenceFacet>;
+  _itemMetadata?: Maybe<_MetadataFacet>;
+  _metadata?: Maybe<IContentMetadataFacet>;
+};
+
+
+export type PageSeoSettingsFacetGraphTypeArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type PageSeoSettingsFacetMetaDescriptionArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type PageSeoSettingsFacetMetaKeywordsArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type PageSeoSettingsFacetMetaTitleArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+export type PageSeoSettingsOrderByInput = {
+  GraphType?: InputMaybe<OrderBy>;
+  MetaDescription?: InputMaybe<OrderBy>;
+  MetaKeywords?: InputMaybe<OrderBy>;
+  MetaTitle?: InputMaybe<OrderBy>;
+  SharingImage?: InputMaybe<ContentReferenceOrderByInput>;
+  _itemMetadata?: InputMaybe<_MetadataOrderByInput>;
+  _metadata?: InputMaybe<IContentMetadataOrderByInput>;
+  _minimumScore?: InputMaybe<Scalars['Float']['input']>;
+  _modified?: InputMaybe<OrderBy>;
+  _ranking?: InputMaybe<Ranking>;
+  /** The value needs to be a positive value, but cannot exceed the maximum value of an integer. In case it is exceeded, the maximum of an integer is used. In case of a negative value, semantic search will be disabled. */
+  _semanticWeight?: InputMaybe<Scalars['Float']['input']>;
+};
+
+export type PageSeoSettingsOutput = {
+  __typename?: 'PageSeoSettingsOutput';
+  autocomplete?: Maybe<PageSeoSettingsAutocomplete>;
+  cursor?: Maybe<Scalars['String']['output']>;
+  facets?: Maybe<PageSeoSettingsFacet>;
+  item?: Maybe<PageSeoSettings>;
+  items?: Maybe<Array<Maybe<PageSeoSettings>>>;
+  total?: Maybe<Scalars['Int']['output']>;
+};
+
+
+export type PageSeoSettingsOutputtotalArgs = {
+  all?: InputMaybe<Scalars['Boolean']['input']>;
+};
+
+export type PageSeoSettingsProperty = {
+  __typename?: 'PageSeoSettingsProperty';
+  GraphType?: Maybe<Scalars['String']['output']>;
+  MetaDescription?: Maybe<Scalars['String']['output']>;
+  MetaKeywords?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  MetaTitle?: Maybe<Scalars['String']['output']>;
+  SharingImage?: Maybe<ContentReference>;
+};
+
+
+export type PageSeoSettingsPropertyGraphTypeArgs = {
+  highlight?: InputMaybe<HighlightOptions>;
+};
+
+
+export type PageSeoSettingsPropertyMetaDescriptionArgs = {
+  highlight?: InputMaybe<HighlightOptions>;
+};
+
+
+export type PageSeoSettingsPropertyMetaKeywordsArgs = {
+  highlight?: InputMaybe<HighlightOptions>;
+};
+
+
+export type PageSeoSettingsPropertyMetaTitleArgs = {
+  highlight?: InputMaybe<HighlightOptions>;
+};
+
+export type PageSeoSettingsPropertyAutocomplete = {
+  __typename?: 'PageSeoSettingsPropertyAutocomplete';
+  SharingImage?: Maybe<ContentReferenceAutocomplete>;
+};
+
+export type PageSeoSettingsPropertyFacet = {
+  __typename?: 'PageSeoSettingsPropertyFacet';
+  GraphType?: Maybe<Array<Maybe<StringFacet>>>;
+  MetaDescription?: Maybe<Array<Maybe<StringFacet>>>;
+  MetaKeywords?: Maybe<Array<Maybe<StringFacet>>>;
+  MetaTitle?: Maybe<Array<Maybe<StringFacet>>>;
+  SharingImage?: Maybe<ContentReferenceFacet>;
+};
+
+
+export type PageSeoSettingsPropertyFacetGraphTypeArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type PageSeoSettingsPropertyFacetMetaDescriptionArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type PageSeoSettingsPropertyFacetMetaKeywordsArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+
+export type PageSeoSettingsPropertyFacetMetaTitleArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+export type PageSeoSettingsPropertyOrderByInput = {
+  GraphType?: InputMaybe<OrderBy>;
+  MetaDescription?: InputMaybe<OrderBy>;
+  MetaKeywords?: InputMaybe<OrderBy>;
+  MetaTitle?: InputMaybe<OrderBy>;
+  SharingImage?: InputMaybe<ContentReferenceOrderByInput>;
+};
+
+export type PageSeoSettingsPropertyWhereInput = {
+  GraphType?: InputMaybe<SearchableStringFilterInput>;
+  MetaDescription?: InputMaybe<SearchableStringFilterInput>;
+  MetaKeywords?: InputMaybe<SearchableStringFilterInput>;
+  MetaTitle?: InputMaybe<SearchableStringFilterInput>;
+  SharingImage?: InputMaybe<ContentReferenceWhereInput>;
+};
+
+export type PageSeoSettingsWhereInput = {
+  GraphType?: InputMaybe<SearchableStringFilterInput>;
+  MetaDescription?: InputMaybe<SearchableStringFilterInput>;
+  MetaKeywords?: InputMaybe<SearchableStringFilterInput>;
+  MetaTitle?: InputMaybe<SearchableStringFilterInput>;
+  SharingImage?: InputMaybe<ContentReferenceWhereInput>;
+  _and?: InputMaybe<Array<InputMaybe<PageSeoSettingsWhereInput>>>;
+  _fulltext?: InputMaybe<SearchableStringFilterInput>;
+  _itemMetadata?: InputMaybe<_MetadataWhereInput>;
+  _metadata?: InputMaybe<IContentMetadataWhereInput>;
+  _modified?: InputMaybe<DateFilterInput>;
+  _not?: InputMaybe<Array<InputMaybe<PageSeoSettingsWhereInput>>>;
+  _or?: InputMaybe<Array<InputMaybe<PageSeoSettingsWhereInput>>>;
+};
+
+export type ParagraphElement = IData & _IComponent & _IContent & _IItem & {
+  __typename?: 'ParagraphElement';
+  /** @deprecated Use `_link` field instead */
+  _children?: Maybe<QueryRef>;
+  _deleted?: Maybe<Scalars['Bool']['output']>;
+  _fulltext?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  _id?: Maybe<Scalars['String']['output']>;
+  _itemMetadata?: Maybe<_Metadata>;
+  _json?: Maybe<Scalars['JSON']['output']>;
+  _link?: Maybe<QueryRef>;
+  _metadata?: Maybe<IContentMetadata>;
+  _modified?: Maybe<Scalars['Date']['output']>;
+  _score?: Maybe<Scalars['Float']['output']>;
+  _track?: Maybe<Scalars['String']['output']>;
+  text?: Maybe<SearchableRichText>;
+};
+
+
+export type ParagraphElement_fulltextArgs = {
+  highlight?: InputMaybe<HighlightOptions>;
+};
+
+
+export type ParagraphElement_linkArgs = {
+  type?: InputMaybe<LinkTypes>;
+};
+
+export type ParagraphElementAutocomplete = {
+  __typename?: 'ParagraphElementAutocomplete';
+  _itemMetadata?: Maybe<_MetadataAutocomplete>;
+  _metadata?: Maybe<IContentMetadataAutocomplete>;
+};
+
+export type ParagraphElementFacet = {
+  __typename?: 'ParagraphElementFacet';
+  _itemMetadata?: Maybe<_MetadataFacet>;
+  _metadata?: Maybe<IContentMetadataFacet>;
+  text?: Maybe<SearchableRichTextFacet>;
+};
+
+export type ParagraphElementOrderByInput = {
+  _itemMetadata?: InputMaybe<_MetadataOrderByInput>;
+  _metadata?: InputMaybe<IContentMetadataOrderByInput>;
+  _minimumScore?: InputMaybe<Scalars['Float']['input']>;
+  _modified?: InputMaybe<OrderBy>;
+  _ranking?: InputMaybe<Ranking>;
+  /** The value needs to be a positive value, but cannot exceed the maximum value of an integer. In case it is exceeded, the maximum of an integer is used. In case of a negative value, semantic search will be disabled. */
+  _semanticWeight?: InputMaybe<Scalars['Float']['input']>;
+  text?: InputMaybe<SearchableRichTextOrderByInput>;
+};
+
+export type ParagraphElementOutput = {
+  __typename?: 'ParagraphElementOutput';
+  autocomplete?: Maybe<ParagraphElementAutocomplete>;
+  cursor?: Maybe<Scalars['String']['output']>;
+  facets?: Maybe<ParagraphElementFacet>;
+  item?: Maybe<ParagraphElement>;
+  items?: Maybe<Array<Maybe<ParagraphElement>>>;
+  total?: Maybe<Scalars['Int']['output']>;
+};
+
+
+export type ParagraphElementOutputtotalArgs = {
+  all?: InputMaybe<Scalars['Boolean']['input']>;
+};
+
+export type ParagraphElementWhereInput = {
+  _and?: InputMaybe<Array<InputMaybe<ParagraphElementWhereInput>>>;
+  _fulltext?: InputMaybe<SearchableStringFilterInput>;
+  _itemMetadata?: InputMaybe<_MetadataWhereInput>;
+  _metadata?: InputMaybe<IContentMetadataWhereInput>;
+  _modified?: InputMaybe<DateFilterInput>;
+  _not?: InputMaybe<Array<InputMaybe<ParagraphElementWhereInput>>>;
+  _or?: InputMaybe<Array<InputMaybe<ParagraphElementWhereInput>>>;
+  text?: InputMaybe<SearchableRichTextWhereInput>;
+};
 
 export type PinnedInput = {
   /** Pinned collection keys */
@@ -2810,38 +4749,62 @@ export type ProfileBlockWhereInput = {
 
 export type Query = {
   __typename?: 'Query';
+  AnotherGreatPage?: Maybe<AnotherGreatPageOutput>;
+  ArticleListElement?: Maybe<ArticleListElementOutput>;
   AvailabilityBlock?: Maybe<AvailabilityBlockOutput>;
   BlankExperience?: Maybe<BlankExperienceOutput>;
   BlankSection?: Maybe<BlankSectionOutput>;
+  BlogPostPage?: Maybe<BlogPostPageOutput>;
+  BlogSectionExperience?: Maybe<BlogSectionExperienceOutput>;
+  ButtonBlock?: Maybe<ButtonBlockOutput>;
   CMSPage?: Maybe<CMSPageOutput>;
+  CTAElement?: Maybe<CTAElementOutput>;
+  CarouselBlock?: Maybe<CarouselBlockOutput>;
   ContactBlock?: Maybe<ContactBlockOutput>;
+  ContentRecsElement?: Maybe<ContentRecsElementOutput>;
+  ContinueReadingComponent?: Maybe<ContinueReadingComponentOutput>;
   Data?: Maybe<DataOutput>;
   Footer?: Maybe<FooterOutput>;
   FooterColumn?: Maybe<FooterColumnOutput>;
   GenericMedia?: Maybe<GenericMediaOutput>;
   GenericMedia123?: Maybe<GenericMedia123Output>;
   Header?: Maybe<HeaderOutput>;
+  HeadingElement?: Maybe<HeadingElementOutput>;
   HelloWorld?: Maybe<HelloWorldOutput>;
   HeroBlock?: Maybe<HeroBlockOutput>;
   HomePage?: Maybe<HomePageOutput>;
+  ImageElement?: Maybe<ImageElementOutput>;
   ImageMedia?: Maybe<ImageMediaOutput>;
+  LandingPage?: Maybe<LandingPageOutput>;
+  LayoutSettingsBlock?: Maybe<LayoutSettingsBlockOutput>;
   LogoItemBlock?: Maybe<LogoItemBlockOutput>;
   LogosBlock?: Maybe<LogosBlockOutput>;
+  MegaMenuGroupBlock?: Maybe<MegaMenuGroupBlockOutput>;
+  MenuNavigationBlock?: Maybe<MenuNavigationBlockOutput>;
   NavItem?: Maybe<NavItemOutput>;
+  OdpEmbedBlock?: Maybe<OdpEmbedBlockOutput>;
+  PageSeoSettings?: Maybe<PageSeoSettingsOutput>;
+  ParagraphElement?: Maybe<ParagraphElementOutput>;
   PortfolioGridBlock?: Maybe<PortfolioGridBlockOutput>;
   PortfolioItemBlock?: Maybe<PortfolioItemBlockOutput>;
   ProfileBlock?: Maybe<ProfileBlockOutput>;
+  QuoteBlock?: Maybe<QuoteBlockOutput>;
+  RichTextElement?: Maybe<RichTextElementOutput>;
   SEOExperience?: Maybe<SEOExperienceOutput>;
   ServiceItem?: Maybe<ServiceItemOutput>;
   ServicesBlock?: Maybe<ServicesBlockOutput>;
   SocialLink?: Maybe<SocialLinkOutput>;
+  SomeGreatNewPage?: Maybe<SomeGreatNewPageOutput>;
   StartPage?: Maybe<StartPageOutput>;
   StoryBlock?: Maybe<StoryBlockOutput>;
   SysContentFolder?: Maybe<SysContentFolderOutput>;
-  TedTestBlock?: Maybe<TedTestBlockOutput>;
+  TestBlockPropertyGroup?: Maybe<TestBlockPropertyGroupOutput>;
+  TestimonialElement?: Maybe<TestimonialElementOutput>;
   TestimonialItem?: Maybe<TestimonialItemOutput>;
   TestimonialItemBlock?: Maybe<TestimonialItemBlockOutput>;
   TestimonialsBlock?: Maybe<TestimonialsBlockOutput>;
+  TextBlock?: Maybe<TextBlockOutput>;
+  VideoElement?: Maybe<VideoElementOutput>;
   VideoMedia?: Maybe<VideoMediaOutput>;
   _AssetItem?: Maybe<_AssetItemOutput>;
   _Component?: Maybe<_ComponentOutput>;
@@ -2855,6 +4818,34 @@ export type Query = {
   _Page?: Maybe<_PageOutput>;
   _Section?: Maybe<_SectionOutput>;
   _Video?: Maybe<_VideoOutput>;
+};
+
+
+export type QueryAnotherGreatPageArgs = {
+  cursor?: InputMaybe<Scalars['String']['input']>;
+  ids?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  limit?: Scalars['Int']['input'];
+  locale?: InputMaybe<Array<InputMaybe<Locales>>>;
+  orderBy?: InputMaybe<AnotherGreatPageOrderByInput>;
+  pinned?: InputMaybe<PinnedInput>;
+  skip?: Scalars['Int']['input'];
+  track?: InputMaybe<Scalars['String']['input']>;
+  variation?: InputMaybe<VariationInput>;
+  where?: InputMaybe<AnotherGreatPageWhereInput>;
+};
+
+
+export type QueryArticleListElementArgs = {
+  cursor?: InputMaybe<Scalars['String']['input']>;
+  ids?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  limit?: Scalars['Int']['input'];
+  locale?: InputMaybe<Array<InputMaybe<Locales>>>;
+  orderBy?: InputMaybe<ArticleListElementOrderByInput>;
+  pinned?: InputMaybe<PinnedInput>;
+  skip?: Scalars['Int']['input'];
+  track?: InputMaybe<Scalars['String']['input']>;
+  variation?: InputMaybe<VariationInput>;
+  where?: InputMaybe<ArticleListElementWhereInput>;
 };
 
 
@@ -2900,6 +4891,48 @@ export type QueryBlankSectionArgs = {
 };
 
 
+export type QueryBlogPostPageArgs = {
+  cursor?: InputMaybe<Scalars['String']['input']>;
+  ids?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  limit?: Scalars['Int']['input'];
+  locale?: InputMaybe<Array<InputMaybe<Locales>>>;
+  orderBy?: InputMaybe<BlogPostPageOrderByInput>;
+  pinned?: InputMaybe<PinnedInput>;
+  skip?: Scalars['Int']['input'];
+  track?: InputMaybe<Scalars['String']['input']>;
+  variation?: InputMaybe<VariationInput>;
+  where?: InputMaybe<BlogPostPageWhereInput>;
+};
+
+
+export type QueryBlogSectionExperienceArgs = {
+  cursor?: InputMaybe<Scalars['String']['input']>;
+  ids?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  limit?: Scalars['Int']['input'];
+  locale?: InputMaybe<Array<InputMaybe<Locales>>>;
+  orderBy?: InputMaybe<BlogSectionExperienceOrderByInput>;
+  pinned?: InputMaybe<PinnedInput>;
+  skip?: Scalars['Int']['input'];
+  track?: InputMaybe<Scalars['String']['input']>;
+  variation?: InputMaybe<VariationInput>;
+  where?: InputMaybe<BlogSectionExperienceWhereInput>;
+};
+
+
+export type QueryButtonBlockArgs = {
+  cursor?: InputMaybe<Scalars['String']['input']>;
+  ids?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  limit?: Scalars['Int']['input'];
+  locale?: InputMaybe<Array<InputMaybe<Locales>>>;
+  orderBy?: InputMaybe<ButtonBlockOrderByInput>;
+  pinned?: InputMaybe<PinnedInput>;
+  skip?: Scalars['Int']['input'];
+  track?: InputMaybe<Scalars['String']['input']>;
+  variation?: InputMaybe<VariationInput>;
+  where?: InputMaybe<ButtonBlockWhereInput>;
+};
+
+
 export type QueryCMSPageArgs = {
   cursor?: InputMaybe<Scalars['String']['input']>;
   ids?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
@@ -2914,6 +4947,34 @@ export type QueryCMSPageArgs = {
 };
 
 
+export type QueryCTAElementArgs = {
+  cursor?: InputMaybe<Scalars['String']['input']>;
+  ids?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  limit?: Scalars['Int']['input'];
+  locale?: InputMaybe<Array<InputMaybe<Locales>>>;
+  orderBy?: InputMaybe<CTAElementOrderByInput>;
+  pinned?: InputMaybe<PinnedInput>;
+  skip?: Scalars['Int']['input'];
+  track?: InputMaybe<Scalars['String']['input']>;
+  variation?: InputMaybe<VariationInput>;
+  where?: InputMaybe<CTAElementWhereInput>;
+};
+
+
+export type QueryCarouselBlockArgs = {
+  cursor?: InputMaybe<Scalars['String']['input']>;
+  ids?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  limit?: Scalars['Int']['input'];
+  locale?: InputMaybe<Array<InputMaybe<Locales>>>;
+  orderBy?: InputMaybe<CarouselBlockOrderByInput>;
+  pinned?: InputMaybe<PinnedInput>;
+  skip?: Scalars['Int']['input'];
+  track?: InputMaybe<Scalars['String']['input']>;
+  variation?: InputMaybe<VariationInput>;
+  where?: InputMaybe<CarouselBlockWhereInput>;
+};
+
+
 export type QueryContactBlockArgs = {
   cursor?: InputMaybe<Scalars['String']['input']>;
   ids?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
@@ -2925,6 +4986,34 @@ export type QueryContactBlockArgs = {
   track?: InputMaybe<Scalars['String']['input']>;
   variation?: InputMaybe<VariationInput>;
   where?: InputMaybe<ContactBlockWhereInput>;
+};
+
+
+export type QueryContentRecsElementArgs = {
+  cursor?: InputMaybe<Scalars['String']['input']>;
+  ids?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  limit?: Scalars['Int']['input'];
+  locale?: InputMaybe<Array<InputMaybe<Locales>>>;
+  orderBy?: InputMaybe<ContentRecsElementOrderByInput>;
+  pinned?: InputMaybe<PinnedInput>;
+  skip?: Scalars['Int']['input'];
+  track?: InputMaybe<Scalars['String']['input']>;
+  variation?: InputMaybe<VariationInput>;
+  where?: InputMaybe<ContentRecsElementWhereInput>;
+};
+
+
+export type QueryContinueReadingComponentArgs = {
+  cursor?: InputMaybe<Scalars['String']['input']>;
+  ids?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  limit?: Scalars['Int']['input'];
+  locale?: InputMaybe<Array<InputMaybe<Locales>>>;
+  orderBy?: InputMaybe<ContinueReadingComponentOrderByInput>;
+  pinned?: InputMaybe<PinnedInput>;
+  skip?: Scalars['Int']['input'];
+  track?: InputMaybe<Scalars['String']['input']>;
+  variation?: InputMaybe<VariationInput>;
+  where?: InputMaybe<ContinueReadingComponentWhereInput>;
 };
 
 
@@ -3012,6 +5101,20 @@ export type QueryHeaderArgs = {
 };
 
 
+export type QueryHeadingElementArgs = {
+  cursor?: InputMaybe<Scalars['String']['input']>;
+  ids?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  limit?: Scalars['Int']['input'];
+  locale?: InputMaybe<Array<InputMaybe<Locales>>>;
+  orderBy?: InputMaybe<HeadingElementOrderByInput>;
+  pinned?: InputMaybe<PinnedInput>;
+  skip?: Scalars['Int']['input'];
+  track?: InputMaybe<Scalars['String']['input']>;
+  variation?: InputMaybe<VariationInput>;
+  where?: InputMaybe<HeadingElementWhereInput>;
+};
+
+
 export type QueryHelloWorldArgs = {
   cursor?: InputMaybe<Scalars['String']['input']>;
   ids?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
@@ -3054,6 +5157,20 @@ export type QueryHomePageArgs = {
 };
 
 
+export type QueryImageElementArgs = {
+  cursor?: InputMaybe<Scalars['String']['input']>;
+  ids?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  limit?: Scalars['Int']['input'];
+  locale?: InputMaybe<Array<InputMaybe<Locales>>>;
+  orderBy?: InputMaybe<ImageElementOrderByInput>;
+  pinned?: InputMaybe<PinnedInput>;
+  skip?: Scalars['Int']['input'];
+  track?: InputMaybe<Scalars['String']['input']>;
+  variation?: InputMaybe<VariationInput>;
+  where?: InputMaybe<ImageElementWhereInput>;
+};
+
+
 export type QueryImageMediaArgs = {
   cursor?: InputMaybe<Scalars['String']['input']>;
   ids?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
@@ -3065,6 +5182,34 @@ export type QueryImageMediaArgs = {
   track?: InputMaybe<Scalars['String']['input']>;
   variation?: InputMaybe<VariationInput>;
   where?: InputMaybe<ImageMediaWhereInput>;
+};
+
+
+export type QueryLandingPageArgs = {
+  cursor?: InputMaybe<Scalars['String']['input']>;
+  ids?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  limit?: Scalars['Int']['input'];
+  locale?: InputMaybe<Array<InputMaybe<Locales>>>;
+  orderBy?: InputMaybe<LandingPageOrderByInput>;
+  pinned?: InputMaybe<PinnedInput>;
+  skip?: Scalars['Int']['input'];
+  track?: InputMaybe<Scalars['String']['input']>;
+  variation?: InputMaybe<VariationInput>;
+  where?: InputMaybe<LandingPageWhereInput>;
+};
+
+
+export type QueryLayoutSettingsBlockArgs = {
+  cursor?: InputMaybe<Scalars['String']['input']>;
+  ids?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  limit?: Scalars['Int']['input'];
+  locale?: InputMaybe<Array<InputMaybe<Locales>>>;
+  orderBy?: InputMaybe<LayoutSettingsBlockOrderByInput>;
+  pinned?: InputMaybe<PinnedInput>;
+  skip?: Scalars['Int']['input'];
+  track?: InputMaybe<Scalars['String']['input']>;
+  variation?: InputMaybe<VariationInput>;
+  where?: InputMaybe<LayoutSettingsBlockWhereInput>;
 };
 
 
@@ -3096,6 +5241,34 @@ export type QueryLogosBlockArgs = {
 };
 
 
+export type QueryMegaMenuGroupBlockArgs = {
+  cursor?: InputMaybe<Scalars['String']['input']>;
+  ids?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  limit?: Scalars['Int']['input'];
+  locale?: InputMaybe<Array<InputMaybe<Locales>>>;
+  orderBy?: InputMaybe<MegaMenuGroupBlockOrderByInput>;
+  pinned?: InputMaybe<PinnedInput>;
+  skip?: Scalars['Int']['input'];
+  track?: InputMaybe<Scalars['String']['input']>;
+  variation?: InputMaybe<VariationInput>;
+  where?: InputMaybe<MegaMenuGroupBlockWhereInput>;
+};
+
+
+export type QueryMenuNavigationBlockArgs = {
+  cursor?: InputMaybe<Scalars['String']['input']>;
+  ids?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  limit?: Scalars['Int']['input'];
+  locale?: InputMaybe<Array<InputMaybe<Locales>>>;
+  orderBy?: InputMaybe<MenuNavigationBlockOrderByInput>;
+  pinned?: InputMaybe<PinnedInput>;
+  skip?: Scalars['Int']['input'];
+  track?: InputMaybe<Scalars['String']['input']>;
+  variation?: InputMaybe<VariationInput>;
+  where?: InputMaybe<MenuNavigationBlockWhereInput>;
+};
+
+
 export type QueryNavItemArgs = {
   cursor?: InputMaybe<Scalars['String']['input']>;
   ids?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
@@ -3107,6 +5280,48 @@ export type QueryNavItemArgs = {
   track?: InputMaybe<Scalars['String']['input']>;
   variation?: InputMaybe<VariationInput>;
   where?: InputMaybe<NavItemWhereInput>;
+};
+
+
+export type QueryOdpEmbedBlockArgs = {
+  cursor?: InputMaybe<Scalars['String']['input']>;
+  ids?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  limit?: Scalars['Int']['input'];
+  locale?: InputMaybe<Array<InputMaybe<Locales>>>;
+  orderBy?: InputMaybe<OdpEmbedBlockOrderByInput>;
+  pinned?: InputMaybe<PinnedInput>;
+  skip?: Scalars['Int']['input'];
+  track?: InputMaybe<Scalars['String']['input']>;
+  variation?: InputMaybe<VariationInput>;
+  where?: InputMaybe<OdpEmbedBlockWhereInput>;
+};
+
+
+export type QueryPageSeoSettingsArgs = {
+  cursor?: InputMaybe<Scalars['String']['input']>;
+  ids?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  limit?: Scalars['Int']['input'];
+  locale?: InputMaybe<Array<InputMaybe<Locales>>>;
+  orderBy?: InputMaybe<PageSeoSettingsOrderByInput>;
+  pinned?: InputMaybe<PinnedInput>;
+  skip?: Scalars['Int']['input'];
+  track?: InputMaybe<Scalars['String']['input']>;
+  variation?: InputMaybe<VariationInput>;
+  where?: InputMaybe<PageSeoSettingsWhereInput>;
+};
+
+
+export type QueryParagraphElementArgs = {
+  cursor?: InputMaybe<Scalars['String']['input']>;
+  ids?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  limit?: Scalars['Int']['input'];
+  locale?: InputMaybe<Array<InputMaybe<Locales>>>;
+  orderBy?: InputMaybe<ParagraphElementOrderByInput>;
+  pinned?: InputMaybe<PinnedInput>;
+  skip?: Scalars['Int']['input'];
+  track?: InputMaybe<Scalars['String']['input']>;
+  variation?: InputMaybe<VariationInput>;
+  where?: InputMaybe<ParagraphElementWhereInput>;
 };
 
 
@@ -3149,6 +5364,34 @@ export type QueryProfileBlockArgs = {
   track?: InputMaybe<Scalars['String']['input']>;
   variation?: InputMaybe<VariationInput>;
   where?: InputMaybe<ProfileBlockWhereInput>;
+};
+
+
+export type QueryQuoteBlockArgs = {
+  cursor?: InputMaybe<Scalars['String']['input']>;
+  ids?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  limit?: Scalars['Int']['input'];
+  locale?: InputMaybe<Array<InputMaybe<Locales>>>;
+  orderBy?: InputMaybe<QuoteBlockOrderByInput>;
+  pinned?: InputMaybe<PinnedInput>;
+  skip?: Scalars['Int']['input'];
+  track?: InputMaybe<Scalars['String']['input']>;
+  variation?: InputMaybe<VariationInput>;
+  where?: InputMaybe<QuoteBlockWhereInput>;
+};
+
+
+export type QueryRichTextElementArgs = {
+  cursor?: InputMaybe<Scalars['String']['input']>;
+  ids?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  limit?: Scalars['Int']['input'];
+  locale?: InputMaybe<Array<InputMaybe<Locales>>>;
+  orderBy?: InputMaybe<RichTextElementOrderByInput>;
+  pinned?: InputMaybe<PinnedInput>;
+  skip?: Scalars['Int']['input'];
+  track?: InputMaybe<Scalars['String']['input']>;
+  variation?: InputMaybe<VariationInput>;
+  where?: InputMaybe<RichTextElementWhereInput>;
 };
 
 
@@ -3208,6 +5451,20 @@ export type QuerySocialLinkArgs = {
 };
 
 
+export type QuerySomeGreatNewPageArgs = {
+  cursor?: InputMaybe<Scalars['String']['input']>;
+  ids?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  limit?: Scalars['Int']['input'];
+  locale?: InputMaybe<Array<InputMaybe<Locales>>>;
+  orderBy?: InputMaybe<SomeGreatNewPageOrderByInput>;
+  pinned?: InputMaybe<PinnedInput>;
+  skip?: Scalars['Int']['input'];
+  track?: InputMaybe<Scalars['String']['input']>;
+  variation?: InputMaybe<VariationInput>;
+  where?: InputMaybe<SomeGreatNewPageWhereInput>;
+};
+
+
 export type QueryStartPageArgs = {
   cursor?: InputMaybe<Scalars['String']['input']>;
   ids?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
@@ -3250,17 +5507,31 @@ export type QuerySysContentFolderArgs = {
 };
 
 
-export type QueryTedTestBlockArgs = {
+export type QueryTestBlockPropertyGroupArgs = {
   cursor?: InputMaybe<Scalars['String']['input']>;
   ids?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
   limit?: Scalars['Int']['input'];
   locale?: InputMaybe<Array<InputMaybe<Locales>>>;
-  orderBy?: InputMaybe<TedTestBlockOrderByInput>;
+  orderBy?: InputMaybe<TestBlockPropertyGroupOrderByInput>;
   pinned?: InputMaybe<PinnedInput>;
   skip?: Scalars['Int']['input'];
   track?: InputMaybe<Scalars['String']['input']>;
   variation?: InputMaybe<VariationInput>;
-  where?: InputMaybe<TedTestBlockWhereInput>;
+  where?: InputMaybe<TestBlockPropertyGroupWhereInput>;
+};
+
+
+export type QueryTestimonialElementArgs = {
+  cursor?: InputMaybe<Scalars['String']['input']>;
+  ids?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  limit?: Scalars['Int']['input'];
+  locale?: InputMaybe<Array<InputMaybe<Locales>>>;
+  orderBy?: InputMaybe<TestimonialElementOrderByInput>;
+  pinned?: InputMaybe<PinnedInput>;
+  skip?: Scalars['Int']['input'];
+  track?: InputMaybe<Scalars['String']['input']>;
+  variation?: InputMaybe<VariationInput>;
+  where?: InputMaybe<TestimonialElementWhereInput>;
 };
 
 
@@ -3303,6 +5574,34 @@ export type QueryTestimonialsBlockArgs = {
   track?: InputMaybe<Scalars['String']['input']>;
   variation?: InputMaybe<VariationInput>;
   where?: InputMaybe<TestimonialsBlockWhereInput>;
+};
+
+
+export type QueryTextBlockArgs = {
+  cursor?: InputMaybe<Scalars['String']['input']>;
+  ids?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  limit?: Scalars['Int']['input'];
+  locale?: InputMaybe<Array<InputMaybe<Locales>>>;
+  orderBy?: InputMaybe<TextBlockOrderByInput>;
+  pinned?: InputMaybe<PinnedInput>;
+  skip?: Scalars['Int']['input'];
+  track?: InputMaybe<Scalars['String']['input']>;
+  variation?: InputMaybe<VariationInput>;
+  where?: InputMaybe<TextBlockWhereInput>;
+};
+
+
+export type QueryVideoElementArgs = {
+  cursor?: InputMaybe<Scalars['String']['input']>;
+  ids?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  limit?: Scalars['Int']['input'];
+  locale?: InputMaybe<Array<InputMaybe<Locales>>>;
+  orderBy?: InputMaybe<VideoElementOrderByInput>;
+  pinned?: InputMaybe<PinnedInput>;
+  skip?: Scalars['Int']['input'];
+  track?: InputMaybe<Scalars['String']['input']>;
+  variation?: InputMaybe<VariationInput>;
+  where?: InputMaybe<VideoElementWhereInput>;
 };
 
 
@@ -3489,38 +5788,62 @@ export type Query_VideoArgs = {
 
 export type QueryRef = {
   __typename?: 'QueryRef';
+  AnotherGreatPage?: Maybe<AnotherGreatPageOutput>;
+  ArticleListElement?: Maybe<ArticleListElementOutput>;
   AvailabilityBlock?: Maybe<AvailabilityBlockOutput>;
   BlankExperience?: Maybe<BlankExperienceOutput>;
   BlankSection?: Maybe<BlankSectionOutput>;
+  BlogPostPage?: Maybe<BlogPostPageOutput>;
+  BlogSectionExperience?: Maybe<BlogSectionExperienceOutput>;
+  ButtonBlock?: Maybe<ButtonBlockOutput>;
   CMSPage?: Maybe<CMSPageOutput>;
+  CTAElement?: Maybe<CTAElementOutput>;
+  CarouselBlock?: Maybe<CarouselBlockOutput>;
   ContactBlock?: Maybe<ContactBlockOutput>;
+  ContentRecsElement?: Maybe<ContentRecsElementOutput>;
+  ContinueReadingComponent?: Maybe<ContinueReadingComponentOutput>;
   Data?: Maybe<DataOutput>;
   Footer?: Maybe<FooterOutput>;
   FooterColumn?: Maybe<FooterColumnOutput>;
   GenericMedia?: Maybe<GenericMediaOutput>;
   GenericMedia123?: Maybe<GenericMedia123Output>;
   Header?: Maybe<HeaderOutput>;
+  HeadingElement?: Maybe<HeadingElementOutput>;
   HelloWorld?: Maybe<HelloWorldOutput>;
   HeroBlock?: Maybe<HeroBlockOutput>;
   HomePage?: Maybe<HomePageOutput>;
+  ImageElement?: Maybe<ImageElementOutput>;
   ImageMedia?: Maybe<ImageMediaOutput>;
+  LandingPage?: Maybe<LandingPageOutput>;
+  LayoutSettingsBlock?: Maybe<LayoutSettingsBlockOutput>;
   LogoItemBlock?: Maybe<LogoItemBlockOutput>;
   LogosBlock?: Maybe<LogosBlockOutput>;
+  MegaMenuGroupBlock?: Maybe<MegaMenuGroupBlockOutput>;
+  MenuNavigationBlock?: Maybe<MenuNavigationBlockOutput>;
   NavItem?: Maybe<NavItemOutput>;
+  OdpEmbedBlock?: Maybe<OdpEmbedBlockOutput>;
+  PageSeoSettings?: Maybe<PageSeoSettingsOutput>;
+  ParagraphElement?: Maybe<ParagraphElementOutput>;
   PortfolioGridBlock?: Maybe<PortfolioGridBlockOutput>;
   PortfolioItemBlock?: Maybe<PortfolioItemBlockOutput>;
   ProfileBlock?: Maybe<ProfileBlockOutput>;
+  QuoteBlock?: Maybe<QuoteBlockOutput>;
+  RichTextElement?: Maybe<RichTextElementOutput>;
   SEOExperience?: Maybe<SEOExperienceOutput>;
   ServiceItem?: Maybe<ServiceItemOutput>;
   ServicesBlock?: Maybe<ServicesBlockOutput>;
   SocialLink?: Maybe<SocialLinkOutput>;
+  SomeGreatNewPage?: Maybe<SomeGreatNewPageOutput>;
   StartPage?: Maybe<StartPageOutput>;
   StoryBlock?: Maybe<StoryBlockOutput>;
   SysContentFolder?: Maybe<SysContentFolderOutput>;
-  TedTestBlock?: Maybe<TedTestBlockOutput>;
+  TestBlockPropertyGroup?: Maybe<TestBlockPropertyGroupOutput>;
+  TestimonialElement?: Maybe<TestimonialElementOutput>;
   TestimonialItem?: Maybe<TestimonialItemOutput>;
   TestimonialItemBlock?: Maybe<TestimonialItemBlockOutput>;
   TestimonialsBlock?: Maybe<TestimonialsBlockOutput>;
+  TextBlock?: Maybe<TextBlockOutput>;
+  VideoElement?: Maybe<VideoElementOutput>;
   VideoMedia?: Maybe<VideoMediaOutput>;
   _AssetItem?: Maybe<_AssetItemOutput>;
   _Component?: Maybe<_ComponentOutput>;
@@ -3534,6 +5857,34 @@ export type QueryRef = {
   _Page?: Maybe<_PageOutput>;
   _Section?: Maybe<_SectionOutput>;
   _Video?: Maybe<_VideoOutput>;
+};
+
+
+export type QueryRefAnotherGreatPageArgs = {
+  cursor?: InputMaybe<Scalars['String']['input']>;
+  ids?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  limit?: Scalars['Int']['input'];
+  locale?: InputMaybe<Array<InputMaybe<Locales>>>;
+  orderBy?: InputMaybe<AnotherGreatPageOrderByInput>;
+  pinned?: InputMaybe<PinnedInput>;
+  skip?: Scalars['Int']['input'];
+  track?: InputMaybe<Scalars['String']['input']>;
+  variation?: InputMaybe<VariationInput>;
+  where?: InputMaybe<AnotherGreatPageWhereInput>;
+};
+
+
+export type QueryRefArticleListElementArgs = {
+  cursor?: InputMaybe<Scalars['String']['input']>;
+  ids?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  limit?: Scalars['Int']['input'];
+  locale?: InputMaybe<Array<InputMaybe<Locales>>>;
+  orderBy?: InputMaybe<ArticleListElementOrderByInput>;
+  pinned?: InputMaybe<PinnedInput>;
+  skip?: Scalars['Int']['input'];
+  track?: InputMaybe<Scalars['String']['input']>;
+  variation?: InputMaybe<VariationInput>;
+  where?: InputMaybe<ArticleListElementWhereInput>;
 };
 
 
@@ -3579,6 +5930,48 @@ export type QueryRefBlankSectionArgs = {
 };
 
 
+export type QueryRefBlogPostPageArgs = {
+  cursor?: InputMaybe<Scalars['String']['input']>;
+  ids?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  limit?: Scalars['Int']['input'];
+  locale?: InputMaybe<Array<InputMaybe<Locales>>>;
+  orderBy?: InputMaybe<BlogPostPageOrderByInput>;
+  pinned?: InputMaybe<PinnedInput>;
+  skip?: Scalars['Int']['input'];
+  track?: InputMaybe<Scalars['String']['input']>;
+  variation?: InputMaybe<VariationInput>;
+  where?: InputMaybe<BlogPostPageWhereInput>;
+};
+
+
+export type QueryRefBlogSectionExperienceArgs = {
+  cursor?: InputMaybe<Scalars['String']['input']>;
+  ids?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  limit?: Scalars['Int']['input'];
+  locale?: InputMaybe<Array<InputMaybe<Locales>>>;
+  orderBy?: InputMaybe<BlogSectionExperienceOrderByInput>;
+  pinned?: InputMaybe<PinnedInput>;
+  skip?: Scalars['Int']['input'];
+  track?: InputMaybe<Scalars['String']['input']>;
+  variation?: InputMaybe<VariationInput>;
+  where?: InputMaybe<BlogSectionExperienceWhereInput>;
+};
+
+
+export type QueryRefButtonBlockArgs = {
+  cursor?: InputMaybe<Scalars['String']['input']>;
+  ids?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  limit?: Scalars['Int']['input'];
+  locale?: InputMaybe<Array<InputMaybe<Locales>>>;
+  orderBy?: InputMaybe<ButtonBlockOrderByInput>;
+  pinned?: InputMaybe<PinnedInput>;
+  skip?: Scalars['Int']['input'];
+  track?: InputMaybe<Scalars['String']['input']>;
+  variation?: InputMaybe<VariationInput>;
+  where?: InputMaybe<ButtonBlockWhereInput>;
+};
+
+
 export type QueryRefCMSPageArgs = {
   cursor?: InputMaybe<Scalars['String']['input']>;
   ids?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
@@ -3593,6 +5986,34 @@ export type QueryRefCMSPageArgs = {
 };
 
 
+export type QueryRefCTAElementArgs = {
+  cursor?: InputMaybe<Scalars['String']['input']>;
+  ids?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  limit?: Scalars['Int']['input'];
+  locale?: InputMaybe<Array<InputMaybe<Locales>>>;
+  orderBy?: InputMaybe<CTAElementOrderByInput>;
+  pinned?: InputMaybe<PinnedInput>;
+  skip?: Scalars['Int']['input'];
+  track?: InputMaybe<Scalars['String']['input']>;
+  variation?: InputMaybe<VariationInput>;
+  where?: InputMaybe<CTAElementWhereInput>;
+};
+
+
+export type QueryRefCarouselBlockArgs = {
+  cursor?: InputMaybe<Scalars['String']['input']>;
+  ids?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  limit?: Scalars['Int']['input'];
+  locale?: InputMaybe<Array<InputMaybe<Locales>>>;
+  orderBy?: InputMaybe<CarouselBlockOrderByInput>;
+  pinned?: InputMaybe<PinnedInput>;
+  skip?: Scalars['Int']['input'];
+  track?: InputMaybe<Scalars['String']['input']>;
+  variation?: InputMaybe<VariationInput>;
+  where?: InputMaybe<CarouselBlockWhereInput>;
+};
+
+
 export type QueryRefContactBlockArgs = {
   cursor?: InputMaybe<Scalars['String']['input']>;
   ids?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
@@ -3604,6 +6025,34 @@ export type QueryRefContactBlockArgs = {
   track?: InputMaybe<Scalars['String']['input']>;
   variation?: InputMaybe<VariationInput>;
   where?: InputMaybe<ContactBlockWhereInput>;
+};
+
+
+export type QueryRefContentRecsElementArgs = {
+  cursor?: InputMaybe<Scalars['String']['input']>;
+  ids?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  limit?: Scalars['Int']['input'];
+  locale?: InputMaybe<Array<InputMaybe<Locales>>>;
+  orderBy?: InputMaybe<ContentRecsElementOrderByInput>;
+  pinned?: InputMaybe<PinnedInput>;
+  skip?: Scalars['Int']['input'];
+  track?: InputMaybe<Scalars['String']['input']>;
+  variation?: InputMaybe<VariationInput>;
+  where?: InputMaybe<ContentRecsElementWhereInput>;
+};
+
+
+export type QueryRefContinueReadingComponentArgs = {
+  cursor?: InputMaybe<Scalars['String']['input']>;
+  ids?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  limit?: Scalars['Int']['input'];
+  locale?: InputMaybe<Array<InputMaybe<Locales>>>;
+  orderBy?: InputMaybe<ContinueReadingComponentOrderByInput>;
+  pinned?: InputMaybe<PinnedInput>;
+  skip?: Scalars['Int']['input'];
+  track?: InputMaybe<Scalars['String']['input']>;
+  variation?: InputMaybe<VariationInput>;
+  where?: InputMaybe<ContinueReadingComponentWhereInput>;
 };
 
 
@@ -3691,6 +6140,20 @@ export type QueryRefHeaderArgs = {
 };
 
 
+export type QueryRefHeadingElementArgs = {
+  cursor?: InputMaybe<Scalars['String']['input']>;
+  ids?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  limit?: Scalars['Int']['input'];
+  locale?: InputMaybe<Array<InputMaybe<Locales>>>;
+  orderBy?: InputMaybe<HeadingElementOrderByInput>;
+  pinned?: InputMaybe<PinnedInput>;
+  skip?: Scalars['Int']['input'];
+  track?: InputMaybe<Scalars['String']['input']>;
+  variation?: InputMaybe<VariationInput>;
+  where?: InputMaybe<HeadingElementWhereInput>;
+};
+
+
 export type QueryRefHelloWorldArgs = {
   cursor?: InputMaybe<Scalars['String']['input']>;
   ids?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
@@ -3733,6 +6196,20 @@ export type QueryRefHomePageArgs = {
 };
 
 
+export type QueryRefImageElementArgs = {
+  cursor?: InputMaybe<Scalars['String']['input']>;
+  ids?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  limit?: Scalars['Int']['input'];
+  locale?: InputMaybe<Array<InputMaybe<Locales>>>;
+  orderBy?: InputMaybe<ImageElementOrderByInput>;
+  pinned?: InputMaybe<PinnedInput>;
+  skip?: Scalars['Int']['input'];
+  track?: InputMaybe<Scalars['String']['input']>;
+  variation?: InputMaybe<VariationInput>;
+  where?: InputMaybe<ImageElementWhereInput>;
+};
+
+
 export type QueryRefImageMediaArgs = {
   cursor?: InputMaybe<Scalars['String']['input']>;
   ids?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
@@ -3744,6 +6221,34 @@ export type QueryRefImageMediaArgs = {
   track?: InputMaybe<Scalars['String']['input']>;
   variation?: InputMaybe<VariationInput>;
   where?: InputMaybe<ImageMediaWhereInput>;
+};
+
+
+export type QueryRefLandingPageArgs = {
+  cursor?: InputMaybe<Scalars['String']['input']>;
+  ids?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  limit?: Scalars['Int']['input'];
+  locale?: InputMaybe<Array<InputMaybe<Locales>>>;
+  orderBy?: InputMaybe<LandingPageOrderByInput>;
+  pinned?: InputMaybe<PinnedInput>;
+  skip?: Scalars['Int']['input'];
+  track?: InputMaybe<Scalars['String']['input']>;
+  variation?: InputMaybe<VariationInput>;
+  where?: InputMaybe<LandingPageWhereInput>;
+};
+
+
+export type QueryRefLayoutSettingsBlockArgs = {
+  cursor?: InputMaybe<Scalars['String']['input']>;
+  ids?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  limit?: Scalars['Int']['input'];
+  locale?: InputMaybe<Array<InputMaybe<Locales>>>;
+  orderBy?: InputMaybe<LayoutSettingsBlockOrderByInput>;
+  pinned?: InputMaybe<PinnedInput>;
+  skip?: Scalars['Int']['input'];
+  track?: InputMaybe<Scalars['String']['input']>;
+  variation?: InputMaybe<VariationInput>;
+  where?: InputMaybe<LayoutSettingsBlockWhereInput>;
 };
 
 
@@ -3775,6 +6280,34 @@ export type QueryRefLogosBlockArgs = {
 };
 
 
+export type QueryRefMegaMenuGroupBlockArgs = {
+  cursor?: InputMaybe<Scalars['String']['input']>;
+  ids?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  limit?: Scalars['Int']['input'];
+  locale?: InputMaybe<Array<InputMaybe<Locales>>>;
+  orderBy?: InputMaybe<MegaMenuGroupBlockOrderByInput>;
+  pinned?: InputMaybe<PinnedInput>;
+  skip?: Scalars['Int']['input'];
+  track?: InputMaybe<Scalars['String']['input']>;
+  variation?: InputMaybe<VariationInput>;
+  where?: InputMaybe<MegaMenuGroupBlockWhereInput>;
+};
+
+
+export type QueryRefMenuNavigationBlockArgs = {
+  cursor?: InputMaybe<Scalars['String']['input']>;
+  ids?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  limit?: Scalars['Int']['input'];
+  locale?: InputMaybe<Array<InputMaybe<Locales>>>;
+  orderBy?: InputMaybe<MenuNavigationBlockOrderByInput>;
+  pinned?: InputMaybe<PinnedInput>;
+  skip?: Scalars['Int']['input'];
+  track?: InputMaybe<Scalars['String']['input']>;
+  variation?: InputMaybe<VariationInput>;
+  where?: InputMaybe<MenuNavigationBlockWhereInput>;
+};
+
+
 export type QueryRefNavItemArgs = {
   cursor?: InputMaybe<Scalars['String']['input']>;
   ids?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
@@ -3786,6 +6319,48 @@ export type QueryRefNavItemArgs = {
   track?: InputMaybe<Scalars['String']['input']>;
   variation?: InputMaybe<VariationInput>;
   where?: InputMaybe<NavItemWhereInput>;
+};
+
+
+export type QueryRefOdpEmbedBlockArgs = {
+  cursor?: InputMaybe<Scalars['String']['input']>;
+  ids?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  limit?: Scalars['Int']['input'];
+  locale?: InputMaybe<Array<InputMaybe<Locales>>>;
+  orderBy?: InputMaybe<OdpEmbedBlockOrderByInput>;
+  pinned?: InputMaybe<PinnedInput>;
+  skip?: Scalars['Int']['input'];
+  track?: InputMaybe<Scalars['String']['input']>;
+  variation?: InputMaybe<VariationInput>;
+  where?: InputMaybe<OdpEmbedBlockWhereInput>;
+};
+
+
+export type QueryRefPageSeoSettingsArgs = {
+  cursor?: InputMaybe<Scalars['String']['input']>;
+  ids?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  limit?: Scalars['Int']['input'];
+  locale?: InputMaybe<Array<InputMaybe<Locales>>>;
+  orderBy?: InputMaybe<PageSeoSettingsOrderByInput>;
+  pinned?: InputMaybe<PinnedInput>;
+  skip?: Scalars['Int']['input'];
+  track?: InputMaybe<Scalars['String']['input']>;
+  variation?: InputMaybe<VariationInput>;
+  where?: InputMaybe<PageSeoSettingsWhereInput>;
+};
+
+
+export type QueryRefParagraphElementArgs = {
+  cursor?: InputMaybe<Scalars['String']['input']>;
+  ids?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  limit?: Scalars['Int']['input'];
+  locale?: InputMaybe<Array<InputMaybe<Locales>>>;
+  orderBy?: InputMaybe<ParagraphElementOrderByInput>;
+  pinned?: InputMaybe<PinnedInput>;
+  skip?: Scalars['Int']['input'];
+  track?: InputMaybe<Scalars['String']['input']>;
+  variation?: InputMaybe<VariationInput>;
+  where?: InputMaybe<ParagraphElementWhereInput>;
 };
 
 
@@ -3828,6 +6403,34 @@ export type QueryRefProfileBlockArgs = {
   track?: InputMaybe<Scalars['String']['input']>;
   variation?: InputMaybe<VariationInput>;
   where?: InputMaybe<ProfileBlockWhereInput>;
+};
+
+
+export type QueryRefQuoteBlockArgs = {
+  cursor?: InputMaybe<Scalars['String']['input']>;
+  ids?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  limit?: Scalars['Int']['input'];
+  locale?: InputMaybe<Array<InputMaybe<Locales>>>;
+  orderBy?: InputMaybe<QuoteBlockOrderByInput>;
+  pinned?: InputMaybe<PinnedInput>;
+  skip?: Scalars['Int']['input'];
+  track?: InputMaybe<Scalars['String']['input']>;
+  variation?: InputMaybe<VariationInput>;
+  where?: InputMaybe<QuoteBlockWhereInput>;
+};
+
+
+export type QueryRefRichTextElementArgs = {
+  cursor?: InputMaybe<Scalars['String']['input']>;
+  ids?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  limit?: Scalars['Int']['input'];
+  locale?: InputMaybe<Array<InputMaybe<Locales>>>;
+  orderBy?: InputMaybe<RichTextElementOrderByInput>;
+  pinned?: InputMaybe<PinnedInput>;
+  skip?: Scalars['Int']['input'];
+  track?: InputMaybe<Scalars['String']['input']>;
+  variation?: InputMaybe<VariationInput>;
+  where?: InputMaybe<RichTextElementWhereInput>;
 };
 
 
@@ -3887,6 +6490,20 @@ export type QueryRefSocialLinkArgs = {
 };
 
 
+export type QueryRefSomeGreatNewPageArgs = {
+  cursor?: InputMaybe<Scalars['String']['input']>;
+  ids?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  limit?: Scalars['Int']['input'];
+  locale?: InputMaybe<Array<InputMaybe<Locales>>>;
+  orderBy?: InputMaybe<SomeGreatNewPageOrderByInput>;
+  pinned?: InputMaybe<PinnedInput>;
+  skip?: Scalars['Int']['input'];
+  track?: InputMaybe<Scalars['String']['input']>;
+  variation?: InputMaybe<VariationInput>;
+  where?: InputMaybe<SomeGreatNewPageWhereInput>;
+};
+
+
 export type QueryRefStartPageArgs = {
   cursor?: InputMaybe<Scalars['String']['input']>;
   ids?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
@@ -3929,17 +6546,31 @@ export type QueryRefSysContentFolderArgs = {
 };
 
 
-export type QueryRefTedTestBlockArgs = {
+export type QueryRefTestBlockPropertyGroupArgs = {
   cursor?: InputMaybe<Scalars['String']['input']>;
   ids?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
   limit?: Scalars['Int']['input'];
   locale?: InputMaybe<Array<InputMaybe<Locales>>>;
-  orderBy?: InputMaybe<TedTestBlockOrderByInput>;
+  orderBy?: InputMaybe<TestBlockPropertyGroupOrderByInput>;
   pinned?: InputMaybe<PinnedInput>;
   skip?: Scalars['Int']['input'];
   track?: InputMaybe<Scalars['String']['input']>;
   variation?: InputMaybe<VariationInput>;
-  where?: InputMaybe<TedTestBlockWhereInput>;
+  where?: InputMaybe<TestBlockPropertyGroupWhereInput>;
+};
+
+
+export type QueryRefTestimonialElementArgs = {
+  cursor?: InputMaybe<Scalars['String']['input']>;
+  ids?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  limit?: Scalars['Int']['input'];
+  locale?: InputMaybe<Array<InputMaybe<Locales>>>;
+  orderBy?: InputMaybe<TestimonialElementOrderByInput>;
+  pinned?: InputMaybe<PinnedInput>;
+  skip?: Scalars['Int']['input'];
+  track?: InputMaybe<Scalars['String']['input']>;
+  variation?: InputMaybe<VariationInput>;
+  where?: InputMaybe<TestimonialElementWhereInput>;
 };
 
 
@@ -3982,6 +6613,34 @@ export type QueryRefTestimonialsBlockArgs = {
   track?: InputMaybe<Scalars['String']['input']>;
   variation?: InputMaybe<VariationInput>;
   where?: InputMaybe<TestimonialsBlockWhereInput>;
+};
+
+
+export type QueryRefTextBlockArgs = {
+  cursor?: InputMaybe<Scalars['String']['input']>;
+  ids?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  limit?: Scalars['Int']['input'];
+  locale?: InputMaybe<Array<InputMaybe<Locales>>>;
+  orderBy?: InputMaybe<TextBlockOrderByInput>;
+  pinned?: InputMaybe<PinnedInput>;
+  skip?: Scalars['Int']['input'];
+  track?: InputMaybe<Scalars['String']['input']>;
+  variation?: InputMaybe<VariationInput>;
+  where?: InputMaybe<TextBlockWhereInput>;
+};
+
+
+export type QueryRefVideoElementArgs = {
+  cursor?: InputMaybe<Scalars['String']['input']>;
+  ids?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  limit?: Scalars['Int']['input'];
+  locale?: InputMaybe<Array<InputMaybe<Locales>>>;
+  orderBy?: InputMaybe<VideoElementOrderByInput>;
+  pinned?: InputMaybe<PinnedInput>;
+  skip?: Scalars['Int']['input'];
+  track?: InputMaybe<Scalars['String']['input']>;
+  variation?: InputMaybe<VariationInput>;
+  where?: InputMaybe<VideoElementWhereInput>;
 };
 
 
@@ -4166,6 +6825,89 @@ export type QueryRef_VideoArgs = {
   where?: InputMaybe<_VideoWhereInput>;
 };
 
+export type QuoteBlock = IData & _IComponent & _IContent & _IItem & {
+  __typename?: 'QuoteBlock';
+  QuoteActive?: Maybe<Scalars['Boolean']['output']>;
+  QuoteColor?: Maybe<Scalars['String']['output']>;
+  QuoteProfileLocation?: Maybe<Scalars['String']['output']>;
+  QuoteProfileName?: Maybe<Scalars['String']['output']>;
+  QuoteProfilePicture?: Maybe<ContentReference>;
+  QuoteText?: Maybe<Scalars['String']['output']>;
+  /** @deprecated Use `_link` field instead */
+  _children?: Maybe<QueryRef>;
+  _deleted?: Maybe<Scalars['Bool']['output']>;
+  _fulltext?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  _id?: Maybe<Scalars['String']['output']>;
+  _itemMetadata?: Maybe<_Metadata>;
+  _json?: Maybe<Scalars['JSON']['output']>;
+  _link?: Maybe<QueryRef>;
+  _metadata?: Maybe<IContentMetadata>;
+  _modified?: Maybe<Scalars['Date']['output']>;
+  _score?: Maybe<Scalars['Float']['output']>;
+  _track?: Maybe<Scalars['String']['output']>;
+};
+
+
+export type QuoteBlock_fulltextArgs = {
+  highlight?: InputMaybe<HighlightOptions>;
+};
+
+
+export type QuoteBlock_linkArgs = {
+  type?: InputMaybe<LinkTypes>;
+};
+
+export type QuoteBlockAutocomplete = {
+  __typename?: 'QuoteBlockAutocomplete';
+  QuoteProfilePicture?: Maybe<ContentReferenceAutocomplete>;
+  _itemMetadata?: Maybe<_MetadataAutocomplete>;
+  _metadata?: Maybe<IContentMetadataAutocomplete>;
+};
+
+export type QuoteBlockFacet = {
+  __typename?: 'QuoteBlockFacet';
+  QuoteProfilePicture?: Maybe<ContentReferenceFacet>;
+  _itemMetadata?: Maybe<_MetadataFacet>;
+  _metadata?: Maybe<IContentMetadataFacet>;
+};
+
+export type QuoteBlockOrderByInput = {
+  QuoteProfilePicture?: InputMaybe<ContentReferenceOrderByInput>;
+  _itemMetadata?: InputMaybe<_MetadataOrderByInput>;
+  _metadata?: InputMaybe<IContentMetadataOrderByInput>;
+  _minimumScore?: InputMaybe<Scalars['Float']['input']>;
+  _modified?: InputMaybe<OrderBy>;
+  _ranking?: InputMaybe<Ranking>;
+  /** The value needs to be a positive value, but cannot exceed the maximum value of an integer. In case it is exceeded, the maximum of an integer is used. In case of a negative value, semantic search will be disabled. */
+  _semanticWeight?: InputMaybe<Scalars['Float']['input']>;
+};
+
+export type QuoteBlockOutput = {
+  __typename?: 'QuoteBlockOutput';
+  autocomplete?: Maybe<QuoteBlockAutocomplete>;
+  cursor?: Maybe<Scalars['String']['output']>;
+  facets?: Maybe<QuoteBlockFacet>;
+  item?: Maybe<QuoteBlock>;
+  items?: Maybe<Array<Maybe<QuoteBlock>>>;
+  total?: Maybe<Scalars['Int']['output']>;
+};
+
+
+export type QuoteBlockOutputtotalArgs = {
+  all?: InputMaybe<Scalars['Boolean']['input']>;
+};
+
+export type QuoteBlockWhereInput = {
+  QuoteProfilePicture?: InputMaybe<ContentReferenceWhereInput>;
+  _and?: InputMaybe<Array<InputMaybe<QuoteBlockWhereInput>>>;
+  _fulltext?: InputMaybe<SearchableStringFilterInput>;
+  _itemMetadata?: InputMaybe<_MetadataWhereInput>;
+  _metadata?: InputMaybe<IContentMetadataWhereInput>;
+  _modified?: InputMaybe<DateFilterInput>;
+  _not?: InputMaybe<Array<InputMaybe<QuoteBlockWhereInput>>>;
+  _or?: InputMaybe<Array<InputMaybe<QuoteBlockWhereInput>>>;
+};
+
 export type RangeFacetsInput = {
   from?: InputMaybe<Scalars['Int']['input']>;
   to?: InputMaybe<Scalars['Int']['input']>;
@@ -4177,6 +6919,121 @@ export enum Ranking {
   RELEVANCE = 'RELEVANCE',
   SEMANTIC = 'SEMANTIC'
 }
+
+export type RichText = {
+  __typename?: 'RichText';
+  html?: Maybe<Scalars['String']['output']>;
+  json?: Maybe<Scalars['JSON']['output']>;
+};
+
+export type RichTextAutocomplete = {
+  __typename?: 'RichTextAutocomplete';
+  html?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+};
+
+
+export type RichTextAutocompletehtmlArgs = {
+  limit?: Scalars['Int']['input'];
+  value: Scalars['String']['input'];
+};
+
+export type RichTextElement = IData & _IComponent & _IContent & _IItem & {
+  __typename?: 'RichTextElement';
+  /** @deprecated Use `_link` field instead */
+  _children?: Maybe<QueryRef>;
+  _deleted?: Maybe<Scalars['Bool']['output']>;
+  _fulltext?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  _id?: Maybe<Scalars['String']['output']>;
+  _itemMetadata?: Maybe<_Metadata>;
+  _json?: Maybe<Scalars['JSON']['output']>;
+  _link?: Maybe<QueryRef>;
+  _metadata?: Maybe<IContentMetadata>;
+  _modified?: Maybe<Scalars['Date']['output']>;
+  _score?: Maybe<Scalars['Float']['output']>;
+  _track?: Maybe<Scalars['String']['output']>;
+  text?: Maybe<SearchableRichText>;
+};
+
+
+export type RichTextElement_fulltextArgs = {
+  highlight?: InputMaybe<HighlightOptions>;
+};
+
+
+export type RichTextElement_linkArgs = {
+  type?: InputMaybe<LinkTypes>;
+};
+
+export type RichTextElementAutocomplete = {
+  __typename?: 'RichTextElementAutocomplete';
+  _itemMetadata?: Maybe<_MetadataAutocomplete>;
+  _metadata?: Maybe<IContentMetadataAutocomplete>;
+};
+
+export type RichTextElementFacet = {
+  __typename?: 'RichTextElementFacet';
+  _itemMetadata?: Maybe<_MetadataFacet>;
+  _metadata?: Maybe<IContentMetadataFacet>;
+  text?: Maybe<SearchableRichTextFacet>;
+};
+
+export type RichTextElementOrderByInput = {
+  _itemMetadata?: InputMaybe<_MetadataOrderByInput>;
+  _metadata?: InputMaybe<IContentMetadataOrderByInput>;
+  _minimumScore?: InputMaybe<Scalars['Float']['input']>;
+  _modified?: InputMaybe<OrderBy>;
+  _ranking?: InputMaybe<Ranking>;
+  /** The value needs to be a positive value, but cannot exceed the maximum value of an integer. In case it is exceeded, the maximum of an integer is used. In case of a negative value, semantic search will be disabled. */
+  _semanticWeight?: InputMaybe<Scalars['Float']['input']>;
+  text?: InputMaybe<SearchableRichTextOrderByInput>;
+};
+
+export type RichTextElementOutput = {
+  __typename?: 'RichTextElementOutput';
+  autocomplete?: Maybe<RichTextElementAutocomplete>;
+  cursor?: Maybe<Scalars['String']['output']>;
+  facets?: Maybe<RichTextElementFacet>;
+  item?: Maybe<RichTextElement>;
+  items?: Maybe<Array<Maybe<RichTextElement>>>;
+  total?: Maybe<Scalars['Int']['output']>;
+};
+
+
+export type RichTextElementOutputtotalArgs = {
+  all?: InputMaybe<Scalars['Boolean']['input']>;
+};
+
+export type RichTextElementWhereInput = {
+  _and?: InputMaybe<Array<InputMaybe<RichTextElementWhereInput>>>;
+  _fulltext?: InputMaybe<SearchableStringFilterInput>;
+  _itemMetadata?: InputMaybe<_MetadataWhereInput>;
+  _metadata?: InputMaybe<IContentMetadataWhereInput>;
+  _modified?: InputMaybe<DateFilterInput>;
+  _not?: InputMaybe<Array<InputMaybe<RichTextElementWhereInput>>>;
+  _or?: InputMaybe<Array<InputMaybe<RichTextElementWhereInput>>>;
+  text?: InputMaybe<SearchableRichTextWhereInput>;
+};
+
+export type RichTextFacet = {
+  __typename?: 'RichTextFacet';
+  html?: Maybe<Array<Maybe<StringFacet>>>;
+};
+
+
+export type RichTextFacethtmlArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+export type RichTextOrderByInput = {
+  html?: InputMaybe<OrderBy>;
+};
+
+export type RichTextWhereInput = {
+  html?: InputMaybe<StringFilterInput>;
+};
 
 export type SEOExperience = IData & _IContent & _IExperience & _IItem & _IPage & {
   __typename?: 'SEOExperience';
@@ -4257,6 +7114,38 @@ export type SEOExperienceWhereInput = {
   _not?: InputMaybe<Array<InputMaybe<SEOExperienceWhereInput>>>;
   _or?: InputMaybe<Array<InputMaybe<SEOExperienceWhereInput>>>;
   composition?: InputMaybe<CompositionStructureNodeWhereInput>;
+};
+
+export type SearchableRichText = {
+  __typename?: 'SearchableRichText';
+  html?: Maybe<Scalars['String']['output']>;
+  json?: Maybe<Scalars['JSON']['output']>;
+};
+
+
+export type SearchableRichTexthtmlArgs = {
+  highlight?: InputMaybe<HighlightOptions>;
+};
+
+export type SearchableRichTextFacet = {
+  __typename?: 'SearchableRichTextFacet';
+  html?: Maybe<Array<Maybe<StringFacet>>>;
+};
+
+
+export type SearchableRichTextFacethtmlArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+export type SearchableRichTextOrderByInput = {
+  html?: InputMaybe<OrderBy>;
+};
+
+export type SearchableRichTextWhereInput = {
+  html?: InputMaybe<SearchableStringFilterInput>;
 };
 
 export type SearchableStringFilterInput = {
@@ -4513,6 +7402,121 @@ export type SocialLinkWhereInput = {
   _modified?: InputMaybe<DateFilterInput>;
   _not?: InputMaybe<Array<InputMaybe<SocialLinkWhereInput>>>;
   _or?: InputMaybe<Array<InputMaybe<SocialLinkWhereInput>>>;
+};
+
+export type SomeGreatNewPage = IData & _IContent & _IItem & _IPage & {
+  __typename?: 'SomeGreatNewPage';
+  AddBlocksHere?: Maybe<Array<Maybe<_IContent>>>;
+  Body?: Maybe<RichText>;
+  SeoSettings?: Maybe<PageSeoSettingsProperty>;
+  Title?: Maybe<Scalars['String']['output']>;
+  /** @deprecated Use `_link` field instead */
+  _children?: Maybe<QueryRef>;
+  _deleted?: Maybe<Scalars['Bool']['output']>;
+  _fulltext?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  _id?: Maybe<Scalars['String']['output']>;
+  _itemMetadata?: Maybe<_Metadata>;
+  _json?: Maybe<Scalars['JSON']['output']>;
+  _link?: Maybe<QueryRef>;
+  _metadata?: Maybe<IContentMetadata>;
+  _modified?: Maybe<Scalars['Date']['output']>;
+  _score?: Maybe<Scalars['Float']['output']>;
+  _track?: Maybe<Scalars['String']['output']>;
+  newLink?: Maybe<ContentUrl>;
+  newProperty?: Maybe<RichText>;
+};
+
+
+export type SomeGreatNewPageTitleArgs = {
+  highlight?: InputMaybe<HighlightOptions>;
+};
+
+
+export type SomeGreatNewPage_fulltextArgs = {
+  highlight?: InputMaybe<HighlightOptions>;
+};
+
+
+export type SomeGreatNewPage_linkArgs = {
+  type?: InputMaybe<LinkTypes>;
+};
+
+export type SomeGreatNewPageAutocomplete = {
+  __typename?: 'SomeGreatNewPageAutocomplete';
+  AddBlocksHere?: Maybe<_IContentAutocomplete>;
+  Body?: Maybe<RichTextAutocomplete>;
+  SeoSettings?: Maybe<PageSeoSettingsPropertyAutocomplete>;
+  _itemMetadata?: Maybe<_MetadataAutocomplete>;
+  _metadata?: Maybe<IContentMetadataAutocomplete>;
+  newLink?: Maybe<ContentUrlAutocomplete>;
+  newProperty?: Maybe<RichTextAutocomplete>;
+};
+
+export type SomeGreatNewPageFacet = {
+  __typename?: 'SomeGreatNewPageFacet';
+  AddBlocksHere?: Maybe<_IContentFacet>;
+  Body?: Maybe<RichTextFacet>;
+  SeoSettings?: Maybe<PageSeoSettingsPropertyFacet>;
+  Title?: Maybe<Array<Maybe<StringFacet>>>;
+  _itemMetadata?: Maybe<_MetadataFacet>;
+  _metadata?: Maybe<IContentMetadataFacet>;
+  newLink?: Maybe<ContentUrlFacet>;
+  newProperty?: Maybe<RichTextFacet>;
+};
+
+
+export type SomeGreatNewPageFacetTitleArgs = {
+  filters?: InputMaybe<Array<Scalars['String']['input']>>;
+  limit?: Scalars['Int']['input'];
+  orderBy?: InputMaybe<OrderBy>;
+  orderType?: InputMaybe<OrderByFacetType>;
+};
+
+export type SomeGreatNewPageOrderByInput = {
+  AddBlocksHere?: InputMaybe<_IContentOrderByInput>;
+  Body?: InputMaybe<RichTextOrderByInput>;
+  SeoSettings?: InputMaybe<PageSeoSettingsPropertyOrderByInput>;
+  Title?: InputMaybe<OrderBy>;
+  _itemMetadata?: InputMaybe<_MetadataOrderByInput>;
+  _metadata?: InputMaybe<IContentMetadataOrderByInput>;
+  _minimumScore?: InputMaybe<Scalars['Float']['input']>;
+  _modified?: InputMaybe<OrderBy>;
+  _ranking?: InputMaybe<Ranking>;
+  /** The value needs to be a positive value, but cannot exceed the maximum value of an integer. In case it is exceeded, the maximum of an integer is used. In case of a negative value, semantic search will be disabled. */
+  _semanticWeight?: InputMaybe<Scalars['Float']['input']>;
+  newLink?: InputMaybe<ContentUrlOrderByInput>;
+  newProperty?: InputMaybe<RichTextOrderByInput>;
+};
+
+export type SomeGreatNewPageOutput = {
+  __typename?: 'SomeGreatNewPageOutput';
+  autocomplete?: Maybe<SomeGreatNewPageAutocomplete>;
+  cursor?: Maybe<Scalars['String']['output']>;
+  facets?: Maybe<SomeGreatNewPageFacet>;
+  item?: Maybe<SomeGreatNewPage>;
+  items?: Maybe<Array<Maybe<SomeGreatNewPage>>>;
+  total?: Maybe<Scalars['Int']['output']>;
+};
+
+
+export type SomeGreatNewPageOutputtotalArgs = {
+  all?: InputMaybe<Scalars['Boolean']['input']>;
+};
+
+export type SomeGreatNewPageWhereInput = {
+  AddBlocksHere?: InputMaybe<_IContentWhereInput>;
+  Body?: InputMaybe<RichTextWhereInput>;
+  SeoSettings?: InputMaybe<PageSeoSettingsPropertyWhereInput>;
+  Title?: InputMaybe<SearchableStringFilterInput>;
+  _and?: InputMaybe<Array<InputMaybe<SomeGreatNewPageWhereInput>>>;
+  _fulltext?: InputMaybe<SearchableStringFilterInput>;
+  _itemMetadata?: InputMaybe<_MetadataWhereInput>;
+  _metadata?: InputMaybe<IContentMetadataWhereInput>;
+  _modified?: InputMaybe<DateFilterInput>;
+  _not?: InputMaybe<Array<InputMaybe<SomeGreatNewPageWhereInput>>>;
+  _or?: InputMaybe<Array<InputMaybe<SomeGreatNewPageWhereInput>>>;
+  newLink?: InputMaybe<ContentUrlWhereInput>;
+  newProperty?: InputMaybe<RichTextWhereInput>;
 };
 
 export type StartPage = IData & _IContent & _IItem & _IPage & {
@@ -4782,8 +7786,9 @@ export type SysContentFolderWhereInput = {
   _or?: InputMaybe<Array<InputMaybe<SysContentFolderWhereInput>>>;
 };
 
-export type TedTestBlock = IData & _IComponent & _IContent & _IItem & {
-  __typename?: 'TedTestBlock';
+export type TestBlockPropertyGroup = IData & _IComponent & _IContent & _IItem & {
+  __typename?: 'TestBlockPropertyGroup';
+  Shared?: Maybe<Scalars['String']['output']>;
   /** @deprecated Use `_link` field instead */
   _children?: Maybe<QueryRef>;
   _deleted?: Maybe<Scalars['Bool']['output']>;
@@ -4796,32 +7801,31 @@ export type TedTestBlock = IData & _IComponent & _IContent & _IItem & {
   _modified?: Maybe<Scalars['Date']['output']>;
   _score?: Maybe<Scalars['Float']['output']>;
   _track?: Maybe<Scalars['String']['output']>;
-  stringTest?: Maybe<Scalars['String']['output']>;
 };
 
 
-export type TedTestBlock_fulltextArgs = {
+export type TestBlockPropertyGroup_fulltextArgs = {
   highlight?: InputMaybe<HighlightOptions>;
 };
 
 
-export type TedTestBlock_linkArgs = {
+export type TestBlockPropertyGroup_linkArgs = {
   type?: InputMaybe<LinkTypes>;
 };
 
-export type TedTestBlockAutocomplete = {
-  __typename?: 'TedTestBlockAutocomplete';
+export type TestBlockPropertyGroupAutocomplete = {
+  __typename?: 'TestBlockPropertyGroupAutocomplete';
   _itemMetadata?: Maybe<_MetadataAutocomplete>;
   _metadata?: Maybe<IContentMetadataAutocomplete>;
 };
 
-export type TedTestBlockFacet = {
-  __typename?: 'TedTestBlockFacet';
+export type TestBlockPropertyGroupFacet = {
+  __typename?: 'TestBlockPropertyGroupFacet';
   _itemMetadata?: Maybe<_MetadataFacet>;
   _metadata?: Maybe<IContentMetadataFacet>;
 };
 
-export type TedTestBlockOrderByInput = {
+export type TestBlockPropertyGroupOrderByInput = {
   _itemMetadata?: InputMaybe<_MetadataOrderByInput>;
   _metadata?: InputMaybe<IContentMetadataOrderByInput>;
   _minimumScore?: InputMaybe<Scalars['Float']['input']>;
@@ -4831,29 +7835,115 @@ export type TedTestBlockOrderByInput = {
   _semanticWeight?: InputMaybe<Scalars['Float']['input']>;
 };
 
-export type TedTestBlockOutput = {
-  __typename?: 'TedTestBlockOutput';
-  autocomplete?: Maybe<TedTestBlockAutocomplete>;
+export type TestBlockPropertyGroupOutput = {
+  __typename?: 'TestBlockPropertyGroupOutput';
+  autocomplete?: Maybe<TestBlockPropertyGroupAutocomplete>;
   cursor?: Maybe<Scalars['String']['output']>;
-  facets?: Maybe<TedTestBlockFacet>;
-  item?: Maybe<TedTestBlock>;
-  items?: Maybe<Array<Maybe<TedTestBlock>>>;
+  facets?: Maybe<TestBlockPropertyGroupFacet>;
+  item?: Maybe<TestBlockPropertyGroup>;
+  items?: Maybe<Array<Maybe<TestBlockPropertyGroup>>>;
   total?: Maybe<Scalars['Int']['output']>;
 };
 
 
-export type TedTestBlockOutputtotalArgs = {
+export type TestBlockPropertyGroupOutputtotalArgs = {
   all?: InputMaybe<Scalars['Boolean']['input']>;
 };
 
-export type TedTestBlockWhereInput = {
-  _and?: InputMaybe<Array<InputMaybe<TedTestBlockWhereInput>>>;
+export type TestBlockPropertyGroupWhereInput = {
+  _and?: InputMaybe<Array<InputMaybe<TestBlockPropertyGroupWhereInput>>>;
   _fulltext?: InputMaybe<SearchableStringFilterInput>;
   _itemMetadata?: InputMaybe<_MetadataWhereInput>;
   _metadata?: InputMaybe<IContentMetadataWhereInput>;
   _modified?: InputMaybe<DateFilterInput>;
-  _not?: InputMaybe<Array<InputMaybe<TedTestBlockWhereInput>>>;
-  _or?: InputMaybe<Array<InputMaybe<TedTestBlockWhereInput>>>;
+  _not?: InputMaybe<Array<InputMaybe<TestBlockPropertyGroupWhereInput>>>;
+  _or?: InputMaybe<Array<InputMaybe<TestBlockPropertyGroupWhereInput>>>;
+};
+
+export type TestimonialElement = IData & _IComponent & _IContent & _IItem & {
+  __typename?: 'TestimonialElement';
+  /** @deprecated Use `_link` field instead */
+  _children?: Maybe<QueryRef>;
+  _deleted?: Maybe<Scalars['Bool']['output']>;
+  _fulltext?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  _id?: Maybe<Scalars['String']['output']>;
+  _itemMetadata?: Maybe<_Metadata>;
+  _json?: Maybe<Scalars['JSON']['output']>;
+  _link?: Maybe<QueryRef>;
+  _metadata?: Maybe<IContentMetadata>;
+  _modified?: Maybe<Scalars['Date']['output']>;
+  _score?: Maybe<Scalars['Float']['output']>;
+  _track?: Maybe<Scalars['String']['output']>;
+  customerImage?: Maybe<ContentReference>;
+  customerLocation?: Maybe<Scalars['String']['output']>;
+  customerName?: Maybe<Scalars['String']['output']>;
+  referenceText?: Maybe<RichText>;
+  referenceTitle?: Maybe<Scalars['String']['output']>;
+};
+
+
+export type TestimonialElement_fulltextArgs = {
+  highlight?: InputMaybe<HighlightOptions>;
+};
+
+
+export type TestimonialElement_linkArgs = {
+  type?: InputMaybe<LinkTypes>;
+};
+
+export type TestimonialElementAutocomplete = {
+  __typename?: 'TestimonialElementAutocomplete';
+  _itemMetadata?: Maybe<_MetadataAutocomplete>;
+  _metadata?: Maybe<IContentMetadataAutocomplete>;
+  customerImage?: Maybe<ContentReferenceAutocomplete>;
+  referenceText?: Maybe<RichTextAutocomplete>;
+};
+
+export type TestimonialElementFacet = {
+  __typename?: 'TestimonialElementFacet';
+  _itemMetadata?: Maybe<_MetadataFacet>;
+  _metadata?: Maybe<IContentMetadataFacet>;
+  customerImage?: Maybe<ContentReferenceFacet>;
+  referenceText?: Maybe<RichTextFacet>;
+};
+
+export type TestimonialElementOrderByInput = {
+  _itemMetadata?: InputMaybe<_MetadataOrderByInput>;
+  _metadata?: InputMaybe<IContentMetadataOrderByInput>;
+  _minimumScore?: InputMaybe<Scalars['Float']['input']>;
+  _modified?: InputMaybe<OrderBy>;
+  _ranking?: InputMaybe<Ranking>;
+  /** The value needs to be a positive value, but cannot exceed the maximum value of an integer. In case it is exceeded, the maximum of an integer is used. In case of a negative value, semantic search will be disabled. */
+  _semanticWeight?: InputMaybe<Scalars['Float']['input']>;
+  customerImage?: InputMaybe<ContentReferenceOrderByInput>;
+  referenceText?: InputMaybe<RichTextOrderByInput>;
+};
+
+export type TestimonialElementOutput = {
+  __typename?: 'TestimonialElementOutput';
+  autocomplete?: Maybe<TestimonialElementAutocomplete>;
+  cursor?: Maybe<Scalars['String']['output']>;
+  facets?: Maybe<TestimonialElementFacet>;
+  item?: Maybe<TestimonialElement>;
+  items?: Maybe<Array<Maybe<TestimonialElement>>>;
+  total?: Maybe<Scalars['Int']['output']>;
+};
+
+
+export type TestimonialElementOutputtotalArgs = {
+  all?: InputMaybe<Scalars['Boolean']['input']>;
+};
+
+export type TestimonialElementWhereInput = {
+  _and?: InputMaybe<Array<InputMaybe<TestimonialElementWhereInput>>>;
+  _fulltext?: InputMaybe<SearchableStringFilterInput>;
+  _itemMetadata?: InputMaybe<_MetadataWhereInput>;
+  _metadata?: InputMaybe<IContentMetadataWhereInput>;
+  _modified?: InputMaybe<DateFilterInput>;
+  _not?: InputMaybe<Array<InputMaybe<TestimonialElementWhereInput>>>;
+  _or?: InputMaybe<Array<InputMaybe<TestimonialElementWhereInput>>>;
+  customerImage?: InputMaybe<ContentReferenceWhereInput>;
+  referenceText?: InputMaybe<RichTextWhereInput>;
 };
 
 export type TestimonialItem = IData & _IComponent & _IContent & _IItem & {
@@ -5089,6 +8179,90 @@ export type TestimonialsBlockWhereInput = {
   testimonials?: InputMaybe<_IContentWhereInput>;
 };
 
+export type TextBlock = IData & _IComponent & _IContent & _IItem & {
+  __typename?: 'TextBlock';
+  TextBlockDescription?: Maybe<RichText>;
+  TextBlockHeading?: Maybe<Scalars['String']['output']>;
+  TextBlockHeadingSize?: Maybe<Scalars['String']['output']>;
+  TextBlockOverline?: Maybe<Scalars['String']['output']>;
+  TextBlockWidth?: Maybe<Scalars['String']['output']>;
+  TextCenter?: Maybe<Scalars['Boolean']['output']>;
+  TextClassName?: Maybe<Scalars['String']['output']>;
+  /** @deprecated Use `_link` field instead */
+  _children?: Maybe<QueryRef>;
+  _deleted?: Maybe<Scalars['Bool']['output']>;
+  _fulltext?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  _id?: Maybe<Scalars['String']['output']>;
+  _itemMetadata?: Maybe<_Metadata>;
+  _json?: Maybe<Scalars['JSON']['output']>;
+  _link?: Maybe<QueryRef>;
+  _metadata?: Maybe<IContentMetadata>;
+  _modified?: Maybe<Scalars['Date']['output']>;
+  _score?: Maybe<Scalars['Float']['output']>;
+  _track?: Maybe<Scalars['String']['output']>;
+};
+
+
+export type TextBlock_fulltextArgs = {
+  highlight?: InputMaybe<HighlightOptions>;
+};
+
+
+export type TextBlock_linkArgs = {
+  type?: InputMaybe<LinkTypes>;
+};
+
+export type TextBlockAutocomplete = {
+  __typename?: 'TextBlockAutocomplete';
+  TextBlockDescription?: Maybe<RichTextAutocomplete>;
+  _itemMetadata?: Maybe<_MetadataAutocomplete>;
+  _metadata?: Maybe<IContentMetadataAutocomplete>;
+};
+
+export type TextBlockFacet = {
+  __typename?: 'TextBlockFacet';
+  TextBlockDescription?: Maybe<RichTextFacet>;
+  _itemMetadata?: Maybe<_MetadataFacet>;
+  _metadata?: Maybe<IContentMetadataFacet>;
+};
+
+export type TextBlockOrderByInput = {
+  TextBlockDescription?: InputMaybe<RichTextOrderByInput>;
+  _itemMetadata?: InputMaybe<_MetadataOrderByInput>;
+  _metadata?: InputMaybe<IContentMetadataOrderByInput>;
+  _minimumScore?: InputMaybe<Scalars['Float']['input']>;
+  _modified?: InputMaybe<OrderBy>;
+  _ranking?: InputMaybe<Ranking>;
+  /** The value needs to be a positive value, but cannot exceed the maximum value of an integer. In case it is exceeded, the maximum of an integer is used. In case of a negative value, semantic search will be disabled. */
+  _semanticWeight?: InputMaybe<Scalars['Float']['input']>;
+};
+
+export type TextBlockOutput = {
+  __typename?: 'TextBlockOutput';
+  autocomplete?: Maybe<TextBlockAutocomplete>;
+  cursor?: Maybe<Scalars['String']['output']>;
+  facets?: Maybe<TextBlockFacet>;
+  item?: Maybe<TextBlock>;
+  items?: Maybe<Array<Maybe<TextBlock>>>;
+  total?: Maybe<Scalars['Int']['output']>;
+};
+
+
+export type TextBlockOutputtotalArgs = {
+  all?: InputMaybe<Scalars['Boolean']['input']>;
+};
+
+export type TextBlockWhereInput = {
+  TextBlockDescription?: InputMaybe<RichTextWhereInput>;
+  _and?: InputMaybe<Array<InputMaybe<TextBlockWhereInput>>>;
+  _fulltext?: InputMaybe<SearchableStringFilterInput>;
+  _itemMetadata?: InputMaybe<_MetadataWhereInput>;
+  _metadata?: InputMaybe<IContentMetadataWhereInput>;
+  _modified?: InputMaybe<DateFilterInput>;
+  _not?: InputMaybe<Array<InputMaybe<TextBlockWhereInput>>>;
+  _or?: InputMaybe<Array<InputMaybe<TextBlockWhereInput>>>;
+};
+
 export enum VariationIncludeMode {
   ALL = 'ALL',
   NONE = 'NONE',
@@ -5099,6 +8273,90 @@ export type VariationInput = {
   include?: InputMaybe<VariationIncludeMode>;
   includeOriginal?: InputMaybe<Scalars['Boolean']['input']>;
   value?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+export type VideoElement = IData & _IComponent & _IContent & _IItem & {
+  __typename?: 'VideoElement';
+  /** @deprecated Use `_link` field instead */
+  _children?: Maybe<QueryRef>;
+  _deleted?: Maybe<Scalars['Bool']['output']>;
+  _fulltext?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  _id?: Maybe<Scalars['String']['output']>;
+  _itemMetadata?: Maybe<_Metadata>;
+  _json?: Maybe<Scalars['JSON']['output']>;
+  _link?: Maybe<QueryRef>;
+  _metadata?: Maybe<IContentMetadata>;
+  _modified?: Maybe<Scalars['Date']['output']>;
+  _score?: Maybe<Scalars['Float']['output']>;
+  _track?: Maybe<Scalars['String']['output']>;
+  placeholder?: Maybe<ContentReference>;
+  title?: Maybe<Scalars['String']['output']>;
+  video?: Maybe<ContentReference>;
+};
+
+
+export type VideoElement_fulltextArgs = {
+  highlight?: InputMaybe<HighlightOptions>;
+};
+
+
+export type VideoElement_linkArgs = {
+  type?: InputMaybe<LinkTypes>;
+};
+
+export type VideoElementAutocomplete = {
+  __typename?: 'VideoElementAutocomplete';
+  _itemMetadata?: Maybe<_MetadataAutocomplete>;
+  _metadata?: Maybe<IContentMetadataAutocomplete>;
+  placeholder?: Maybe<ContentReferenceAutocomplete>;
+  video?: Maybe<ContentReferenceAutocomplete>;
+};
+
+export type VideoElementFacet = {
+  __typename?: 'VideoElementFacet';
+  _itemMetadata?: Maybe<_MetadataFacet>;
+  _metadata?: Maybe<IContentMetadataFacet>;
+  placeholder?: Maybe<ContentReferenceFacet>;
+  video?: Maybe<ContentReferenceFacet>;
+};
+
+export type VideoElementOrderByInput = {
+  _itemMetadata?: InputMaybe<_MetadataOrderByInput>;
+  _metadata?: InputMaybe<IContentMetadataOrderByInput>;
+  _minimumScore?: InputMaybe<Scalars['Float']['input']>;
+  _modified?: InputMaybe<OrderBy>;
+  _ranking?: InputMaybe<Ranking>;
+  /** The value needs to be a positive value, but cannot exceed the maximum value of an integer. In case it is exceeded, the maximum of an integer is used. In case of a negative value, semantic search will be disabled. */
+  _semanticWeight?: InputMaybe<Scalars['Float']['input']>;
+  placeholder?: InputMaybe<ContentReferenceOrderByInput>;
+  video?: InputMaybe<ContentReferenceOrderByInput>;
+};
+
+export type VideoElementOutput = {
+  __typename?: 'VideoElementOutput';
+  autocomplete?: Maybe<VideoElementAutocomplete>;
+  cursor?: Maybe<Scalars['String']['output']>;
+  facets?: Maybe<VideoElementFacet>;
+  item?: Maybe<VideoElement>;
+  items?: Maybe<Array<Maybe<VideoElement>>>;
+  total?: Maybe<Scalars['Int']['output']>;
+};
+
+
+export type VideoElementOutputtotalArgs = {
+  all?: InputMaybe<Scalars['Boolean']['input']>;
+};
+
+export type VideoElementWhereInput = {
+  _and?: InputMaybe<Array<InputMaybe<VideoElementWhereInput>>>;
+  _fulltext?: InputMaybe<SearchableStringFilterInput>;
+  _itemMetadata?: InputMaybe<_MetadataWhereInput>;
+  _metadata?: InputMaybe<IContentMetadataWhereInput>;
+  _modified?: InputMaybe<DateFilterInput>;
+  _not?: InputMaybe<Array<InputMaybe<VideoElementWhereInput>>>;
+  _or?: InputMaybe<Array<InputMaybe<VideoElementWhereInput>>>;
+  placeholder?: InputMaybe<ContentReferenceWhereInput>;
+  video?: InputMaybe<ContentReferenceWhereInput>;
 };
 
 export type VideoMedia = IData & _IAssetItem & _IContent & _IItem & _IMedia & _IVideo & {
@@ -6654,6 +9912,12 @@ export type AvailabilityBlockDataFragment = { __typename?: 'AvailabilityBlock', 
 export type ContactBlockDataFragment = { __typename?: 'ContactBlock', title?: string | null, description?: string | null } & { ' $fragmentName'?: 'ContactBlockDataFragment' };
 
 export type FooterColumnDataFragment = { __typename?: 'FooterColumn', title?: string | null, links?: Array<(
+    { __typename?: 'AnotherGreatPage' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_AnotherGreatPage_Fragment': IContentListItem_AnotherGreatPage_Fragment } }
+  ) | (
+    { __typename?: 'ArticleListElement' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_ArticleListElement_Fragment': IContentListItem_ArticleListElement_Fragment } }
+  ) | (
     { __typename?: 'AvailabilityBlock' }
     & { ' $fragmentRefs'?: { 'IContentListItem_AvailabilityBlock_Fragment': IContentListItem_AvailabilityBlock_Fragment } }
   ) | (
@@ -6663,11 +9927,32 @@ export type FooterColumnDataFragment = { __typename?: 'FooterColumn', title?: st
     { __typename?: 'BlankSection' }
     & { ' $fragmentRefs'?: { 'IContentListItem_BlankSection_Fragment': IContentListItem_BlankSection_Fragment } }
   ) | (
+    { __typename?: 'BlogPostPage' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_BlogPostPage_Fragment': IContentListItem_BlogPostPage_Fragment } }
+  ) | (
+    { __typename?: 'BlogSectionExperience' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_BlogSectionExperience_Fragment': IContentListItem_BlogSectionExperience_Fragment } }
+  ) | (
+    { __typename?: 'ButtonBlock' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_ButtonBlock_Fragment': IContentListItem_ButtonBlock_Fragment } }
+  ) | (
     { __typename?: 'CMSPage' }
     & { ' $fragmentRefs'?: { 'IContentListItem_CMSPage_Fragment': IContentListItem_CMSPage_Fragment } }
   ) | (
+    { __typename?: 'CTAElement' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_CTAElement_Fragment': IContentListItem_CTAElement_Fragment } }
+  ) | (
+    { __typename?: 'CarouselBlock' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_CarouselBlock_Fragment': IContentListItem_CarouselBlock_Fragment } }
+  ) | (
     { __typename?: 'ContactBlock' }
     & { ' $fragmentRefs'?: { 'IContentListItem_ContactBlock_Fragment': IContentListItem_ContactBlock_Fragment } }
+  ) | (
+    { __typename?: 'ContentRecsElement' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_ContentRecsElement_Fragment': IContentListItem_ContentRecsElement_Fragment } }
+  ) | (
+    { __typename?: 'ContinueReadingComponent' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_ContinueReadingComponent_Fragment': IContentListItem_ContinueReadingComponent_Fragment } }
   ) | (
     { __typename?: 'Footer' }
     & { ' $fragmentRefs'?: { 'IContentListItem_Footer_Fragment': IContentListItem_Footer_Fragment } }
@@ -6684,6 +9969,9 @@ export type FooterColumnDataFragment = { __typename?: 'FooterColumn', title?: st
     { __typename?: 'Header' }
     & { ' $fragmentRefs'?: { 'IContentListItem_Header_Fragment': IContentListItem_Header_Fragment } }
   ) | (
+    { __typename?: 'HeadingElement' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_HeadingElement_Fragment': IContentListItem_HeadingElement_Fragment } }
+  ) | (
     { __typename?: 'HelloWorld' }
     & { ' $fragmentRefs'?: { 'IContentListItem_HelloWorld_Fragment': IContentListItem_HelloWorld_Fragment } }
   ) | (
@@ -6693,8 +9981,17 @@ export type FooterColumnDataFragment = { __typename?: 'FooterColumn', title?: st
     { __typename?: 'HomePage' }
     & { ' $fragmentRefs'?: { 'IContentListItem_HomePage_Fragment': IContentListItem_HomePage_Fragment } }
   ) | (
+    { __typename?: 'ImageElement' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_ImageElement_Fragment': IContentListItem_ImageElement_Fragment } }
+  ) | (
     { __typename?: 'ImageMedia' }
     & { ' $fragmentRefs'?: { 'IContentListItem_ImageMedia_Fragment': IContentListItem_ImageMedia_Fragment } }
+  ) | (
+    { __typename?: 'LandingPage' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_LandingPage_Fragment': IContentListItem_LandingPage_Fragment } }
+  ) | (
+    { __typename?: 'LayoutSettingsBlock' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_LayoutSettingsBlock_Fragment': IContentListItem_LayoutSettingsBlock_Fragment } }
   ) | (
     { __typename?: 'LogoItemBlock' }
     & { ' $fragmentRefs'?: { 'IContentListItem_LogoItemBlock_Fragment': IContentListItem_LogoItemBlock_Fragment } }
@@ -6702,8 +9999,23 @@ export type FooterColumnDataFragment = { __typename?: 'FooterColumn', title?: st
     { __typename?: 'LogosBlock' }
     & { ' $fragmentRefs'?: { 'IContentListItem_LogosBlock_Fragment': IContentListItem_LogosBlock_Fragment } }
   ) | (
+    { __typename?: 'MegaMenuGroupBlock' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_MegaMenuGroupBlock_Fragment': IContentListItem_MegaMenuGroupBlock_Fragment } }
+  ) | (
+    { __typename?: 'MenuNavigationBlock' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_MenuNavigationBlock_Fragment': IContentListItem_MenuNavigationBlock_Fragment } }
+  ) | (
     { __typename?: 'NavItem' }
     & { ' $fragmentRefs'?: { 'IContentListItem_NavItem_Fragment': IContentListItem_NavItem_Fragment } }
+  ) | (
+    { __typename?: 'OdpEmbedBlock' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_OdpEmbedBlock_Fragment': IContentListItem_OdpEmbedBlock_Fragment } }
+  ) | (
+    { __typename?: 'PageSeoSettings' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_PageSeoSettings_Fragment': IContentListItem_PageSeoSettings_Fragment } }
+  ) | (
+    { __typename?: 'ParagraphElement' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_ParagraphElement_Fragment': IContentListItem_ParagraphElement_Fragment } }
   ) | (
     { __typename?: 'PortfolioGridBlock' }
     & { ' $fragmentRefs'?: { 'IContentListItem_PortfolioGridBlock_Fragment': IContentListItem_PortfolioGridBlock_Fragment } }
@@ -6713,6 +10025,12 @@ export type FooterColumnDataFragment = { __typename?: 'FooterColumn', title?: st
   ) | (
     { __typename?: 'ProfileBlock' }
     & { ' $fragmentRefs'?: { 'IContentListItem_ProfileBlock_Fragment': IContentListItem_ProfileBlock_Fragment } }
+  ) | (
+    { __typename?: 'QuoteBlock' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_QuoteBlock_Fragment': IContentListItem_QuoteBlock_Fragment } }
+  ) | (
+    { __typename?: 'RichTextElement' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_RichTextElement_Fragment': IContentListItem_RichTextElement_Fragment } }
   ) | (
     { __typename?: 'SEOExperience' }
     & { ' $fragmentRefs'?: { 'IContentListItem_SEOExperience_Fragment': IContentListItem_SEOExperience_Fragment } }
@@ -6726,6 +10044,9 @@ export type FooterColumnDataFragment = { __typename?: 'FooterColumn', title?: st
     { __typename?: 'SocialLink' }
     & { ' $fragmentRefs'?: { 'IContentListItem_SocialLink_Fragment': IContentListItem_SocialLink_Fragment } }
   ) | (
+    { __typename?: 'SomeGreatNewPage' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_SomeGreatNewPage_Fragment': IContentListItem_SomeGreatNewPage_Fragment } }
+  ) | (
     { __typename?: 'StartPage' }
     & { ' $fragmentRefs'?: { 'IContentListItem_StartPage_Fragment': IContentListItem_StartPage_Fragment } }
   ) | (
@@ -6735,8 +10056,11 @@ export type FooterColumnDataFragment = { __typename?: 'FooterColumn', title?: st
     { __typename?: 'SysContentFolder' }
     & { ' $fragmentRefs'?: { 'IContentListItem_SysContentFolder_Fragment': IContentListItem_SysContentFolder_Fragment } }
   ) | (
-    { __typename?: 'TedTestBlock' }
-    & { ' $fragmentRefs'?: { 'IContentListItem_TedTestBlock_Fragment': IContentListItem_TedTestBlock_Fragment } }
+    { __typename?: 'TestBlockPropertyGroup' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_TestBlockPropertyGroup_Fragment': IContentListItem_TestBlockPropertyGroup_Fragment } }
+  ) | (
+    { __typename?: 'TestimonialElement' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_TestimonialElement_Fragment': IContentListItem_TestimonialElement_Fragment } }
   ) | (
     { __typename?: 'TestimonialItem' }
     & { ' $fragmentRefs'?: { 'IContentListItem_TestimonialItem_Fragment': IContentListItem_TestimonialItem_Fragment } }
@@ -6746,6 +10070,12 @@ export type FooterColumnDataFragment = { __typename?: 'FooterColumn', title?: st
   ) | (
     { __typename?: 'TestimonialsBlock' }
     & { ' $fragmentRefs'?: { 'IContentListItem_TestimonialsBlock_Fragment': IContentListItem_TestimonialsBlock_Fragment } }
+  ) | (
+    { __typename?: 'TextBlock' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_TextBlock_Fragment': IContentListItem_TextBlock_Fragment } }
+  ) | (
+    { __typename?: 'VideoElement' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_VideoElement_Fragment': IContentListItem_VideoElement_Fragment } }
   ) | (
     { __typename?: 'VideoMedia' }
     & { ' $fragmentRefs'?: { 'IContentListItem_VideoMedia_Fragment': IContentListItem_VideoMedia_Fragment } }
@@ -6785,6 +10115,12 @@ export type HeroBlockDataFragment = { __typename?: 'HeroBlock', title?: string |
 export type LogoItemBlockDataFragment = { __typename?: 'LogoItemBlock', src?: string | null, alt?: string | null } & { ' $fragmentName'?: 'LogoItemBlockDataFragment' };
 
 export type LogosBlockDataFragment = { __typename?: 'LogosBlock', logos?: Array<(
+    { __typename?: 'AnotherGreatPage' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_AnotherGreatPage_Fragment': IContentListItem_AnotherGreatPage_Fragment } }
+  ) | (
+    { __typename?: 'ArticleListElement' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_ArticleListElement_Fragment': IContentListItem_ArticleListElement_Fragment } }
+  ) | (
     { __typename?: 'AvailabilityBlock' }
     & { ' $fragmentRefs'?: { 'IContentListItem_AvailabilityBlock_Fragment': IContentListItem_AvailabilityBlock_Fragment } }
   ) | (
@@ -6794,11 +10130,32 @@ export type LogosBlockDataFragment = { __typename?: 'LogosBlock', logos?: Array<
     { __typename?: 'BlankSection' }
     & { ' $fragmentRefs'?: { 'IContentListItem_BlankSection_Fragment': IContentListItem_BlankSection_Fragment } }
   ) | (
+    { __typename?: 'BlogPostPage' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_BlogPostPage_Fragment': IContentListItem_BlogPostPage_Fragment } }
+  ) | (
+    { __typename?: 'BlogSectionExperience' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_BlogSectionExperience_Fragment': IContentListItem_BlogSectionExperience_Fragment } }
+  ) | (
+    { __typename?: 'ButtonBlock' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_ButtonBlock_Fragment': IContentListItem_ButtonBlock_Fragment } }
+  ) | (
     { __typename?: 'CMSPage' }
     & { ' $fragmentRefs'?: { 'IContentListItem_CMSPage_Fragment': IContentListItem_CMSPage_Fragment } }
   ) | (
+    { __typename?: 'CTAElement' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_CTAElement_Fragment': IContentListItem_CTAElement_Fragment } }
+  ) | (
+    { __typename?: 'CarouselBlock' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_CarouselBlock_Fragment': IContentListItem_CarouselBlock_Fragment } }
+  ) | (
     { __typename?: 'ContactBlock' }
     & { ' $fragmentRefs'?: { 'IContentListItem_ContactBlock_Fragment': IContentListItem_ContactBlock_Fragment } }
+  ) | (
+    { __typename?: 'ContentRecsElement' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_ContentRecsElement_Fragment': IContentListItem_ContentRecsElement_Fragment } }
+  ) | (
+    { __typename?: 'ContinueReadingComponent' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_ContinueReadingComponent_Fragment': IContentListItem_ContinueReadingComponent_Fragment } }
   ) | (
     { __typename?: 'Footer' }
     & { ' $fragmentRefs'?: { 'IContentListItem_Footer_Fragment': IContentListItem_Footer_Fragment } }
@@ -6815,6 +10172,9 @@ export type LogosBlockDataFragment = { __typename?: 'LogosBlock', logos?: Array<
     { __typename?: 'Header' }
     & { ' $fragmentRefs'?: { 'IContentListItem_Header_Fragment': IContentListItem_Header_Fragment } }
   ) | (
+    { __typename?: 'HeadingElement' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_HeadingElement_Fragment': IContentListItem_HeadingElement_Fragment } }
+  ) | (
     { __typename?: 'HelloWorld' }
     & { ' $fragmentRefs'?: { 'IContentListItem_HelloWorld_Fragment': IContentListItem_HelloWorld_Fragment } }
   ) | (
@@ -6824,8 +10184,17 @@ export type LogosBlockDataFragment = { __typename?: 'LogosBlock', logos?: Array<
     { __typename?: 'HomePage' }
     & { ' $fragmentRefs'?: { 'IContentListItem_HomePage_Fragment': IContentListItem_HomePage_Fragment } }
   ) | (
+    { __typename?: 'ImageElement' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_ImageElement_Fragment': IContentListItem_ImageElement_Fragment } }
+  ) | (
     { __typename?: 'ImageMedia' }
     & { ' $fragmentRefs'?: { 'IContentListItem_ImageMedia_Fragment': IContentListItem_ImageMedia_Fragment } }
+  ) | (
+    { __typename?: 'LandingPage' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_LandingPage_Fragment': IContentListItem_LandingPage_Fragment } }
+  ) | (
+    { __typename?: 'LayoutSettingsBlock' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_LayoutSettingsBlock_Fragment': IContentListItem_LayoutSettingsBlock_Fragment } }
   ) | (
     { __typename?: 'LogoItemBlock' }
     & { ' $fragmentRefs'?: { 'IContentListItem_LogoItemBlock_Fragment': IContentListItem_LogoItemBlock_Fragment } }
@@ -6833,8 +10202,23 @@ export type LogosBlockDataFragment = { __typename?: 'LogosBlock', logos?: Array<
     { __typename?: 'LogosBlock' }
     & { ' $fragmentRefs'?: { 'IContentListItem_LogosBlock_Fragment': IContentListItem_LogosBlock_Fragment } }
   ) | (
+    { __typename?: 'MegaMenuGroupBlock' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_MegaMenuGroupBlock_Fragment': IContentListItem_MegaMenuGroupBlock_Fragment } }
+  ) | (
+    { __typename?: 'MenuNavigationBlock' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_MenuNavigationBlock_Fragment': IContentListItem_MenuNavigationBlock_Fragment } }
+  ) | (
     { __typename?: 'NavItem' }
     & { ' $fragmentRefs'?: { 'IContentListItem_NavItem_Fragment': IContentListItem_NavItem_Fragment } }
+  ) | (
+    { __typename?: 'OdpEmbedBlock' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_OdpEmbedBlock_Fragment': IContentListItem_OdpEmbedBlock_Fragment } }
+  ) | (
+    { __typename?: 'PageSeoSettings' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_PageSeoSettings_Fragment': IContentListItem_PageSeoSettings_Fragment } }
+  ) | (
+    { __typename?: 'ParagraphElement' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_ParagraphElement_Fragment': IContentListItem_ParagraphElement_Fragment } }
   ) | (
     { __typename?: 'PortfolioGridBlock' }
     & { ' $fragmentRefs'?: { 'IContentListItem_PortfolioGridBlock_Fragment': IContentListItem_PortfolioGridBlock_Fragment } }
@@ -6844,6 +10228,12 @@ export type LogosBlockDataFragment = { __typename?: 'LogosBlock', logos?: Array<
   ) | (
     { __typename?: 'ProfileBlock' }
     & { ' $fragmentRefs'?: { 'IContentListItem_ProfileBlock_Fragment': IContentListItem_ProfileBlock_Fragment } }
+  ) | (
+    { __typename?: 'QuoteBlock' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_QuoteBlock_Fragment': IContentListItem_QuoteBlock_Fragment } }
+  ) | (
+    { __typename?: 'RichTextElement' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_RichTextElement_Fragment': IContentListItem_RichTextElement_Fragment } }
   ) | (
     { __typename?: 'SEOExperience' }
     & { ' $fragmentRefs'?: { 'IContentListItem_SEOExperience_Fragment': IContentListItem_SEOExperience_Fragment } }
@@ -6857,6 +10247,9 @@ export type LogosBlockDataFragment = { __typename?: 'LogosBlock', logos?: Array<
     { __typename?: 'SocialLink' }
     & { ' $fragmentRefs'?: { 'IContentListItem_SocialLink_Fragment': IContentListItem_SocialLink_Fragment } }
   ) | (
+    { __typename?: 'SomeGreatNewPage' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_SomeGreatNewPage_Fragment': IContentListItem_SomeGreatNewPage_Fragment } }
+  ) | (
     { __typename?: 'StartPage' }
     & { ' $fragmentRefs'?: { 'IContentListItem_StartPage_Fragment': IContentListItem_StartPage_Fragment } }
   ) | (
@@ -6866,8 +10259,11 @@ export type LogosBlockDataFragment = { __typename?: 'LogosBlock', logos?: Array<
     { __typename?: 'SysContentFolder' }
     & { ' $fragmentRefs'?: { 'IContentListItem_SysContentFolder_Fragment': IContentListItem_SysContentFolder_Fragment } }
   ) | (
-    { __typename?: 'TedTestBlock' }
-    & { ' $fragmentRefs'?: { 'IContentListItem_TedTestBlock_Fragment': IContentListItem_TedTestBlock_Fragment } }
+    { __typename?: 'TestBlockPropertyGroup' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_TestBlockPropertyGroup_Fragment': IContentListItem_TestBlockPropertyGroup_Fragment } }
+  ) | (
+    { __typename?: 'TestimonialElement' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_TestimonialElement_Fragment': IContentListItem_TestimonialElement_Fragment } }
   ) | (
     { __typename?: 'TestimonialItem' }
     & { ' $fragmentRefs'?: { 'IContentListItem_TestimonialItem_Fragment': IContentListItem_TestimonialItem_Fragment } }
@@ -6877,6 +10273,12 @@ export type LogosBlockDataFragment = { __typename?: 'LogosBlock', logos?: Array<
   ) | (
     { __typename?: 'TestimonialsBlock' }
     & { ' $fragmentRefs'?: { 'IContentListItem_TestimonialsBlock_Fragment': IContentListItem_TestimonialsBlock_Fragment } }
+  ) | (
+    { __typename?: 'TextBlock' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_TextBlock_Fragment': IContentListItem_TextBlock_Fragment } }
+  ) | (
+    { __typename?: 'VideoElement' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_VideoElement_Fragment': IContentListItem_VideoElement_Fragment } }
   ) | (
     { __typename?: 'VideoMedia' }
     & { ' $fragmentRefs'?: { 'IContentListItem_VideoMedia_Fragment': IContentListItem_VideoMedia_Fragment } }
@@ -6912,6 +10314,12 @@ export type LogosBlockDataFragment = { __typename?: 'LogosBlock', logos?: Array<
 export type NavItemDataFragment = { __typename?: 'NavItem', label?: string | null, href?: string | null } & { ' $fragmentName'?: 'NavItemDataFragment' };
 
 export type PortfolioGridBlockDataFragment = { __typename?: 'PortfolioGridBlock', title?: string | null, items?: Array<(
+    { __typename?: 'AnotherGreatPage' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_AnotherGreatPage_Fragment': IContentListItem_AnotherGreatPage_Fragment } }
+  ) | (
+    { __typename?: 'ArticleListElement' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_ArticleListElement_Fragment': IContentListItem_ArticleListElement_Fragment } }
+  ) | (
     { __typename?: 'AvailabilityBlock' }
     & { ' $fragmentRefs'?: { 'IContentListItem_AvailabilityBlock_Fragment': IContentListItem_AvailabilityBlock_Fragment } }
   ) | (
@@ -6921,11 +10329,32 @@ export type PortfolioGridBlockDataFragment = { __typename?: 'PortfolioGridBlock'
     { __typename?: 'BlankSection' }
     & { ' $fragmentRefs'?: { 'IContentListItem_BlankSection_Fragment': IContentListItem_BlankSection_Fragment } }
   ) | (
+    { __typename?: 'BlogPostPage' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_BlogPostPage_Fragment': IContentListItem_BlogPostPage_Fragment } }
+  ) | (
+    { __typename?: 'BlogSectionExperience' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_BlogSectionExperience_Fragment': IContentListItem_BlogSectionExperience_Fragment } }
+  ) | (
+    { __typename?: 'ButtonBlock' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_ButtonBlock_Fragment': IContentListItem_ButtonBlock_Fragment } }
+  ) | (
     { __typename?: 'CMSPage' }
     & { ' $fragmentRefs'?: { 'IContentListItem_CMSPage_Fragment': IContentListItem_CMSPage_Fragment } }
   ) | (
+    { __typename?: 'CTAElement' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_CTAElement_Fragment': IContentListItem_CTAElement_Fragment } }
+  ) | (
+    { __typename?: 'CarouselBlock' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_CarouselBlock_Fragment': IContentListItem_CarouselBlock_Fragment } }
+  ) | (
     { __typename?: 'ContactBlock' }
     & { ' $fragmentRefs'?: { 'IContentListItem_ContactBlock_Fragment': IContentListItem_ContactBlock_Fragment } }
+  ) | (
+    { __typename?: 'ContentRecsElement' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_ContentRecsElement_Fragment': IContentListItem_ContentRecsElement_Fragment } }
+  ) | (
+    { __typename?: 'ContinueReadingComponent' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_ContinueReadingComponent_Fragment': IContentListItem_ContinueReadingComponent_Fragment } }
   ) | (
     { __typename?: 'Footer' }
     & { ' $fragmentRefs'?: { 'IContentListItem_Footer_Fragment': IContentListItem_Footer_Fragment } }
@@ -6942,6 +10371,9 @@ export type PortfolioGridBlockDataFragment = { __typename?: 'PortfolioGridBlock'
     { __typename?: 'Header' }
     & { ' $fragmentRefs'?: { 'IContentListItem_Header_Fragment': IContentListItem_Header_Fragment } }
   ) | (
+    { __typename?: 'HeadingElement' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_HeadingElement_Fragment': IContentListItem_HeadingElement_Fragment } }
+  ) | (
     { __typename?: 'HelloWorld' }
     & { ' $fragmentRefs'?: { 'IContentListItem_HelloWorld_Fragment': IContentListItem_HelloWorld_Fragment } }
   ) | (
@@ -6951,8 +10383,17 @@ export type PortfolioGridBlockDataFragment = { __typename?: 'PortfolioGridBlock'
     { __typename?: 'HomePage' }
     & { ' $fragmentRefs'?: { 'IContentListItem_HomePage_Fragment': IContentListItem_HomePage_Fragment } }
   ) | (
+    { __typename?: 'ImageElement' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_ImageElement_Fragment': IContentListItem_ImageElement_Fragment } }
+  ) | (
     { __typename?: 'ImageMedia' }
     & { ' $fragmentRefs'?: { 'IContentListItem_ImageMedia_Fragment': IContentListItem_ImageMedia_Fragment } }
+  ) | (
+    { __typename?: 'LandingPage' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_LandingPage_Fragment': IContentListItem_LandingPage_Fragment } }
+  ) | (
+    { __typename?: 'LayoutSettingsBlock' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_LayoutSettingsBlock_Fragment': IContentListItem_LayoutSettingsBlock_Fragment } }
   ) | (
     { __typename?: 'LogoItemBlock' }
     & { ' $fragmentRefs'?: { 'IContentListItem_LogoItemBlock_Fragment': IContentListItem_LogoItemBlock_Fragment } }
@@ -6960,8 +10401,23 @@ export type PortfolioGridBlockDataFragment = { __typename?: 'PortfolioGridBlock'
     { __typename?: 'LogosBlock' }
     & { ' $fragmentRefs'?: { 'IContentListItem_LogosBlock_Fragment': IContentListItem_LogosBlock_Fragment } }
   ) | (
+    { __typename?: 'MegaMenuGroupBlock' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_MegaMenuGroupBlock_Fragment': IContentListItem_MegaMenuGroupBlock_Fragment } }
+  ) | (
+    { __typename?: 'MenuNavigationBlock' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_MenuNavigationBlock_Fragment': IContentListItem_MenuNavigationBlock_Fragment } }
+  ) | (
     { __typename?: 'NavItem' }
     & { ' $fragmentRefs'?: { 'IContentListItem_NavItem_Fragment': IContentListItem_NavItem_Fragment } }
+  ) | (
+    { __typename?: 'OdpEmbedBlock' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_OdpEmbedBlock_Fragment': IContentListItem_OdpEmbedBlock_Fragment } }
+  ) | (
+    { __typename?: 'PageSeoSettings' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_PageSeoSettings_Fragment': IContentListItem_PageSeoSettings_Fragment } }
+  ) | (
+    { __typename?: 'ParagraphElement' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_ParagraphElement_Fragment': IContentListItem_ParagraphElement_Fragment } }
   ) | (
     { __typename?: 'PortfolioGridBlock' }
     & { ' $fragmentRefs'?: { 'IContentListItem_PortfolioGridBlock_Fragment': IContentListItem_PortfolioGridBlock_Fragment } }
@@ -6971,6 +10427,12 @@ export type PortfolioGridBlockDataFragment = { __typename?: 'PortfolioGridBlock'
   ) | (
     { __typename?: 'ProfileBlock' }
     & { ' $fragmentRefs'?: { 'IContentListItem_ProfileBlock_Fragment': IContentListItem_ProfileBlock_Fragment } }
+  ) | (
+    { __typename?: 'QuoteBlock' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_QuoteBlock_Fragment': IContentListItem_QuoteBlock_Fragment } }
+  ) | (
+    { __typename?: 'RichTextElement' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_RichTextElement_Fragment': IContentListItem_RichTextElement_Fragment } }
   ) | (
     { __typename?: 'SEOExperience' }
     & { ' $fragmentRefs'?: { 'IContentListItem_SEOExperience_Fragment': IContentListItem_SEOExperience_Fragment } }
@@ -6984,6 +10446,9 @@ export type PortfolioGridBlockDataFragment = { __typename?: 'PortfolioGridBlock'
     { __typename?: 'SocialLink' }
     & { ' $fragmentRefs'?: { 'IContentListItem_SocialLink_Fragment': IContentListItem_SocialLink_Fragment } }
   ) | (
+    { __typename?: 'SomeGreatNewPage' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_SomeGreatNewPage_Fragment': IContentListItem_SomeGreatNewPage_Fragment } }
+  ) | (
     { __typename?: 'StartPage' }
     & { ' $fragmentRefs'?: { 'IContentListItem_StartPage_Fragment': IContentListItem_StartPage_Fragment } }
   ) | (
@@ -6993,8 +10458,11 @@ export type PortfolioGridBlockDataFragment = { __typename?: 'PortfolioGridBlock'
     { __typename?: 'SysContentFolder' }
     & { ' $fragmentRefs'?: { 'IContentListItem_SysContentFolder_Fragment': IContentListItem_SysContentFolder_Fragment } }
   ) | (
-    { __typename?: 'TedTestBlock' }
-    & { ' $fragmentRefs'?: { 'IContentListItem_TedTestBlock_Fragment': IContentListItem_TedTestBlock_Fragment } }
+    { __typename?: 'TestBlockPropertyGroup' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_TestBlockPropertyGroup_Fragment': IContentListItem_TestBlockPropertyGroup_Fragment } }
+  ) | (
+    { __typename?: 'TestimonialElement' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_TestimonialElement_Fragment': IContentListItem_TestimonialElement_Fragment } }
   ) | (
     { __typename?: 'TestimonialItem' }
     & { ' $fragmentRefs'?: { 'IContentListItem_TestimonialItem_Fragment': IContentListItem_TestimonialItem_Fragment } }
@@ -7004,6 +10472,12 @@ export type PortfolioGridBlockDataFragment = { __typename?: 'PortfolioGridBlock'
   ) | (
     { __typename?: 'TestimonialsBlock' }
     & { ' $fragmentRefs'?: { 'IContentListItem_TestimonialsBlock_Fragment': IContentListItem_TestimonialsBlock_Fragment } }
+  ) | (
+    { __typename?: 'TextBlock' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_TextBlock_Fragment': IContentListItem_TextBlock_Fragment } }
+  ) | (
+    { __typename?: 'VideoElement' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_VideoElement_Fragment': IContentListItem_VideoElement_Fragment } }
   ) | (
     { __typename?: 'VideoMedia' }
     & { ' $fragmentRefs'?: { 'IContentListItem_VideoMedia_Fragment': IContentListItem_VideoMedia_Fragment } }
@@ -7043,6 +10517,12 @@ export type ProfileBlockDataFragment = { __typename?: 'ProfileBlock', imageSrc?:
 export type ServiceItemDataFragment = { __typename?: 'ServiceItem', title?: string | null, description?: string | null, icon?: string | null } & { ' $fragmentName'?: 'ServiceItemDataFragment' };
 
 export type ServicesBlockDataFragment = { __typename?: 'ServicesBlock', services?: Array<(
+    { __typename?: 'AnotherGreatPage' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_AnotherGreatPage_Fragment': IContentListItem_AnotherGreatPage_Fragment } }
+  ) | (
+    { __typename?: 'ArticleListElement' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_ArticleListElement_Fragment': IContentListItem_ArticleListElement_Fragment } }
+  ) | (
     { __typename?: 'AvailabilityBlock' }
     & { ' $fragmentRefs'?: { 'IContentListItem_AvailabilityBlock_Fragment': IContentListItem_AvailabilityBlock_Fragment } }
   ) | (
@@ -7052,11 +10532,32 @@ export type ServicesBlockDataFragment = { __typename?: 'ServicesBlock', services
     { __typename?: 'BlankSection' }
     & { ' $fragmentRefs'?: { 'IContentListItem_BlankSection_Fragment': IContentListItem_BlankSection_Fragment } }
   ) | (
+    { __typename?: 'BlogPostPage' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_BlogPostPage_Fragment': IContentListItem_BlogPostPage_Fragment } }
+  ) | (
+    { __typename?: 'BlogSectionExperience' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_BlogSectionExperience_Fragment': IContentListItem_BlogSectionExperience_Fragment } }
+  ) | (
+    { __typename?: 'ButtonBlock' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_ButtonBlock_Fragment': IContentListItem_ButtonBlock_Fragment } }
+  ) | (
     { __typename?: 'CMSPage' }
     & { ' $fragmentRefs'?: { 'IContentListItem_CMSPage_Fragment': IContentListItem_CMSPage_Fragment } }
   ) | (
+    { __typename?: 'CTAElement' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_CTAElement_Fragment': IContentListItem_CTAElement_Fragment } }
+  ) | (
+    { __typename?: 'CarouselBlock' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_CarouselBlock_Fragment': IContentListItem_CarouselBlock_Fragment } }
+  ) | (
     { __typename?: 'ContactBlock' }
     & { ' $fragmentRefs'?: { 'IContentListItem_ContactBlock_Fragment': IContentListItem_ContactBlock_Fragment } }
+  ) | (
+    { __typename?: 'ContentRecsElement' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_ContentRecsElement_Fragment': IContentListItem_ContentRecsElement_Fragment } }
+  ) | (
+    { __typename?: 'ContinueReadingComponent' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_ContinueReadingComponent_Fragment': IContentListItem_ContinueReadingComponent_Fragment } }
   ) | (
     { __typename?: 'Footer' }
     & { ' $fragmentRefs'?: { 'IContentListItem_Footer_Fragment': IContentListItem_Footer_Fragment } }
@@ -7073,6 +10574,9 @@ export type ServicesBlockDataFragment = { __typename?: 'ServicesBlock', services
     { __typename?: 'Header' }
     & { ' $fragmentRefs'?: { 'IContentListItem_Header_Fragment': IContentListItem_Header_Fragment } }
   ) | (
+    { __typename?: 'HeadingElement' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_HeadingElement_Fragment': IContentListItem_HeadingElement_Fragment } }
+  ) | (
     { __typename?: 'HelloWorld' }
     & { ' $fragmentRefs'?: { 'IContentListItem_HelloWorld_Fragment': IContentListItem_HelloWorld_Fragment } }
   ) | (
@@ -7082,8 +10586,17 @@ export type ServicesBlockDataFragment = { __typename?: 'ServicesBlock', services
     { __typename?: 'HomePage' }
     & { ' $fragmentRefs'?: { 'IContentListItem_HomePage_Fragment': IContentListItem_HomePage_Fragment } }
   ) | (
+    { __typename?: 'ImageElement' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_ImageElement_Fragment': IContentListItem_ImageElement_Fragment } }
+  ) | (
     { __typename?: 'ImageMedia' }
     & { ' $fragmentRefs'?: { 'IContentListItem_ImageMedia_Fragment': IContentListItem_ImageMedia_Fragment } }
+  ) | (
+    { __typename?: 'LandingPage' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_LandingPage_Fragment': IContentListItem_LandingPage_Fragment } }
+  ) | (
+    { __typename?: 'LayoutSettingsBlock' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_LayoutSettingsBlock_Fragment': IContentListItem_LayoutSettingsBlock_Fragment } }
   ) | (
     { __typename?: 'LogoItemBlock' }
     & { ' $fragmentRefs'?: { 'IContentListItem_LogoItemBlock_Fragment': IContentListItem_LogoItemBlock_Fragment } }
@@ -7091,8 +10604,23 @@ export type ServicesBlockDataFragment = { __typename?: 'ServicesBlock', services
     { __typename?: 'LogosBlock' }
     & { ' $fragmentRefs'?: { 'IContentListItem_LogosBlock_Fragment': IContentListItem_LogosBlock_Fragment } }
   ) | (
+    { __typename?: 'MegaMenuGroupBlock' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_MegaMenuGroupBlock_Fragment': IContentListItem_MegaMenuGroupBlock_Fragment } }
+  ) | (
+    { __typename?: 'MenuNavigationBlock' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_MenuNavigationBlock_Fragment': IContentListItem_MenuNavigationBlock_Fragment } }
+  ) | (
     { __typename?: 'NavItem' }
     & { ' $fragmentRefs'?: { 'IContentListItem_NavItem_Fragment': IContentListItem_NavItem_Fragment } }
+  ) | (
+    { __typename?: 'OdpEmbedBlock' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_OdpEmbedBlock_Fragment': IContentListItem_OdpEmbedBlock_Fragment } }
+  ) | (
+    { __typename?: 'PageSeoSettings' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_PageSeoSettings_Fragment': IContentListItem_PageSeoSettings_Fragment } }
+  ) | (
+    { __typename?: 'ParagraphElement' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_ParagraphElement_Fragment': IContentListItem_ParagraphElement_Fragment } }
   ) | (
     { __typename?: 'PortfolioGridBlock' }
     & { ' $fragmentRefs'?: { 'IContentListItem_PortfolioGridBlock_Fragment': IContentListItem_PortfolioGridBlock_Fragment } }
@@ -7102,6 +10630,12 @@ export type ServicesBlockDataFragment = { __typename?: 'ServicesBlock', services
   ) | (
     { __typename?: 'ProfileBlock' }
     & { ' $fragmentRefs'?: { 'IContentListItem_ProfileBlock_Fragment': IContentListItem_ProfileBlock_Fragment } }
+  ) | (
+    { __typename?: 'QuoteBlock' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_QuoteBlock_Fragment': IContentListItem_QuoteBlock_Fragment } }
+  ) | (
+    { __typename?: 'RichTextElement' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_RichTextElement_Fragment': IContentListItem_RichTextElement_Fragment } }
   ) | (
     { __typename?: 'SEOExperience' }
     & { ' $fragmentRefs'?: { 'IContentListItem_SEOExperience_Fragment': IContentListItem_SEOExperience_Fragment } }
@@ -7115,6 +10649,9 @@ export type ServicesBlockDataFragment = { __typename?: 'ServicesBlock', services
     { __typename?: 'SocialLink' }
     & { ' $fragmentRefs'?: { 'IContentListItem_SocialLink_Fragment': IContentListItem_SocialLink_Fragment } }
   ) | (
+    { __typename?: 'SomeGreatNewPage' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_SomeGreatNewPage_Fragment': IContentListItem_SomeGreatNewPage_Fragment } }
+  ) | (
     { __typename?: 'StartPage' }
     & { ' $fragmentRefs'?: { 'IContentListItem_StartPage_Fragment': IContentListItem_StartPage_Fragment } }
   ) | (
@@ -7124,8 +10661,11 @@ export type ServicesBlockDataFragment = { __typename?: 'ServicesBlock', services
     { __typename?: 'SysContentFolder' }
     & { ' $fragmentRefs'?: { 'IContentListItem_SysContentFolder_Fragment': IContentListItem_SysContentFolder_Fragment } }
   ) | (
-    { __typename?: 'TedTestBlock' }
-    & { ' $fragmentRefs'?: { 'IContentListItem_TedTestBlock_Fragment': IContentListItem_TedTestBlock_Fragment } }
+    { __typename?: 'TestBlockPropertyGroup' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_TestBlockPropertyGroup_Fragment': IContentListItem_TestBlockPropertyGroup_Fragment } }
+  ) | (
+    { __typename?: 'TestimonialElement' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_TestimonialElement_Fragment': IContentListItem_TestimonialElement_Fragment } }
   ) | (
     { __typename?: 'TestimonialItem' }
     & { ' $fragmentRefs'?: { 'IContentListItem_TestimonialItem_Fragment': IContentListItem_TestimonialItem_Fragment } }
@@ -7135,6 +10675,12 @@ export type ServicesBlockDataFragment = { __typename?: 'ServicesBlock', services
   ) | (
     { __typename?: 'TestimonialsBlock' }
     & { ' $fragmentRefs'?: { 'IContentListItem_TestimonialsBlock_Fragment': IContentListItem_TestimonialsBlock_Fragment } }
+  ) | (
+    { __typename?: 'TextBlock' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_TextBlock_Fragment': IContentListItem_TextBlock_Fragment } }
+  ) | (
+    { __typename?: 'VideoElement' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_VideoElement_Fragment': IContentListItem_VideoElement_Fragment } }
   ) | (
     { __typename?: 'VideoMedia' }
     & { ' $fragmentRefs'?: { 'IContentListItem_VideoMedia_Fragment': IContentListItem_VideoMedia_Fragment } }
@@ -7171,13 +10717,15 @@ export type SocialLinkDataFragment = { __typename?: 'SocialLink', platform?: str
 
 export type StoryBlockDataFragment = { __typename?: 'StoryBlock', story?: string | null, highlights?: Array<string | null> | null } & { ' $fragmentName'?: 'StoryBlockDataFragment' };
 
-export type TedTestBlockDataFragment = { __typename?: 'TedTestBlock', stringTest?: string | null } & { ' $fragmentName'?: 'TedTestBlockDataFragment' };
-
-export type TestimonialItemDataFragment = { __typename?: 'TestimonialItem', fullName?: string | null, position?: string | null, content?: string | null, avatarSrc?: string | null } & { ' $fragmentName'?: 'TestimonialItemDataFragment' };
-
 export type TestimonialItemBlockDataFragment = { __typename?: 'TestimonialItemBlock', fullName?: string | null, position?: string | null, content?: string | null, avatarSrc?: string | null } & { ' $fragmentName'?: 'TestimonialItemBlockDataFragment' };
 
 export type TestimonialsBlockDataFragment = { __typename?: 'TestimonialsBlock', title?: string | null, testimonials?: Array<(
+    { __typename?: 'AnotherGreatPage' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_AnotherGreatPage_Fragment': IContentListItem_AnotherGreatPage_Fragment } }
+  ) | (
+    { __typename?: 'ArticleListElement' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_ArticleListElement_Fragment': IContentListItem_ArticleListElement_Fragment } }
+  ) | (
     { __typename?: 'AvailabilityBlock' }
     & { ' $fragmentRefs'?: { 'IContentListItem_AvailabilityBlock_Fragment': IContentListItem_AvailabilityBlock_Fragment } }
   ) | (
@@ -7187,11 +10735,32 @@ export type TestimonialsBlockDataFragment = { __typename?: 'TestimonialsBlock', 
     { __typename?: 'BlankSection' }
     & { ' $fragmentRefs'?: { 'IContentListItem_BlankSection_Fragment': IContentListItem_BlankSection_Fragment } }
   ) | (
+    { __typename?: 'BlogPostPage' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_BlogPostPage_Fragment': IContentListItem_BlogPostPage_Fragment } }
+  ) | (
+    { __typename?: 'BlogSectionExperience' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_BlogSectionExperience_Fragment': IContentListItem_BlogSectionExperience_Fragment } }
+  ) | (
+    { __typename?: 'ButtonBlock' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_ButtonBlock_Fragment': IContentListItem_ButtonBlock_Fragment } }
+  ) | (
     { __typename?: 'CMSPage' }
     & { ' $fragmentRefs'?: { 'IContentListItem_CMSPage_Fragment': IContentListItem_CMSPage_Fragment } }
   ) | (
+    { __typename?: 'CTAElement' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_CTAElement_Fragment': IContentListItem_CTAElement_Fragment } }
+  ) | (
+    { __typename?: 'CarouselBlock' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_CarouselBlock_Fragment': IContentListItem_CarouselBlock_Fragment } }
+  ) | (
     { __typename?: 'ContactBlock' }
     & { ' $fragmentRefs'?: { 'IContentListItem_ContactBlock_Fragment': IContentListItem_ContactBlock_Fragment } }
+  ) | (
+    { __typename?: 'ContentRecsElement' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_ContentRecsElement_Fragment': IContentListItem_ContentRecsElement_Fragment } }
+  ) | (
+    { __typename?: 'ContinueReadingComponent' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_ContinueReadingComponent_Fragment': IContentListItem_ContinueReadingComponent_Fragment } }
   ) | (
     { __typename?: 'Footer' }
     & { ' $fragmentRefs'?: { 'IContentListItem_Footer_Fragment': IContentListItem_Footer_Fragment } }
@@ -7208,6 +10777,9 @@ export type TestimonialsBlockDataFragment = { __typename?: 'TestimonialsBlock', 
     { __typename?: 'Header' }
     & { ' $fragmentRefs'?: { 'IContentListItem_Header_Fragment': IContentListItem_Header_Fragment } }
   ) | (
+    { __typename?: 'HeadingElement' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_HeadingElement_Fragment': IContentListItem_HeadingElement_Fragment } }
+  ) | (
     { __typename?: 'HelloWorld' }
     & { ' $fragmentRefs'?: { 'IContentListItem_HelloWorld_Fragment': IContentListItem_HelloWorld_Fragment } }
   ) | (
@@ -7217,8 +10789,17 @@ export type TestimonialsBlockDataFragment = { __typename?: 'TestimonialsBlock', 
     { __typename?: 'HomePage' }
     & { ' $fragmentRefs'?: { 'IContentListItem_HomePage_Fragment': IContentListItem_HomePage_Fragment } }
   ) | (
+    { __typename?: 'ImageElement' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_ImageElement_Fragment': IContentListItem_ImageElement_Fragment } }
+  ) | (
     { __typename?: 'ImageMedia' }
     & { ' $fragmentRefs'?: { 'IContentListItem_ImageMedia_Fragment': IContentListItem_ImageMedia_Fragment } }
+  ) | (
+    { __typename?: 'LandingPage' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_LandingPage_Fragment': IContentListItem_LandingPage_Fragment } }
+  ) | (
+    { __typename?: 'LayoutSettingsBlock' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_LayoutSettingsBlock_Fragment': IContentListItem_LayoutSettingsBlock_Fragment } }
   ) | (
     { __typename?: 'LogoItemBlock' }
     & { ' $fragmentRefs'?: { 'IContentListItem_LogoItemBlock_Fragment': IContentListItem_LogoItemBlock_Fragment } }
@@ -7226,8 +10807,23 @@ export type TestimonialsBlockDataFragment = { __typename?: 'TestimonialsBlock', 
     { __typename?: 'LogosBlock' }
     & { ' $fragmentRefs'?: { 'IContentListItem_LogosBlock_Fragment': IContentListItem_LogosBlock_Fragment } }
   ) | (
+    { __typename?: 'MegaMenuGroupBlock' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_MegaMenuGroupBlock_Fragment': IContentListItem_MegaMenuGroupBlock_Fragment } }
+  ) | (
+    { __typename?: 'MenuNavigationBlock' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_MenuNavigationBlock_Fragment': IContentListItem_MenuNavigationBlock_Fragment } }
+  ) | (
     { __typename?: 'NavItem' }
     & { ' $fragmentRefs'?: { 'IContentListItem_NavItem_Fragment': IContentListItem_NavItem_Fragment } }
+  ) | (
+    { __typename?: 'OdpEmbedBlock' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_OdpEmbedBlock_Fragment': IContentListItem_OdpEmbedBlock_Fragment } }
+  ) | (
+    { __typename?: 'PageSeoSettings' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_PageSeoSettings_Fragment': IContentListItem_PageSeoSettings_Fragment } }
+  ) | (
+    { __typename?: 'ParagraphElement' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_ParagraphElement_Fragment': IContentListItem_ParagraphElement_Fragment } }
   ) | (
     { __typename?: 'PortfolioGridBlock' }
     & { ' $fragmentRefs'?: { 'IContentListItem_PortfolioGridBlock_Fragment': IContentListItem_PortfolioGridBlock_Fragment } }
@@ -7237,6 +10833,12 @@ export type TestimonialsBlockDataFragment = { __typename?: 'TestimonialsBlock', 
   ) | (
     { __typename?: 'ProfileBlock' }
     & { ' $fragmentRefs'?: { 'IContentListItem_ProfileBlock_Fragment': IContentListItem_ProfileBlock_Fragment } }
+  ) | (
+    { __typename?: 'QuoteBlock' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_QuoteBlock_Fragment': IContentListItem_QuoteBlock_Fragment } }
+  ) | (
+    { __typename?: 'RichTextElement' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_RichTextElement_Fragment': IContentListItem_RichTextElement_Fragment } }
   ) | (
     { __typename?: 'SEOExperience' }
     & { ' $fragmentRefs'?: { 'IContentListItem_SEOExperience_Fragment': IContentListItem_SEOExperience_Fragment } }
@@ -7250,6 +10852,9 @@ export type TestimonialsBlockDataFragment = { __typename?: 'TestimonialsBlock', 
     { __typename?: 'SocialLink' }
     & { ' $fragmentRefs'?: { 'IContentListItem_SocialLink_Fragment': IContentListItem_SocialLink_Fragment } }
   ) | (
+    { __typename?: 'SomeGreatNewPage' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_SomeGreatNewPage_Fragment': IContentListItem_SomeGreatNewPage_Fragment } }
+  ) | (
     { __typename?: 'StartPage' }
     & { ' $fragmentRefs'?: { 'IContentListItem_StartPage_Fragment': IContentListItem_StartPage_Fragment } }
   ) | (
@@ -7259,8 +10864,11 @@ export type TestimonialsBlockDataFragment = { __typename?: 'TestimonialsBlock', 
     { __typename?: 'SysContentFolder' }
     & { ' $fragmentRefs'?: { 'IContentListItem_SysContentFolder_Fragment': IContentListItem_SysContentFolder_Fragment } }
   ) | (
-    { __typename?: 'TedTestBlock' }
-    & { ' $fragmentRefs'?: { 'IContentListItem_TedTestBlock_Fragment': IContentListItem_TedTestBlock_Fragment } }
+    { __typename?: 'TestBlockPropertyGroup' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_TestBlockPropertyGroup_Fragment': IContentListItem_TestBlockPropertyGroup_Fragment } }
+  ) | (
+    { __typename?: 'TestimonialElement' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_TestimonialElement_Fragment': IContentListItem_TestimonialElement_Fragment } }
   ) | (
     { __typename?: 'TestimonialItem' }
     & { ' $fragmentRefs'?: { 'IContentListItem_TestimonialItem_Fragment': IContentListItem_TestimonialItem_Fragment } }
@@ -7270,6 +10878,12 @@ export type TestimonialsBlockDataFragment = { __typename?: 'TestimonialsBlock', 
   ) | (
     { __typename?: 'TestimonialsBlock' }
     & { ' $fragmentRefs'?: { 'IContentListItem_TestimonialsBlock_Fragment': IContentListItem_TestimonialsBlock_Fragment } }
+  ) | (
+    { __typename?: 'TextBlock' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_TextBlock_Fragment': IContentListItem_TextBlock_Fragment } }
+  ) | (
+    { __typename?: 'VideoElement' }
+    & { ' $fragmentRefs'?: { 'IContentListItem_VideoElement_Fragment': IContentListItem_VideoElement_Fragment } }
   ) | (
     { __typename?: 'VideoMedia' }
     & { ' $fragmentRefs'?: { 'IContentListItem_VideoMedia_Fragment': IContentListItem_VideoMedia_Fragment } }
@@ -7316,35 +10930,75 @@ export type ImageMediaDataFragment = { __typename?: 'ImageMedia', empty?: { __ty
 
 export type GenericMediaDataFragment = { __typename?: 'GenericMedia', empty?: { __typename?: 'ContentMetadata', key?: string | null } | { __typename?: 'InstanceMetadata', key?: string | null } | { __typename?: 'ItemMetadata', key?: string | null } | { __typename?: 'MediaMetadata', key?: string | null } | null } & { ' $fragmentName'?: 'GenericMediaDataFragment' };
 
-export type GenericMedia123DataFragment = { __typename?: 'GenericMedia123', empty?: { __typename?: 'ContentMetadata', key?: string | null } | { __typename?: 'InstanceMetadata', key?: string | null } | { __typename?: 'ItemMetadata', key?: string | null } | { __typename?: 'MediaMetadata', key?: string | null } | null } & { ' $fragmentName'?: 'GenericMedia123DataFragment' };
-
-export type CMSPageDataFragment = { __typename?: 'CMSPage', title?: string | null, shortDescription?: string | null, keywords?: string | null, blocks?: Array<(
+export type CMSPageDataFragment = { __typename?: 'CMSPage', title?: string | null, shortDescription?: string | null, keywords?: string | null, blocks?: Array<{ __typename?: 'AnotherGreatPage' } | (
+    { __typename?: 'ArticleListElement' }
+    & { ' $fragmentRefs'?: { 'BlockData_ArticleListElement_Fragment': BlockData_ArticleListElement_Fragment } }
+  ) | (
     { __typename?: 'AvailabilityBlock' }
     & { ' $fragmentRefs'?: { 'BlockData_AvailabilityBlock_Fragment': BlockData_AvailabilityBlock_Fragment;'AvailabilityBlockDataFragment': AvailabilityBlockDataFragment } }
   ) | { __typename?: 'BlankExperience' } | (
     { __typename?: 'BlankSection' }
     & { ' $fragmentRefs'?: { 'BlockData_BlankSection_Fragment': BlockData_BlankSection_Fragment } }
+  ) | { __typename?: 'BlogPostPage' } | { __typename?: 'BlogSectionExperience' } | (
+    { __typename?: 'ButtonBlock' }
+    & { ' $fragmentRefs'?: { 'BlockData_ButtonBlock_Fragment': BlockData_ButtonBlock_Fragment } }
   ) | { __typename?: 'CMSPage' } | (
+    { __typename?: 'CTAElement' }
+    & { ' $fragmentRefs'?: { 'BlockData_CTAElement_Fragment': BlockData_CTAElement_Fragment } }
+  ) | (
+    { __typename?: 'CarouselBlock' }
+    & { ' $fragmentRefs'?: { 'BlockData_CarouselBlock_Fragment': BlockData_CarouselBlock_Fragment } }
+  ) | (
     { __typename?: 'ContactBlock' }
     & { ' $fragmentRefs'?: { 'BlockData_ContactBlock_Fragment': BlockData_ContactBlock_Fragment;'ContactBlockDataFragment': ContactBlockDataFragment } }
+  ) | (
+    { __typename?: 'ContentRecsElement' }
+    & { ' $fragmentRefs'?: { 'BlockData_ContentRecsElement_Fragment': BlockData_ContentRecsElement_Fragment } }
+  ) | (
+    { __typename?: 'ContinueReadingComponent' }
+    & { ' $fragmentRefs'?: { 'BlockData_ContinueReadingComponent_Fragment': BlockData_ContinueReadingComponent_Fragment } }
   ) | { __typename?: 'Footer' } | (
     { __typename?: 'FooterColumn' }
     & { ' $fragmentRefs'?: { 'BlockData_FooterColumn_Fragment': BlockData_FooterColumn_Fragment;'FooterColumnDataFragment': FooterColumnDataFragment } }
   ) | { __typename?: 'GenericMedia' } | { __typename?: 'GenericMedia123' } | { __typename?: 'Header' } | (
+    { __typename?: 'HeadingElement' }
+    & { ' $fragmentRefs'?: { 'BlockData_HeadingElement_Fragment': BlockData_HeadingElement_Fragment } }
+  ) | (
     { __typename?: 'HelloWorld' }
     & { ' $fragmentRefs'?: { 'BlockData_HelloWorld_Fragment': BlockData_HelloWorld_Fragment;'HelloWorldDataFragment': HelloWorldDataFragment } }
   ) | (
     { __typename?: 'HeroBlock' }
     & { ' $fragmentRefs'?: { 'BlockData_HeroBlock_Fragment': BlockData_HeroBlock_Fragment;'HeroBlockDataFragment': HeroBlockDataFragment } }
-  ) | { __typename?: 'HomePage' } | { __typename?: 'ImageMedia' } | (
+  ) | { __typename?: 'HomePage' } | (
+    { __typename?: 'ImageElement' }
+    & { ' $fragmentRefs'?: { 'BlockData_ImageElement_Fragment': BlockData_ImageElement_Fragment } }
+  ) | { __typename?: 'ImageMedia' } | { __typename?: 'LandingPage' } | (
+    { __typename?: 'LayoutSettingsBlock' }
+    & { ' $fragmentRefs'?: { 'BlockData_LayoutSettingsBlock_Fragment': BlockData_LayoutSettingsBlock_Fragment } }
+  ) | (
     { __typename?: 'LogoItemBlock' }
     & { ' $fragmentRefs'?: { 'BlockData_LogoItemBlock_Fragment': BlockData_LogoItemBlock_Fragment;'LogoItemBlockDataFragment': LogoItemBlockDataFragment } }
   ) | (
     { __typename?: 'LogosBlock' }
     & { ' $fragmentRefs'?: { 'BlockData_LogosBlock_Fragment': BlockData_LogosBlock_Fragment;'LogosBlockDataFragment': LogosBlockDataFragment } }
   ) | (
+    { __typename?: 'MegaMenuGroupBlock' }
+    & { ' $fragmentRefs'?: { 'BlockData_MegaMenuGroupBlock_Fragment': BlockData_MegaMenuGroupBlock_Fragment } }
+  ) | (
+    { __typename?: 'MenuNavigationBlock' }
+    & { ' $fragmentRefs'?: { 'BlockData_MenuNavigationBlock_Fragment': BlockData_MenuNavigationBlock_Fragment } }
+  ) | (
     { __typename?: 'NavItem' }
     & { ' $fragmentRefs'?: { 'BlockData_NavItem_Fragment': BlockData_NavItem_Fragment;'NavItemDataFragment': NavItemDataFragment } }
+  ) | (
+    { __typename?: 'OdpEmbedBlock' }
+    & { ' $fragmentRefs'?: { 'BlockData_OdpEmbedBlock_Fragment': BlockData_OdpEmbedBlock_Fragment } }
+  ) | (
+    { __typename?: 'PageSeoSettings' }
+    & { ' $fragmentRefs'?: { 'BlockData_PageSeoSettings_Fragment': BlockData_PageSeoSettings_Fragment } }
+  ) | (
+    { __typename?: 'ParagraphElement' }
+    & { ' $fragmentRefs'?: { 'BlockData_ParagraphElement_Fragment': BlockData_ParagraphElement_Fragment } }
   ) | (
     { __typename?: 'PortfolioGridBlock' }
     & { ' $fragmentRefs'?: { 'BlockData_PortfolioGridBlock_Fragment': BlockData_PortfolioGridBlock_Fragment;'PortfolioGridBlockDataFragment': PortfolioGridBlockDataFragment } }
@@ -7354,6 +11008,12 @@ export type CMSPageDataFragment = { __typename?: 'CMSPage', title?: string | nul
   ) | (
     { __typename?: 'ProfileBlock' }
     & { ' $fragmentRefs'?: { 'BlockData_ProfileBlock_Fragment': BlockData_ProfileBlock_Fragment;'ProfileBlockDataFragment': ProfileBlockDataFragment } }
+  ) | (
+    { __typename?: 'QuoteBlock' }
+    & { ' $fragmentRefs'?: { 'BlockData_QuoteBlock_Fragment': BlockData_QuoteBlock_Fragment } }
+  ) | (
+    { __typename?: 'RichTextElement' }
+    & { ' $fragmentRefs'?: { 'BlockData_RichTextElement_Fragment': BlockData_RichTextElement_Fragment } }
   ) | { __typename?: 'SEOExperience' } | (
     { __typename?: 'ServiceItem' }
     & { ' $fragmentRefs'?: { 'BlockData_ServiceItem_Fragment': BlockData_ServiceItem_Fragment;'ServiceItemDataFragment': ServiceItemDataFragment } }
@@ -7363,21 +11023,30 @@ export type CMSPageDataFragment = { __typename?: 'CMSPage', title?: string | nul
   ) | (
     { __typename?: 'SocialLink' }
     & { ' $fragmentRefs'?: { 'BlockData_SocialLink_Fragment': BlockData_SocialLink_Fragment;'SocialLinkDataFragment': SocialLinkDataFragment } }
-  ) | { __typename?: 'StartPage' } | (
+  ) | { __typename?: 'SomeGreatNewPage' } | { __typename?: 'StartPage' } | (
     { __typename?: 'StoryBlock' }
     & { ' $fragmentRefs'?: { 'BlockData_StoryBlock_Fragment': BlockData_StoryBlock_Fragment;'StoryBlockDataFragment': StoryBlockDataFragment } }
   ) | { __typename?: 'SysContentFolder' } | (
-    { __typename?: 'TedTestBlock' }
-    & { ' $fragmentRefs'?: { 'BlockData_TedTestBlock_Fragment': BlockData_TedTestBlock_Fragment;'TedTestBlockDataFragment': TedTestBlockDataFragment } }
+    { __typename?: 'TestBlockPropertyGroup' }
+    & { ' $fragmentRefs'?: { 'BlockData_TestBlockPropertyGroup_Fragment': BlockData_TestBlockPropertyGroup_Fragment } }
+  ) | (
+    { __typename?: 'TestimonialElement' }
+    & { ' $fragmentRefs'?: { 'BlockData_TestimonialElement_Fragment': BlockData_TestimonialElement_Fragment } }
   ) | (
     { __typename?: 'TestimonialItem' }
-    & { ' $fragmentRefs'?: { 'BlockData_TestimonialItem_Fragment': BlockData_TestimonialItem_Fragment;'TestimonialItemDataFragment': TestimonialItemDataFragment } }
+    & { ' $fragmentRefs'?: { 'BlockData_TestimonialItem_Fragment': BlockData_TestimonialItem_Fragment } }
   ) | (
     { __typename?: 'TestimonialItemBlock' }
     & { ' $fragmentRefs'?: { 'BlockData_TestimonialItemBlock_Fragment': BlockData_TestimonialItemBlock_Fragment;'TestimonialItemBlockDataFragment': TestimonialItemBlockDataFragment } }
   ) | (
     { __typename?: 'TestimonialsBlock' }
     & { ' $fragmentRefs'?: { 'BlockData_TestimonialsBlock_Fragment': BlockData_TestimonialsBlock_Fragment;'TestimonialsBlockDataFragment': TestimonialsBlockDataFragment } }
+  ) | (
+    { __typename?: 'TextBlock' }
+    & { ' $fragmentRefs'?: { 'BlockData_TextBlock_Fragment': BlockData_TextBlock_Fragment } }
+  ) | (
+    { __typename?: 'VideoElement' }
+    & { ' $fragmentRefs'?: { 'BlockData_VideoElement_Fragment': BlockData_VideoElement_Fragment } }
   ) | { __typename?: 'VideoMedia' } | (
     { __typename?: '_Component' }
     & { ' $fragmentRefs'?: { 'BlockData__Component_Fragment': BlockData__Component_Fragment } }
@@ -7386,33 +11055,75 @@ export type CMSPageDataFragment = { __typename?: 'CMSPage', title?: string | nul
     & { ' $fragmentRefs'?: { 'BlockData__Section_Fragment': BlockData__Section_Fragment } }
   ) | { __typename?: '_Video' } | null> | null } & { ' $fragmentName'?: 'CMSPageDataFragment' };
 
-export type FooterDataFragment = { __typename?: 'Footer', copyrightText?: string | null, columns?: Array<(
+export type FooterDataFragment = { __typename?: 'Footer', copyrightText?: string | null, columns?: Array<{ __typename?: 'AnotherGreatPage' } | (
+    { __typename?: 'ArticleListElement' }
+    & { ' $fragmentRefs'?: { 'BlockData_ArticleListElement_Fragment': BlockData_ArticleListElement_Fragment } }
+  ) | (
     { __typename?: 'AvailabilityBlock' }
     & { ' $fragmentRefs'?: { 'BlockData_AvailabilityBlock_Fragment': BlockData_AvailabilityBlock_Fragment;'AvailabilityBlockDataFragment': AvailabilityBlockDataFragment } }
   ) | { __typename?: 'BlankExperience' } | (
     { __typename?: 'BlankSection' }
     & { ' $fragmentRefs'?: { 'BlockData_BlankSection_Fragment': BlockData_BlankSection_Fragment } }
+  ) | { __typename?: 'BlogPostPage' } | { __typename?: 'BlogSectionExperience' } | (
+    { __typename?: 'ButtonBlock' }
+    & { ' $fragmentRefs'?: { 'BlockData_ButtonBlock_Fragment': BlockData_ButtonBlock_Fragment } }
   ) | { __typename?: 'CMSPage' } | (
+    { __typename?: 'CTAElement' }
+    & { ' $fragmentRefs'?: { 'BlockData_CTAElement_Fragment': BlockData_CTAElement_Fragment } }
+  ) | (
+    { __typename?: 'CarouselBlock' }
+    & { ' $fragmentRefs'?: { 'BlockData_CarouselBlock_Fragment': BlockData_CarouselBlock_Fragment } }
+  ) | (
     { __typename?: 'ContactBlock' }
     & { ' $fragmentRefs'?: { 'BlockData_ContactBlock_Fragment': BlockData_ContactBlock_Fragment;'ContactBlockDataFragment': ContactBlockDataFragment } }
+  ) | (
+    { __typename?: 'ContentRecsElement' }
+    & { ' $fragmentRefs'?: { 'BlockData_ContentRecsElement_Fragment': BlockData_ContentRecsElement_Fragment } }
+  ) | (
+    { __typename?: 'ContinueReadingComponent' }
+    & { ' $fragmentRefs'?: { 'BlockData_ContinueReadingComponent_Fragment': BlockData_ContinueReadingComponent_Fragment } }
   ) | { __typename?: 'Footer' } | (
     { __typename?: 'FooterColumn' }
     & { ' $fragmentRefs'?: { 'BlockData_FooterColumn_Fragment': BlockData_FooterColumn_Fragment;'FooterColumnDataFragment': FooterColumnDataFragment } }
   ) | { __typename?: 'GenericMedia' } | { __typename?: 'GenericMedia123' } | { __typename?: 'Header' } | (
+    { __typename?: 'HeadingElement' }
+    & { ' $fragmentRefs'?: { 'BlockData_HeadingElement_Fragment': BlockData_HeadingElement_Fragment } }
+  ) | (
     { __typename?: 'HelloWorld' }
     & { ' $fragmentRefs'?: { 'BlockData_HelloWorld_Fragment': BlockData_HelloWorld_Fragment;'HelloWorldDataFragment': HelloWorldDataFragment } }
   ) | (
     { __typename?: 'HeroBlock' }
     & { ' $fragmentRefs'?: { 'BlockData_HeroBlock_Fragment': BlockData_HeroBlock_Fragment;'HeroBlockDataFragment': HeroBlockDataFragment } }
-  ) | { __typename?: 'HomePage' } | { __typename?: 'ImageMedia' } | (
+  ) | { __typename?: 'HomePage' } | (
+    { __typename?: 'ImageElement' }
+    & { ' $fragmentRefs'?: { 'BlockData_ImageElement_Fragment': BlockData_ImageElement_Fragment } }
+  ) | { __typename?: 'ImageMedia' } | { __typename?: 'LandingPage' } | (
+    { __typename?: 'LayoutSettingsBlock' }
+    & { ' $fragmentRefs'?: { 'BlockData_LayoutSettingsBlock_Fragment': BlockData_LayoutSettingsBlock_Fragment } }
+  ) | (
     { __typename?: 'LogoItemBlock' }
     & { ' $fragmentRefs'?: { 'BlockData_LogoItemBlock_Fragment': BlockData_LogoItemBlock_Fragment;'LogoItemBlockDataFragment': LogoItemBlockDataFragment } }
   ) | (
     { __typename?: 'LogosBlock' }
     & { ' $fragmentRefs'?: { 'BlockData_LogosBlock_Fragment': BlockData_LogosBlock_Fragment;'LogosBlockDataFragment': LogosBlockDataFragment } }
   ) | (
+    { __typename?: 'MegaMenuGroupBlock' }
+    & { ' $fragmentRefs'?: { 'BlockData_MegaMenuGroupBlock_Fragment': BlockData_MegaMenuGroupBlock_Fragment } }
+  ) | (
+    { __typename?: 'MenuNavigationBlock' }
+    & { ' $fragmentRefs'?: { 'BlockData_MenuNavigationBlock_Fragment': BlockData_MenuNavigationBlock_Fragment } }
+  ) | (
     { __typename?: 'NavItem' }
     & { ' $fragmentRefs'?: { 'BlockData_NavItem_Fragment': BlockData_NavItem_Fragment;'NavItemDataFragment': NavItemDataFragment } }
+  ) | (
+    { __typename?: 'OdpEmbedBlock' }
+    & { ' $fragmentRefs'?: { 'BlockData_OdpEmbedBlock_Fragment': BlockData_OdpEmbedBlock_Fragment } }
+  ) | (
+    { __typename?: 'PageSeoSettings' }
+    & { ' $fragmentRefs'?: { 'BlockData_PageSeoSettings_Fragment': BlockData_PageSeoSettings_Fragment } }
+  ) | (
+    { __typename?: 'ParagraphElement' }
+    & { ' $fragmentRefs'?: { 'BlockData_ParagraphElement_Fragment': BlockData_ParagraphElement_Fragment } }
   ) | (
     { __typename?: 'PortfolioGridBlock' }
     & { ' $fragmentRefs'?: { 'BlockData_PortfolioGridBlock_Fragment': BlockData_PortfolioGridBlock_Fragment;'PortfolioGridBlockDataFragment': PortfolioGridBlockDataFragment } }
@@ -7422,6 +11133,12 @@ export type FooterDataFragment = { __typename?: 'Footer', copyrightText?: string
   ) | (
     { __typename?: 'ProfileBlock' }
     & { ' $fragmentRefs'?: { 'BlockData_ProfileBlock_Fragment': BlockData_ProfileBlock_Fragment;'ProfileBlockDataFragment': ProfileBlockDataFragment } }
+  ) | (
+    { __typename?: 'QuoteBlock' }
+    & { ' $fragmentRefs'?: { 'BlockData_QuoteBlock_Fragment': BlockData_QuoteBlock_Fragment } }
+  ) | (
+    { __typename?: 'RichTextElement' }
+    & { ' $fragmentRefs'?: { 'BlockData_RichTextElement_Fragment': BlockData_RichTextElement_Fragment } }
   ) | { __typename?: 'SEOExperience' } | (
     { __typename?: 'ServiceItem' }
     & { ' $fragmentRefs'?: { 'BlockData_ServiceItem_Fragment': BlockData_ServiceItem_Fragment;'ServiceItemDataFragment': ServiceItemDataFragment } }
@@ -7431,54 +11148,105 @@ export type FooterDataFragment = { __typename?: 'Footer', copyrightText?: string
   ) | (
     { __typename?: 'SocialLink' }
     & { ' $fragmentRefs'?: { 'BlockData_SocialLink_Fragment': BlockData_SocialLink_Fragment;'SocialLinkDataFragment': SocialLinkDataFragment } }
-  ) | { __typename?: 'StartPage' } | (
+  ) | { __typename?: 'SomeGreatNewPage' } | { __typename?: 'StartPage' } | (
     { __typename?: 'StoryBlock' }
     & { ' $fragmentRefs'?: { 'BlockData_StoryBlock_Fragment': BlockData_StoryBlock_Fragment;'StoryBlockDataFragment': StoryBlockDataFragment } }
   ) | { __typename?: 'SysContentFolder' } | (
-    { __typename?: 'TedTestBlock' }
-    & { ' $fragmentRefs'?: { 'BlockData_TedTestBlock_Fragment': BlockData_TedTestBlock_Fragment;'TedTestBlockDataFragment': TedTestBlockDataFragment } }
+    { __typename?: 'TestBlockPropertyGroup' }
+    & { ' $fragmentRefs'?: { 'BlockData_TestBlockPropertyGroup_Fragment': BlockData_TestBlockPropertyGroup_Fragment } }
+  ) | (
+    { __typename?: 'TestimonialElement' }
+    & { ' $fragmentRefs'?: { 'BlockData_TestimonialElement_Fragment': BlockData_TestimonialElement_Fragment } }
   ) | (
     { __typename?: 'TestimonialItem' }
-    & { ' $fragmentRefs'?: { 'BlockData_TestimonialItem_Fragment': BlockData_TestimonialItem_Fragment;'TestimonialItemDataFragment': TestimonialItemDataFragment } }
+    & { ' $fragmentRefs'?: { 'BlockData_TestimonialItem_Fragment': BlockData_TestimonialItem_Fragment } }
   ) | (
     { __typename?: 'TestimonialItemBlock' }
     & { ' $fragmentRefs'?: { 'BlockData_TestimonialItemBlock_Fragment': BlockData_TestimonialItemBlock_Fragment;'TestimonialItemBlockDataFragment': TestimonialItemBlockDataFragment } }
   ) | (
     { __typename?: 'TestimonialsBlock' }
     & { ' $fragmentRefs'?: { 'BlockData_TestimonialsBlock_Fragment': BlockData_TestimonialsBlock_Fragment;'TestimonialsBlockDataFragment': TestimonialsBlockDataFragment } }
+  ) | (
+    { __typename?: 'TextBlock' }
+    & { ' $fragmentRefs'?: { 'BlockData_TextBlock_Fragment': BlockData_TextBlock_Fragment } }
+  ) | (
+    { __typename?: 'VideoElement' }
+    & { ' $fragmentRefs'?: { 'BlockData_VideoElement_Fragment': BlockData_VideoElement_Fragment } }
   ) | { __typename?: 'VideoMedia' } | (
     { __typename?: '_Component' }
     & { ' $fragmentRefs'?: { 'BlockData__Component_Fragment': BlockData__Component_Fragment } }
   ) | { __typename?: '_Content' } | { __typename?: '_Experience' } | { __typename?: '_Folder' } | { __typename?: '_Image' } | { __typename?: '_Media' } | { __typename?: '_Page' } | (
     { __typename?: '_Section' }
     & { ' $fragmentRefs'?: { 'BlockData__Section_Fragment': BlockData__Section_Fragment } }
-  ) | { __typename?: '_Video' } | null> | null, socialLinks?: Array<(
+  ) | { __typename?: '_Video' } | null> | null, socialLinks?: Array<{ __typename?: 'AnotherGreatPage' } | (
+    { __typename?: 'ArticleListElement' }
+    & { ' $fragmentRefs'?: { 'BlockData_ArticleListElement_Fragment': BlockData_ArticleListElement_Fragment } }
+  ) | (
     { __typename?: 'AvailabilityBlock' }
     & { ' $fragmentRefs'?: { 'BlockData_AvailabilityBlock_Fragment': BlockData_AvailabilityBlock_Fragment;'AvailabilityBlockDataFragment': AvailabilityBlockDataFragment } }
   ) | { __typename?: 'BlankExperience' } | (
     { __typename?: 'BlankSection' }
     & { ' $fragmentRefs'?: { 'BlockData_BlankSection_Fragment': BlockData_BlankSection_Fragment } }
+  ) | { __typename?: 'BlogPostPage' } | { __typename?: 'BlogSectionExperience' } | (
+    { __typename?: 'ButtonBlock' }
+    & { ' $fragmentRefs'?: { 'BlockData_ButtonBlock_Fragment': BlockData_ButtonBlock_Fragment } }
   ) | { __typename?: 'CMSPage' } | (
+    { __typename?: 'CTAElement' }
+    & { ' $fragmentRefs'?: { 'BlockData_CTAElement_Fragment': BlockData_CTAElement_Fragment } }
+  ) | (
+    { __typename?: 'CarouselBlock' }
+    & { ' $fragmentRefs'?: { 'BlockData_CarouselBlock_Fragment': BlockData_CarouselBlock_Fragment } }
+  ) | (
     { __typename?: 'ContactBlock' }
     & { ' $fragmentRefs'?: { 'BlockData_ContactBlock_Fragment': BlockData_ContactBlock_Fragment;'ContactBlockDataFragment': ContactBlockDataFragment } }
+  ) | (
+    { __typename?: 'ContentRecsElement' }
+    & { ' $fragmentRefs'?: { 'BlockData_ContentRecsElement_Fragment': BlockData_ContentRecsElement_Fragment } }
+  ) | (
+    { __typename?: 'ContinueReadingComponent' }
+    & { ' $fragmentRefs'?: { 'BlockData_ContinueReadingComponent_Fragment': BlockData_ContinueReadingComponent_Fragment } }
   ) | { __typename?: 'Footer' } | (
     { __typename?: 'FooterColumn' }
     & { ' $fragmentRefs'?: { 'BlockData_FooterColumn_Fragment': BlockData_FooterColumn_Fragment;'FooterColumnDataFragment': FooterColumnDataFragment } }
   ) | { __typename?: 'GenericMedia' } | { __typename?: 'GenericMedia123' } | { __typename?: 'Header' } | (
+    { __typename?: 'HeadingElement' }
+    & { ' $fragmentRefs'?: { 'BlockData_HeadingElement_Fragment': BlockData_HeadingElement_Fragment } }
+  ) | (
     { __typename?: 'HelloWorld' }
     & { ' $fragmentRefs'?: { 'BlockData_HelloWorld_Fragment': BlockData_HelloWorld_Fragment;'HelloWorldDataFragment': HelloWorldDataFragment } }
   ) | (
     { __typename?: 'HeroBlock' }
     & { ' $fragmentRefs'?: { 'BlockData_HeroBlock_Fragment': BlockData_HeroBlock_Fragment;'HeroBlockDataFragment': HeroBlockDataFragment } }
-  ) | { __typename?: 'HomePage' } | { __typename?: 'ImageMedia' } | (
+  ) | { __typename?: 'HomePage' } | (
+    { __typename?: 'ImageElement' }
+    & { ' $fragmentRefs'?: { 'BlockData_ImageElement_Fragment': BlockData_ImageElement_Fragment } }
+  ) | { __typename?: 'ImageMedia' } | { __typename?: 'LandingPage' } | (
+    { __typename?: 'LayoutSettingsBlock' }
+    & { ' $fragmentRefs'?: { 'BlockData_LayoutSettingsBlock_Fragment': BlockData_LayoutSettingsBlock_Fragment } }
+  ) | (
     { __typename?: 'LogoItemBlock' }
     & { ' $fragmentRefs'?: { 'BlockData_LogoItemBlock_Fragment': BlockData_LogoItemBlock_Fragment;'LogoItemBlockDataFragment': LogoItemBlockDataFragment } }
   ) | (
     { __typename?: 'LogosBlock' }
     & { ' $fragmentRefs'?: { 'BlockData_LogosBlock_Fragment': BlockData_LogosBlock_Fragment;'LogosBlockDataFragment': LogosBlockDataFragment } }
   ) | (
+    { __typename?: 'MegaMenuGroupBlock' }
+    & { ' $fragmentRefs'?: { 'BlockData_MegaMenuGroupBlock_Fragment': BlockData_MegaMenuGroupBlock_Fragment } }
+  ) | (
+    { __typename?: 'MenuNavigationBlock' }
+    & { ' $fragmentRefs'?: { 'BlockData_MenuNavigationBlock_Fragment': BlockData_MenuNavigationBlock_Fragment } }
+  ) | (
     { __typename?: 'NavItem' }
     & { ' $fragmentRefs'?: { 'BlockData_NavItem_Fragment': BlockData_NavItem_Fragment;'NavItemDataFragment': NavItemDataFragment } }
+  ) | (
+    { __typename?: 'OdpEmbedBlock' }
+    & { ' $fragmentRefs'?: { 'BlockData_OdpEmbedBlock_Fragment': BlockData_OdpEmbedBlock_Fragment } }
+  ) | (
+    { __typename?: 'PageSeoSettings' }
+    & { ' $fragmentRefs'?: { 'BlockData_PageSeoSettings_Fragment': BlockData_PageSeoSettings_Fragment } }
+  ) | (
+    { __typename?: 'ParagraphElement' }
+    & { ' $fragmentRefs'?: { 'BlockData_ParagraphElement_Fragment': BlockData_ParagraphElement_Fragment } }
   ) | (
     { __typename?: 'PortfolioGridBlock' }
     & { ' $fragmentRefs'?: { 'BlockData_PortfolioGridBlock_Fragment': BlockData_PortfolioGridBlock_Fragment;'PortfolioGridBlockDataFragment': PortfolioGridBlockDataFragment } }
@@ -7488,6 +11256,12 @@ export type FooterDataFragment = { __typename?: 'Footer', copyrightText?: string
   ) | (
     { __typename?: 'ProfileBlock' }
     & { ' $fragmentRefs'?: { 'BlockData_ProfileBlock_Fragment': BlockData_ProfileBlock_Fragment;'ProfileBlockDataFragment': ProfileBlockDataFragment } }
+  ) | (
+    { __typename?: 'QuoteBlock' }
+    & { ' $fragmentRefs'?: { 'BlockData_QuoteBlock_Fragment': BlockData_QuoteBlock_Fragment } }
+  ) | (
+    { __typename?: 'RichTextElement' }
+    & { ' $fragmentRefs'?: { 'BlockData_RichTextElement_Fragment': BlockData_RichTextElement_Fragment } }
   ) | { __typename?: 'SEOExperience' } | (
     { __typename?: 'ServiceItem' }
     & { ' $fragmentRefs'?: { 'BlockData_ServiceItem_Fragment': BlockData_ServiceItem_Fragment;'ServiceItemDataFragment': ServiceItemDataFragment } }
@@ -7497,21 +11271,30 @@ export type FooterDataFragment = { __typename?: 'Footer', copyrightText?: string
   ) | (
     { __typename?: 'SocialLink' }
     & { ' $fragmentRefs'?: { 'BlockData_SocialLink_Fragment': BlockData_SocialLink_Fragment;'SocialLinkDataFragment': SocialLinkDataFragment } }
-  ) | { __typename?: 'StartPage' } | (
+  ) | { __typename?: 'SomeGreatNewPage' } | { __typename?: 'StartPage' } | (
     { __typename?: 'StoryBlock' }
     & { ' $fragmentRefs'?: { 'BlockData_StoryBlock_Fragment': BlockData_StoryBlock_Fragment;'StoryBlockDataFragment': StoryBlockDataFragment } }
   ) | { __typename?: 'SysContentFolder' } | (
-    { __typename?: 'TedTestBlock' }
-    & { ' $fragmentRefs'?: { 'BlockData_TedTestBlock_Fragment': BlockData_TedTestBlock_Fragment;'TedTestBlockDataFragment': TedTestBlockDataFragment } }
+    { __typename?: 'TestBlockPropertyGroup' }
+    & { ' $fragmentRefs'?: { 'BlockData_TestBlockPropertyGroup_Fragment': BlockData_TestBlockPropertyGroup_Fragment } }
+  ) | (
+    { __typename?: 'TestimonialElement' }
+    & { ' $fragmentRefs'?: { 'BlockData_TestimonialElement_Fragment': BlockData_TestimonialElement_Fragment } }
   ) | (
     { __typename?: 'TestimonialItem' }
-    & { ' $fragmentRefs'?: { 'BlockData_TestimonialItem_Fragment': BlockData_TestimonialItem_Fragment;'TestimonialItemDataFragment': TestimonialItemDataFragment } }
+    & { ' $fragmentRefs'?: { 'BlockData_TestimonialItem_Fragment': BlockData_TestimonialItem_Fragment } }
   ) | (
     { __typename?: 'TestimonialItemBlock' }
     & { ' $fragmentRefs'?: { 'BlockData_TestimonialItemBlock_Fragment': BlockData_TestimonialItemBlock_Fragment;'TestimonialItemBlockDataFragment': TestimonialItemBlockDataFragment } }
   ) | (
     { __typename?: 'TestimonialsBlock' }
     & { ' $fragmentRefs'?: { 'BlockData_TestimonialsBlock_Fragment': BlockData_TestimonialsBlock_Fragment;'TestimonialsBlockDataFragment': TestimonialsBlockDataFragment } }
+  ) | (
+    { __typename?: 'TextBlock' }
+    & { ' $fragmentRefs'?: { 'BlockData_TextBlock_Fragment': BlockData_TextBlock_Fragment } }
+  ) | (
+    { __typename?: 'VideoElement' }
+    & { ' $fragmentRefs'?: { 'BlockData_VideoElement_Fragment': BlockData_VideoElement_Fragment } }
   ) | { __typename?: 'VideoMedia' } | (
     { __typename?: '_Component' }
     & { ' $fragmentRefs'?: { 'BlockData__Component_Fragment': BlockData__Component_Fragment } }
@@ -7520,33 +11303,75 @@ export type FooterDataFragment = { __typename?: 'Footer', copyrightText?: string
     & { ' $fragmentRefs'?: { 'BlockData__Section_Fragment': BlockData__Section_Fragment } }
   ) | { __typename?: '_Video' } | null> | null } & { ' $fragmentName'?: 'FooterDataFragment' };
 
-export type HeaderDataFragment = { __typename?: 'Header', logo?: string | null, ctaText?: string | null, ctaHref?: string | null, navItems?: Array<(
+export type HeaderDataFragment = { __typename?: 'Header', logo?: string | null, ctaText?: string | null, ctaHref?: string | null, navItems?: Array<{ __typename?: 'AnotherGreatPage' } | (
+    { __typename?: 'ArticleListElement' }
+    & { ' $fragmentRefs'?: { 'BlockData_ArticleListElement_Fragment': BlockData_ArticleListElement_Fragment } }
+  ) | (
     { __typename?: 'AvailabilityBlock' }
     & { ' $fragmentRefs'?: { 'BlockData_AvailabilityBlock_Fragment': BlockData_AvailabilityBlock_Fragment;'AvailabilityBlockDataFragment': AvailabilityBlockDataFragment } }
   ) | { __typename?: 'BlankExperience' } | (
     { __typename?: 'BlankSection' }
     & { ' $fragmentRefs'?: { 'BlockData_BlankSection_Fragment': BlockData_BlankSection_Fragment } }
+  ) | { __typename?: 'BlogPostPage' } | { __typename?: 'BlogSectionExperience' } | (
+    { __typename?: 'ButtonBlock' }
+    & { ' $fragmentRefs'?: { 'BlockData_ButtonBlock_Fragment': BlockData_ButtonBlock_Fragment } }
   ) | { __typename?: 'CMSPage' } | (
+    { __typename?: 'CTAElement' }
+    & { ' $fragmentRefs'?: { 'BlockData_CTAElement_Fragment': BlockData_CTAElement_Fragment } }
+  ) | (
+    { __typename?: 'CarouselBlock' }
+    & { ' $fragmentRefs'?: { 'BlockData_CarouselBlock_Fragment': BlockData_CarouselBlock_Fragment } }
+  ) | (
     { __typename?: 'ContactBlock' }
     & { ' $fragmentRefs'?: { 'BlockData_ContactBlock_Fragment': BlockData_ContactBlock_Fragment;'ContactBlockDataFragment': ContactBlockDataFragment } }
+  ) | (
+    { __typename?: 'ContentRecsElement' }
+    & { ' $fragmentRefs'?: { 'BlockData_ContentRecsElement_Fragment': BlockData_ContentRecsElement_Fragment } }
+  ) | (
+    { __typename?: 'ContinueReadingComponent' }
+    & { ' $fragmentRefs'?: { 'BlockData_ContinueReadingComponent_Fragment': BlockData_ContinueReadingComponent_Fragment } }
   ) | { __typename?: 'Footer' } | (
     { __typename?: 'FooterColumn' }
     & { ' $fragmentRefs'?: { 'BlockData_FooterColumn_Fragment': BlockData_FooterColumn_Fragment;'FooterColumnDataFragment': FooterColumnDataFragment } }
   ) | { __typename?: 'GenericMedia' } | { __typename?: 'GenericMedia123' } | { __typename?: 'Header' } | (
+    { __typename?: 'HeadingElement' }
+    & { ' $fragmentRefs'?: { 'BlockData_HeadingElement_Fragment': BlockData_HeadingElement_Fragment } }
+  ) | (
     { __typename?: 'HelloWorld' }
     & { ' $fragmentRefs'?: { 'BlockData_HelloWorld_Fragment': BlockData_HelloWorld_Fragment;'HelloWorldDataFragment': HelloWorldDataFragment } }
   ) | (
     { __typename?: 'HeroBlock' }
     & { ' $fragmentRefs'?: { 'BlockData_HeroBlock_Fragment': BlockData_HeroBlock_Fragment;'HeroBlockDataFragment': HeroBlockDataFragment } }
-  ) | { __typename?: 'HomePage' } | { __typename?: 'ImageMedia' } | (
+  ) | { __typename?: 'HomePage' } | (
+    { __typename?: 'ImageElement' }
+    & { ' $fragmentRefs'?: { 'BlockData_ImageElement_Fragment': BlockData_ImageElement_Fragment } }
+  ) | { __typename?: 'ImageMedia' } | { __typename?: 'LandingPage' } | (
+    { __typename?: 'LayoutSettingsBlock' }
+    & { ' $fragmentRefs'?: { 'BlockData_LayoutSettingsBlock_Fragment': BlockData_LayoutSettingsBlock_Fragment } }
+  ) | (
     { __typename?: 'LogoItemBlock' }
     & { ' $fragmentRefs'?: { 'BlockData_LogoItemBlock_Fragment': BlockData_LogoItemBlock_Fragment;'LogoItemBlockDataFragment': LogoItemBlockDataFragment } }
   ) | (
     { __typename?: 'LogosBlock' }
     & { ' $fragmentRefs'?: { 'BlockData_LogosBlock_Fragment': BlockData_LogosBlock_Fragment;'LogosBlockDataFragment': LogosBlockDataFragment } }
   ) | (
+    { __typename?: 'MegaMenuGroupBlock' }
+    & { ' $fragmentRefs'?: { 'BlockData_MegaMenuGroupBlock_Fragment': BlockData_MegaMenuGroupBlock_Fragment } }
+  ) | (
+    { __typename?: 'MenuNavigationBlock' }
+    & { ' $fragmentRefs'?: { 'BlockData_MenuNavigationBlock_Fragment': BlockData_MenuNavigationBlock_Fragment } }
+  ) | (
     { __typename?: 'NavItem' }
     & { ' $fragmentRefs'?: { 'BlockData_NavItem_Fragment': BlockData_NavItem_Fragment;'NavItemDataFragment': NavItemDataFragment } }
+  ) | (
+    { __typename?: 'OdpEmbedBlock' }
+    & { ' $fragmentRefs'?: { 'BlockData_OdpEmbedBlock_Fragment': BlockData_OdpEmbedBlock_Fragment } }
+  ) | (
+    { __typename?: 'PageSeoSettings' }
+    & { ' $fragmentRefs'?: { 'BlockData_PageSeoSettings_Fragment': BlockData_PageSeoSettings_Fragment } }
+  ) | (
+    { __typename?: 'ParagraphElement' }
+    & { ' $fragmentRefs'?: { 'BlockData_ParagraphElement_Fragment': BlockData_ParagraphElement_Fragment } }
   ) | (
     { __typename?: 'PortfolioGridBlock' }
     & { ' $fragmentRefs'?: { 'BlockData_PortfolioGridBlock_Fragment': BlockData_PortfolioGridBlock_Fragment;'PortfolioGridBlockDataFragment': PortfolioGridBlockDataFragment } }
@@ -7556,6 +11381,12 @@ export type HeaderDataFragment = { __typename?: 'Header', logo?: string | null, 
   ) | (
     { __typename?: 'ProfileBlock' }
     & { ' $fragmentRefs'?: { 'BlockData_ProfileBlock_Fragment': BlockData_ProfileBlock_Fragment;'ProfileBlockDataFragment': ProfileBlockDataFragment } }
+  ) | (
+    { __typename?: 'QuoteBlock' }
+    & { ' $fragmentRefs'?: { 'BlockData_QuoteBlock_Fragment': BlockData_QuoteBlock_Fragment } }
+  ) | (
+    { __typename?: 'RichTextElement' }
+    & { ' $fragmentRefs'?: { 'BlockData_RichTextElement_Fragment': BlockData_RichTextElement_Fragment } }
   ) | { __typename?: 'SEOExperience' } | (
     { __typename?: 'ServiceItem' }
     & { ' $fragmentRefs'?: { 'BlockData_ServiceItem_Fragment': BlockData_ServiceItem_Fragment;'ServiceItemDataFragment': ServiceItemDataFragment } }
@@ -7565,21 +11396,30 @@ export type HeaderDataFragment = { __typename?: 'Header', logo?: string | null, 
   ) | (
     { __typename?: 'SocialLink' }
     & { ' $fragmentRefs'?: { 'BlockData_SocialLink_Fragment': BlockData_SocialLink_Fragment;'SocialLinkDataFragment': SocialLinkDataFragment } }
-  ) | { __typename?: 'StartPage' } | (
+  ) | { __typename?: 'SomeGreatNewPage' } | { __typename?: 'StartPage' } | (
     { __typename?: 'StoryBlock' }
     & { ' $fragmentRefs'?: { 'BlockData_StoryBlock_Fragment': BlockData_StoryBlock_Fragment;'StoryBlockDataFragment': StoryBlockDataFragment } }
   ) | { __typename?: 'SysContentFolder' } | (
-    { __typename?: 'TedTestBlock' }
-    & { ' $fragmentRefs'?: { 'BlockData_TedTestBlock_Fragment': BlockData_TedTestBlock_Fragment;'TedTestBlockDataFragment': TedTestBlockDataFragment } }
+    { __typename?: 'TestBlockPropertyGroup' }
+    & { ' $fragmentRefs'?: { 'BlockData_TestBlockPropertyGroup_Fragment': BlockData_TestBlockPropertyGroup_Fragment } }
+  ) | (
+    { __typename?: 'TestimonialElement' }
+    & { ' $fragmentRefs'?: { 'BlockData_TestimonialElement_Fragment': BlockData_TestimonialElement_Fragment } }
   ) | (
     { __typename?: 'TestimonialItem' }
-    & { ' $fragmentRefs'?: { 'BlockData_TestimonialItem_Fragment': BlockData_TestimonialItem_Fragment;'TestimonialItemDataFragment': TestimonialItemDataFragment } }
+    & { ' $fragmentRefs'?: { 'BlockData_TestimonialItem_Fragment': BlockData_TestimonialItem_Fragment } }
   ) | (
     { __typename?: 'TestimonialItemBlock' }
     & { ' $fragmentRefs'?: { 'BlockData_TestimonialItemBlock_Fragment': BlockData_TestimonialItemBlock_Fragment;'TestimonialItemBlockDataFragment': TestimonialItemBlockDataFragment } }
   ) | (
     { __typename?: 'TestimonialsBlock' }
     & { ' $fragmentRefs'?: { 'BlockData_TestimonialsBlock_Fragment': BlockData_TestimonialsBlock_Fragment;'TestimonialsBlockDataFragment': TestimonialsBlockDataFragment } }
+  ) | (
+    { __typename?: 'TextBlock' }
+    & { ' $fragmentRefs'?: { 'BlockData_TextBlock_Fragment': BlockData_TextBlock_Fragment } }
+  ) | (
+    { __typename?: 'VideoElement' }
+    & { ' $fragmentRefs'?: { 'BlockData_VideoElement_Fragment': BlockData_VideoElement_Fragment } }
   ) | { __typename?: 'VideoMedia' } | (
     { __typename?: '_Component' }
     & { ' $fragmentRefs'?: { 'BlockData__Component_Fragment': BlockData__Component_Fragment } }
@@ -7588,33 +11428,75 @@ export type HeaderDataFragment = { __typename?: 'Header', logo?: string | null, 
     & { ' $fragmentRefs'?: { 'BlockData__Section_Fragment': BlockData__Section_Fragment } }
   ) | { __typename?: '_Video' } | null> | null } & { ' $fragmentName'?: 'HeaderDataFragment' };
 
-export type HomePageDataFragment = { __typename?: 'HomePage', title?: string | null, shortDescription?: string | null, keywords?: string | null, blocks?: Array<(
+export type HomePageDataFragment = { __typename?: 'HomePage', title?: string | null, shortDescription?: string | null, keywords?: string | null, blocks?: Array<{ __typename?: 'AnotherGreatPage' } | (
+    { __typename?: 'ArticleListElement' }
+    & { ' $fragmentRefs'?: { 'BlockData_ArticleListElement_Fragment': BlockData_ArticleListElement_Fragment } }
+  ) | (
     { __typename?: 'AvailabilityBlock' }
     & { ' $fragmentRefs'?: { 'BlockData_AvailabilityBlock_Fragment': BlockData_AvailabilityBlock_Fragment;'AvailabilityBlockDataFragment': AvailabilityBlockDataFragment } }
   ) | { __typename?: 'BlankExperience' } | (
     { __typename?: 'BlankSection' }
     & { ' $fragmentRefs'?: { 'BlockData_BlankSection_Fragment': BlockData_BlankSection_Fragment } }
+  ) | { __typename?: 'BlogPostPage' } | { __typename?: 'BlogSectionExperience' } | (
+    { __typename?: 'ButtonBlock' }
+    & { ' $fragmentRefs'?: { 'BlockData_ButtonBlock_Fragment': BlockData_ButtonBlock_Fragment } }
   ) | { __typename?: 'CMSPage' } | (
+    { __typename?: 'CTAElement' }
+    & { ' $fragmentRefs'?: { 'BlockData_CTAElement_Fragment': BlockData_CTAElement_Fragment } }
+  ) | (
+    { __typename?: 'CarouselBlock' }
+    & { ' $fragmentRefs'?: { 'BlockData_CarouselBlock_Fragment': BlockData_CarouselBlock_Fragment } }
+  ) | (
     { __typename?: 'ContactBlock' }
     & { ' $fragmentRefs'?: { 'BlockData_ContactBlock_Fragment': BlockData_ContactBlock_Fragment;'ContactBlockDataFragment': ContactBlockDataFragment } }
+  ) | (
+    { __typename?: 'ContentRecsElement' }
+    & { ' $fragmentRefs'?: { 'BlockData_ContentRecsElement_Fragment': BlockData_ContentRecsElement_Fragment } }
+  ) | (
+    { __typename?: 'ContinueReadingComponent' }
+    & { ' $fragmentRefs'?: { 'BlockData_ContinueReadingComponent_Fragment': BlockData_ContinueReadingComponent_Fragment } }
   ) | { __typename?: 'Footer' } | (
     { __typename?: 'FooterColumn' }
     & { ' $fragmentRefs'?: { 'BlockData_FooterColumn_Fragment': BlockData_FooterColumn_Fragment;'FooterColumnDataFragment': FooterColumnDataFragment } }
   ) | { __typename?: 'GenericMedia' } | { __typename?: 'GenericMedia123' } | { __typename?: 'Header' } | (
+    { __typename?: 'HeadingElement' }
+    & { ' $fragmentRefs'?: { 'BlockData_HeadingElement_Fragment': BlockData_HeadingElement_Fragment } }
+  ) | (
     { __typename?: 'HelloWorld' }
     & { ' $fragmentRefs'?: { 'BlockData_HelloWorld_Fragment': BlockData_HelloWorld_Fragment;'HelloWorldDataFragment': HelloWorldDataFragment } }
   ) | (
     { __typename?: 'HeroBlock' }
     & { ' $fragmentRefs'?: { 'BlockData_HeroBlock_Fragment': BlockData_HeroBlock_Fragment;'HeroBlockDataFragment': HeroBlockDataFragment } }
-  ) | { __typename?: 'HomePage' } | { __typename?: 'ImageMedia' } | (
+  ) | { __typename?: 'HomePage' } | (
+    { __typename?: 'ImageElement' }
+    & { ' $fragmentRefs'?: { 'BlockData_ImageElement_Fragment': BlockData_ImageElement_Fragment } }
+  ) | { __typename?: 'ImageMedia' } | { __typename?: 'LandingPage' } | (
+    { __typename?: 'LayoutSettingsBlock' }
+    & { ' $fragmentRefs'?: { 'BlockData_LayoutSettingsBlock_Fragment': BlockData_LayoutSettingsBlock_Fragment } }
+  ) | (
     { __typename?: 'LogoItemBlock' }
     & { ' $fragmentRefs'?: { 'BlockData_LogoItemBlock_Fragment': BlockData_LogoItemBlock_Fragment;'LogoItemBlockDataFragment': LogoItemBlockDataFragment } }
   ) | (
     { __typename?: 'LogosBlock' }
     & { ' $fragmentRefs'?: { 'BlockData_LogosBlock_Fragment': BlockData_LogosBlock_Fragment;'LogosBlockDataFragment': LogosBlockDataFragment } }
   ) | (
+    { __typename?: 'MegaMenuGroupBlock' }
+    & { ' $fragmentRefs'?: { 'BlockData_MegaMenuGroupBlock_Fragment': BlockData_MegaMenuGroupBlock_Fragment } }
+  ) | (
+    { __typename?: 'MenuNavigationBlock' }
+    & { ' $fragmentRefs'?: { 'BlockData_MenuNavigationBlock_Fragment': BlockData_MenuNavigationBlock_Fragment } }
+  ) | (
     { __typename?: 'NavItem' }
     & { ' $fragmentRefs'?: { 'BlockData_NavItem_Fragment': BlockData_NavItem_Fragment;'NavItemDataFragment': NavItemDataFragment } }
+  ) | (
+    { __typename?: 'OdpEmbedBlock' }
+    & { ' $fragmentRefs'?: { 'BlockData_OdpEmbedBlock_Fragment': BlockData_OdpEmbedBlock_Fragment } }
+  ) | (
+    { __typename?: 'PageSeoSettings' }
+    & { ' $fragmentRefs'?: { 'BlockData_PageSeoSettings_Fragment': BlockData_PageSeoSettings_Fragment } }
+  ) | (
+    { __typename?: 'ParagraphElement' }
+    & { ' $fragmentRefs'?: { 'BlockData_ParagraphElement_Fragment': BlockData_ParagraphElement_Fragment } }
   ) | (
     { __typename?: 'PortfolioGridBlock' }
     & { ' $fragmentRefs'?: { 'BlockData_PortfolioGridBlock_Fragment': BlockData_PortfolioGridBlock_Fragment;'PortfolioGridBlockDataFragment': PortfolioGridBlockDataFragment } }
@@ -7624,6 +11506,12 @@ export type HomePageDataFragment = { __typename?: 'HomePage', title?: string | n
   ) | (
     { __typename?: 'ProfileBlock' }
     & { ' $fragmentRefs'?: { 'BlockData_ProfileBlock_Fragment': BlockData_ProfileBlock_Fragment;'ProfileBlockDataFragment': ProfileBlockDataFragment } }
+  ) | (
+    { __typename?: 'QuoteBlock' }
+    & { ' $fragmentRefs'?: { 'BlockData_QuoteBlock_Fragment': BlockData_QuoteBlock_Fragment } }
+  ) | (
+    { __typename?: 'RichTextElement' }
+    & { ' $fragmentRefs'?: { 'BlockData_RichTextElement_Fragment': BlockData_RichTextElement_Fragment } }
   ) | { __typename?: 'SEOExperience' } | (
     { __typename?: 'ServiceItem' }
     & { ' $fragmentRefs'?: { 'BlockData_ServiceItem_Fragment': BlockData_ServiceItem_Fragment;'ServiceItemDataFragment': ServiceItemDataFragment } }
@@ -7633,21 +11521,30 @@ export type HomePageDataFragment = { __typename?: 'HomePage', title?: string | n
   ) | (
     { __typename?: 'SocialLink' }
     & { ' $fragmentRefs'?: { 'BlockData_SocialLink_Fragment': BlockData_SocialLink_Fragment;'SocialLinkDataFragment': SocialLinkDataFragment } }
-  ) | { __typename?: 'StartPage' } | (
+  ) | { __typename?: 'SomeGreatNewPage' } | { __typename?: 'StartPage' } | (
     { __typename?: 'StoryBlock' }
     & { ' $fragmentRefs'?: { 'BlockData_StoryBlock_Fragment': BlockData_StoryBlock_Fragment;'StoryBlockDataFragment': StoryBlockDataFragment } }
   ) | { __typename?: 'SysContentFolder' } | (
-    { __typename?: 'TedTestBlock' }
-    & { ' $fragmentRefs'?: { 'BlockData_TedTestBlock_Fragment': BlockData_TedTestBlock_Fragment;'TedTestBlockDataFragment': TedTestBlockDataFragment } }
+    { __typename?: 'TestBlockPropertyGroup' }
+    & { ' $fragmentRefs'?: { 'BlockData_TestBlockPropertyGroup_Fragment': BlockData_TestBlockPropertyGroup_Fragment } }
+  ) | (
+    { __typename?: 'TestimonialElement' }
+    & { ' $fragmentRefs'?: { 'BlockData_TestimonialElement_Fragment': BlockData_TestimonialElement_Fragment } }
   ) | (
     { __typename?: 'TestimonialItem' }
-    & { ' $fragmentRefs'?: { 'BlockData_TestimonialItem_Fragment': BlockData_TestimonialItem_Fragment;'TestimonialItemDataFragment': TestimonialItemDataFragment } }
+    & { ' $fragmentRefs'?: { 'BlockData_TestimonialItem_Fragment': BlockData_TestimonialItem_Fragment } }
   ) | (
     { __typename?: 'TestimonialItemBlock' }
     & { ' $fragmentRefs'?: { 'BlockData_TestimonialItemBlock_Fragment': BlockData_TestimonialItemBlock_Fragment;'TestimonialItemBlockDataFragment': TestimonialItemBlockDataFragment } }
   ) | (
     { __typename?: 'TestimonialsBlock' }
     & { ' $fragmentRefs'?: { 'BlockData_TestimonialsBlock_Fragment': BlockData_TestimonialsBlock_Fragment;'TestimonialsBlockDataFragment': TestimonialsBlockDataFragment } }
+  ) | (
+    { __typename?: 'TextBlock' }
+    & { ' $fragmentRefs'?: { 'BlockData_TextBlock_Fragment': BlockData_TextBlock_Fragment } }
+  ) | (
+    { __typename?: 'VideoElement' }
+    & { ' $fragmentRefs'?: { 'BlockData_VideoElement_Fragment': BlockData_VideoElement_Fragment } }
   ) | { __typename?: 'VideoMedia' } | (
     { __typename?: '_Component' }
     & { ' $fragmentRefs'?: { 'BlockData__Component_Fragment': BlockData__Component_Fragment } }
@@ -7656,33 +11553,75 @@ export type HomePageDataFragment = { __typename?: 'HomePage', title?: string | n
     & { ' $fragmentRefs'?: { 'BlockData__Section_Fragment': BlockData__Section_Fragment } }
   ) | { __typename?: '_Video' } | null> | null } & { ' $fragmentName'?: 'HomePageDataFragment' };
 
-export type StartPageDataFragment = { __typename?: 'StartPage', title?: string | null, shortDescription?: string | null, keywords?: string | null, blocks?: Array<(
+export type StartPageDataFragment = { __typename?: 'StartPage', title?: string | null, shortDescription?: string | null, keywords?: string | null, blocks?: Array<{ __typename?: 'AnotherGreatPage' } | (
+    { __typename?: 'ArticleListElement' }
+    & { ' $fragmentRefs'?: { 'BlockData_ArticleListElement_Fragment': BlockData_ArticleListElement_Fragment } }
+  ) | (
     { __typename?: 'AvailabilityBlock' }
     & { ' $fragmentRefs'?: { 'BlockData_AvailabilityBlock_Fragment': BlockData_AvailabilityBlock_Fragment;'AvailabilityBlockDataFragment': AvailabilityBlockDataFragment } }
   ) | { __typename?: 'BlankExperience' } | (
     { __typename?: 'BlankSection' }
     & { ' $fragmentRefs'?: { 'BlockData_BlankSection_Fragment': BlockData_BlankSection_Fragment } }
+  ) | { __typename?: 'BlogPostPage' } | { __typename?: 'BlogSectionExperience' } | (
+    { __typename?: 'ButtonBlock' }
+    & { ' $fragmentRefs'?: { 'BlockData_ButtonBlock_Fragment': BlockData_ButtonBlock_Fragment } }
   ) | { __typename?: 'CMSPage' } | (
+    { __typename?: 'CTAElement' }
+    & { ' $fragmentRefs'?: { 'BlockData_CTAElement_Fragment': BlockData_CTAElement_Fragment } }
+  ) | (
+    { __typename?: 'CarouselBlock' }
+    & { ' $fragmentRefs'?: { 'BlockData_CarouselBlock_Fragment': BlockData_CarouselBlock_Fragment } }
+  ) | (
     { __typename?: 'ContactBlock' }
     & { ' $fragmentRefs'?: { 'BlockData_ContactBlock_Fragment': BlockData_ContactBlock_Fragment;'ContactBlockDataFragment': ContactBlockDataFragment } }
+  ) | (
+    { __typename?: 'ContentRecsElement' }
+    & { ' $fragmentRefs'?: { 'BlockData_ContentRecsElement_Fragment': BlockData_ContentRecsElement_Fragment } }
+  ) | (
+    { __typename?: 'ContinueReadingComponent' }
+    & { ' $fragmentRefs'?: { 'BlockData_ContinueReadingComponent_Fragment': BlockData_ContinueReadingComponent_Fragment } }
   ) | { __typename?: 'Footer' } | (
     { __typename?: 'FooterColumn' }
     & { ' $fragmentRefs'?: { 'BlockData_FooterColumn_Fragment': BlockData_FooterColumn_Fragment;'FooterColumnDataFragment': FooterColumnDataFragment } }
   ) | { __typename?: 'GenericMedia' } | { __typename?: 'GenericMedia123' } | { __typename?: 'Header' } | (
+    { __typename?: 'HeadingElement' }
+    & { ' $fragmentRefs'?: { 'BlockData_HeadingElement_Fragment': BlockData_HeadingElement_Fragment } }
+  ) | (
     { __typename?: 'HelloWorld' }
     & { ' $fragmentRefs'?: { 'BlockData_HelloWorld_Fragment': BlockData_HelloWorld_Fragment;'HelloWorldDataFragment': HelloWorldDataFragment } }
   ) | (
     { __typename?: 'HeroBlock' }
     & { ' $fragmentRefs'?: { 'BlockData_HeroBlock_Fragment': BlockData_HeroBlock_Fragment;'HeroBlockDataFragment': HeroBlockDataFragment } }
-  ) | { __typename?: 'HomePage' } | { __typename?: 'ImageMedia' } | (
+  ) | { __typename?: 'HomePage' } | (
+    { __typename?: 'ImageElement' }
+    & { ' $fragmentRefs'?: { 'BlockData_ImageElement_Fragment': BlockData_ImageElement_Fragment } }
+  ) | { __typename?: 'ImageMedia' } | { __typename?: 'LandingPage' } | (
+    { __typename?: 'LayoutSettingsBlock' }
+    & { ' $fragmentRefs'?: { 'BlockData_LayoutSettingsBlock_Fragment': BlockData_LayoutSettingsBlock_Fragment } }
+  ) | (
     { __typename?: 'LogoItemBlock' }
     & { ' $fragmentRefs'?: { 'BlockData_LogoItemBlock_Fragment': BlockData_LogoItemBlock_Fragment;'LogoItemBlockDataFragment': LogoItemBlockDataFragment } }
   ) | (
     { __typename?: 'LogosBlock' }
     & { ' $fragmentRefs'?: { 'BlockData_LogosBlock_Fragment': BlockData_LogosBlock_Fragment;'LogosBlockDataFragment': LogosBlockDataFragment } }
   ) | (
+    { __typename?: 'MegaMenuGroupBlock' }
+    & { ' $fragmentRefs'?: { 'BlockData_MegaMenuGroupBlock_Fragment': BlockData_MegaMenuGroupBlock_Fragment } }
+  ) | (
+    { __typename?: 'MenuNavigationBlock' }
+    & { ' $fragmentRefs'?: { 'BlockData_MenuNavigationBlock_Fragment': BlockData_MenuNavigationBlock_Fragment } }
+  ) | (
     { __typename?: 'NavItem' }
     & { ' $fragmentRefs'?: { 'BlockData_NavItem_Fragment': BlockData_NavItem_Fragment;'NavItemDataFragment': NavItemDataFragment } }
+  ) | (
+    { __typename?: 'OdpEmbedBlock' }
+    & { ' $fragmentRefs'?: { 'BlockData_OdpEmbedBlock_Fragment': BlockData_OdpEmbedBlock_Fragment } }
+  ) | (
+    { __typename?: 'PageSeoSettings' }
+    & { ' $fragmentRefs'?: { 'BlockData_PageSeoSettings_Fragment': BlockData_PageSeoSettings_Fragment } }
+  ) | (
+    { __typename?: 'ParagraphElement' }
+    & { ' $fragmentRefs'?: { 'BlockData_ParagraphElement_Fragment': BlockData_ParagraphElement_Fragment } }
   ) | (
     { __typename?: 'PortfolioGridBlock' }
     & { ' $fragmentRefs'?: { 'BlockData_PortfolioGridBlock_Fragment': BlockData_PortfolioGridBlock_Fragment;'PortfolioGridBlockDataFragment': PortfolioGridBlockDataFragment } }
@@ -7692,6 +11631,12 @@ export type StartPageDataFragment = { __typename?: 'StartPage', title?: string |
   ) | (
     { __typename?: 'ProfileBlock' }
     & { ' $fragmentRefs'?: { 'BlockData_ProfileBlock_Fragment': BlockData_ProfileBlock_Fragment;'ProfileBlockDataFragment': ProfileBlockDataFragment } }
+  ) | (
+    { __typename?: 'QuoteBlock' }
+    & { ' $fragmentRefs'?: { 'BlockData_QuoteBlock_Fragment': BlockData_QuoteBlock_Fragment } }
+  ) | (
+    { __typename?: 'RichTextElement' }
+    & { ' $fragmentRefs'?: { 'BlockData_RichTextElement_Fragment': BlockData_RichTextElement_Fragment } }
   ) | { __typename?: 'SEOExperience' } | (
     { __typename?: 'ServiceItem' }
     & { ' $fragmentRefs'?: { 'BlockData_ServiceItem_Fragment': BlockData_ServiceItem_Fragment;'ServiceItemDataFragment': ServiceItemDataFragment } }
@@ -7701,21 +11646,30 @@ export type StartPageDataFragment = { __typename?: 'StartPage', title?: string |
   ) | (
     { __typename?: 'SocialLink' }
     & { ' $fragmentRefs'?: { 'BlockData_SocialLink_Fragment': BlockData_SocialLink_Fragment;'SocialLinkDataFragment': SocialLinkDataFragment } }
-  ) | { __typename?: 'StartPage' } | (
+  ) | { __typename?: 'SomeGreatNewPage' } | { __typename?: 'StartPage' } | (
     { __typename?: 'StoryBlock' }
     & { ' $fragmentRefs'?: { 'BlockData_StoryBlock_Fragment': BlockData_StoryBlock_Fragment;'StoryBlockDataFragment': StoryBlockDataFragment } }
   ) | { __typename?: 'SysContentFolder' } | (
-    { __typename?: 'TedTestBlock' }
-    & { ' $fragmentRefs'?: { 'BlockData_TedTestBlock_Fragment': BlockData_TedTestBlock_Fragment;'TedTestBlockDataFragment': TedTestBlockDataFragment } }
+    { __typename?: 'TestBlockPropertyGroup' }
+    & { ' $fragmentRefs'?: { 'BlockData_TestBlockPropertyGroup_Fragment': BlockData_TestBlockPropertyGroup_Fragment } }
+  ) | (
+    { __typename?: 'TestimonialElement' }
+    & { ' $fragmentRefs'?: { 'BlockData_TestimonialElement_Fragment': BlockData_TestimonialElement_Fragment } }
   ) | (
     { __typename?: 'TestimonialItem' }
-    & { ' $fragmentRefs'?: { 'BlockData_TestimonialItem_Fragment': BlockData_TestimonialItem_Fragment;'TestimonialItemDataFragment': TestimonialItemDataFragment } }
+    & { ' $fragmentRefs'?: { 'BlockData_TestimonialItem_Fragment': BlockData_TestimonialItem_Fragment } }
   ) | (
     { __typename?: 'TestimonialItemBlock' }
     & { ' $fragmentRefs'?: { 'BlockData_TestimonialItemBlock_Fragment': BlockData_TestimonialItemBlock_Fragment;'TestimonialItemBlockDataFragment': TestimonialItemBlockDataFragment } }
   ) | (
     { __typename?: 'TestimonialsBlock' }
     & { ' $fragmentRefs'?: { 'BlockData_TestimonialsBlock_Fragment': BlockData_TestimonialsBlock_Fragment;'TestimonialsBlockDataFragment': TestimonialsBlockDataFragment } }
+  ) | (
+    { __typename?: 'TextBlock' }
+    & { ' $fragmentRefs'?: { 'BlockData_TextBlock_Fragment': BlockData_TextBlock_Fragment } }
+  ) | (
+    { __typename?: 'VideoElement' }
+    & { ' $fragmentRefs'?: { 'BlockData_VideoElement_Fragment': BlockData_VideoElement_Fragment } }
   ) | { __typename?: 'VideoMedia' } | (
     { __typename?: '_Component' }
     & { ' $fragmentRefs'?: { 'BlockData__Component_Fragment': BlockData__Component_Fragment } }
@@ -7725,6 +11679,34 @@ export type StartPageDataFragment = { __typename?: 'StartPage', title?: string |
   ) | { __typename?: '_Video' } | null> | null } & { ' $fragmentName'?: 'StartPageDataFragment' };
 
 export type VideoMediaDataFragment = { __typename?: 'VideoMedia', empty?: { __typename?: 'ContentMetadata', key?: string | null } | { __typename?: 'InstanceMetadata', key?: string | null } | { __typename?: 'ItemMetadata', key?: string | null } | { __typename?: 'MediaMetadata', key?: string | null } | null } & { ' $fragmentName'?: 'VideoMediaDataFragment' };
+
+type IContentData_AnotherGreatPage_Fragment = { __typename?: 'AnotherGreatPage', _type: 'AnotherGreatPage', _metadata?: (
+    { __typename?: 'ContentMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_ContentMetadata_Fragment': IContentInfo_ContentMetadata_Fragment } }
+  ) | (
+    { __typename?: 'InstanceMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_InstanceMetadata_Fragment': IContentInfo_InstanceMetadata_Fragment } }
+  ) | (
+    { __typename?: 'ItemMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_ItemMetadata_Fragment': IContentInfo_ItemMetadata_Fragment } }
+  ) | (
+    { __typename?: 'MediaMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_MediaMetadata_Fragment': IContentInfo_MediaMetadata_Fragment } }
+  ) | null } & { ' $fragmentName'?: 'IContentData_AnotherGreatPage_Fragment' };
+
+type IContentData_ArticleListElement_Fragment = { __typename?: 'ArticleListElement', _type: 'ArticleListElement', _metadata?: (
+    { __typename?: 'ContentMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_ContentMetadata_Fragment': IContentInfo_ContentMetadata_Fragment } }
+  ) | (
+    { __typename?: 'InstanceMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_InstanceMetadata_Fragment': IContentInfo_InstanceMetadata_Fragment } }
+  ) | (
+    { __typename?: 'ItemMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_ItemMetadata_Fragment': IContentInfo_ItemMetadata_Fragment } }
+  ) | (
+    { __typename?: 'MediaMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_MediaMetadata_Fragment': IContentInfo_MediaMetadata_Fragment } }
+  ) | null } & { ' $fragmentName'?: 'IContentData_ArticleListElement_Fragment' };
 
 type IContentData_AvailabilityBlock_Fragment = { __typename?: 'AvailabilityBlock', _type: 'AvailabilityBlock', _metadata?: (
     { __typename?: 'ContentMetadata' }
@@ -7768,6 +11750,48 @@ type IContentData_BlankSection_Fragment = { __typename?: 'BlankSection', _type: 
     & { ' $fragmentRefs'?: { 'IContentInfo_MediaMetadata_Fragment': IContentInfo_MediaMetadata_Fragment } }
   ) | null } & { ' $fragmentName'?: 'IContentData_BlankSection_Fragment' };
 
+type IContentData_BlogPostPage_Fragment = { __typename?: 'BlogPostPage', _type: 'BlogPostPage', _metadata?: (
+    { __typename?: 'ContentMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_ContentMetadata_Fragment': IContentInfo_ContentMetadata_Fragment } }
+  ) | (
+    { __typename?: 'InstanceMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_InstanceMetadata_Fragment': IContentInfo_InstanceMetadata_Fragment } }
+  ) | (
+    { __typename?: 'ItemMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_ItemMetadata_Fragment': IContentInfo_ItemMetadata_Fragment } }
+  ) | (
+    { __typename?: 'MediaMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_MediaMetadata_Fragment': IContentInfo_MediaMetadata_Fragment } }
+  ) | null } & { ' $fragmentName'?: 'IContentData_BlogPostPage_Fragment' };
+
+type IContentData_BlogSectionExperience_Fragment = { __typename?: 'BlogSectionExperience', _type: 'BlogSectionExperience', _metadata?: (
+    { __typename?: 'ContentMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_ContentMetadata_Fragment': IContentInfo_ContentMetadata_Fragment } }
+  ) | (
+    { __typename?: 'InstanceMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_InstanceMetadata_Fragment': IContentInfo_InstanceMetadata_Fragment } }
+  ) | (
+    { __typename?: 'ItemMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_ItemMetadata_Fragment': IContentInfo_ItemMetadata_Fragment } }
+  ) | (
+    { __typename?: 'MediaMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_MediaMetadata_Fragment': IContentInfo_MediaMetadata_Fragment } }
+  ) | null } & { ' $fragmentName'?: 'IContentData_BlogSectionExperience_Fragment' };
+
+type IContentData_ButtonBlock_Fragment = { __typename?: 'ButtonBlock', _type: 'ButtonBlock', _metadata?: (
+    { __typename?: 'ContentMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_ContentMetadata_Fragment': IContentInfo_ContentMetadata_Fragment } }
+  ) | (
+    { __typename?: 'InstanceMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_InstanceMetadata_Fragment': IContentInfo_InstanceMetadata_Fragment } }
+  ) | (
+    { __typename?: 'ItemMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_ItemMetadata_Fragment': IContentInfo_ItemMetadata_Fragment } }
+  ) | (
+    { __typename?: 'MediaMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_MediaMetadata_Fragment': IContentInfo_MediaMetadata_Fragment } }
+  ) | null } & { ' $fragmentName'?: 'IContentData_ButtonBlock_Fragment' };
+
 type IContentData_CMSPage_Fragment = { __typename?: 'CMSPage', _type: 'CMSPage', _metadata?: (
     { __typename?: 'ContentMetadata' }
     & { ' $fragmentRefs'?: { 'IContentInfo_ContentMetadata_Fragment': IContentInfo_ContentMetadata_Fragment } }
@@ -7782,6 +11806,34 @@ type IContentData_CMSPage_Fragment = { __typename?: 'CMSPage', _type: 'CMSPage',
     & { ' $fragmentRefs'?: { 'IContentInfo_MediaMetadata_Fragment': IContentInfo_MediaMetadata_Fragment } }
   ) | null } & { ' $fragmentName'?: 'IContentData_CMSPage_Fragment' };
 
+type IContentData_CTAElement_Fragment = { __typename?: 'CTAElement', _type: 'CTAElement', _metadata?: (
+    { __typename?: 'ContentMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_ContentMetadata_Fragment': IContentInfo_ContentMetadata_Fragment } }
+  ) | (
+    { __typename?: 'InstanceMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_InstanceMetadata_Fragment': IContentInfo_InstanceMetadata_Fragment } }
+  ) | (
+    { __typename?: 'ItemMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_ItemMetadata_Fragment': IContentInfo_ItemMetadata_Fragment } }
+  ) | (
+    { __typename?: 'MediaMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_MediaMetadata_Fragment': IContentInfo_MediaMetadata_Fragment } }
+  ) | null } & { ' $fragmentName'?: 'IContentData_CTAElement_Fragment' };
+
+type IContentData_CarouselBlock_Fragment = { __typename?: 'CarouselBlock', _type: 'CarouselBlock', _metadata?: (
+    { __typename?: 'ContentMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_ContentMetadata_Fragment': IContentInfo_ContentMetadata_Fragment } }
+  ) | (
+    { __typename?: 'InstanceMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_InstanceMetadata_Fragment': IContentInfo_InstanceMetadata_Fragment } }
+  ) | (
+    { __typename?: 'ItemMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_ItemMetadata_Fragment': IContentInfo_ItemMetadata_Fragment } }
+  ) | (
+    { __typename?: 'MediaMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_MediaMetadata_Fragment': IContentInfo_MediaMetadata_Fragment } }
+  ) | null } & { ' $fragmentName'?: 'IContentData_CarouselBlock_Fragment' };
+
 type IContentData_ContactBlock_Fragment = { __typename?: 'ContactBlock', _type: 'ContactBlock', _metadata?: (
     { __typename?: 'ContentMetadata' }
     & { ' $fragmentRefs'?: { 'IContentInfo_ContentMetadata_Fragment': IContentInfo_ContentMetadata_Fragment } }
@@ -7795,6 +11847,34 @@ type IContentData_ContactBlock_Fragment = { __typename?: 'ContactBlock', _type: 
     { __typename?: 'MediaMetadata' }
     & { ' $fragmentRefs'?: { 'IContentInfo_MediaMetadata_Fragment': IContentInfo_MediaMetadata_Fragment } }
   ) | null } & { ' $fragmentName'?: 'IContentData_ContactBlock_Fragment' };
+
+type IContentData_ContentRecsElement_Fragment = { __typename?: 'ContentRecsElement', _type: 'ContentRecsElement', _metadata?: (
+    { __typename?: 'ContentMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_ContentMetadata_Fragment': IContentInfo_ContentMetadata_Fragment } }
+  ) | (
+    { __typename?: 'InstanceMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_InstanceMetadata_Fragment': IContentInfo_InstanceMetadata_Fragment } }
+  ) | (
+    { __typename?: 'ItemMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_ItemMetadata_Fragment': IContentInfo_ItemMetadata_Fragment } }
+  ) | (
+    { __typename?: 'MediaMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_MediaMetadata_Fragment': IContentInfo_MediaMetadata_Fragment } }
+  ) | null } & { ' $fragmentName'?: 'IContentData_ContentRecsElement_Fragment' };
+
+type IContentData_ContinueReadingComponent_Fragment = { __typename?: 'ContinueReadingComponent', _type: 'ContinueReadingComponent', _metadata?: (
+    { __typename?: 'ContentMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_ContentMetadata_Fragment': IContentInfo_ContentMetadata_Fragment } }
+  ) | (
+    { __typename?: 'InstanceMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_InstanceMetadata_Fragment': IContentInfo_InstanceMetadata_Fragment } }
+  ) | (
+    { __typename?: 'ItemMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_ItemMetadata_Fragment': IContentInfo_ItemMetadata_Fragment } }
+  ) | (
+    { __typename?: 'MediaMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_MediaMetadata_Fragment': IContentInfo_MediaMetadata_Fragment } }
+  ) | null } & { ' $fragmentName'?: 'IContentData_ContinueReadingComponent_Fragment' };
 
 type IContentData_Footer_Fragment = { __typename?: 'Footer', _type: 'Footer', _metadata?: (
     { __typename?: 'ContentMetadata' }
@@ -7866,6 +11946,20 @@ type IContentData_Header_Fragment = { __typename?: 'Header', _type: 'Header', _m
     & { ' $fragmentRefs'?: { 'IContentInfo_MediaMetadata_Fragment': IContentInfo_MediaMetadata_Fragment } }
   ) | null } & { ' $fragmentName'?: 'IContentData_Header_Fragment' };
 
+type IContentData_HeadingElement_Fragment = { __typename?: 'HeadingElement', _type: 'HeadingElement', _metadata?: (
+    { __typename?: 'ContentMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_ContentMetadata_Fragment': IContentInfo_ContentMetadata_Fragment } }
+  ) | (
+    { __typename?: 'InstanceMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_InstanceMetadata_Fragment': IContentInfo_InstanceMetadata_Fragment } }
+  ) | (
+    { __typename?: 'ItemMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_ItemMetadata_Fragment': IContentInfo_ItemMetadata_Fragment } }
+  ) | (
+    { __typename?: 'MediaMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_MediaMetadata_Fragment': IContentInfo_MediaMetadata_Fragment } }
+  ) | null } & { ' $fragmentName'?: 'IContentData_HeadingElement_Fragment' };
+
 type IContentData_HelloWorld_Fragment = { __typename?: 'HelloWorld', _type: 'HelloWorld', _metadata?: (
     { __typename?: 'ContentMetadata' }
     & { ' $fragmentRefs'?: { 'IContentInfo_ContentMetadata_Fragment': IContentInfo_ContentMetadata_Fragment } }
@@ -7908,6 +12002,20 @@ type IContentData_HomePage_Fragment = { __typename?: 'HomePage', _type: 'HomePag
     & { ' $fragmentRefs'?: { 'IContentInfo_MediaMetadata_Fragment': IContentInfo_MediaMetadata_Fragment } }
   ) | null } & { ' $fragmentName'?: 'IContentData_HomePage_Fragment' };
 
+type IContentData_ImageElement_Fragment = { __typename?: 'ImageElement', _type: 'ImageElement', _metadata?: (
+    { __typename?: 'ContentMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_ContentMetadata_Fragment': IContentInfo_ContentMetadata_Fragment } }
+  ) | (
+    { __typename?: 'InstanceMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_InstanceMetadata_Fragment': IContentInfo_InstanceMetadata_Fragment } }
+  ) | (
+    { __typename?: 'ItemMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_ItemMetadata_Fragment': IContentInfo_ItemMetadata_Fragment } }
+  ) | (
+    { __typename?: 'MediaMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_MediaMetadata_Fragment': IContentInfo_MediaMetadata_Fragment } }
+  ) | null } & { ' $fragmentName'?: 'IContentData_ImageElement_Fragment' };
+
 type IContentData_ImageMedia_Fragment = { __typename?: 'ImageMedia', _type: 'ImageMedia', _metadata?: (
     { __typename?: 'ContentMetadata' }
     & { ' $fragmentRefs'?: { 'IContentInfo_ContentMetadata_Fragment': IContentInfo_ContentMetadata_Fragment } }
@@ -7921,6 +12029,34 @@ type IContentData_ImageMedia_Fragment = { __typename?: 'ImageMedia', _type: 'Ima
     { __typename?: 'MediaMetadata' }
     & { ' $fragmentRefs'?: { 'IContentInfo_MediaMetadata_Fragment': IContentInfo_MediaMetadata_Fragment } }
   ) | null } & { ' $fragmentName'?: 'IContentData_ImageMedia_Fragment' };
+
+type IContentData_LandingPage_Fragment = { __typename?: 'LandingPage', _type: 'LandingPage', _metadata?: (
+    { __typename?: 'ContentMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_ContentMetadata_Fragment': IContentInfo_ContentMetadata_Fragment } }
+  ) | (
+    { __typename?: 'InstanceMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_InstanceMetadata_Fragment': IContentInfo_InstanceMetadata_Fragment } }
+  ) | (
+    { __typename?: 'ItemMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_ItemMetadata_Fragment': IContentInfo_ItemMetadata_Fragment } }
+  ) | (
+    { __typename?: 'MediaMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_MediaMetadata_Fragment': IContentInfo_MediaMetadata_Fragment } }
+  ) | null } & { ' $fragmentName'?: 'IContentData_LandingPage_Fragment' };
+
+type IContentData_LayoutSettingsBlock_Fragment = { __typename?: 'LayoutSettingsBlock', _type: 'LayoutSettingsBlock', _metadata?: (
+    { __typename?: 'ContentMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_ContentMetadata_Fragment': IContentInfo_ContentMetadata_Fragment } }
+  ) | (
+    { __typename?: 'InstanceMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_InstanceMetadata_Fragment': IContentInfo_InstanceMetadata_Fragment } }
+  ) | (
+    { __typename?: 'ItemMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_ItemMetadata_Fragment': IContentInfo_ItemMetadata_Fragment } }
+  ) | (
+    { __typename?: 'MediaMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_MediaMetadata_Fragment': IContentInfo_MediaMetadata_Fragment } }
+  ) | null } & { ' $fragmentName'?: 'IContentData_LayoutSettingsBlock_Fragment' };
 
 type IContentData_LogoItemBlock_Fragment = { __typename?: 'LogoItemBlock', _type: 'LogoItemBlock', _metadata?: (
     { __typename?: 'ContentMetadata' }
@@ -7950,6 +12086,34 @@ type IContentData_LogosBlock_Fragment = { __typename?: 'LogosBlock', _type: 'Log
     & { ' $fragmentRefs'?: { 'IContentInfo_MediaMetadata_Fragment': IContentInfo_MediaMetadata_Fragment } }
   ) | null } & { ' $fragmentName'?: 'IContentData_LogosBlock_Fragment' };
 
+type IContentData_MegaMenuGroupBlock_Fragment = { __typename?: 'MegaMenuGroupBlock', _type: 'MegaMenuGroupBlock', _metadata?: (
+    { __typename?: 'ContentMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_ContentMetadata_Fragment': IContentInfo_ContentMetadata_Fragment } }
+  ) | (
+    { __typename?: 'InstanceMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_InstanceMetadata_Fragment': IContentInfo_InstanceMetadata_Fragment } }
+  ) | (
+    { __typename?: 'ItemMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_ItemMetadata_Fragment': IContentInfo_ItemMetadata_Fragment } }
+  ) | (
+    { __typename?: 'MediaMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_MediaMetadata_Fragment': IContentInfo_MediaMetadata_Fragment } }
+  ) | null } & { ' $fragmentName'?: 'IContentData_MegaMenuGroupBlock_Fragment' };
+
+type IContentData_MenuNavigationBlock_Fragment = { __typename?: 'MenuNavigationBlock', _type: 'MenuNavigationBlock', _metadata?: (
+    { __typename?: 'ContentMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_ContentMetadata_Fragment': IContentInfo_ContentMetadata_Fragment } }
+  ) | (
+    { __typename?: 'InstanceMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_InstanceMetadata_Fragment': IContentInfo_InstanceMetadata_Fragment } }
+  ) | (
+    { __typename?: 'ItemMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_ItemMetadata_Fragment': IContentInfo_ItemMetadata_Fragment } }
+  ) | (
+    { __typename?: 'MediaMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_MediaMetadata_Fragment': IContentInfo_MediaMetadata_Fragment } }
+  ) | null } & { ' $fragmentName'?: 'IContentData_MenuNavigationBlock_Fragment' };
+
 type IContentData_NavItem_Fragment = { __typename?: 'NavItem', _type: 'NavItem', _metadata?: (
     { __typename?: 'ContentMetadata' }
     & { ' $fragmentRefs'?: { 'IContentInfo_ContentMetadata_Fragment': IContentInfo_ContentMetadata_Fragment } }
@@ -7963,6 +12127,48 @@ type IContentData_NavItem_Fragment = { __typename?: 'NavItem', _type: 'NavItem',
     { __typename?: 'MediaMetadata' }
     & { ' $fragmentRefs'?: { 'IContentInfo_MediaMetadata_Fragment': IContentInfo_MediaMetadata_Fragment } }
   ) | null } & { ' $fragmentName'?: 'IContentData_NavItem_Fragment' };
+
+type IContentData_OdpEmbedBlock_Fragment = { __typename?: 'OdpEmbedBlock', _type: 'OdpEmbedBlock', _metadata?: (
+    { __typename?: 'ContentMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_ContentMetadata_Fragment': IContentInfo_ContentMetadata_Fragment } }
+  ) | (
+    { __typename?: 'InstanceMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_InstanceMetadata_Fragment': IContentInfo_InstanceMetadata_Fragment } }
+  ) | (
+    { __typename?: 'ItemMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_ItemMetadata_Fragment': IContentInfo_ItemMetadata_Fragment } }
+  ) | (
+    { __typename?: 'MediaMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_MediaMetadata_Fragment': IContentInfo_MediaMetadata_Fragment } }
+  ) | null } & { ' $fragmentName'?: 'IContentData_OdpEmbedBlock_Fragment' };
+
+type IContentData_PageSeoSettings_Fragment = { __typename?: 'PageSeoSettings', _type: 'PageSeoSettings', _metadata?: (
+    { __typename?: 'ContentMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_ContentMetadata_Fragment': IContentInfo_ContentMetadata_Fragment } }
+  ) | (
+    { __typename?: 'InstanceMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_InstanceMetadata_Fragment': IContentInfo_InstanceMetadata_Fragment } }
+  ) | (
+    { __typename?: 'ItemMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_ItemMetadata_Fragment': IContentInfo_ItemMetadata_Fragment } }
+  ) | (
+    { __typename?: 'MediaMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_MediaMetadata_Fragment': IContentInfo_MediaMetadata_Fragment } }
+  ) | null } & { ' $fragmentName'?: 'IContentData_PageSeoSettings_Fragment' };
+
+type IContentData_ParagraphElement_Fragment = { __typename?: 'ParagraphElement', _type: 'ParagraphElement', _metadata?: (
+    { __typename?: 'ContentMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_ContentMetadata_Fragment': IContentInfo_ContentMetadata_Fragment } }
+  ) | (
+    { __typename?: 'InstanceMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_InstanceMetadata_Fragment': IContentInfo_InstanceMetadata_Fragment } }
+  ) | (
+    { __typename?: 'ItemMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_ItemMetadata_Fragment': IContentInfo_ItemMetadata_Fragment } }
+  ) | (
+    { __typename?: 'MediaMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_MediaMetadata_Fragment': IContentInfo_MediaMetadata_Fragment } }
+  ) | null } & { ' $fragmentName'?: 'IContentData_ParagraphElement_Fragment' };
 
 type IContentData_PortfolioGridBlock_Fragment = { __typename?: 'PortfolioGridBlock', _type: 'PortfolioGridBlock', _metadata?: (
     { __typename?: 'ContentMetadata' }
@@ -8005,6 +12211,34 @@ type IContentData_ProfileBlock_Fragment = { __typename?: 'ProfileBlock', _type: 
     { __typename?: 'MediaMetadata' }
     & { ' $fragmentRefs'?: { 'IContentInfo_MediaMetadata_Fragment': IContentInfo_MediaMetadata_Fragment } }
   ) | null } & { ' $fragmentName'?: 'IContentData_ProfileBlock_Fragment' };
+
+type IContentData_QuoteBlock_Fragment = { __typename?: 'QuoteBlock', _type: 'QuoteBlock', _metadata?: (
+    { __typename?: 'ContentMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_ContentMetadata_Fragment': IContentInfo_ContentMetadata_Fragment } }
+  ) | (
+    { __typename?: 'InstanceMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_InstanceMetadata_Fragment': IContentInfo_InstanceMetadata_Fragment } }
+  ) | (
+    { __typename?: 'ItemMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_ItemMetadata_Fragment': IContentInfo_ItemMetadata_Fragment } }
+  ) | (
+    { __typename?: 'MediaMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_MediaMetadata_Fragment': IContentInfo_MediaMetadata_Fragment } }
+  ) | null } & { ' $fragmentName'?: 'IContentData_QuoteBlock_Fragment' };
+
+type IContentData_RichTextElement_Fragment = { __typename?: 'RichTextElement', _type: 'RichTextElement', _metadata?: (
+    { __typename?: 'ContentMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_ContentMetadata_Fragment': IContentInfo_ContentMetadata_Fragment } }
+  ) | (
+    { __typename?: 'InstanceMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_InstanceMetadata_Fragment': IContentInfo_InstanceMetadata_Fragment } }
+  ) | (
+    { __typename?: 'ItemMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_ItemMetadata_Fragment': IContentInfo_ItemMetadata_Fragment } }
+  ) | (
+    { __typename?: 'MediaMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_MediaMetadata_Fragment': IContentInfo_MediaMetadata_Fragment } }
+  ) | null } & { ' $fragmentName'?: 'IContentData_RichTextElement_Fragment' };
 
 type IContentData_SEOExperience_Fragment = { __typename?: 'SEOExperience', _type: 'SEOExperience', _metadata?: (
     { __typename?: 'ContentMetadata' }
@@ -8062,6 +12296,20 @@ type IContentData_SocialLink_Fragment = { __typename?: 'SocialLink', _type: 'Soc
     & { ' $fragmentRefs'?: { 'IContentInfo_MediaMetadata_Fragment': IContentInfo_MediaMetadata_Fragment } }
   ) | null } & { ' $fragmentName'?: 'IContentData_SocialLink_Fragment' };
 
+type IContentData_SomeGreatNewPage_Fragment = { __typename?: 'SomeGreatNewPage', _type: 'SomeGreatNewPage', _metadata?: (
+    { __typename?: 'ContentMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_ContentMetadata_Fragment': IContentInfo_ContentMetadata_Fragment } }
+  ) | (
+    { __typename?: 'InstanceMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_InstanceMetadata_Fragment': IContentInfo_InstanceMetadata_Fragment } }
+  ) | (
+    { __typename?: 'ItemMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_ItemMetadata_Fragment': IContentInfo_ItemMetadata_Fragment } }
+  ) | (
+    { __typename?: 'MediaMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_MediaMetadata_Fragment': IContentInfo_MediaMetadata_Fragment } }
+  ) | null } & { ' $fragmentName'?: 'IContentData_SomeGreatNewPage_Fragment' };
+
 type IContentData_StartPage_Fragment = { __typename?: 'StartPage', _type: 'StartPage', _metadata?: (
     { __typename?: 'ContentMetadata' }
     & { ' $fragmentRefs'?: { 'IContentInfo_ContentMetadata_Fragment': IContentInfo_ContentMetadata_Fragment } }
@@ -8104,7 +12352,7 @@ type IContentData_SysContentFolder_Fragment = { __typename?: 'SysContentFolder',
     & { ' $fragmentRefs'?: { 'IContentInfo_MediaMetadata_Fragment': IContentInfo_MediaMetadata_Fragment } }
   ) | null } & { ' $fragmentName'?: 'IContentData_SysContentFolder_Fragment' };
 
-type IContentData_TedTestBlock_Fragment = { __typename?: 'TedTestBlock', _type: 'TedTestBlock', _metadata?: (
+type IContentData_TestBlockPropertyGroup_Fragment = { __typename?: 'TestBlockPropertyGroup', _type: 'TestBlockPropertyGroup', _metadata?: (
     { __typename?: 'ContentMetadata' }
     & { ' $fragmentRefs'?: { 'IContentInfo_ContentMetadata_Fragment': IContentInfo_ContentMetadata_Fragment } }
   ) | (
@@ -8116,7 +12364,21 @@ type IContentData_TedTestBlock_Fragment = { __typename?: 'TedTestBlock', _type: 
   ) | (
     { __typename?: 'MediaMetadata' }
     & { ' $fragmentRefs'?: { 'IContentInfo_MediaMetadata_Fragment': IContentInfo_MediaMetadata_Fragment } }
-  ) | null } & { ' $fragmentName'?: 'IContentData_TedTestBlock_Fragment' };
+  ) | null } & { ' $fragmentName'?: 'IContentData_TestBlockPropertyGroup_Fragment' };
+
+type IContentData_TestimonialElement_Fragment = { __typename?: 'TestimonialElement', _type: 'TestimonialElement', _metadata?: (
+    { __typename?: 'ContentMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_ContentMetadata_Fragment': IContentInfo_ContentMetadata_Fragment } }
+  ) | (
+    { __typename?: 'InstanceMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_InstanceMetadata_Fragment': IContentInfo_InstanceMetadata_Fragment } }
+  ) | (
+    { __typename?: 'ItemMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_ItemMetadata_Fragment': IContentInfo_ItemMetadata_Fragment } }
+  ) | (
+    { __typename?: 'MediaMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_MediaMetadata_Fragment': IContentInfo_MediaMetadata_Fragment } }
+  ) | null } & { ' $fragmentName'?: 'IContentData_TestimonialElement_Fragment' };
 
 type IContentData_TestimonialItem_Fragment = { __typename?: 'TestimonialItem', _type: 'TestimonialItem', _metadata?: (
     { __typename?: 'ContentMetadata' }
@@ -8159,6 +12421,34 @@ type IContentData_TestimonialsBlock_Fragment = { __typename?: 'TestimonialsBlock
     { __typename?: 'MediaMetadata' }
     & { ' $fragmentRefs'?: { 'IContentInfo_MediaMetadata_Fragment': IContentInfo_MediaMetadata_Fragment } }
   ) | null } & { ' $fragmentName'?: 'IContentData_TestimonialsBlock_Fragment' };
+
+type IContentData_TextBlock_Fragment = { __typename?: 'TextBlock', _type: 'TextBlock', _metadata?: (
+    { __typename?: 'ContentMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_ContentMetadata_Fragment': IContentInfo_ContentMetadata_Fragment } }
+  ) | (
+    { __typename?: 'InstanceMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_InstanceMetadata_Fragment': IContentInfo_InstanceMetadata_Fragment } }
+  ) | (
+    { __typename?: 'ItemMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_ItemMetadata_Fragment': IContentInfo_ItemMetadata_Fragment } }
+  ) | (
+    { __typename?: 'MediaMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_MediaMetadata_Fragment': IContentInfo_MediaMetadata_Fragment } }
+  ) | null } & { ' $fragmentName'?: 'IContentData_TextBlock_Fragment' };
+
+type IContentData_VideoElement_Fragment = { __typename?: 'VideoElement', _type: 'VideoElement', _metadata?: (
+    { __typename?: 'ContentMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_ContentMetadata_Fragment': IContentInfo_ContentMetadata_Fragment } }
+  ) | (
+    { __typename?: 'InstanceMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_InstanceMetadata_Fragment': IContentInfo_InstanceMetadata_Fragment } }
+  ) | (
+    { __typename?: 'ItemMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_ItemMetadata_Fragment': IContentInfo_ItemMetadata_Fragment } }
+  ) | (
+    { __typename?: 'MediaMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_MediaMetadata_Fragment': IContentInfo_MediaMetadata_Fragment } }
+  ) | null } & { ' $fragmentName'?: 'IContentData_VideoElement_Fragment' };
 
 type IContentData_VideoMedia_Fragment = { __typename?: 'VideoMedia', _type: 'VideoMedia', _metadata?: (
     { __typename?: 'ContentMetadata' }
@@ -8300,7 +12590,21 @@ type IContentData__Video_Fragment = { __typename?: '_Video', _type: '_Video', _m
     & { ' $fragmentRefs'?: { 'IContentInfo_MediaMetadata_Fragment': IContentInfo_MediaMetadata_Fragment } }
   ) | null } & { ' $fragmentName'?: 'IContentData__Video_Fragment' };
 
-export type IContentDataFragment = IContentData_AvailabilityBlock_Fragment | IContentData_BlankExperience_Fragment | IContentData_BlankSection_Fragment | IContentData_CMSPage_Fragment | IContentData_ContactBlock_Fragment | IContentData_Footer_Fragment | IContentData_FooterColumn_Fragment | IContentData_GenericMedia_Fragment | IContentData_GenericMedia123_Fragment | IContentData_Header_Fragment | IContentData_HelloWorld_Fragment | IContentData_HeroBlock_Fragment | IContentData_HomePage_Fragment | IContentData_ImageMedia_Fragment | IContentData_LogoItemBlock_Fragment | IContentData_LogosBlock_Fragment | IContentData_NavItem_Fragment | IContentData_PortfolioGridBlock_Fragment | IContentData_PortfolioItemBlock_Fragment | IContentData_ProfileBlock_Fragment | IContentData_SEOExperience_Fragment | IContentData_ServiceItem_Fragment | IContentData_ServicesBlock_Fragment | IContentData_SocialLink_Fragment | IContentData_StartPage_Fragment | IContentData_StoryBlock_Fragment | IContentData_SysContentFolder_Fragment | IContentData_TedTestBlock_Fragment | IContentData_TestimonialItem_Fragment | IContentData_TestimonialItemBlock_Fragment | IContentData_TestimonialsBlock_Fragment | IContentData_VideoMedia_Fragment | IContentData__Component_Fragment | IContentData__Content_Fragment | IContentData__Experience_Fragment | IContentData__Folder_Fragment | IContentData__Image_Fragment | IContentData__Media_Fragment | IContentData__Page_Fragment | IContentData__Section_Fragment | IContentData__Video_Fragment;
+export type IContentDataFragment = IContentData_AnotherGreatPage_Fragment | IContentData_ArticleListElement_Fragment | IContentData_AvailabilityBlock_Fragment | IContentData_BlankExperience_Fragment | IContentData_BlankSection_Fragment | IContentData_BlogPostPage_Fragment | IContentData_BlogSectionExperience_Fragment | IContentData_ButtonBlock_Fragment | IContentData_CMSPage_Fragment | IContentData_CTAElement_Fragment | IContentData_CarouselBlock_Fragment | IContentData_ContactBlock_Fragment | IContentData_ContentRecsElement_Fragment | IContentData_ContinueReadingComponent_Fragment | IContentData_Footer_Fragment | IContentData_FooterColumn_Fragment | IContentData_GenericMedia_Fragment | IContentData_GenericMedia123_Fragment | IContentData_Header_Fragment | IContentData_HeadingElement_Fragment | IContentData_HelloWorld_Fragment | IContentData_HeroBlock_Fragment | IContentData_HomePage_Fragment | IContentData_ImageElement_Fragment | IContentData_ImageMedia_Fragment | IContentData_LandingPage_Fragment | IContentData_LayoutSettingsBlock_Fragment | IContentData_LogoItemBlock_Fragment | IContentData_LogosBlock_Fragment | IContentData_MegaMenuGroupBlock_Fragment | IContentData_MenuNavigationBlock_Fragment | IContentData_NavItem_Fragment | IContentData_OdpEmbedBlock_Fragment | IContentData_PageSeoSettings_Fragment | IContentData_ParagraphElement_Fragment | IContentData_PortfolioGridBlock_Fragment | IContentData_PortfolioItemBlock_Fragment | IContentData_ProfileBlock_Fragment | IContentData_QuoteBlock_Fragment | IContentData_RichTextElement_Fragment | IContentData_SEOExperience_Fragment | IContentData_ServiceItem_Fragment | IContentData_ServicesBlock_Fragment | IContentData_SocialLink_Fragment | IContentData_SomeGreatNewPage_Fragment | IContentData_StartPage_Fragment | IContentData_StoryBlock_Fragment | IContentData_SysContentFolder_Fragment | IContentData_TestBlockPropertyGroup_Fragment | IContentData_TestimonialElement_Fragment | IContentData_TestimonialItem_Fragment | IContentData_TestimonialItemBlock_Fragment | IContentData_TestimonialsBlock_Fragment | IContentData_TextBlock_Fragment | IContentData_VideoElement_Fragment | IContentData_VideoMedia_Fragment | IContentData__Component_Fragment | IContentData__Content_Fragment | IContentData__Experience_Fragment | IContentData__Folder_Fragment | IContentData__Image_Fragment | IContentData__Media_Fragment | IContentData__Page_Fragment | IContentData__Section_Fragment | IContentData__Video_Fragment;
+
+type IElementData_ArticleListElement_Fragment = { __typename?: 'ArticleListElement', _type: 'ArticleListElement', _metadata?: (
+    { __typename?: 'ContentMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_ContentMetadata_Fragment': IContentInfo_ContentMetadata_Fragment } }
+  ) | (
+    { __typename?: 'InstanceMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_InstanceMetadata_Fragment': IContentInfo_InstanceMetadata_Fragment } }
+  ) | (
+    { __typename?: 'ItemMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_ItemMetadata_Fragment': IContentInfo_ItemMetadata_Fragment } }
+  ) | (
+    { __typename?: 'MediaMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_MediaMetadata_Fragment': IContentInfo_MediaMetadata_Fragment } }
+  ) | null } & { ' $fragmentName'?: 'IElementData_ArticleListElement_Fragment' };
 
 type IElementData_AvailabilityBlock_Fragment = { __typename?: 'AvailabilityBlock', _type: 'AvailabilityBlock', _metadata?: (
     { __typename?: 'ContentMetadata' }
@@ -8330,6 +12634,48 @@ type IElementData_BlankSection_Fragment = { __typename?: 'BlankSection', _type: 
     & { ' $fragmentRefs'?: { 'IContentInfo_MediaMetadata_Fragment': IContentInfo_MediaMetadata_Fragment } }
   ) | null } & { ' $fragmentName'?: 'IElementData_BlankSection_Fragment' };
 
+type IElementData_ButtonBlock_Fragment = { __typename?: 'ButtonBlock', _type: 'ButtonBlock', _metadata?: (
+    { __typename?: 'ContentMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_ContentMetadata_Fragment': IContentInfo_ContentMetadata_Fragment } }
+  ) | (
+    { __typename?: 'InstanceMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_InstanceMetadata_Fragment': IContentInfo_InstanceMetadata_Fragment } }
+  ) | (
+    { __typename?: 'ItemMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_ItemMetadata_Fragment': IContentInfo_ItemMetadata_Fragment } }
+  ) | (
+    { __typename?: 'MediaMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_MediaMetadata_Fragment': IContentInfo_MediaMetadata_Fragment } }
+  ) | null } & { ' $fragmentName'?: 'IElementData_ButtonBlock_Fragment' };
+
+type IElementData_CTAElement_Fragment = { __typename?: 'CTAElement', _type: 'CTAElement', _metadata?: (
+    { __typename?: 'ContentMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_ContentMetadata_Fragment': IContentInfo_ContentMetadata_Fragment } }
+  ) | (
+    { __typename?: 'InstanceMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_InstanceMetadata_Fragment': IContentInfo_InstanceMetadata_Fragment } }
+  ) | (
+    { __typename?: 'ItemMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_ItemMetadata_Fragment': IContentInfo_ItemMetadata_Fragment } }
+  ) | (
+    { __typename?: 'MediaMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_MediaMetadata_Fragment': IContentInfo_MediaMetadata_Fragment } }
+  ) | null } & { ' $fragmentName'?: 'IElementData_CTAElement_Fragment' };
+
+type IElementData_CarouselBlock_Fragment = { __typename?: 'CarouselBlock', _type: 'CarouselBlock', _metadata?: (
+    { __typename?: 'ContentMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_ContentMetadata_Fragment': IContentInfo_ContentMetadata_Fragment } }
+  ) | (
+    { __typename?: 'InstanceMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_InstanceMetadata_Fragment': IContentInfo_InstanceMetadata_Fragment } }
+  ) | (
+    { __typename?: 'ItemMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_ItemMetadata_Fragment': IContentInfo_ItemMetadata_Fragment } }
+  ) | (
+    { __typename?: 'MediaMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_MediaMetadata_Fragment': IContentInfo_MediaMetadata_Fragment } }
+  ) | null } & { ' $fragmentName'?: 'IElementData_CarouselBlock_Fragment' };
+
 type IElementData_ContactBlock_Fragment = { __typename?: 'ContactBlock', _type: 'ContactBlock', _metadata?: (
     { __typename?: 'ContentMetadata' }
     & { ' $fragmentRefs'?: { 'IContentInfo_ContentMetadata_Fragment': IContentInfo_ContentMetadata_Fragment } }
@@ -8344,6 +12690,34 @@ type IElementData_ContactBlock_Fragment = { __typename?: 'ContactBlock', _type: 
     & { ' $fragmentRefs'?: { 'IContentInfo_MediaMetadata_Fragment': IContentInfo_MediaMetadata_Fragment } }
   ) | null } & { ' $fragmentName'?: 'IElementData_ContactBlock_Fragment' };
 
+type IElementData_ContentRecsElement_Fragment = { __typename?: 'ContentRecsElement', _type: 'ContentRecsElement', _metadata?: (
+    { __typename?: 'ContentMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_ContentMetadata_Fragment': IContentInfo_ContentMetadata_Fragment } }
+  ) | (
+    { __typename?: 'InstanceMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_InstanceMetadata_Fragment': IContentInfo_InstanceMetadata_Fragment } }
+  ) | (
+    { __typename?: 'ItemMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_ItemMetadata_Fragment': IContentInfo_ItemMetadata_Fragment } }
+  ) | (
+    { __typename?: 'MediaMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_MediaMetadata_Fragment': IContentInfo_MediaMetadata_Fragment } }
+  ) | null } & { ' $fragmentName'?: 'IElementData_ContentRecsElement_Fragment' };
+
+type IElementData_ContinueReadingComponent_Fragment = { __typename?: 'ContinueReadingComponent', _type: 'ContinueReadingComponent', _metadata?: (
+    { __typename?: 'ContentMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_ContentMetadata_Fragment': IContentInfo_ContentMetadata_Fragment } }
+  ) | (
+    { __typename?: 'InstanceMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_InstanceMetadata_Fragment': IContentInfo_InstanceMetadata_Fragment } }
+  ) | (
+    { __typename?: 'ItemMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_ItemMetadata_Fragment': IContentInfo_ItemMetadata_Fragment } }
+  ) | (
+    { __typename?: 'MediaMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_MediaMetadata_Fragment': IContentInfo_MediaMetadata_Fragment } }
+  ) | null } & { ' $fragmentName'?: 'IElementData_ContinueReadingComponent_Fragment' };
+
 type IElementData_FooterColumn_Fragment = { __typename?: 'FooterColumn', _type: 'FooterColumn', _metadata?: (
     { __typename?: 'ContentMetadata' }
     & { ' $fragmentRefs'?: { 'IContentInfo_ContentMetadata_Fragment': IContentInfo_ContentMetadata_Fragment } }
@@ -8357,6 +12731,20 @@ type IElementData_FooterColumn_Fragment = { __typename?: 'FooterColumn', _type: 
     { __typename?: 'MediaMetadata' }
     & { ' $fragmentRefs'?: { 'IContentInfo_MediaMetadata_Fragment': IContentInfo_MediaMetadata_Fragment } }
   ) | null } & { ' $fragmentName'?: 'IElementData_FooterColumn_Fragment' };
+
+type IElementData_HeadingElement_Fragment = { __typename?: 'HeadingElement', _type: 'HeadingElement', _metadata?: (
+    { __typename?: 'ContentMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_ContentMetadata_Fragment': IContentInfo_ContentMetadata_Fragment } }
+  ) | (
+    { __typename?: 'InstanceMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_InstanceMetadata_Fragment': IContentInfo_InstanceMetadata_Fragment } }
+  ) | (
+    { __typename?: 'ItemMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_ItemMetadata_Fragment': IContentInfo_ItemMetadata_Fragment } }
+  ) | (
+    { __typename?: 'MediaMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_MediaMetadata_Fragment': IContentInfo_MediaMetadata_Fragment } }
+  ) | null } & { ' $fragmentName'?: 'IElementData_HeadingElement_Fragment' };
 
 type IElementData_HelloWorld_Fragment = { __typename?: 'HelloWorld', _type: 'HelloWorld', _metadata?: (
     { __typename?: 'ContentMetadata' }
@@ -8386,6 +12774,34 @@ type IElementData_HeroBlock_Fragment = { __typename?: 'HeroBlock', _type: 'HeroB
     & { ' $fragmentRefs'?: { 'IContentInfo_MediaMetadata_Fragment': IContentInfo_MediaMetadata_Fragment } }
   ) | null } & { ' $fragmentName'?: 'IElementData_HeroBlock_Fragment' };
 
+type IElementData_ImageElement_Fragment = { __typename?: 'ImageElement', _type: 'ImageElement', _metadata?: (
+    { __typename?: 'ContentMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_ContentMetadata_Fragment': IContentInfo_ContentMetadata_Fragment } }
+  ) | (
+    { __typename?: 'InstanceMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_InstanceMetadata_Fragment': IContentInfo_InstanceMetadata_Fragment } }
+  ) | (
+    { __typename?: 'ItemMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_ItemMetadata_Fragment': IContentInfo_ItemMetadata_Fragment } }
+  ) | (
+    { __typename?: 'MediaMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_MediaMetadata_Fragment': IContentInfo_MediaMetadata_Fragment } }
+  ) | null } & { ' $fragmentName'?: 'IElementData_ImageElement_Fragment' };
+
+type IElementData_LayoutSettingsBlock_Fragment = { __typename?: 'LayoutSettingsBlock', _type: 'LayoutSettingsBlock', _metadata?: (
+    { __typename?: 'ContentMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_ContentMetadata_Fragment': IContentInfo_ContentMetadata_Fragment } }
+  ) | (
+    { __typename?: 'InstanceMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_InstanceMetadata_Fragment': IContentInfo_InstanceMetadata_Fragment } }
+  ) | (
+    { __typename?: 'ItemMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_ItemMetadata_Fragment': IContentInfo_ItemMetadata_Fragment } }
+  ) | (
+    { __typename?: 'MediaMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_MediaMetadata_Fragment': IContentInfo_MediaMetadata_Fragment } }
+  ) | null } & { ' $fragmentName'?: 'IElementData_LayoutSettingsBlock_Fragment' };
+
 type IElementData_LogoItemBlock_Fragment = { __typename?: 'LogoItemBlock', _type: 'LogoItemBlock', _metadata?: (
     { __typename?: 'ContentMetadata' }
     & { ' $fragmentRefs'?: { 'IContentInfo_ContentMetadata_Fragment': IContentInfo_ContentMetadata_Fragment } }
@@ -8414,6 +12830,34 @@ type IElementData_LogosBlock_Fragment = { __typename?: 'LogosBlock', _type: 'Log
     & { ' $fragmentRefs'?: { 'IContentInfo_MediaMetadata_Fragment': IContentInfo_MediaMetadata_Fragment } }
   ) | null } & { ' $fragmentName'?: 'IElementData_LogosBlock_Fragment' };
 
+type IElementData_MegaMenuGroupBlock_Fragment = { __typename?: 'MegaMenuGroupBlock', _type: 'MegaMenuGroupBlock', _metadata?: (
+    { __typename?: 'ContentMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_ContentMetadata_Fragment': IContentInfo_ContentMetadata_Fragment } }
+  ) | (
+    { __typename?: 'InstanceMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_InstanceMetadata_Fragment': IContentInfo_InstanceMetadata_Fragment } }
+  ) | (
+    { __typename?: 'ItemMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_ItemMetadata_Fragment': IContentInfo_ItemMetadata_Fragment } }
+  ) | (
+    { __typename?: 'MediaMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_MediaMetadata_Fragment': IContentInfo_MediaMetadata_Fragment } }
+  ) | null } & { ' $fragmentName'?: 'IElementData_MegaMenuGroupBlock_Fragment' };
+
+type IElementData_MenuNavigationBlock_Fragment = { __typename?: 'MenuNavigationBlock', _type: 'MenuNavigationBlock', _metadata?: (
+    { __typename?: 'ContentMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_ContentMetadata_Fragment': IContentInfo_ContentMetadata_Fragment } }
+  ) | (
+    { __typename?: 'InstanceMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_InstanceMetadata_Fragment': IContentInfo_InstanceMetadata_Fragment } }
+  ) | (
+    { __typename?: 'ItemMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_ItemMetadata_Fragment': IContentInfo_ItemMetadata_Fragment } }
+  ) | (
+    { __typename?: 'MediaMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_MediaMetadata_Fragment': IContentInfo_MediaMetadata_Fragment } }
+  ) | null } & { ' $fragmentName'?: 'IElementData_MenuNavigationBlock_Fragment' };
+
 type IElementData_NavItem_Fragment = { __typename?: 'NavItem', _type: 'NavItem', _metadata?: (
     { __typename?: 'ContentMetadata' }
     & { ' $fragmentRefs'?: { 'IContentInfo_ContentMetadata_Fragment': IContentInfo_ContentMetadata_Fragment } }
@@ -8427,6 +12871,48 @@ type IElementData_NavItem_Fragment = { __typename?: 'NavItem', _type: 'NavItem',
     { __typename?: 'MediaMetadata' }
     & { ' $fragmentRefs'?: { 'IContentInfo_MediaMetadata_Fragment': IContentInfo_MediaMetadata_Fragment } }
   ) | null } & { ' $fragmentName'?: 'IElementData_NavItem_Fragment' };
+
+type IElementData_OdpEmbedBlock_Fragment = { __typename?: 'OdpEmbedBlock', _type: 'OdpEmbedBlock', _metadata?: (
+    { __typename?: 'ContentMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_ContentMetadata_Fragment': IContentInfo_ContentMetadata_Fragment } }
+  ) | (
+    { __typename?: 'InstanceMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_InstanceMetadata_Fragment': IContentInfo_InstanceMetadata_Fragment } }
+  ) | (
+    { __typename?: 'ItemMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_ItemMetadata_Fragment': IContentInfo_ItemMetadata_Fragment } }
+  ) | (
+    { __typename?: 'MediaMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_MediaMetadata_Fragment': IContentInfo_MediaMetadata_Fragment } }
+  ) | null } & { ' $fragmentName'?: 'IElementData_OdpEmbedBlock_Fragment' };
+
+type IElementData_PageSeoSettings_Fragment = { __typename?: 'PageSeoSettings', _type: 'PageSeoSettings', _metadata?: (
+    { __typename?: 'ContentMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_ContentMetadata_Fragment': IContentInfo_ContentMetadata_Fragment } }
+  ) | (
+    { __typename?: 'InstanceMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_InstanceMetadata_Fragment': IContentInfo_InstanceMetadata_Fragment } }
+  ) | (
+    { __typename?: 'ItemMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_ItemMetadata_Fragment': IContentInfo_ItemMetadata_Fragment } }
+  ) | (
+    { __typename?: 'MediaMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_MediaMetadata_Fragment': IContentInfo_MediaMetadata_Fragment } }
+  ) | null } & { ' $fragmentName'?: 'IElementData_PageSeoSettings_Fragment' };
+
+type IElementData_ParagraphElement_Fragment = { __typename?: 'ParagraphElement', _type: 'ParagraphElement', _metadata?: (
+    { __typename?: 'ContentMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_ContentMetadata_Fragment': IContentInfo_ContentMetadata_Fragment } }
+  ) | (
+    { __typename?: 'InstanceMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_InstanceMetadata_Fragment': IContentInfo_InstanceMetadata_Fragment } }
+  ) | (
+    { __typename?: 'ItemMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_ItemMetadata_Fragment': IContentInfo_ItemMetadata_Fragment } }
+  ) | (
+    { __typename?: 'MediaMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_MediaMetadata_Fragment': IContentInfo_MediaMetadata_Fragment } }
+  ) | null } & { ' $fragmentName'?: 'IElementData_ParagraphElement_Fragment' };
 
 type IElementData_PortfolioGridBlock_Fragment = { __typename?: 'PortfolioGridBlock', _type: 'PortfolioGridBlock', _metadata?: (
     { __typename?: 'ContentMetadata' }
@@ -8469,6 +12955,34 @@ type IElementData_ProfileBlock_Fragment = { __typename?: 'ProfileBlock', _type: 
     { __typename?: 'MediaMetadata' }
     & { ' $fragmentRefs'?: { 'IContentInfo_MediaMetadata_Fragment': IContentInfo_MediaMetadata_Fragment } }
   ) | null } & { ' $fragmentName'?: 'IElementData_ProfileBlock_Fragment' };
+
+type IElementData_QuoteBlock_Fragment = { __typename?: 'QuoteBlock', _type: 'QuoteBlock', _metadata?: (
+    { __typename?: 'ContentMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_ContentMetadata_Fragment': IContentInfo_ContentMetadata_Fragment } }
+  ) | (
+    { __typename?: 'InstanceMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_InstanceMetadata_Fragment': IContentInfo_InstanceMetadata_Fragment } }
+  ) | (
+    { __typename?: 'ItemMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_ItemMetadata_Fragment': IContentInfo_ItemMetadata_Fragment } }
+  ) | (
+    { __typename?: 'MediaMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_MediaMetadata_Fragment': IContentInfo_MediaMetadata_Fragment } }
+  ) | null } & { ' $fragmentName'?: 'IElementData_QuoteBlock_Fragment' };
+
+type IElementData_RichTextElement_Fragment = { __typename?: 'RichTextElement', _type: 'RichTextElement', _metadata?: (
+    { __typename?: 'ContentMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_ContentMetadata_Fragment': IContentInfo_ContentMetadata_Fragment } }
+  ) | (
+    { __typename?: 'InstanceMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_InstanceMetadata_Fragment': IContentInfo_InstanceMetadata_Fragment } }
+  ) | (
+    { __typename?: 'ItemMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_ItemMetadata_Fragment': IContentInfo_ItemMetadata_Fragment } }
+  ) | (
+    { __typename?: 'MediaMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_MediaMetadata_Fragment': IContentInfo_MediaMetadata_Fragment } }
+  ) | null } & { ' $fragmentName'?: 'IElementData_RichTextElement_Fragment' };
 
 type IElementData_ServiceItem_Fragment = { __typename?: 'ServiceItem', _type: 'ServiceItem', _metadata?: (
     { __typename?: 'ContentMetadata' }
@@ -8526,7 +13040,7 @@ type IElementData_StoryBlock_Fragment = { __typename?: 'StoryBlock', _type: 'Sto
     & { ' $fragmentRefs'?: { 'IContentInfo_MediaMetadata_Fragment': IContentInfo_MediaMetadata_Fragment } }
   ) | null } & { ' $fragmentName'?: 'IElementData_StoryBlock_Fragment' };
 
-type IElementData_TedTestBlock_Fragment = { __typename?: 'TedTestBlock', _type: 'TedTestBlock', _metadata?: (
+type IElementData_TestBlockPropertyGroup_Fragment = { __typename?: 'TestBlockPropertyGroup', _type: 'TestBlockPropertyGroup', _metadata?: (
     { __typename?: 'ContentMetadata' }
     & { ' $fragmentRefs'?: { 'IContentInfo_ContentMetadata_Fragment': IContentInfo_ContentMetadata_Fragment } }
   ) | (
@@ -8538,7 +13052,21 @@ type IElementData_TedTestBlock_Fragment = { __typename?: 'TedTestBlock', _type: 
   ) | (
     { __typename?: 'MediaMetadata' }
     & { ' $fragmentRefs'?: { 'IContentInfo_MediaMetadata_Fragment': IContentInfo_MediaMetadata_Fragment } }
-  ) | null } & { ' $fragmentName'?: 'IElementData_TedTestBlock_Fragment' };
+  ) | null } & { ' $fragmentName'?: 'IElementData_TestBlockPropertyGroup_Fragment' };
+
+type IElementData_TestimonialElement_Fragment = { __typename?: 'TestimonialElement', _type: 'TestimonialElement', _metadata?: (
+    { __typename?: 'ContentMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_ContentMetadata_Fragment': IContentInfo_ContentMetadata_Fragment } }
+  ) | (
+    { __typename?: 'InstanceMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_InstanceMetadata_Fragment': IContentInfo_InstanceMetadata_Fragment } }
+  ) | (
+    { __typename?: 'ItemMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_ItemMetadata_Fragment': IContentInfo_ItemMetadata_Fragment } }
+  ) | (
+    { __typename?: 'MediaMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_MediaMetadata_Fragment': IContentInfo_MediaMetadata_Fragment } }
+  ) | null } & { ' $fragmentName'?: 'IElementData_TestimonialElement_Fragment' };
 
 type IElementData_TestimonialItem_Fragment = { __typename?: 'TestimonialItem', _type: 'TestimonialItem', _metadata?: (
     { __typename?: 'ContentMetadata' }
@@ -8582,6 +13110,34 @@ type IElementData_TestimonialsBlock_Fragment = { __typename?: 'TestimonialsBlock
     & { ' $fragmentRefs'?: { 'IContentInfo_MediaMetadata_Fragment': IContentInfo_MediaMetadata_Fragment } }
   ) | null } & { ' $fragmentName'?: 'IElementData_TestimonialsBlock_Fragment' };
 
+type IElementData_TextBlock_Fragment = { __typename?: 'TextBlock', _type: 'TextBlock', _metadata?: (
+    { __typename?: 'ContentMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_ContentMetadata_Fragment': IContentInfo_ContentMetadata_Fragment } }
+  ) | (
+    { __typename?: 'InstanceMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_InstanceMetadata_Fragment': IContentInfo_InstanceMetadata_Fragment } }
+  ) | (
+    { __typename?: 'ItemMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_ItemMetadata_Fragment': IContentInfo_ItemMetadata_Fragment } }
+  ) | (
+    { __typename?: 'MediaMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_MediaMetadata_Fragment': IContentInfo_MediaMetadata_Fragment } }
+  ) | null } & { ' $fragmentName'?: 'IElementData_TextBlock_Fragment' };
+
+type IElementData_VideoElement_Fragment = { __typename?: 'VideoElement', _type: 'VideoElement', _metadata?: (
+    { __typename?: 'ContentMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_ContentMetadata_Fragment': IContentInfo_ContentMetadata_Fragment } }
+  ) | (
+    { __typename?: 'InstanceMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_InstanceMetadata_Fragment': IContentInfo_InstanceMetadata_Fragment } }
+  ) | (
+    { __typename?: 'ItemMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_ItemMetadata_Fragment': IContentInfo_ItemMetadata_Fragment } }
+  ) | (
+    { __typename?: 'MediaMetadata' }
+    & { ' $fragmentRefs'?: { 'IContentInfo_MediaMetadata_Fragment': IContentInfo_MediaMetadata_Fragment } }
+  ) | null } & { ' $fragmentName'?: 'IElementData_VideoElement_Fragment' };
+
 type IElementData__Component_Fragment = { __typename?: '_Component', _type: '_Component', _metadata?: (
     { __typename?: 'ContentMetadata' }
     & { ' $fragmentRefs'?: { 'IContentInfo_ContentMetadata_Fragment': IContentInfo_ContentMetadata_Fragment } }
@@ -8610,7 +13166,12 @@ type IElementData__Section_Fragment = { __typename?: '_Section', _type: '_Sectio
     & { ' $fragmentRefs'?: { 'IContentInfo_MediaMetadata_Fragment': IContentInfo_MediaMetadata_Fragment } }
   ) | null } & { ' $fragmentName'?: 'IElementData__Section_Fragment' };
 
-export type IElementDataFragment = IElementData_AvailabilityBlock_Fragment | IElementData_BlankSection_Fragment | IElementData_ContactBlock_Fragment | IElementData_FooterColumn_Fragment | IElementData_HelloWorld_Fragment | IElementData_HeroBlock_Fragment | IElementData_LogoItemBlock_Fragment | IElementData_LogosBlock_Fragment | IElementData_NavItem_Fragment | IElementData_PortfolioGridBlock_Fragment | IElementData_PortfolioItemBlock_Fragment | IElementData_ProfileBlock_Fragment | IElementData_ServiceItem_Fragment | IElementData_ServicesBlock_Fragment | IElementData_SocialLink_Fragment | IElementData_StoryBlock_Fragment | IElementData_TedTestBlock_Fragment | IElementData_TestimonialItem_Fragment | IElementData_TestimonialItemBlock_Fragment | IElementData_TestimonialsBlock_Fragment | IElementData__Component_Fragment | IElementData__Section_Fragment;
+export type IElementDataFragment = IElementData_ArticleListElement_Fragment | IElementData_AvailabilityBlock_Fragment | IElementData_BlankSection_Fragment | IElementData_ButtonBlock_Fragment | IElementData_CTAElement_Fragment | IElementData_CarouselBlock_Fragment | IElementData_ContactBlock_Fragment | IElementData_ContentRecsElement_Fragment | IElementData_ContinueReadingComponent_Fragment | IElementData_FooterColumn_Fragment | IElementData_HeadingElement_Fragment | IElementData_HelloWorld_Fragment | IElementData_HeroBlock_Fragment | IElementData_ImageElement_Fragment | IElementData_LayoutSettingsBlock_Fragment | IElementData_LogoItemBlock_Fragment | IElementData_LogosBlock_Fragment | IElementData_MegaMenuGroupBlock_Fragment | IElementData_MenuNavigationBlock_Fragment | IElementData_NavItem_Fragment | IElementData_OdpEmbedBlock_Fragment | IElementData_PageSeoSettings_Fragment | IElementData_ParagraphElement_Fragment | IElementData_PortfolioGridBlock_Fragment | IElementData_PortfolioItemBlock_Fragment | IElementData_ProfileBlock_Fragment | IElementData_QuoteBlock_Fragment | IElementData_RichTextElement_Fragment | IElementData_ServiceItem_Fragment | IElementData_ServicesBlock_Fragment | IElementData_SocialLink_Fragment | IElementData_StoryBlock_Fragment | IElementData_TestBlockPropertyGroup_Fragment | IElementData_TestimonialElement_Fragment | IElementData_TestimonialItem_Fragment | IElementData_TestimonialItemBlock_Fragment | IElementData_TestimonialsBlock_Fragment | IElementData_TextBlock_Fragment | IElementData_VideoElement_Fragment | IElementData__Component_Fragment | IElementData__Section_Fragment;
+
+type ElementData_ArticleListElement_Fragment = (
+  { __typename?: 'ArticleListElement' }
+  & { ' $fragmentRefs'?: { 'IElementData_ArticleListElement_Fragment': IElementData_ArticleListElement_Fragment } }
+) & { ' $fragmentName'?: 'ElementData_ArticleListElement_Fragment' };
 
 type ElementData_AvailabilityBlock_Fragment = (
   { __typename?: 'AvailabilityBlock' }
@@ -8622,15 +13183,45 @@ type ElementData_BlankSection_Fragment = (
   & { ' $fragmentRefs'?: { 'IElementData_BlankSection_Fragment': IElementData_BlankSection_Fragment } }
 ) & { ' $fragmentName'?: 'ElementData_BlankSection_Fragment' };
 
+type ElementData_ButtonBlock_Fragment = (
+  { __typename?: 'ButtonBlock' }
+  & { ' $fragmentRefs'?: { 'IElementData_ButtonBlock_Fragment': IElementData_ButtonBlock_Fragment } }
+) & { ' $fragmentName'?: 'ElementData_ButtonBlock_Fragment' };
+
+type ElementData_CTAElement_Fragment = (
+  { __typename?: 'CTAElement' }
+  & { ' $fragmentRefs'?: { 'IElementData_CTAElement_Fragment': IElementData_CTAElement_Fragment } }
+) & { ' $fragmentName'?: 'ElementData_CTAElement_Fragment' };
+
+type ElementData_CarouselBlock_Fragment = (
+  { __typename?: 'CarouselBlock' }
+  & { ' $fragmentRefs'?: { 'IElementData_CarouselBlock_Fragment': IElementData_CarouselBlock_Fragment } }
+) & { ' $fragmentName'?: 'ElementData_CarouselBlock_Fragment' };
+
 type ElementData_ContactBlock_Fragment = (
   { __typename?: 'ContactBlock' }
   & { ' $fragmentRefs'?: { 'IElementData_ContactBlock_Fragment': IElementData_ContactBlock_Fragment } }
 ) & { ' $fragmentName'?: 'ElementData_ContactBlock_Fragment' };
 
+type ElementData_ContentRecsElement_Fragment = (
+  { __typename?: 'ContentRecsElement' }
+  & { ' $fragmentRefs'?: { 'IElementData_ContentRecsElement_Fragment': IElementData_ContentRecsElement_Fragment } }
+) & { ' $fragmentName'?: 'ElementData_ContentRecsElement_Fragment' };
+
+type ElementData_ContinueReadingComponent_Fragment = (
+  { __typename?: 'ContinueReadingComponent' }
+  & { ' $fragmentRefs'?: { 'IElementData_ContinueReadingComponent_Fragment': IElementData_ContinueReadingComponent_Fragment } }
+) & { ' $fragmentName'?: 'ElementData_ContinueReadingComponent_Fragment' };
+
 type ElementData_FooterColumn_Fragment = (
   { __typename?: 'FooterColumn' }
   & { ' $fragmentRefs'?: { 'IElementData_FooterColumn_Fragment': IElementData_FooterColumn_Fragment } }
 ) & { ' $fragmentName'?: 'ElementData_FooterColumn_Fragment' };
+
+type ElementData_HeadingElement_Fragment = (
+  { __typename?: 'HeadingElement' }
+  & { ' $fragmentRefs'?: { 'IElementData_HeadingElement_Fragment': IElementData_HeadingElement_Fragment } }
+) & { ' $fragmentName'?: 'ElementData_HeadingElement_Fragment' };
 
 type ElementData_HelloWorld_Fragment = (
   { __typename?: 'HelloWorld' }
@@ -8642,6 +13233,16 @@ type ElementData_HeroBlock_Fragment = (
   & { ' $fragmentRefs'?: { 'IElementData_HeroBlock_Fragment': IElementData_HeroBlock_Fragment } }
 ) & { ' $fragmentName'?: 'ElementData_HeroBlock_Fragment' };
 
+type ElementData_ImageElement_Fragment = (
+  { __typename?: 'ImageElement' }
+  & { ' $fragmentRefs'?: { 'IElementData_ImageElement_Fragment': IElementData_ImageElement_Fragment } }
+) & { ' $fragmentName'?: 'ElementData_ImageElement_Fragment' };
+
+type ElementData_LayoutSettingsBlock_Fragment = (
+  { __typename?: 'LayoutSettingsBlock' }
+  & { ' $fragmentRefs'?: { 'IElementData_LayoutSettingsBlock_Fragment': IElementData_LayoutSettingsBlock_Fragment } }
+) & { ' $fragmentName'?: 'ElementData_LayoutSettingsBlock_Fragment' };
+
 type ElementData_LogoItemBlock_Fragment = (
   { __typename?: 'LogoItemBlock' }
   & { ' $fragmentRefs'?: { 'IElementData_LogoItemBlock_Fragment': IElementData_LogoItemBlock_Fragment } }
@@ -8652,10 +13253,35 @@ type ElementData_LogosBlock_Fragment = (
   & { ' $fragmentRefs'?: { 'IElementData_LogosBlock_Fragment': IElementData_LogosBlock_Fragment } }
 ) & { ' $fragmentName'?: 'ElementData_LogosBlock_Fragment' };
 
+type ElementData_MegaMenuGroupBlock_Fragment = (
+  { __typename?: 'MegaMenuGroupBlock' }
+  & { ' $fragmentRefs'?: { 'IElementData_MegaMenuGroupBlock_Fragment': IElementData_MegaMenuGroupBlock_Fragment } }
+) & { ' $fragmentName'?: 'ElementData_MegaMenuGroupBlock_Fragment' };
+
+type ElementData_MenuNavigationBlock_Fragment = (
+  { __typename?: 'MenuNavigationBlock' }
+  & { ' $fragmentRefs'?: { 'IElementData_MenuNavigationBlock_Fragment': IElementData_MenuNavigationBlock_Fragment } }
+) & { ' $fragmentName'?: 'ElementData_MenuNavigationBlock_Fragment' };
+
 type ElementData_NavItem_Fragment = (
   { __typename?: 'NavItem' }
   & { ' $fragmentRefs'?: { 'IElementData_NavItem_Fragment': IElementData_NavItem_Fragment } }
 ) & { ' $fragmentName'?: 'ElementData_NavItem_Fragment' };
+
+type ElementData_OdpEmbedBlock_Fragment = (
+  { __typename?: 'OdpEmbedBlock' }
+  & { ' $fragmentRefs'?: { 'IElementData_OdpEmbedBlock_Fragment': IElementData_OdpEmbedBlock_Fragment } }
+) & { ' $fragmentName'?: 'ElementData_OdpEmbedBlock_Fragment' };
+
+type ElementData_PageSeoSettings_Fragment = (
+  { __typename?: 'PageSeoSettings' }
+  & { ' $fragmentRefs'?: { 'IElementData_PageSeoSettings_Fragment': IElementData_PageSeoSettings_Fragment } }
+) & { ' $fragmentName'?: 'ElementData_PageSeoSettings_Fragment' };
+
+type ElementData_ParagraphElement_Fragment = (
+  { __typename?: 'ParagraphElement' }
+  & { ' $fragmentRefs'?: { 'IElementData_ParagraphElement_Fragment': IElementData_ParagraphElement_Fragment } }
+) & { ' $fragmentName'?: 'ElementData_ParagraphElement_Fragment' };
 
 type ElementData_PortfolioGridBlock_Fragment = (
   { __typename?: 'PortfolioGridBlock' }
@@ -8671,6 +13297,16 @@ type ElementData_ProfileBlock_Fragment = (
   { __typename?: 'ProfileBlock' }
   & { ' $fragmentRefs'?: { 'IElementData_ProfileBlock_Fragment': IElementData_ProfileBlock_Fragment } }
 ) & { ' $fragmentName'?: 'ElementData_ProfileBlock_Fragment' };
+
+type ElementData_QuoteBlock_Fragment = (
+  { __typename?: 'QuoteBlock' }
+  & { ' $fragmentRefs'?: { 'IElementData_QuoteBlock_Fragment': IElementData_QuoteBlock_Fragment } }
+) & { ' $fragmentName'?: 'ElementData_QuoteBlock_Fragment' };
+
+type ElementData_RichTextElement_Fragment = (
+  { __typename?: 'RichTextElement' }
+  & { ' $fragmentRefs'?: { 'IElementData_RichTextElement_Fragment': IElementData_RichTextElement_Fragment } }
+) & { ' $fragmentName'?: 'ElementData_RichTextElement_Fragment' };
 
 type ElementData_ServiceItem_Fragment = (
   { __typename?: 'ServiceItem' }
@@ -8692,10 +13328,15 @@ type ElementData_StoryBlock_Fragment = (
   & { ' $fragmentRefs'?: { 'IElementData_StoryBlock_Fragment': IElementData_StoryBlock_Fragment } }
 ) & { ' $fragmentName'?: 'ElementData_StoryBlock_Fragment' };
 
-type ElementData_TedTestBlock_Fragment = (
-  { __typename?: 'TedTestBlock' }
-  & { ' $fragmentRefs'?: { 'IElementData_TedTestBlock_Fragment': IElementData_TedTestBlock_Fragment } }
-) & { ' $fragmentName'?: 'ElementData_TedTestBlock_Fragment' };
+type ElementData_TestBlockPropertyGroup_Fragment = (
+  { __typename?: 'TestBlockPropertyGroup' }
+  & { ' $fragmentRefs'?: { 'IElementData_TestBlockPropertyGroup_Fragment': IElementData_TestBlockPropertyGroup_Fragment } }
+) & { ' $fragmentName'?: 'ElementData_TestBlockPropertyGroup_Fragment' };
+
+type ElementData_TestimonialElement_Fragment = (
+  { __typename?: 'TestimonialElement' }
+  & { ' $fragmentRefs'?: { 'IElementData_TestimonialElement_Fragment': IElementData_TestimonialElement_Fragment } }
+) & { ' $fragmentName'?: 'ElementData_TestimonialElement_Fragment' };
 
 type ElementData_TestimonialItem_Fragment = (
   { __typename?: 'TestimonialItem' }
@@ -8712,6 +13353,16 @@ type ElementData_TestimonialsBlock_Fragment = (
   & { ' $fragmentRefs'?: { 'IElementData_TestimonialsBlock_Fragment': IElementData_TestimonialsBlock_Fragment } }
 ) & { ' $fragmentName'?: 'ElementData_TestimonialsBlock_Fragment' };
 
+type ElementData_TextBlock_Fragment = (
+  { __typename?: 'TextBlock' }
+  & { ' $fragmentRefs'?: { 'IElementData_TextBlock_Fragment': IElementData_TextBlock_Fragment } }
+) & { ' $fragmentName'?: 'ElementData_TextBlock_Fragment' };
+
+type ElementData_VideoElement_Fragment = (
+  { __typename?: 'VideoElement' }
+  & { ' $fragmentRefs'?: { 'IElementData_VideoElement_Fragment': IElementData_VideoElement_Fragment } }
+) & { ' $fragmentName'?: 'ElementData_VideoElement_Fragment' };
+
 type ElementData__Component_Fragment = (
   { __typename?: '_Component' }
   & { ' $fragmentRefs'?: { 'IElementData__Component_Fragment': IElementData__Component_Fragment } }
@@ -8722,7 +13373,12 @@ type ElementData__Section_Fragment = (
   & { ' $fragmentRefs'?: { 'IElementData__Section_Fragment': IElementData__Section_Fragment } }
 ) & { ' $fragmentName'?: 'ElementData__Section_Fragment' };
 
-export type ElementDataFragment = ElementData_AvailabilityBlock_Fragment | ElementData_BlankSection_Fragment | ElementData_ContactBlock_Fragment | ElementData_FooterColumn_Fragment | ElementData_HelloWorld_Fragment | ElementData_HeroBlock_Fragment | ElementData_LogoItemBlock_Fragment | ElementData_LogosBlock_Fragment | ElementData_NavItem_Fragment | ElementData_PortfolioGridBlock_Fragment | ElementData_PortfolioItemBlock_Fragment | ElementData_ProfileBlock_Fragment | ElementData_ServiceItem_Fragment | ElementData_ServicesBlock_Fragment | ElementData_SocialLink_Fragment | ElementData_StoryBlock_Fragment | ElementData_TedTestBlock_Fragment | ElementData_TestimonialItem_Fragment | ElementData_TestimonialItemBlock_Fragment | ElementData_TestimonialsBlock_Fragment | ElementData__Component_Fragment | ElementData__Section_Fragment;
+export type ElementDataFragment = ElementData_ArticleListElement_Fragment | ElementData_AvailabilityBlock_Fragment | ElementData_BlankSection_Fragment | ElementData_ButtonBlock_Fragment | ElementData_CTAElement_Fragment | ElementData_CarouselBlock_Fragment | ElementData_ContactBlock_Fragment | ElementData_ContentRecsElement_Fragment | ElementData_ContinueReadingComponent_Fragment | ElementData_FooterColumn_Fragment | ElementData_HeadingElement_Fragment | ElementData_HelloWorld_Fragment | ElementData_HeroBlock_Fragment | ElementData_ImageElement_Fragment | ElementData_LayoutSettingsBlock_Fragment | ElementData_LogoItemBlock_Fragment | ElementData_LogosBlock_Fragment | ElementData_MegaMenuGroupBlock_Fragment | ElementData_MenuNavigationBlock_Fragment | ElementData_NavItem_Fragment | ElementData_OdpEmbedBlock_Fragment | ElementData_PageSeoSettings_Fragment | ElementData_ParagraphElement_Fragment | ElementData_PortfolioGridBlock_Fragment | ElementData_PortfolioItemBlock_Fragment | ElementData_ProfileBlock_Fragment | ElementData_QuoteBlock_Fragment | ElementData_RichTextElement_Fragment | ElementData_ServiceItem_Fragment | ElementData_ServicesBlock_Fragment | ElementData_SocialLink_Fragment | ElementData_StoryBlock_Fragment | ElementData_TestBlockPropertyGroup_Fragment | ElementData_TestimonialElement_Fragment | ElementData_TestimonialItem_Fragment | ElementData_TestimonialItemBlock_Fragment | ElementData_TestimonialsBlock_Fragment | ElementData_TextBlock_Fragment | ElementData_VideoElement_Fragment | ElementData__Component_Fragment | ElementData__Section_Fragment;
+
+type BlockData_ArticleListElement_Fragment = (
+  { __typename?: 'ArticleListElement' }
+  & { ' $fragmentRefs'?: { 'IContentData_ArticleListElement_Fragment': IContentData_ArticleListElement_Fragment } }
+) & { ' $fragmentName'?: 'BlockData_ArticleListElement_Fragment' };
 
 type BlockData_AvailabilityBlock_Fragment = (
   { __typename?: 'AvailabilityBlock' }
@@ -8734,15 +13390,45 @@ type BlockData_BlankSection_Fragment = (
   & { ' $fragmentRefs'?: { 'IContentData_BlankSection_Fragment': IContentData_BlankSection_Fragment } }
 ) & { ' $fragmentName'?: 'BlockData_BlankSection_Fragment' };
 
+type BlockData_ButtonBlock_Fragment = (
+  { __typename?: 'ButtonBlock' }
+  & { ' $fragmentRefs'?: { 'IContentData_ButtonBlock_Fragment': IContentData_ButtonBlock_Fragment } }
+) & { ' $fragmentName'?: 'BlockData_ButtonBlock_Fragment' };
+
+type BlockData_CTAElement_Fragment = (
+  { __typename?: 'CTAElement' }
+  & { ' $fragmentRefs'?: { 'IContentData_CTAElement_Fragment': IContentData_CTAElement_Fragment } }
+) & { ' $fragmentName'?: 'BlockData_CTAElement_Fragment' };
+
+type BlockData_CarouselBlock_Fragment = (
+  { __typename?: 'CarouselBlock' }
+  & { ' $fragmentRefs'?: { 'IContentData_CarouselBlock_Fragment': IContentData_CarouselBlock_Fragment } }
+) & { ' $fragmentName'?: 'BlockData_CarouselBlock_Fragment' };
+
 type BlockData_ContactBlock_Fragment = (
   { __typename?: 'ContactBlock' }
   & { ' $fragmentRefs'?: { 'IContentData_ContactBlock_Fragment': IContentData_ContactBlock_Fragment } }
 ) & { ' $fragmentName'?: 'BlockData_ContactBlock_Fragment' };
 
+type BlockData_ContentRecsElement_Fragment = (
+  { __typename?: 'ContentRecsElement' }
+  & { ' $fragmentRefs'?: { 'IContentData_ContentRecsElement_Fragment': IContentData_ContentRecsElement_Fragment } }
+) & { ' $fragmentName'?: 'BlockData_ContentRecsElement_Fragment' };
+
+type BlockData_ContinueReadingComponent_Fragment = (
+  { __typename?: 'ContinueReadingComponent' }
+  & { ' $fragmentRefs'?: { 'IContentData_ContinueReadingComponent_Fragment': IContentData_ContinueReadingComponent_Fragment } }
+) & { ' $fragmentName'?: 'BlockData_ContinueReadingComponent_Fragment' };
+
 type BlockData_FooterColumn_Fragment = (
   { __typename?: 'FooterColumn' }
   & { ' $fragmentRefs'?: { 'IContentData_FooterColumn_Fragment': IContentData_FooterColumn_Fragment } }
 ) & { ' $fragmentName'?: 'BlockData_FooterColumn_Fragment' };
+
+type BlockData_HeadingElement_Fragment = (
+  { __typename?: 'HeadingElement' }
+  & { ' $fragmentRefs'?: { 'IContentData_HeadingElement_Fragment': IContentData_HeadingElement_Fragment } }
+) & { ' $fragmentName'?: 'BlockData_HeadingElement_Fragment' };
 
 type BlockData_HelloWorld_Fragment = (
   { __typename?: 'HelloWorld' }
@@ -8754,6 +13440,16 @@ type BlockData_HeroBlock_Fragment = (
   & { ' $fragmentRefs'?: { 'IContentData_HeroBlock_Fragment': IContentData_HeroBlock_Fragment } }
 ) & { ' $fragmentName'?: 'BlockData_HeroBlock_Fragment' };
 
+type BlockData_ImageElement_Fragment = (
+  { __typename?: 'ImageElement' }
+  & { ' $fragmentRefs'?: { 'IContentData_ImageElement_Fragment': IContentData_ImageElement_Fragment } }
+) & { ' $fragmentName'?: 'BlockData_ImageElement_Fragment' };
+
+type BlockData_LayoutSettingsBlock_Fragment = (
+  { __typename?: 'LayoutSettingsBlock' }
+  & { ' $fragmentRefs'?: { 'IContentData_LayoutSettingsBlock_Fragment': IContentData_LayoutSettingsBlock_Fragment } }
+) & { ' $fragmentName'?: 'BlockData_LayoutSettingsBlock_Fragment' };
+
 type BlockData_LogoItemBlock_Fragment = (
   { __typename?: 'LogoItemBlock' }
   & { ' $fragmentRefs'?: { 'IContentData_LogoItemBlock_Fragment': IContentData_LogoItemBlock_Fragment } }
@@ -8764,10 +13460,35 @@ type BlockData_LogosBlock_Fragment = (
   & { ' $fragmentRefs'?: { 'IContentData_LogosBlock_Fragment': IContentData_LogosBlock_Fragment } }
 ) & { ' $fragmentName'?: 'BlockData_LogosBlock_Fragment' };
 
+type BlockData_MegaMenuGroupBlock_Fragment = (
+  { __typename?: 'MegaMenuGroupBlock' }
+  & { ' $fragmentRefs'?: { 'IContentData_MegaMenuGroupBlock_Fragment': IContentData_MegaMenuGroupBlock_Fragment } }
+) & { ' $fragmentName'?: 'BlockData_MegaMenuGroupBlock_Fragment' };
+
+type BlockData_MenuNavigationBlock_Fragment = (
+  { __typename?: 'MenuNavigationBlock' }
+  & { ' $fragmentRefs'?: { 'IContentData_MenuNavigationBlock_Fragment': IContentData_MenuNavigationBlock_Fragment } }
+) & { ' $fragmentName'?: 'BlockData_MenuNavigationBlock_Fragment' };
+
 type BlockData_NavItem_Fragment = (
   { __typename?: 'NavItem' }
   & { ' $fragmentRefs'?: { 'IContentData_NavItem_Fragment': IContentData_NavItem_Fragment } }
 ) & { ' $fragmentName'?: 'BlockData_NavItem_Fragment' };
+
+type BlockData_OdpEmbedBlock_Fragment = (
+  { __typename?: 'OdpEmbedBlock' }
+  & { ' $fragmentRefs'?: { 'IContentData_OdpEmbedBlock_Fragment': IContentData_OdpEmbedBlock_Fragment } }
+) & { ' $fragmentName'?: 'BlockData_OdpEmbedBlock_Fragment' };
+
+type BlockData_PageSeoSettings_Fragment = (
+  { __typename?: 'PageSeoSettings' }
+  & { ' $fragmentRefs'?: { 'IContentData_PageSeoSettings_Fragment': IContentData_PageSeoSettings_Fragment } }
+) & { ' $fragmentName'?: 'BlockData_PageSeoSettings_Fragment' };
+
+type BlockData_ParagraphElement_Fragment = (
+  { __typename?: 'ParagraphElement' }
+  & { ' $fragmentRefs'?: { 'IContentData_ParagraphElement_Fragment': IContentData_ParagraphElement_Fragment } }
+) & { ' $fragmentName'?: 'BlockData_ParagraphElement_Fragment' };
 
 type BlockData_PortfolioGridBlock_Fragment = (
   { __typename?: 'PortfolioGridBlock' }
@@ -8783,6 +13504,16 @@ type BlockData_ProfileBlock_Fragment = (
   { __typename?: 'ProfileBlock' }
   & { ' $fragmentRefs'?: { 'IContentData_ProfileBlock_Fragment': IContentData_ProfileBlock_Fragment } }
 ) & { ' $fragmentName'?: 'BlockData_ProfileBlock_Fragment' };
+
+type BlockData_QuoteBlock_Fragment = (
+  { __typename?: 'QuoteBlock' }
+  & { ' $fragmentRefs'?: { 'IContentData_QuoteBlock_Fragment': IContentData_QuoteBlock_Fragment } }
+) & { ' $fragmentName'?: 'BlockData_QuoteBlock_Fragment' };
+
+type BlockData_RichTextElement_Fragment = (
+  { __typename?: 'RichTextElement' }
+  & { ' $fragmentRefs'?: { 'IContentData_RichTextElement_Fragment': IContentData_RichTextElement_Fragment } }
+) & { ' $fragmentName'?: 'BlockData_RichTextElement_Fragment' };
 
 type BlockData_ServiceItem_Fragment = (
   { __typename?: 'ServiceItem' }
@@ -8804,10 +13535,15 @@ type BlockData_StoryBlock_Fragment = (
   & { ' $fragmentRefs'?: { 'IContentData_StoryBlock_Fragment': IContentData_StoryBlock_Fragment } }
 ) & { ' $fragmentName'?: 'BlockData_StoryBlock_Fragment' };
 
-type BlockData_TedTestBlock_Fragment = (
-  { __typename?: 'TedTestBlock' }
-  & { ' $fragmentRefs'?: { 'IContentData_TedTestBlock_Fragment': IContentData_TedTestBlock_Fragment } }
-) & { ' $fragmentName'?: 'BlockData_TedTestBlock_Fragment' };
+type BlockData_TestBlockPropertyGroup_Fragment = (
+  { __typename?: 'TestBlockPropertyGroup' }
+  & { ' $fragmentRefs'?: { 'IContentData_TestBlockPropertyGroup_Fragment': IContentData_TestBlockPropertyGroup_Fragment } }
+) & { ' $fragmentName'?: 'BlockData_TestBlockPropertyGroup_Fragment' };
+
+type BlockData_TestimonialElement_Fragment = (
+  { __typename?: 'TestimonialElement' }
+  & { ' $fragmentRefs'?: { 'IContentData_TestimonialElement_Fragment': IContentData_TestimonialElement_Fragment } }
+) & { ' $fragmentName'?: 'BlockData_TestimonialElement_Fragment' };
 
 type BlockData_TestimonialItem_Fragment = (
   { __typename?: 'TestimonialItem' }
@@ -8824,6 +13560,16 @@ type BlockData_TestimonialsBlock_Fragment = (
   & { ' $fragmentRefs'?: { 'IContentData_TestimonialsBlock_Fragment': IContentData_TestimonialsBlock_Fragment } }
 ) & { ' $fragmentName'?: 'BlockData_TestimonialsBlock_Fragment' };
 
+type BlockData_TextBlock_Fragment = (
+  { __typename?: 'TextBlock' }
+  & { ' $fragmentRefs'?: { 'IContentData_TextBlock_Fragment': IContentData_TextBlock_Fragment } }
+) & { ' $fragmentName'?: 'BlockData_TextBlock_Fragment' };
+
+type BlockData_VideoElement_Fragment = (
+  { __typename?: 'VideoElement' }
+  & { ' $fragmentRefs'?: { 'IContentData_VideoElement_Fragment': IContentData_VideoElement_Fragment } }
+) & { ' $fragmentName'?: 'BlockData_VideoElement_Fragment' };
+
 type BlockData__Component_Fragment = (
   { __typename?: '_Component' }
   & { ' $fragmentRefs'?: { 'IContentData__Component_Fragment': IContentData__Component_Fragment } }
@@ -8834,7 +13580,17 @@ type BlockData__Section_Fragment = (
   & { ' $fragmentRefs'?: { 'IContentData__Section_Fragment': IContentData__Section_Fragment } }
 ) & { ' $fragmentName'?: 'BlockData__Section_Fragment' };
 
-export type BlockDataFragment = BlockData_AvailabilityBlock_Fragment | BlockData_BlankSection_Fragment | BlockData_ContactBlock_Fragment | BlockData_FooterColumn_Fragment | BlockData_HelloWorld_Fragment | BlockData_HeroBlock_Fragment | BlockData_LogoItemBlock_Fragment | BlockData_LogosBlock_Fragment | BlockData_NavItem_Fragment | BlockData_PortfolioGridBlock_Fragment | BlockData_PortfolioItemBlock_Fragment | BlockData_ProfileBlock_Fragment | BlockData_ServiceItem_Fragment | BlockData_ServicesBlock_Fragment | BlockData_SocialLink_Fragment | BlockData_StoryBlock_Fragment | BlockData_TedTestBlock_Fragment | BlockData_TestimonialItem_Fragment | BlockData_TestimonialItemBlock_Fragment | BlockData_TestimonialsBlock_Fragment | BlockData__Component_Fragment | BlockData__Section_Fragment;
+export type BlockDataFragment = BlockData_ArticleListElement_Fragment | BlockData_AvailabilityBlock_Fragment | BlockData_BlankSection_Fragment | BlockData_ButtonBlock_Fragment | BlockData_CTAElement_Fragment | BlockData_CarouselBlock_Fragment | BlockData_ContactBlock_Fragment | BlockData_ContentRecsElement_Fragment | BlockData_ContinueReadingComponent_Fragment | BlockData_FooterColumn_Fragment | BlockData_HeadingElement_Fragment | BlockData_HelloWorld_Fragment | BlockData_HeroBlock_Fragment | BlockData_ImageElement_Fragment | BlockData_LayoutSettingsBlock_Fragment | BlockData_LogoItemBlock_Fragment | BlockData_LogosBlock_Fragment | BlockData_MegaMenuGroupBlock_Fragment | BlockData_MenuNavigationBlock_Fragment | BlockData_NavItem_Fragment | BlockData_OdpEmbedBlock_Fragment | BlockData_PageSeoSettings_Fragment | BlockData_ParagraphElement_Fragment | BlockData_PortfolioGridBlock_Fragment | BlockData_PortfolioItemBlock_Fragment | BlockData_ProfileBlock_Fragment | BlockData_QuoteBlock_Fragment | BlockData_RichTextElement_Fragment | BlockData_ServiceItem_Fragment | BlockData_ServicesBlock_Fragment | BlockData_SocialLink_Fragment | BlockData_StoryBlock_Fragment | BlockData_TestBlockPropertyGroup_Fragment | BlockData_TestimonialElement_Fragment | BlockData_TestimonialItem_Fragment | BlockData_TestimonialItemBlock_Fragment | BlockData_TestimonialsBlock_Fragment | BlockData_TextBlock_Fragment | BlockData_VideoElement_Fragment | BlockData__Component_Fragment | BlockData__Section_Fragment;
+
+type PageData_AnotherGreatPage_Fragment = (
+  { __typename?: 'AnotherGreatPage' }
+  & { ' $fragmentRefs'?: { 'IContentData_AnotherGreatPage_Fragment': IContentData_AnotherGreatPage_Fragment } }
+) & { ' $fragmentName'?: 'PageData_AnotherGreatPage_Fragment' };
+
+type PageData_ArticleListElement_Fragment = (
+  { __typename?: 'ArticleListElement' }
+  & { ' $fragmentRefs'?: { 'IContentData_ArticleListElement_Fragment': IContentData_ArticleListElement_Fragment } }
+) & { ' $fragmentName'?: 'PageData_ArticleListElement_Fragment' };
 
 type PageData_AvailabilityBlock_Fragment = (
   { __typename?: 'AvailabilityBlock' }
@@ -8851,15 +13607,50 @@ type PageData_BlankSection_Fragment = (
   & { ' $fragmentRefs'?: { 'IContentData_BlankSection_Fragment': IContentData_BlankSection_Fragment } }
 ) & { ' $fragmentName'?: 'PageData_BlankSection_Fragment' };
 
+type PageData_BlogPostPage_Fragment = (
+  { __typename?: 'BlogPostPage' }
+  & { ' $fragmentRefs'?: { 'IContentData_BlogPostPage_Fragment': IContentData_BlogPostPage_Fragment } }
+) & { ' $fragmentName'?: 'PageData_BlogPostPage_Fragment' };
+
+type PageData_BlogSectionExperience_Fragment = (
+  { __typename?: 'BlogSectionExperience' }
+  & { ' $fragmentRefs'?: { 'IContentData_BlogSectionExperience_Fragment': IContentData_BlogSectionExperience_Fragment } }
+) & { ' $fragmentName'?: 'PageData_BlogSectionExperience_Fragment' };
+
+type PageData_ButtonBlock_Fragment = (
+  { __typename?: 'ButtonBlock' }
+  & { ' $fragmentRefs'?: { 'IContentData_ButtonBlock_Fragment': IContentData_ButtonBlock_Fragment } }
+) & { ' $fragmentName'?: 'PageData_ButtonBlock_Fragment' };
+
 type PageData_CMSPage_Fragment = (
   { __typename?: 'CMSPage' }
   & { ' $fragmentRefs'?: { 'IContentData_CMSPage_Fragment': IContentData_CMSPage_Fragment } }
 ) & { ' $fragmentName'?: 'PageData_CMSPage_Fragment' };
 
+type PageData_CTAElement_Fragment = (
+  { __typename?: 'CTAElement' }
+  & { ' $fragmentRefs'?: { 'IContentData_CTAElement_Fragment': IContentData_CTAElement_Fragment } }
+) & { ' $fragmentName'?: 'PageData_CTAElement_Fragment' };
+
+type PageData_CarouselBlock_Fragment = (
+  { __typename?: 'CarouselBlock' }
+  & { ' $fragmentRefs'?: { 'IContentData_CarouselBlock_Fragment': IContentData_CarouselBlock_Fragment } }
+) & { ' $fragmentName'?: 'PageData_CarouselBlock_Fragment' };
+
 type PageData_ContactBlock_Fragment = (
   { __typename?: 'ContactBlock' }
   & { ' $fragmentRefs'?: { 'IContentData_ContactBlock_Fragment': IContentData_ContactBlock_Fragment } }
 ) & { ' $fragmentName'?: 'PageData_ContactBlock_Fragment' };
+
+type PageData_ContentRecsElement_Fragment = (
+  { __typename?: 'ContentRecsElement' }
+  & { ' $fragmentRefs'?: { 'IContentData_ContentRecsElement_Fragment': IContentData_ContentRecsElement_Fragment } }
+) & { ' $fragmentName'?: 'PageData_ContentRecsElement_Fragment' };
+
+type PageData_ContinueReadingComponent_Fragment = (
+  { __typename?: 'ContinueReadingComponent' }
+  & { ' $fragmentRefs'?: { 'IContentData_ContinueReadingComponent_Fragment': IContentData_ContinueReadingComponent_Fragment } }
+) & { ' $fragmentName'?: 'PageData_ContinueReadingComponent_Fragment' };
 
 type PageData_Footer_Fragment = (
   { __typename?: 'Footer' }
@@ -8886,6 +13677,11 @@ type PageData_Header_Fragment = (
   & { ' $fragmentRefs'?: { 'IContentData_Header_Fragment': IContentData_Header_Fragment } }
 ) & { ' $fragmentName'?: 'PageData_Header_Fragment' };
 
+type PageData_HeadingElement_Fragment = (
+  { __typename?: 'HeadingElement' }
+  & { ' $fragmentRefs'?: { 'IContentData_HeadingElement_Fragment': IContentData_HeadingElement_Fragment } }
+) & { ' $fragmentName'?: 'PageData_HeadingElement_Fragment' };
+
 type PageData_HelloWorld_Fragment = (
   { __typename?: 'HelloWorld' }
   & { ' $fragmentRefs'?: { 'IContentData_HelloWorld_Fragment': IContentData_HelloWorld_Fragment } }
@@ -8901,10 +13697,25 @@ type PageData_HomePage_Fragment = (
   & { ' $fragmentRefs'?: { 'IContentData_HomePage_Fragment': IContentData_HomePage_Fragment } }
 ) & { ' $fragmentName'?: 'PageData_HomePage_Fragment' };
 
+type PageData_ImageElement_Fragment = (
+  { __typename?: 'ImageElement' }
+  & { ' $fragmentRefs'?: { 'IContentData_ImageElement_Fragment': IContentData_ImageElement_Fragment } }
+) & { ' $fragmentName'?: 'PageData_ImageElement_Fragment' };
+
 type PageData_ImageMedia_Fragment = (
   { __typename?: 'ImageMedia' }
   & { ' $fragmentRefs'?: { 'IContentData_ImageMedia_Fragment': IContentData_ImageMedia_Fragment } }
 ) & { ' $fragmentName'?: 'PageData_ImageMedia_Fragment' };
+
+type PageData_LandingPage_Fragment = (
+  { __typename?: 'LandingPage' }
+  & { ' $fragmentRefs'?: { 'IContentData_LandingPage_Fragment': IContentData_LandingPage_Fragment } }
+) & { ' $fragmentName'?: 'PageData_LandingPage_Fragment' };
+
+type PageData_LayoutSettingsBlock_Fragment = (
+  { __typename?: 'LayoutSettingsBlock' }
+  & { ' $fragmentRefs'?: { 'IContentData_LayoutSettingsBlock_Fragment': IContentData_LayoutSettingsBlock_Fragment } }
+) & { ' $fragmentName'?: 'PageData_LayoutSettingsBlock_Fragment' };
 
 type PageData_LogoItemBlock_Fragment = (
   { __typename?: 'LogoItemBlock' }
@@ -8916,10 +13727,35 @@ type PageData_LogosBlock_Fragment = (
   & { ' $fragmentRefs'?: { 'IContentData_LogosBlock_Fragment': IContentData_LogosBlock_Fragment } }
 ) & { ' $fragmentName'?: 'PageData_LogosBlock_Fragment' };
 
+type PageData_MegaMenuGroupBlock_Fragment = (
+  { __typename?: 'MegaMenuGroupBlock' }
+  & { ' $fragmentRefs'?: { 'IContentData_MegaMenuGroupBlock_Fragment': IContentData_MegaMenuGroupBlock_Fragment } }
+) & { ' $fragmentName'?: 'PageData_MegaMenuGroupBlock_Fragment' };
+
+type PageData_MenuNavigationBlock_Fragment = (
+  { __typename?: 'MenuNavigationBlock' }
+  & { ' $fragmentRefs'?: { 'IContentData_MenuNavigationBlock_Fragment': IContentData_MenuNavigationBlock_Fragment } }
+) & { ' $fragmentName'?: 'PageData_MenuNavigationBlock_Fragment' };
+
 type PageData_NavItem_Fragment = (
   { __typename?: 'NavItem' }
   & { ' $fragmentRefs'?: { 'IContentData_NavItem_Fragment': IContentData_NavItem_Fragment } }
 ) & { ' $fragmentName'?: 'PageData_NavItem_Fragment' };
+
+type PageData_OdpEmbedBlock_Fragment = (
+  { __typename?: 'OdpEmbedBlock' }
+  & { ' $fragmentRefs'?: { 'IContentData_OdpEmbedBlock_Fragment': IContentData_OdpEmbedBlock_Fragment } }
+) & { ' $fragmentName'?: 'PageData_OdpEmbedBlock_Fragment' };
+
+type PageData_PageSeoSettings_Fragment = (
+  { __typename?: 'PageSeoSettings' }
+  & { ' $fragmentRefs'?: { 'IContentData_PageSeoSettings_Fragment': IContentData_PageSeoSettings_Fragment } }
+) & { ' $fragmentName'?: 'PageData_PageSeoSettings_Fragment' };
+
+type PageData_ParagraphElement_Fragment = (
+  { __typename?: 'ParagraphElement' }
+  & { ' $fragmentRefs'?: { 'IContentData_ParagraphElement_Fragment': IContentData_ParagraphElement_Fragment } }
+) & { ' $fragmentName'?: 'PageData_ParagraphElement_Fragment' };
 
 type PageData_PortfolioGridBlock_Fragment = (
   { __typename?: 'PortfolioGridBlock' }
@@ -8935,6 +13771,16 @@ type PageData_ProfileBlock_Fragment = (
   { __typename?: 'ProfileBlock' }
   & { ' $fragmentRefs'?: { 'IContentData_ProfileBlock_Fragment': IContentData_ProfileBlock_Fragment } }
 ) & { ' $fragmentName'?: 'PageData_ProfileBlock_Fragment' };
+
+type PageData_QuoteBlock_Fragment = (
+  { __typename?: 'QuoteBlock' }
+  & { ' $fragmentRefs'?: { 'IContentData_QuoteBlock_Fragment': IContentData_QuoteBlock_Fragment } }
+) & { ' $fragmentName'?: 'PageData_QuoteBlock_Fragment' };
+
+type PageData_RichTextElement_Fragment = (
+  { __typename?: 'RichTextElement' }
+  & { ' $fragmentRefs'?: { 'IContentData_RichTextElement_Fragment': IContentData_RichTextElement_Fragment } }
+) & { ' $fragmentName'?: 'PageData_RichTextElement_Fragment' };
 
 type PageData_SEOExperience_Fragment = (
   { __typename?: 'SEOExperience' }
@@ -8956,6 +13802,11 @@ type PageData_SocialLink_Fragment = (
   & { ' $fragmentRefs'?: { 'IContentData_SocialLink_Fragment': IContentData_SocialLink_Fragment } }
 ) & { ' $fragmentName'?: 'PageData_SocialLink_Fragment' };
 
+type PageData_SomeGreatNewPage_Fragment = (
+  { __typename?: 'SomeGreatNewPage' }
+  & { ' $fragmentRefs'?: { 'IContentData_SomeGreatNewPage_Fragment': IContentData_SomeGreatNewPage_Fragment } }
+) & { ' $fragmentName'?: 'PageData_SomeGreatNewPage_Fragment' };
+
 type PageData_StartPage_Fragment = (
   { __typename?: 'StartPage' }
   & { ' $fragmentRefs'?: { 'IContentData_StartPage_Fragment': IContentData_StartPage_Fragment } }
@@ -8971,10 +13822,15 @@ type PageData_SysContentFolder_Fragment = (
   & { ' $fragmentRefs'?: { 'IContentData_SysContentFolder_Fragment': IContentData_SysContentFolder_Fragment } }
 ) & { ' $fragmentName'?: 'PageData_SysContentFolder_Fragment' };
 
-type PageData_TedTestBlock_Fragment = (
-  { __typename?: 'TedTestBlock' }
-  & { ' $fragmentRefs'?: { 'IContentData_TedTestBlock_Fragment': IContentData_TedTestBlock_Fragment } }
-) & { ' $fragmentName'?: 'PageData_TedTestBlock_Fragment' };
+type PageData_TestBlockPropertyGroup_Fragment = (
+  { __typename?: 'TestBlockPropertyGroup' }
+  & { ' $fragmentRefs'?: { 'IContentData_TestBlockPropertyGroup_Fragment': IContentData_TestBlockPropertyGroup_Fragment } }
+) & { ' $fragmentName'?: 'PageData_TestBlockPropertyGroup_Fragment' };
+
+type PageData_TestimonialElement_Fragment = (
+  { __typename?: 'TestimonialElement' }
+  & { ' $fragmentRefs'?: { 'IContentData_TestimonialElement_Fragment': IContentData_TestimonialElement_Fragment } }
+) & { ' $fragmentName'?: 'PageData_TestimonialElement_Fragment' };
 
 type PageData_TestimonialItem_Fragment = (
   { __typename?: 'TestimonialItem' }
@@ -8990,6 +13846,16 @@ type PageData_TestimonialsBlock_Fragment = (
   { __typename?: 'TestimonialsBlock' }
   & { ' $fragmentRefs'?: { 'IContentData_TestimonialsBlock_Fragment': IContentData_TestimonialsBlock_Fragment } }
 ) & { ' $fragmentName'?: 'PageData_TestimonialsBlock_Fragment' };
+
+type PageData_TextBlock_Fragment = (
+  { __typename?: 'TextBlock' }
+  & { ' $fragmentRefs'?: { 'IContentData_TextBlock_Fragment': IContentData_TextBlock_Fragment } }
+) & { ' $fragmentName'?: 'PageData_TextBlock_Fragment' };
+
+type PageData_VideoElement_Fragment = (
+  { __typename?: 'VideoElement' }
+  & { ' $fragmentRefs'?: { 'IContentData_VideoElement_Fragment': IContentData_VideoElement_Fragment } }
+) & { ' $fragmentName'?: 'PageData_VideoElement_Fragment' };
 
 type PageData_VideoMedia_Fragment = (
   { __typename?: 'VideoMedia' }
@@ -9041,9 +13907,14 @@ type PageData__Video_Fragment = (
   & { ' $fragmentRefs'?: { 'IContentData__Video_Fragment': IContentData__Video_Fragment } }
 ) & { ' $fragmentName'?: 'PageData__Video_Fragment' };
 
-export type PageDataFragment = PageData_AvailabilityBlock_Fragment | PageData_BlankExperience_Fragment | PageData_BlankSection_Fragment | PageData_CMSPage_Fragment | PageData_ContactBlock_Fragment | PageData_Footer_Fragment | PageData_FooterColumn_Fragment | PageData_GenericMedia_Fragment | PageData_GenericMedia123_Fragment | PageData_Header_Fragment | PageData_HelloWorld_Fragment | PageData_HeroBlock_Fragment | PageData_HomePage_Fragment | PageData_ImageMedia_Fragment | PageData_LogoItemBlock_Fragment | PageData_LogosBlock_Fragment | PageData_NavItem_Fragment | PageData_PortfolioGridBlock_Fragment | PageData_PortfolioItemBlock_Fragment | PageData_ProfileBlock_Fragment | PageData_SEOExperience_Fragment | PageData_ServiceItem_Fragment | PageData_ServicesBlock_Fragment | PageData_SocialLink_Fragment | PageData_StartPage_Fragment | PageData_StoryBlock_Fragment | PageData_SysContentFolder_Fragment | PageData_TedTestBlock_Fragment | PageData_TestimonialItem_Fragment | PageData_TestimonialItemBlock_Fragment | PageData_TestimonialsBlock_Fragment | PageData_VideoMedia_Fragment | PageData__Component_Fragment | PageData__Content_Fragment | PageData__Experience_Fragment | PageData__Folder_Fragment | PageData__Image_Fragment | PageData__Media_Fragment | PageData__Page_Fragment | PageData__Section_Fragment | PageData__Video_Fragment;
+export type PageDataFragment = PageData_AnotherGreatPage_Fragment | PageData_ArticleListElement_Fragment | PageData_AvailabilityBlock_Fragment | PageData_BlankExperience_Fragment | PageData_BlankSection_Fragment | PageData_BlogPostPage_Fragment | PageData_BlogSectionExperience_Fragment | PageData_ButtonBlock_Fragment | PageData_CMSPage_Fragment | PageData_CTAElement_Fragment | PageData_CarouselBlock_Fragment | PageData_ContactBlock_Fragment | PageData_ContentRecsElement_Fragment | PageData_ContinueReadingComponent_Fragment | PageData_Footer_Fragment | PageData_FooterColumn_Fragment | PageData_GenericMedia_Fragment | PageData_GenericMedia123_Fragment | PageData_Header_Fragment | PageData_HeadingElement_Fragment | PageData_HelloWorld_Fragment | PageData_HeroBlock_Fragment | PageData_HomePage_Fragment | PageData_ImageElement_Fragment | PageData_ImageMedia_Fragment | PageData_LandingPage_Fragment | PageData_LayoutSettingsBlock_Fragment | PageData_LogoItemBlock_Fragment | PageData_LogosBlock_Fragment | PageData_MegaMenuGroupBlock_Fragment | PageData_MenuNavigationBlock_Fragment | PageData_NavItem_Fragment | PageData_OdpEmbedBlock_Fragment | PageData_PageSeoSettings_Fragment | PageData_ParagraphElement_Fragment | PageData_PortfolioGridBlock_Fragment | PageData_PortfolioItemBlock_Fragment | PageData_ProfileBlock_Fragment | PageData_QuoteBlock_Fragment | PageData_RichTextElement_Fragment | PageData_SEOExperience_Fragment | PageData_ServiceItem_Fragment | PageData_ServicesBlock_Fragment | PageData_SocialLink_Fragment | PageData_SomeGreatNewPage_Fragment | PageData_StartPage_Fragment | PageData_StoryBlock_Fragment | PageData_SysContentFolder_Fragment | PageData_TestBlockPropertyGroup_Fragment | PageData_TestimonialElement_Fragment | PageData_TestimonialItem_Fragment | PageData_TestimonialItemBlock_Fragment | PageData_TestimonialsBlock_Fragment | PageData_TextBlock_Fragment | PageData_VideoElement_Fragment | PageData_VideoMedia_Fragment | PageData__Component_Fragment | PageData__Content_Fragment | PageData__Experience_Fragment | PageData__Folder_Fragment | PageData__Image_Fragment | PageData__Media_Fragment | PageData__Page_Fragment | PageData__Section_Fragment | PageData__Video_Fragment;
 
 export type LinkDataFragment = { __typename?: 'ContentUrl', type?: string | null, base?: string | null, default?: string | null } & { ' $fragmentName'?: 'LinkDataFragment' };
+
+export type ReferenceDataFragment = { __typename?: 'ContentReference', key?: string | null, url?: (
+    { __typename?: 'ContentUrl' }
+    & { ' $fragmentRefs'?: { 'LinkDataFragment': LinkDataFragment } }
+  ) | null } & { ' $fragmentName'?: 'ReferenceDataFragment' };
 
 type IContentInfo_ContentMetadata_Fragment = { __typename?: 'ContentMetadata', key?: string | null, locale?: string | null, types?: Array<string | null> | null, displayName?: string | null, version?: string | null, url?: (
     { __typename?: 'ContentUrl' }
@@ -9067,6 +13938,16 @@ type IContentInfo_MediaMetadata_Fragment = { __typename?: 'MediaMetadata', key?:
 
 export type IContentInfoFragment = IContentInfo_ContentMetadata_Fragment | IContentInfo_InstanceMetadata_Fragment | IContentInfo_ItemMetadata_Fragment | IContentInfo_MediaMetadata_Fragment;
 
+type IContentListItem_AnotherGreatPage_Fragment = (
+  { __typename?: 'AnotherGreatPage' }
+  & { ' $fragmentRefs'?: { 'IContentData_AnotherGreatPage_Fragment': IContentData_AnotherGreatPage_Fragment } }
+) & { ' $fragmentName'?: 'IContentListItem_AnotherGreatPage_Fragment' };
+
+type IContentListItem_ArticleListElement_Fragment = (
+  { __typename?: 'ArticleListElement' }
+  & { ' $fragmentRefs'?: { 'IContentData_ArticleListElement_Fragment': IContentData_ArticleListElement_Fragment } }
+) & { ' $fragmentName'?: 'IContentListItem_ArticleListElement_Fragment' };
+
 type IContentListItem_AvailabilityBlock_Fragment = (
   { __typename?: 'AvailabilityBlock' }
   & { ' $fragmentRefs'?: { 'IContentData_AvailabilityBlock_Fragment': IContentData_AvailabilityBlock_Fragment } }
@@ -9082,15 +13963,50 @@ type IContentListItem_BlankSection_Fragment = (
   & { ' $fragmentRefs'?: { 'IContentData_BlankSection_Fragment': IContentData_BlankSection_Fragment } }
 ) & { ' $fragmentName'?: 'IContentListItem_BlankSection_Fragment' };
 
+type IContentListItem_BlogPostPage_Fragment = (
+  { __typename?: 'BlogPostPage' }
+  & { ' $fragmentRefs'?: { 'IContentData_BlogPostPage_Fragment': IContentData_BlogPostPage_Fragment } }
+) & { ' $fragmentName'?: 'IContentListItem_BlogPostPage_Fragment' };
+
+type IContentListItem_BlogSectionExperience_Fragment = (
+  { __typename?: 'BlogSectionExperience' }
+  & { ' $fragmentRefs'?: { 'IContentData_BlogSectionExperience_Fragment': IContentData_BlogSectionExperience_Fragment } }
+) & { ' $fragmentName'?: 'IContentListItem_BlogSectionExperience_Fragment' };
+
+type IContentListItem_ButtonBlock_Fragment = (
+  { __typename?: 'ButtonBlock' }
+  & { ' $fragmentRefs'?: { 'IContentData_ButtonBlock_Fragment': IContentData_ButtonBlock_Fragment } }
+) & { ' $fragmentName'?: 'IContentListItem_ButtonBlock_Fragment' };
+
 type IContentListItem_CMSPage_Fragment = (
   { __typename?: 'CMSPage' }
   & { ' $fragmentRefs'?: { 'IContentData_CMSPage_Fragment': IContentData_CMSPage_Fragment } }
 ) & { ' $fragmentName'?: 'IContentListItem_CMSPage_Fragment' };
 
+type IContentListItem_CTAElement_Fragment = (
+  { __typename?: 'CTAElement' }
+  & { ' $fragmentRefs'?: { 'IContentData_CTAElement_Fragment': IContentData_CTAElement_Fragment } }
+) & { ' $fragmentName'?: 'IContentListItem_CTAElement_Fragment' };
+
+type IContentListItem_CarouselBlock_Fragment = (
+  { __typename?: 'CarouselBlock' }
+  & { ' $fragmentRefs'?: { 'IContentData_CarouselBlock_Fragment': IContentData_CarouselBlock_Fragment } }
+) & { ' $fragmentName'?: 'IContentListItem_CarouselBlock_Fragment' };
+
 type IContentListItem_ContactBlock_Fragment = (
   { __typename?: 'ContactBlock' }
   & { ' $fragmentRefs'?: { 'IContentData_ContactBlock_Fragment': IContentData_ContactBlock_Fragment } }
 ) & { ' $fragmentName'?: 'IContentListItem_ContactBlock_Fragment' };
+
+type IContentListItem_ContentRecsElement_Fragment = (
+  { __typename?: 'ContentRecsElement' }
+  & { ' $fragmentRefs'?: { 'IContentData_ContentRecsElement_Fragment': IContentData_ContentRecsElement_Fragment } }
+) & { ' $fragmentName'?: 'IContentListItem_ContentRecsElement_Fragment' };
+
+type IContentListItem_ContinueReadingComponent_Fragment = (
+  { __typename?: 'ContinueReadingComponent' }
+  & { ' $fragmentRefs'?: { 'IContentData_ContinueReadingComponent_Fragment': IContentData_ContinueReadingComponent_Fragment } }
+) & { ' $fragmentName'?: 'IContentListItem_ContinueReadingComponent_Fragment' };
 
 type IContentListItem_Footer_Fragment = (
   { __typename?: 'Footer' }
@@ -9117,6 +14033,11 @@ type IContentListItem_Header_Fragment = (
   & { ' $fragmentRefs'?: { 'IContentData_Header_Fragment': IContentData_Header_Fragment } }
 ) & { ' $fragmentName'?: 'IContentListItem_Header_Fragment' };
 
+type IContentListItem_HeadingElement_Fragment = (
+  { __typename?: 'HeadingElement' }
+  & { ' $fragmentRefs'?: { 'IContentData_HeadingElement_Fragment': IContentData_HeadingElement_Fragment } }
+) & { ' $fragmentName'?: 'IContentListItem_HeadingElement_Fragment' };
+
 type IContentListItem_HelloWorld_Fragment = (
   { __typename?: 'HelloWorld' }
   & { ' $fragmentRefs'?: { 'IContentData_HelloWorld_Fragment': IContentData_HelloWorld_Fragment } }
@@ -9132,10 +14053,25 @@ type IContentListItem_HomePage_Fragment = (
   & { ' $fragmentRefs'?: { 'IContentData_HomePage_Fragment': IContentData_HomePage_Fragment } }
 ) & { ' $fragmentName'?: 'IContentListItem_HomePage_Fragment' };
 
+type IContentListItem_ImageElement_Fragment = (
+  { __typename?: 'ImageElement' }
+  & { ' $fragmentRefs'?: { 'IContentData_ImageElement_Fragment': IContentData_ImageElement_Fragment } }
+) & { ' $fragmentName'?: 'IContentListItem_ImageElement_Fragment' };
+
 type IContentListItem_ImageMedia_Fragment = (
   { __typename?: 'ImageMedia' }
   & { ' $fragmentRefs'?: { 'IContentData_ImageMedia_Fragment': IContentData_ImageMedia_Fragment } }
 ) & { ' $fragmentName'?: 'IContentListItem_ImageMedia_Fragment' };
+
+type IContentListItem_LandingPage_Fragment = (
+  { __typename?: 'LandingPage' }
+  & { ' $fragmentRefs'?: { 'IContentData_LandingPage_Fragment': IContentData_LandingPage_Fragment } }
+) & { ' $fragmentName'?: 'IContentListItem_LandingPage_Fragment' };
+
+type IContentListItem_LayoutSettingsBlock_Fragment = (
+  { __typename?: 'LayoutSettingsBlock' }
+  & { ' $fragmentRefs'?: { 'IContentData_LayoutSettingsBlock_Fragment': IContentData_LayoutSettingsBlock_Fragment } }
+) & { ' $fragmentName'?: 'IContentListItem_LayoutSettingsBlock_Fragment' };
 
 type IContentListItem_LogoItemBlock_Fragment = (
   { __typename?: 'LogoItemBlock' }
@@ -9147,10 +14083,35 @@ type IContentListItem_LogosBlock_Fragment = (
   & { ' $fragmentRefs'?: { 'IContentData_LogosBlock_Fragment': IContentData_LogosBlock_Fragment } }
 ) & { ' $fragmentName'?: 'IContentListItem_LogosBlock_Fragment' };
 
+type IContentListItem_MegaMenuGroupBlock_Fragment = (
+  { __typename?: 'MegaMenuGroupBlock' }
+  & { ' $fragmentRefs'?: { 'IContentData_MegaMenuGroupBlock_Fragment': IContentData_MegaMenuGroupBlock_Fragment } }
+) & { ' $fragmentName'?: 'IContentListItem_MegaMenuGroupBlock_Fragment' };
+
+type IContentListItem_MenuNavigationBlock_Fragment = (
+  { __typename?: 'MenuNavigationBlock' }
+  & { ' $fragmentRefs'?: { 'IContentData_MenuNavigationBlock_Fragment': IContentData_MenuNavigationBlock_Fragment } }
+) & { ' $fragmentName'?: 'IContentListItem_MenuNavigationBlock_Fragment' };
+
 type IContentListItem_NavItem_Fragment = (
   { __typename?: 'NavItem' }
   & { ' $fragmentRefs'?: { 'IContentData_NavItem_Fragment': IContentData_NavItem_Fragment } }
 ) & { ' $fragmentName'?: 'IContentListItem_NavItem_Fragment' };
+
+type IContentListItem_OdpEmbedBlock_Fragment = (
+  { __typename?: 'OdpEmbedBlock' }
+  & { ' $fragmentRefs'?: { 'IContentData_OdpEmbedBlock_Fragment': IContentData_OdpEmbedBlock_Fragment } }
+) & { ' $fragmentName'?: 'IContentListItem_OdpEmbedBlock_Fragment' };
+
+type IContentListItem_PageSeoSettings_Fragment = (
+  { __typename?: 'PageSeoSettings' }
+  & { ' $fragmentRefs'?: { 'IContentData_PageSeoSettings_Fragment': IContentData_PageSeoSettings_Fragment } }
+) & { ' $fragmentName'?: 'IContentListItem_PageSeoSettings_Fragment' };
+
+type IContentListItem_ParagraphElement_Fragment = (
+  { __typename?: 'ParagraphElement' }
+  & { ' $fragmentRefs'?: { 'IContentData_ParagraphElement_Fragment': IContentData_ParagraphElement_Fragment } }
+) & { ' $fragmentName'?: 'IContentListItem_ParagraphElement_Fragment' };
 
 type IContentListItem_PortfolioGridBlock_Fragment = (
   { __typename?: 'PortfolioGridBlock' }
@@ -9166,6 +14127,16 @@ type IContentListItem_ProfileBlock_Fragment = (
   { __typename?: 'ProfileBlock' }
   & { ' $fragmentRefs'?: { 'IContentData_ProfileBlock_Fragment': IContentData_ProfileBlock_Fragment } }
 ) & { ' $fragmentName'?: 'IContentListItem_ProfileBlock_Fragment' };
+
+type IContentListItem_QuoteBlock_Fragment = (
+  { __typename?: 'QuoteBlock' }
+  & { ' $fragmentRefs'?: { 'IContentData_QuoteBlock_Fragment': IContentData_QuoteBlock_Fragment } }
+) & { ' $fragmentName'?: 'IContentListItem_QuoteBlock_Fragment' };
+
+type IContentListItem_RichTextElement_Fragment = (
+  { __typename?: 'RichTextElement' }
+  & { ' $fragmentRefs'?: { 'IContentData_RichTextElement_Fragment': IContentData_RichTextElement_Fragment } }
+) & { ' $fragmentName'?: 'IContentListItem_RichTextElement_Fragment' };
 
 type IContentListItem_SEOExperience_Fragment = (
   { __typename?: 'SEOExperience' }
@@ -9187,6 +14158,11 @@ type IContentListItem_SocialLink_Fragment = (
   & { ' $fragmentRefs'?: { 'IContentData_SocialLink_Fragment': IContentData_SocialLink_Fragment } }
 ) & { ' $fragmentName'?: 'IContentListItem_SocialLink_Fragment' };
 
+type IContentListItem_SomeGreatNewPage_Fragment = (
+  { __typename?: 'SomeGreatNewPage' }
+  & { ' $fragmentRefs'?: { 'IContentData_SomeGreatNewPage_Fragment': IContentData_SomeGreatNewPage_Fragment } }
+) & { ' $fragmentName'?: 'IContentListItem_SomeGreatNewPage_Fragment' };
+
 type IContentListItem_StartPage_Fragment = (
   { __typename?: 'StartPage' }
   & { ' $fragmentRefs'?: { 'IContentData_StartPage_Fragment': IContentData_StartPage_Fragment } }
@@ -9202,10 +14178,15 @@ type IContentListItem_SysContentFolder_Fragment = (
   & { ' $fragmentRefs'?: { 'IContentData_SysContentFolder_Fragment': IContentData_SysContentFolder_Fragment } }
 ) & { ' $fragmentName'?: 'IContentListItem_SysContentFolder_Fragment' };
 
-type IContentListItem_TedTestBlock_Fragment = (
-  { __typename?: 'TedTestBlock' }
-  & { ' $fragmentRefs'?: { 'IContentData_TedTestBlock_Fragment': IContentData_TedTestBlock_Fragment } }
-) & { ' $fragmentName'?: 'IContentListItem_TedTestBlock_Fragment' };
+type IContentListItem_TestBlockPropertyGroup_Fragment = (
+  { __typename?: 'TestBlockPropertyGroup' }
+  & { ' $fragmentRefs'?: { 'IContentData_TestBlockPropertyGroup_Fragment': IContentData_TestBlockPropertyGroup_Fragment } }
+) & { ' $fragmentName'?: 'IContentListItem_TestBlockPropertyGroup_Fragment' };
+
+type IContentListItem_TestimonialElement_Fragment = (
+  { __typename?: 'TestimonialElement' }
+  & { ' $fragmentRefs'?: { 'IContentData_TestimonialElement_Fragment': IContentData_TestimonialElement_Fragment } }
+) & { ' $fragmentName'?: 'IContentListItem_TestimonialElement_Fragment' };
 
 type IContentListItem_TestimonialItem_Fragment = (
   { __typename?: 'TestimonialItem' }
@@ -9221,6 +14202,16 @@ type IContentListItem_TestimonialsBlock_Fragment = (
   { __typename?: 'TestimonialsBlock' }
   & { ' $fragmentRefs'?: { 'IContentData_TestimonialsBlock_Fragment': IContentData_TestimonialsBlock_Fragment } }
 ) & { ' $fragmentName'?: 'IContentListItem_TestimonialsBlock_Fragment' };
+
+type IContentListItem_TextBlock_Fragment = (
+  { __typename?: 'TextBlock' }
+  & { ' $fragmentRefs'?: { 'IContentData_TextBlock_Fragment': IContentData_TextBlock_Fragment } }
+) & { ' $fragmentName'?: 'IContentListItem_TextBlock_Fragment' };
+
+type IContentListItem_VideoElement_Fragment = (
+  { __typename?: 'VideoElement' }
+  & { ' $fragmentRefs'?: { 'IContentData_VideoElement_Fragment': IContentData_VideoElement_Fragment } }
+) & { ' $fragmentName'?: 'IContentListItem_VideoElement_Fragment' };
 
 type IContentListItem_VideoMedia_Fragment = (
   { __typename?: 'VideoMedia' }
@@ -9272,7 +14263,7 @@ type IContentListItem__Video_Fragment = (
   & { ' $fragmentRefs'?: { 'IContentData__Video_Fragment': IContentData__Video_Fragment } }
 ) & { ' $fragmentName'?: 'IContentListItem__Video_Fragment' };
 
-export type IContentListItemFragment = IContentListItem_AvailabilityBlock_Fragment | IContentListItem_BlankExperience_Fragment | IContentListItem_BlankSection_Fragment | IContentListItem_CMSPage_Fragment | IContentListItem_ContactBlock_Fragment | IContentListItem_Footer_Fragment | IContentListItem_FooterColumn_Fragment | IContentListItem_GenericMedia_Fragment | IContentListItem_GenericMedia123_Fragment | IContentListItem_Header_Fragment | IContentListItem_HelloWorld_Fragment | IContentListItem_HeroBlock_Fragment | IContentListItem_HomePage_Fragment | IContentListItem_ImageMedia_Fragment | IContentListItem_LogoItemBlock_Fragment | IContentListItem_LogosBlock_Fragment | IContentListItem_NavItem_Fragment | IContentListItem_PortfolioGridBlock_Fragment | IContentListItem_PortfolioItemBlock_Fragment | IContentListItem_ProfileBlock_Fragment | IContentListItem_SEOExperience_Fragment | IContentListItem_ServiceItem_Fragment | IContentListItem_ServicesBlock_Fragment | IContentListItem_SocialLink_Fragment | IContentListItem_StartPage_Fragment | IContentListItem_StoryBlock_Fragment | IContentListItem_SysContentFolder_Fragment | IContentListItem_TedTestBlock_Fragment | IContentListItem_TestimonialItem_Fragment | IContentListItem_TestimonialItemBlock_Fragment | IContentListItem_TestimonialsBlock_Fragment | IContentListItem_VideoMedia_Fragment | IContentListItem__Component_Fragment | IContentListItem__Content_Fragment | IContentListItem__Experience_Fragment | IContentListItem__Folder_Fragment | IContentListItem__Image_Fragment | IContentListItem__Media_Fragment | IContentListItem__Page_Fragment | IContentListItem__Section_Fragment | IContentListItem__Video_Fragment;
+export type IContentListItemFragment = IContentListItem_AnotherGreatPage_Fragment | IContentListItem_ArticleListElement_Fragment | IContentListItem_AvailabilityBlock_Fragment | IContentListItem_BlankExperience_Fragment | IContentListItem_BlankSection_Fragment | IContentListItem_BlogPostPage_Fragment | IContentListItem_BlogSectionExperience_Fragment | IContentListItem_ButtonBlock_Fragment | IContentListItem_CMSPage_Fragment | IContentListItem_CTAElement_Fragment | IContentListItem_CarouselBlock_Fragment | IContentListItem_ContactBlock_Fragment | IContentListItem_ContentRecsElement_Fragment | IContentListItem_ContinueReadingComponent_Fragment | IContentListItem_Footer_Fragment | IContentListItem_FooterColumn_Fragment | IContentListItem_GenericMedia_Fragment | IContentListItem_GenericMedia123_Fragment | IContentListItem_Header_Fragment | IContentListItem_HeadingElement_Fragment | IContentListItem_HelloWorld_Fragment | IContentListItem_HeroBlock_Fragment | IContentListItem_HomePage_Fragment | IContentListItem_ImageElement_Fragment | IContentListItem_ImageMedia_Fragment | IContentListItem_LandingPage_Fragment | IContentListItem_LayoutSettingsBlock_Fragment | IContentListItem_LogoItemBlock_Fragment | IContentListItem_LogosBlock_Fragment | IContentListItem_MegaMenuGroupBlock_Fragment | IContentListItem_MenuNavigationBlock_Fragment | IContentListItem_NavItem_Fragment | IContentListItem_OdpEmbedBlock_Fragment | IContentListItem_PageSeoSettings_Fragment | IContentListItem_ParagraphElement_Fragment | IContentListItem_PortfolioGridBlock_Fragment | IContentListItem_PortfolioItemBlock_Fragment | IContentListItem_ProfileBlock_Fragment | IContentListItem_QuoteBlock_Fragment | IContentListItem_RichTextElement_Fragment | IContentListItem_SEOExperience_Fragment | IContentListItem_ServiceItem_Fragment | IContentListItem_ServicesBlock_Fragment | IContentListItem_SocialLink_Fragment | IContentListItem_SomeGreatNewPage_Fragment | IContentListItem_StartPage_Fragment | IContentListItem_StoryBlock_Fragment | IContentListItem_SysContentFolder_Fragment | IContentListItem_TestBlockPropertyGroup_Fragment | IContentListItem_TestimonialElement_Fragment | IContentListItem_TestimonialItem_Fragment | IContentListItem_TestimonialItemBlock_Fragment | IContentListItem_TestimonialsBlock_Fragment | IContentListItem_TextBlock_Fragment | IContentListItem_VideoElement_Fragment | IContentListItem_VideoMedia_Fragment | IContentListItem__Component_Fragment | IContentListItem__Content_Fragment | IContentListItem__Experience_Fragment | IContentListItem__Folder_Fragment | IContentListItem__Image_Fragment | IContentListItem__Media_Fragment | IContentListItem__Page_Fragment | IContentListItem__Section_Fragment | IContentListItem__Video_Fragment;
 
 type ExperienceData_BlankExperience_Fragment = { __typename?: 'BlankExperience', composition?: (
     { __typename?: 'CompositionStructureNode', nodes?: Array<(
@@ -9323,6 +14314,56 @@ type ExperienceData_BlankExperience_Fragment = { __typename?: 'BlankExperience',
     ) | null> | null }
     & { ' $fragmentRefs'?: { 'CompositionNodeData_CompositionStructureNode_Fragment': CompositionNodeData_CompositionStructureNode_Fragment } }
   ) | null } & { ' $fragmentName'?: 'ExperienceData_BlankExperience_Fragment' };
+
+type ExperienceData_BlogSectionExperience_Fragment = { __typename?: 'BlogSectionExperience', composition?: (
+    { __typename?: 'CompositionStructureNode', nodes?: Array<(
+      { __typename?: 'CompositionComponentNode' }
+      & { ' $fragmentRefs'?: { 'CompositionNodeData_CompositionComponentNode_Fragment': CompositionNodeData_CompositionComponentNode_Fragment;'CompositionComponentNodeDataFragment': CompositionComponentNodeDataFragment } }
+    ) | (
+      { __typename?: 'CompositionNode' }
+      & { ' $fragmentRefs'?: { 'CompositionNodeData_CompositionNode_Fragment': CompositionNodeData_CompositionNode_Fragment } }
+    ) | (
+      { __typename?: 'CompositionStructureNode', nodes?: Array<(
+        { __typename?: 'CompositionComponentNode' }
+        & { ' $fragmentRefs'?: { 'CompositionNodeData_CompositionComponentNode_Fragment': CompositionNodeData_CompositionComponentNode_Fragment } }
+      ) | (
+        { __typename?: 'CompositionNode' }
+        & { ' $fragmentRefs'?: { 'CompositionNodeData_CompositionNode_Fragment': CompositionNodeData_CompositionNode_Fragment } }
+      ) | (
+        { __typename?: 'CompositionStructureNode', nodes?: Array<(
+          { __typename?: 'CompositionComponentNode' }
+          & { ' $fragmentRefs'?: { 'CompositionNodeData_CompositionComponentNode_Fragment': CompositionNodeData_CompositionComponentNode_Fragment } }
+        ) | (
+          { __typename?: 'CompositionNode' }
+          & { ' $fragmentRefs'?: { 'CompositionNodeData_CompositionNode_Fragment': CompositionNodeData_CompositionNode_Fragment } }
+        ) | (
+          { __typename?: 'CompositionStructureNode', nodes?: Array<(
+            { __typename?: 'CompositionComponentNode' }
+            & { ' $fragmentRefs'?: { 'CompositionNodeData_CompositionComponentNode_Fragment': CompositionNodeData_CompositionComponentNode_Fragment;'CompositionComponentNodeDataFragment': CompositionComponentNodeDataFragment } }
+          ) | (
+            { __typename?: 'CompositionNode' }
+            & { ' $fragmentRefs'?: { 'CompositionNodeData_CompositionNode_Fragment': CompositionNodeData_CompositionNode_Fragment } }
+          ) | (
+            { __typename?: 'CompositionStructureNode', nodes?: Array<(
+              { __typename?: 'CompositionComponentNode' }
+              & { ' $fragmentRefs'?: { 'CompositionNodeData_CompositionComponentNode_Fragment': CompositionNodeData_CompositionComponentNode_Fragment;'CompositionComponentNodeDataFragment': CompositionComponentNodeDataFragment } }
+            ) | (
+              { __typename?: 'CompositionNode' }
+              & { ' $fragmentRefs'?: { 'CompositionNodeData_CompositionNode_Fragment': CompositionNodeData_CompositionNode_Fragment } }
+            ) | (
+              { __typename?: 'CompositionStructureNode' }
+              & { ' $fragmentRefs'?: { 'CompositionNodeData_CompositionStructureNode_Fragment': CompositionNodeData_CompositionStructureNode_Fragment } }
+            ) | null> | null }
+            & { ' $fragmentRefs'?: { 'CompositionNodeData_CompositionStructureNode_Fragment': CompositionNodeData_CompositionStructureNode_Fragment } }
+          ) | null> | null }
+          & { ' $fragmentRefs'?: { 'CompositionNodeData_CompositionStructureNode_Fragment': CompositionNodeData_CompositionStructureNode_Fragment } }
+        ) | null> | null }
+        & { ' $fragmentRefs'?: { 'CompositionNodeData_CompositionStructureNode_Fragment': CompositionNodeData_CompositionStructureNode_Fragment } }
+      ) | null> | null }
+      & { ' $fragmentRefs'?: { 'CompositionNodeData_CompositionStructureNode_Fragment': CompositionNodeData_CompositionStructureNode_Fragment } }
+    ) | null> | null }
+    & { ' $fragmentRefs'?: { 'CompositionNodeData_CompositionStructureNode_Fragment': CompositionNodeData_CompositionStructureNode_Fragment } }
+  ) | null } & { ' $fragmentName'?: 'ExperienceData_BlogSectionExperience_Fragment' };
 
 type ExperienceData_SEOExperience_Fragment = { __typename?: 'SEOExperience', composition?: (
     { __typename?: 'CompositionStructureNode', nodes?: Array<(
@@ -9424,7 +14465,7 @@ type ExperienceData__Experience_Fragment = { __typename?: '_Experience', composi
     & { ' $fragmentRefs'?: { 'CompositionNodeData_CompositionStructureNode_Fragment': CompositionNodeData_CompositionStructureNode_Fragment } }
   ) | null } & { ' $fragmentName'?: 'ExperienceData__Experience_Fragment' };
 
-export type ExperienceDataFragment = ExperienceData_BlankExperience_Fragment | ExperienceData_SEOExperience_Fragment | ExperienceData__Experience_Fragment;
+export type ExperienceDataFragment = ExperienceData_BlankExperience_Fragment | ExperienceData_BlogSectionExperience_Fragment | ExperienceData_SEOExperience_Fragment | ExperienceData__Experience_Fragment;
 
 type CompositionNodeData_CompositionComponentNode_Fragment = { __typename?: 'CompositionComponentNode', type?: string | null, key?: string | null, name?: string | null, layoutType?: string | null, template?: string | null, settings?: Array<{ __typename?: 'CompositionDisplaySetting', key?: string | null, value?: string | null } | null> | null } & { ' $fragmentName'?: 'CompositionNodeData_CompositionComponentNode_Fragment' };
 
@@ -9435,17 +14476,38 @@ type CompositionNodeData_CompositionStructureNode_Fragment = { __typename?: 'Com
 export type CompositionNodeDataFragment = CompositionNodeData_CompositionComponentNode_Fragment | CompositionNodeData_CompositionNode_Fragment | CompositionNodeData_CompositionStructureNode_Fragment;
 
 export type CompositionComponentNodeDataFragment = { __typename?: 'CompositionComponentNode', component?: (
+    { __typename?: 'ArticleListElement' }
+    & { ' $fragmentRefs'?: { 'BlockData_ArticleListElement_Fragment': BlockData_ArticleListElement_Fragment;'ElementData_ArticleListElement_Fragment': ElementData_ArticleListElement_Fragment } }
+  ) | (
     { __typename?: 'AvailabilityBlock' }
     & { ' $fragmentRefs'?: { 'BlockData_AvailabilityBlock_Fragment': BlockData_AvailabilityBlock_Fragment;'ElementData_AvailabilityBlock_Fragment': ElementData_AvailabilityBlock_Fragment;'AvailabilityBlockDataFragment': AvailabilityBlockDataFragment } }
   ) | (
     { __typename?: 'BlankSection' }
     & { ' $fragmentRefs'?: { 'BlockData_BlankSection_Fragment': BlockData_BlankSection_Fragment;'ElementData_BlankSection_Fragment': ElementData_BlankSection_Fragment } }
   ) | (
+    { __typename?: 'ButtonBlock' }
+    & { ' $fragmentRefs'?: { 'BlockData_ButtonBlock_Fragment': BlockData_ButtonBlock_Fragment;'ElementData_ButtonBlock_Fragment': ElementData_ButtonBlock_Fragment } }
+  ) | (
+    { __typename?: 'CTAElement' }
+    & { ' $fragmentRefs'?: { 'BlockData_CTAElement_Fragment': BlockData_CTAElement_Fragment;'ElementData_CTAElement_Fragment': ElementData_CTAElement_Fragment } }
+  ) | (
+    { __typename?: 'CarouselBlock' }
+    & { ' $fragmentRefs'?: { 'BlockData_CarouselBlock_Fragment': BlockData_CarouselBlock_Fragment;'ElementData_CarouselBlock_Fragment': ElementData_CarouselBlock_Fragment } }
+  ) | (
     { __typename?: 'ContactBlock' }
     & { ' $fragmentRefs'?: { 'BlockData_ContactBlock_Fragment': BlockData_ContactBlock_Fragment;'ElementData_ContactBlock_Fragment': ElementData_ContactBlock_Fragment;'ContactBlockDataFragment': ContactBlockDataFragment } }
   ) | (
+    { __typename?: 'ContentRecsElement' }
+    & { ' $fragmentRefs'?: { 'BlockData_ContentRecsElement_Fragment': BlockData_ContentRecsElement_Fragment;'ElementData_ContentRecsElement_Fragment': ElementData_ContentRecsElement_Fragment } }
+  ) | (
+    { __typename?: 'ContinueReadingComponent' }
+    & { ' $fragmentRefs'?: { 'BlockData_ContinueReadingComponent_Fragment': BlockData_ContinueReadingComponent_Fragment;'ElementData_ContinueReadingComponent_Fragment': ElementData_ContinueReadingComponent_Fragment } }
+  ) | (
     { __typename?: 'FooterColumn' }
     & { ' $fragmentRefs'?: { 'BlockData_FooterColumn_Fragment': BlockData_FooterColumn_Fragment;'ElementData_FooterColumn_Fragment': ElementData_FooterColumn_Fragment;'FooterColumnDataFragment': FooterColumnDataFragment } }
+  ) | (
+    { __typename?: 'HeadingElement' }
+    & { ' $fragmentRefs'?: { 'BlockData_HeadingElement_Fragment': BlockData_HeadingElement_Fragment;'ElementData_HeadingElement_Fragment': ElementData_HeadingElement_Fragment } }
   ) | (
     { __typename?: 'HelloWorld' }
     & { ' $fragmentRefs'?: { 'BlockData_HelloWorld_Fragment': BlockData_HelloWorld_Fragment;'ElementData_HelloWorld_Fragment': ElementData_HelloWorld_Fragment;'HelloWorldDataFragment': HelloWorldDataFragment } }
@@ -9453,14 +14515,35 @@ export type CompositionComponentNodeDataFragment = { __typename?: 'CompositionCo
     { __typename?: 'HeroBlock' }
     & { ' $fragmentRefs'?: { 'BlockData_HeroBlock_Fragment': BlockData_HeroBlock_Fragment;'ElementData_HeroBlock_Fragment': ElementData_HeroBlock_Fragment;'HeroBlockDataFragment': HeroBlockDataFragment } }
   ) | (
+    { __typename?: 'ImageElement' }
+    & { ' $fragmentRefs'?: { 'BlockData_ImageElement_Fragment': BlockData_ImageElement_Fragment;'ElementData_ImageElement_Fragment': ElementData_ImageElement_Fragment } }
+  ) | (
+    { __typename?: 'LayoutSettingsBlock' }
+    & { ' $fragmentRefs'?: { 'BlockData_LayoutSettingsBlock_Fragment': BlockData_LayoutSettingsBlock_Fragment;'ElementData_LayoutSettingsBlock_Fragment': ElementData_LayoutSettingsBlock_Fragment } }
+  ) | (
     { __typename?: 'LogoItemBlock' }
     & { ' $fragmentRefs'?: { 'BlockData_LogoItemBlock_Fragment': BlockData_LogoItemBlock_Fragment;'ElementData_LogoItemBlock_Fragment': ElementData_LogoItemBlock_Fragment;'LogoItemBlockDataFragment': LogoItemBlockDataFragment } }
   ) | (
     { __typename?: 'LogosBlock' }
     & { ' $fragmentRefs'?: { 'BlockData_LogosBlock_Fragment': BlockData_LogosBlock_Fragment;'ElementData_LogosBlock_Fragment': ElementData_LogosBlock_Fragment;'LogosBlockDataFragment': LogosBlockDataFragment } }
   ) | (
+    { __typename?: 'MegaMenuGroupBlock' }
+    & { ' $fragmentRefs'?: { 'BlockData_MegaMenuGroupBlock_Fragment': BlockData_MegaMenuGroupBlock_Fragment;'ElementData_MegaMenuGroupBlock_Fragment': ElementData_MegaMenuGroupBlock_Fragment } }
+  ) | (
+    { __typename?: 'MenuNavigationBlock' }
+    & { ' $fragmentRefs'?: { 'BlockData_MenuNavigationBlock_Fragment': BlockData_MenuNavigationBlock_Fragment;'ElementData_MenuNavigationBlock_Fragment': ElementData_MenuNavigationBlock_Fragment } }
+  ) | (
     { __typename?: 'NavItem' }
     & { ' $fragmentRefs'?: { 'BlockData_NavItem_Fragment': BlockData_NavItem_Fragment;'ElementData_NavItem_Fragment': ElementData_NavItem_Fragment;'NavItemDataFragment': NavItemDataFragment } }
+  ) | (
+    { __typename?: 'OdpEmbedBlock' }
+    & { ' $fragmentRefs'?: { 'BlockData_OdpEmbedBlock_Fragment': BlockData_OdpEmbedBlock_Fragment;'ElementData_OdpEmbedBlock_Fragment': ElementData_OdpEmbedBlock_Fragment } }
+  ) | (
+    { __typename?: 'PageSeoSettings' }
+    & { ' $fragmentRefs'?: { 'BlockData_PageSeoSettings_Fragment': BlockData_PageSeoSettings_Fragment;'ElementData_PageSeoSettings_Fragment': ElementData_PageSeoSettings_Fragment } }
+  ) | (
+    { __typename?: 'ParagraphElement' }
+    & { ' $fragmentRefs'?: { 'BlockData_ParagraphElement_Fragment': BlockData_ParagraphElement_Fragment;'ElementData_ParagraphElement_Fragment': ElementData_ParagraphElement_Fragment } }
   ) | (
     { __typename?: 'PortfolioGridBlock' }
     & { ' $fragmentRefs'?: { 'BlockData_PortfolioGridBlock_Fragment': BlockData_PortfolioGridBlock_Fragment;'ElementData_PortfolioGridBlock_Fragment': ElementData_PortfolioGridBlock_Fragment;'PortfolioGridBlockDataFragment': PortfolioGridBlockDataFragment } }
@@ -9470,6 +14553,12 @@ export type CompositionComponentNodeDataFragment = { __typename?: 'CompositionCo
   ) | (
     { __typename?: 'ProfileBlock' }
     & { ' $fragmentRefs'?: { 'BlockData_ProfileBlock_Fragment': BlockData_ProfileBlock_Fragment;'ElementData_ProfileBlock_Fragment': ElementData_ProfileBlock_Fragment;'ProfileBlockDataFragment': ProfileBlockDataFragment } }
+  ) | (
+    { __typename?: 'QuoteBlock' }
+    & { ' $fragmentRefs'?: { 'BlockData_QuoteBlock_Fragment': BlockData_QuoteBlock_Fragment;'ElementData_QuoteBlock_Fragment': ElementData_QuoteBlock_Fragment } }
+  ) | (
+    { __typename?: 'RichTextElement' }
+    & { ' $fragmentRefs'?: { 'BlockData_RichTextElement_Fragment': BlockData_RichTextElement_Fragment;'ElementData_RichTextElement_Fragment': ElementData_RichTextElement_Fragment } }
   ) | (
     { __typename?: 'ServiceItem' }
     & { ' $fragmentRefs'?: { 'BlockData_ServiceItem_Fragment': BlockData_ServiceItem_Fragment;'ElementData_ServiceItem_Fragment': ElementData_ServiceItem_Fragment;'ServiceItemDataFragment': ServiceItemDataFragment } }
@@ -9483,11 +14572,14 @@ export type CompositionComponentNodeDataFragment = { __typename?: 'CompositionCo
     { __typename?: 'StoryBlock' }
     & { ' $fragmentRefs'?: { 'BlockData_StoryBlock_Fragment': BlockData_StoryBlock_Fragment;'ElementData_StoryBlock_Fragment': ElementData_StoryBlock_Fragment;'StoryBlockDataFragment': StoryBlockDataFragment } }
   ) | (
-    { __typename?: 'TedTestBlock' }
-    & { ' $fragmentRefs'?: { 'BlockData_TedTestBlock_Fragment': BlockData_TedTestBlock_Fragment;'ElementData_TedTestBlock_Fragment': ElementData_TedTestBlock_Fragment;'TedTestBlockDataFragment': TedTestBlockDataFragment } }
+    { __typename?: 'TestBlockPropertyGroup' }
+    & { ' $fragmentRefs'?: { 'BlockData_TestBlockPropertyGroup_Fragment': BlockData_TestBlockPropertyGroup_Fragment;'ElementData_TestBlockPropertyGroup_Fragment': ElementData_TestBlockPropertyGroup_Fragment } }
+  ) | (
+    { __typename?: 'TestimonialElement' }
+    & { ' $fragmentRefs'?: { 'BlockData_TestimonialElement_Fragment': BlockData_TestimonialElement_Fragment;'ElementData_TestimonialElement_Fragment': ElementData_TestimonialElement_Fragment } }
   ) | (
     { __typename?: 'TestimonialItem' }
-    & { ' $fragmentRefs'?: { 'BlockData_TestimonialItem_Fragment': BlockData_TestimonialItem_Fragment;'ElementData_TestimonialItem_Fragment': ElementData_TestimonialItem_Fragment;'TestimonialItemDataFragment': TestimonialItemDataFragment } }
+    & { ' $fragmentRefs'?: { 'BlockData_TestimonialItem_Fragment': BlockData_TestimonialItem_Fragment;'ElementData_TestimonialItem_Fragment': ElementData_TestimonialItem_Fragment } }
   ) | (
     { __typename?: 'TestimonialItemBlock' }
     & { ' $fragmentRefs'?: { 'BlockData_TestimonialItemBlock_Fragment': BlockData_TestimonialItemBlock_Fragment;'ElementData_TestimonialItemBlock_Fragment': ElementData_TestimonialItemBlock_Fragment;'TestimonialItemBlockDataFragment': TestimonialItemBlockDataFragment } }
@@ -9495,12 +14587,23 @@ export type CompositionComponentNodeDataFragment = { __typename?: 'CompositionCo
     { __typename?: 'TestimonialsBlock' }
     & { ' $fragmentRefs'?: { 'BlockData_TestimonialsBlock_Fragment': BlockData_TestimonialsBlock_Fragment;'ElementData_TestimonialsBlock_Fragment': ElementData_TestimonialsBlock_Fragment;'TestimonialsBlockDataFragment': TestimonialsBlockDataFragment } }
   ) | (
+    { __typename?: 'TextBlock' }
+    & { ' $fragmentRefs'?: { 'BlockData_TextBlock_Fragment': BlockData_TextBlock_Fragment;'ElementData_TextBlock_Fragment': ElementData_TextBlock_Fragment } }
+  ) | (
+    { __typename?: 'VideoElement' }
+    & { ' $fragmentRefs'?: { 'BlockData_VideoElement_Fragment': BlockData_VideoElement_Fragment;'ElementData_VideoElement_Fragment': ElementData_VideoElement_Fragment } }
+  ) | (
     { __typename?: '_Component' }
     & { ' $fragmentRefs'?: { 'BlockData__Component_Fragment': BlockData__Component_Fragment;'ElementData__Component_Fragment': ElementData__Component_Fragment } }
   ) | (
     { __typename?: '_Section' }
     & { ' $fragmentRefs'?: { 'BlockData__Section_Fragment': BlockData__Section_Fragment;'ElementData__Section_Fragment': ElementData__Section_Fragment } }
   ) | null } & { ' $fragmentName'?: 'CompositionComponentNodeDataFragment' };
+
+export type LinkItemDataFragment = { __typename?: 'Link', title?: string | null, text?: string | null, target?: string | null, url?: (
+    { __typename?: 'ContentUrl' }
+    & { ' $fragmentRefs'?: { 'LinkDataFragment': LinkDataFragment } }
+  ) | null } & { ' $fragmentName'?: 'LinkItemDataFragment' };
 
 export type getContentByIdQueryVariables = Exact<{
   key: Scalars['String']['input'];
@@ -9513,6 +14616,12 @@ export type getContentByIdQueryVariables = Exact<{
 
 
 export type getContentByIdQuery = { __typename?: 'Query', content?: { __typename?: '_ContentOutput', total?: number | null, items?: (
+      { __typename?: 'AnotherGreatPage' }
+      & { ' $fragmentRefs'?: { 'IContentData_AnotherGreatPage_Fragment': IContentData_AnotherGreatPage_Fragment;'PageData_AnotherGreatPage_Fragment': PageData_AnotherGreatPage_Fragment } }
+    ) | (
+      { __typename?: 'ArticleListElement' }
+      & { ' $fragmentRefs'?: { 'IContentData_ArticleListElement_Fragment': IContentData_ArticleListElement_Fragment;'BlockData_ArticleListElement_Fragment': BlockData_ArticleListElement_Fragment;'PageData_ArticleListElement_Fragment': PageData_ArticleListElement_Fragment } }
+    ) | (
       { __typename?: 'AvailabilityBlock' }
       & { ' $fragmentRefs'?: { 'IContentData_AvailabilityBlock_Fragment': IContentData_AvailabilityBlock_Fragment;'BlockData_AvailabilityBlock_Fragment': BlockData_AvailabilityBlock_Fragment;'PageData_AvailabilityBlock_Fragment': PageData_AvailabilityBlock_Fragment;'AvailabilityBlockDataFragment': AvailabilityBlockDataFragment } }
     ) | (
@@ -9522,11 +14631,32 @@ export type getContentByIdQuery = { __typename?: 'Query', content?: { __typename
       { __typename?: 'BlankSection' }
       & { ' $fragmentRefs'?: { 'IContentData_BlankSection_Fragment': IContentData_BlankSection_Fragment;'BlockData_BlankSection_Fragment': BlockData_BlankSection_Fragment;'PageData_BlankSection_Fragment': PageData_BlankSection_Fragment } }
     ) | (
+      { __typename?: 'BlogPostPage' }
+      & { ' $fragmentRefs'?: { 'IContentData_BlogPostPage_Fragment': IContentData_BlogPostPage_Fragment;'PageData_BlogPostPage_Fragment': PageData_BlogPostPage_Fragment } }
+    ) | (
+      { __typename?: 'BlogSectionExperience' }
+      & { ' $fragmentRefs'?: { 'IContentData_BlogSectionExperience_Fragment': IContentData_BlogSectionExperience_Fragment;'PageData_BlogSectionExperience_Fragment': PageData_BlogSectionExperience_Fragment } }
+    ) | (
+      { __typename?: 'ButtonBlock' }
+      & { ' $fragmentRefs'?: { 'IContentData_ButtonBlock_Fragment': IContentData_ButtonBlock_Fragment;'BlockData_ButtonBlock_Fragment': BlockData_ButtonBlock_Fragment;'PageData_ButtonBlock_Fragment': PageData_ButtonBlock_Fragment } }
+    ) | (
       { __typename?: 'CMSPage' }
       & { ' $fragmentRefs'?: { 'IContentData_CMSPage_Fragment': IContentData_CMSPage_Fragment;'PageData_CMSPage_Fragment': PageData_CMSPage_Fragment;'CMSPageDataFragment': CMSPageDataFragment } }
     ) | (
+      { __typename?: 'CTAElement' }
+      & { ' $fragmentRefs'?: { 'IContentData_CTAElement_Fragment': IContentData_CTAElement_Fragment;'BlockData_CTAElement_Fragment': BlockData_CTAElement_Fragment;'PageData_CTAElement_Fragment': PageData_CTAElement_Fragment } }
+    ) | (
+      { __typename?: 'CarouselBlock' }
+      & { ' $fragmentRefs'?: { 'IContentData_CarouselBlock_Fragment': IContentData_CarouselBlock_Fragment;'BlockData_CarouselBlock_Fragment': BlockData_CarouselBlock_Fragment;'PageData_CarouselBlock_Fragment': PageData_CarouselBlock_Fragment } }
+    ) | (
       { __typename?: 'ContactBlock' }
       & { ' $fragmentRefs'?: { 'IContentData_ContactBlock_Fragment': IContentData_ContactBlock_Fragment;'BlockData_ContactBlock_Fragment': BlockData_ContactBlock_Fragment;'PageData_ContactBlock_Fragment': PageData_ContactBlock_Fragment;'ContactBlockDataFragment': ContactBlockDataFragment } }
+    ) | (
+      { __typename?: 'ContentRecsElement' }
+      & { ' $fragmentRefs'?: { 'IContentData_ContentRecsElement_Fragment': IContentData_ContentRecsElement_Fragment;'BlockData_ContentRecsElement_Fragment': BlockData_ContentRecsElement_Fragment;'PageData_ContentRecsElement_Fragment': PageData_ContentRecsElement_Fragment } }
+    ) | (
+      { __typename?: 'ContinueReadingComponent' }
+      & { ' $fragmentRefs'?: { 'IContentData_ContinueReadingComponent_Fragment': IContentData_ContinueReadingComponent_Fragment;'BlockData_ContinueReadingComponent_Fragment': BlockData_ContinueReadingComponent_Fragment;'PageData_ContinueReadingComponent_Fragment': PageData_ContinueReadingComponent_Fragment } }
     ) | (
       { __typename?: 'Footer' }
       & { ' $fragmentRefs'?: { 'IContentData_Footer_Fragment': IContentData_Footer_Fragment;'PageData_Footer_Fragment': PageData_Footer_Fragment;'FooterDataFragment': FooterDataFragment } }
@@ -9543,6 +14673,9 @@ export type getContentByIdQuery = { __typename?: 'Query', content?: { __typename
       { __typename?: 'Header' }
       & { ' $fragmentRefs'?: { 'IContentData_Header_Fragment': IContentData_Header_Fragment;'PageData_Header_Fragment': PageData_Header_Fragment;'HeaderDataFragment': HeaderDataFragment } }
     ) | (
+      { __typename?: 'HeadingElement' }
+      & { ' $fragmentRefs'?: { 'IContentData_HeadingElement_Fragment': IContentData_HeadingElement_Fragment;'BlockData_HeadingElement_Fragment': BlockData_HeadingElement_Fragment;'PageData_HeadingElement_Fragment': PageData_HeadingElement_Fragment } }
+    ) | (
       { __typename?: 'HelloWorld' }
       & { ' $fragmentRefs'?: { 'IContentData_HelloWorld_Fragment': IContentData_HelloWorld_Fragment;'BlockData_HelloWorld_Fragment': BlockData_HelloWorld_Fragment;'PageData_HelloWorld_Fragment': PageData_HelloWorld_Fragment;'HelloWorldDataFragment': HelloWorldDataFragment } }
     ) | (
@@ -9552,8 +14685,17 @@ export type getContentByIdQuery = { __typename?: 'Query', content?: { __typename
       { __typename?: 'HomePage' }
       & { ' $fragmentRefs'?: { 'IContentData_HomePage_Fragment': IContentData_HomePage_Fragment;'PageData_HomePage_Fragment': PageData_HomePage_Fragment;'HomePageDataFragment': HomePageDataFragment } }
     ) | (
+      { __typename?: 'ImageElement' }
+      & { ' $fragmentRefs'?: { 'IContentData_ImageElement_Fragment': IContentData_ImageElement_Fragment;'BlockData_ImageElement_Fragment': BlockData_ImageElement_Fragment;'PageData_ImageElement_Fragment': PageData_ImageElement_Fragment } }
+    ) | (
       { __typename?: 'ImageMedia' }
       & { ' $fragmentRefs'?: { 'IContentData_ImageMedia_Fragment': IContentData_ImageMedia_Fragment;'PageData_ImageMedia_Fragment': PageData_ImageMedia_Fragment } }
+    ) | (
+      { __typename?: 'LandingPage' }
+      & { ' $fragmentRefs'?: { 'IContentData_LandingPage_Fragment': IContentData_LandingPage_Fragment;'PageData_LandingPage_Fragment': PageData_LandingPage_Fragment } }
+    ) | (
+      { __typename?: 'LayoutSettingsBlock' }
+      & { ' $fragmentRefs'?: { 'IContentData_LayoutSettingsBlock_Fragment': IContentData_LayoutSettingsBlock_Fragment;'BlockData_LayoutSettingsBlock_Fragment': BlockData_LayoutSettingsBlock_Fragment;'PageData_LayoutSettingsBlock_Fragment': PageData_LayoutSettingsBlock_Fragment } }
     ) | (
       { __typename?: 'LogoItemBlock' }
       & { ' $fragmentRefs'?: { 'IContentData_LogoItemBlock_Fragment': IContentData_LogoItemBlock_Fragment;'BlockData_LogoItemBlock_Fragment': BlockData_LogoItemBlock_Fragment;'PageData_LogoItemBlock_Fragment': PageData_LogoItemBlock_Fragment;'LogoItemBlockDataFragment': LogoItemBlockDataFragment } }
@@ -9561,8 +14703,23 @@ export type getContentByIdQuery = { __typename?: 'Query', content?: { __typename
       { __typename?: 'LogosBlock' }
       & { ' $fragmentRefs'?: { 'IContentData_LogosBlock_Fragment': IContentData_LogosBlock_Fragment;'BlockData_LogosBlock_Fragment': BlockData_LogosBlock_Fragment;'PageData_LogosBlock_Fragment': PageData_LogosBlock_Fragment;'LogosBlockDataFragment': LogosBlockDataFragment } }
     ) | (
+      { __typename?: 'MegaMenuGroupBlock' }
+      & { ' $fragmentRefs'?: { 'IContentData_MegaMenuGroupBlock_Fragment': IContentData_MegaMenuGroupBlock_Fragment;'BlockData_MegaMenuGroupBlock_Fragment': BlockData_MegaMenuGroupBlock_Fragment;'PageData_MegaMenuGroupBlock_Fragment': PageData_MegaMenuGroupBlock_Fragment } }
+    ) | (
+      { __typename?: 'MenuNavigationBlock' }
+      & { ' $fragmentRefs'?: { 'IContentData_MenuNavigationBlock_Fragment': IContentData_MenuNavigationBlock_Fragment;'BlockData_MenuNavigationBlock_Fragment': BlockData_MenuNavigationBlock_Fragment;'PageData_MenuNavigationBlock_Fragment': PageData_MenuNavigationBlock_Fragment } }
+    ) | (
       { __typename?: 'NavItem' }
       & { ' $fragmentRefs'?: { 'IContentData_NavItem_Fragment': IContentData_NavItem_Fragment;'BlockData_NavItem_Fragment': BlockData_NavItem_Fragment;'PageData_NavItem_Fragment': PageData_NavItem_Fragment;'NavItemDataFragment': NavItemDataFragment } }
+    ) | (
+      { __typename?: 'OdpEmbedBlock' }
+      & { ' $fragmentRefs'?: { 'IContentData_OdpEmbedBlock_Fragment': IContentData_OdpEmbedBlock_Fragment;'BlockData_OdpEmbedBlock_Fragment': BlockData_OdpEmbedBlock_Fragment;'PageData_OdpEmbedBlock_Fragment': PageData_OdpEmbedBlock_Fragment } }
+    ) | (
+      { __typename?: 'PageSeoSettings' }
+      & { ' $fragmentRefs'?: { 'IContentData_PageSeoSettings_Fragment': IContentData_PageSeoSettings_Fragment;'BlockData_PageSeoSettings_Fragment': BlockData_PageSeoSettings_Fragment;'PageData_PageSeoSettings_Fragment': PageData_PageSeoSettings_Fragment } }
+    ) | (
+      { __typename?: 'ParagraphElement' }
+      & { ' $fragmentRefs'?: { 'IContentData_ParagraphElement_Fragment': IContentData_ParagraphElement_Fragment;'BlockData_ParagraphElement_Fragment': BlockData_ParagraphElement_Fragment;'PageData_ParagraphElement_Fragment': PageData_ParagraphElement_Fragment } }
     ) | (
       { __typename?: 'PortfolioGridBlock' }
       & { ' $fragmentRefs'?: { 'IContentData_PortfolioGridBlock_Fragment': IContentData_PortfolioGridBlock_Fragment;'BlockData_PortfolioGridBlock_Fragment': BlockData_PortfolioGridBlock_Fragment;'PageData_PortfolioGridBlock_Fragment': PageData_PortfolioGridBlock_Fragment;'PortfolioGridBlockDataFragment': PortfolioGridBlockDataFragment } }
@@ -9572,6 +14729,12 @@ export type getContentByIdQuery = { __typename?: 'Query', content?: { __typename
     ) | (
       { __typename?: 'ProfileBlock' }
       & { ' $fragmentRefs'?: { 'IContentData_ProfileBlock_Fragment': IContentData_ProfileBlock_Fragment;'BlockData_ProfileBlock_Fragment': BlockData_ProfileBlock_Fragment;'PageData_ProfileBlock_Fragment': PageData_ProfileBlock_Fragment;'ProfileBlockDataFragment': ProfileBlockDataFragment } }
+    ) | (
+      { __typename?: 'QuoteBlock' }
+      & { ' $fragmentRefs'?: { 'IContentData_QuoteBlock_Fragment': IContentData_QuoteBlock_Fragment;'BlockData_QuoteBlock_Fragment': BlockData_QuoteBlock_Fragment;'PageData_QuoteBlock_Fragment': PageData_QuoteBlock_Fragment } }
+    ) | (
+      { __typename?: 'RichTextElement' }
+      & { ' $fragmentRefs'?: { 'IContentData_RichTextElement_Fragment': IContentData_RichTextElement_Fragment;'BlockData_RichTextElement_Fragment': BlockData_RichTextElement_Fragment;'PageData_RichTextElement_Fragment': PageData_RichTextElement_Fragment } }
     ) | (
       { __typename?: 'SEOExperience' }
       & { ' $fragmentRefs'?: { 'IContentData_SEOExperience_Fragment': IContentData_SEOExperience_Fragment;'PageData_SEOExperience_Fragment': PageData_SEOExperience_Fragment;'SEOExperienceDataFragment': SEOExperienceDataFragment } }
@@ -9585,6 +14748,9 @@ export type getContentByIdQuery = { __typename?: 'Query', content?: { __typename
       { __typename?: 'SocialLink' }
       & { ' $fragmentRefs'?: { 'IContentData_SocialLink_Fragment': IContentData_SocialLink_Fragment;'BlockData_SocialLink_Fragment': BlockData_SocialLink_Fragment;'PageData_SocialLink_Fragment': PageData_SocialLink_Fragment;'SocialLinkDataFragment': SocialLinkDataFragment } }
     ) | (
+      { __typename?: 'SomeGreatNewPage' }
+      & { ' $fragmentRefs'?: { 'IContentData_SomeGreatNewPage_Fragment': IContentData_SomeGreatNewPage_Fragment;'PageData_SomeGreatNewPage_Fragment': PageData_SomeGreatNewPage_Fragment } }
+    ) | (
       { __typename?: 'StartPage' }
       & { ' $fragmentRefs'?: { 'IContentData_StartPage_Fragment': IContentData_StartPage_Fragment;'PageData_StartPage_Fragment': PageData_StartPage_Fragment;'StartPageDataFragment': StartPageDataFragment } }
     ) | (
@@ -9594,17 +14760,26 @@ export type getContentByIdQuery = { __typename?: 'Query', content?: { __typename
       { __typename?: 'SysContentFolder' }
       & { ' $fragmentRefs'?: { 'IContentData_SysContentFolder_Fragment': IContentData_SysContentFolder_Fragment;'PageData_SysContentFolder_Fragment': PageData_SysContentFolder_Fragment } }
     ) | (
-      { __typename?: 'TedTestBlock' }
-      & { ' $fragmentRefs'?: { 'IContentData_TedTestBlock_Fragment': IContentData_TedTestBlock_Fragment;'BlockData_TedTestBlock_Fragment': BlockData_TedTestBlock_Fragment;'PageData_TedTestBlock_Fragment': PageData_TedTestBlock_Fragment;'TedTestBlockDataFragment': TedTestBlockDataFragment } }
+      { __typename?: 'TestBlockPropertyGroup' }
+      & { ' $fragmentRefs'?: { 'IContentData_TestBlockPropertyGroup_Fragment': IContentData_TestBlockPropertyGroup_Fragment;'BlockData_TestBlockPropertyGroup_Fragment': BlockData_TestBlockPropertyGroup_Fragment;'PageData_TestBlockPropertyGroup_Fragment': PageData_TestBlockPropertyGroup_Fragment } }
+    ) | (
+      { __typename?: 'TestimonialElement' }
+      & { ' $fragmentRefs'?: { 'IContentData_TestimonialElement_Fragment': IContentData_TestimonialElement_Fragment;'BlockData_TestimonialElement_Fragment': BlockData_TestimonialElement_Fragment;'PageData_TestimonialElement_Fragment': PageData_TestimonialElement_Fragment } }
     ) | (
       { __typename?: 'TestimonialItem' }
-      & { ' $fragmentRefs'?: { 'IContentData_TestimonialItem_Fragment': IContentData_TestimonialItem_Fragment;'BlockData_TestimonialItem_Fragment': BlockData_TestimonialItem_Fragment;'PageData_TestimonialItem_Fragment': PageData_TestimonialItem_Fragment;'TestimonialItemDataFragment': TestimonialItemDataFragment } }
+      & { ' $fragmentRefs'?: { 'IContentData_TestimonialItem_Fragment': IContentData_TestimonialItem_Fragment;'BlockData_TestimonialItem_Fragment': BlockData_TestimonialItem_Fragment;'PageData_TestimonialItem_Fragment': PageData_TestimonialItem_Fragment } }
     ) | (
       { __typename?: 'TestimonialItemBlock' }
       & { ' $fragmentRefs'?: { 'IContentData_TestimonialItemBlock_Fragment': IContentData_TestimonialItemBlock_Fragment;'BlockData_TestimonialItemBlock_Fragment': BlockData_TestimonialItemBlock_Fragment;'PageData_TestimonialItemBlock_Fragment': PageData_TestimonialItemBlock_Fragment;'TestimonialItemBlockDataFragment': TestimonialItemBlockDataFragment } }
     ) | (
       { __typename?: 'TestimonialsBlock' }
       & { ' $fragmentRefs'?: { 'IContentData_TestimonialsBlock_Fragment': IContentData_TestimonialsBlock_Fragment;'BlockData_TestimonialsBlock_Fragment': BlockData_TestimonialsBlock_Fragment;'PageData_TestimonialsBlock_Fragment': PageData_TestimonialsBlock_Fragment;'TestimonialsBlockDataFragment': TestimonialsBlockDataFragment } }
+    ) | (
+      { __typename?: 'TextBlock' }
+      & { ' $fragmentRefs'?: { 'IContentData_TextBlock_Fragment': IContentData_TextBlock_Fragment;'BlockData_TextBlock_Fragment': BlockData_TextBlock_Fragment;'PageData_TextBlock_Fragment': PageData_TextBlock_Fragment } }
+    ) | (
+      { __typename?: 'VideoElement' }
+      & { ' $fragmentRefs'?: { 'IContentData_VideoElement_Fragment': IContentData_VideoElement_Fragment;'BlockData_VideoElement_Fragment': BlockData_VideoElement_Fragment;'PageData_VideoElement_Fragment': PageData_VideoElement_Fragment } }
     ) | (
       { __typename?: 'VideoMedia' }
       & { ' $fragmentRefs'?: { 'IContentData_VideoMedia_Fragment': IContentData_VideoMedia_Fragment;'PageData_VideoMedia_Fragment': PageData_VideoMedia_Fragment } }
@@ -9646,6 +14821,12 @@ export type getContentByPathQueryVariables = Exact<{
 
 
 export type getContentByPathQuery = { __typename?: 'Query', content?: { __typename?: '_ContentOutput', total?: number | null, items?: (
+      { __typename?: 'AnotherGreatPage' }
+      & { ' $fragmentRefs'?: { 'IContentData_AnotherGreatPage_Fragment': IContentData_AnotherGreatPage_Fragment;'PageData_AnotherGreatPage_Fragment': PageData_AnotherGreatPage_Fragment } }
+    ) | (
+      { __typename?: 'ArticleListElement' }
+      & { ' $fragmentRefs'?: { 'IContentData_ArticleListElement_Fragment': IContentData_ArticleListElement_Fragment;'PageData_ArticleListElement_Fragment': PageData_ArticleListElement_Fragment } }
+    ) | (
       { __typename?: 'AvailabilityBlock' }
       & { ' $fragmentRefs'?: { 'IContentData_AvailabilityBlock_Fragment': IContentData_AvailabilityBlock_Fragment;'PageData_AvailabilityBlock_Fragment': PageData_AvailabilityBlock_Fragment } }
     ) | (
@@ -9655,11 +14836,32 @@ export type getContentByPathQuery = { __typename?: 'Query', content?: { __typena
       { __typename?: 'BlankSection' }
       & { ' $fragmentRefs'?: { 'IContentData_BlankSection_Fragment': IContentData_BlankSection_Fragment;'PageData_BlankSection_Fragment': PageData_BlankSection_Fragment } }
     ) | (
+      { __typename?: 'BlogPostPage' }
+      & { ' $fragmentRefs'?: { 'IContentData_BlogPostPage_Fragment': IContentData_BlogPostPage_Fragment;'PageData_BlogPostPage_Fragment': PageData_BlogPostPage_Fragment } }
+    ) | (
+      { __typename?: 'BlogSectionExperience' }
+      & { ' $fragmentRefs'?: { 'IContentData_BlogSectionExperience_Fragment': IContentData_BlogSectionExperience_Fragment;'PageData_BlogSectionExperience_Fragment': PageData_BlogSectionExperience_Fragment } }
+    ) | (
+      { __typename?: 'ButtonBlock' }
+      & { ' $fragmentRefs'?: { 'IContentData_ButtonBlock_Fragment': IContentData_ButtonBlock_Fragment;'PageData_ButtonBlock_Fragment': PageData_ButtonBlock_Fragment } }
+    ) | (
       { __typename?: 'CMSPage' }
       & { ' $fragmentRefs'?: { 'IContentData_CMSPage_Fragment': IContentData_CMSPage_Fragment;'PageData_CMSPage_Fragment': PageData_CMSPage_Fragment;'CMSPageDataFragment': CMSPageDataFragment } }
     ) | (
+      { __typename?: 'CTAElement' }
+      & { ' $fragmentRefs'?: { 'IContentData_CTAElement_Fragment': IContentData_CTAElement_Fragment;'PageData_CTAElement_Fragment': PageData_CTAElement_Fragment } }
+    ) | (
+      { __typename?: 'CarouselBlock' }
+      & { ' $fragmentRefs'?: { 'IContentData_CarouselBlock_Fragment': IContentData_CarouselBlock_Fragment;'PageData_CarouselBlock_Fragment': PageData_CarouselBlock_Fragment } }
+    ) | (
       { __typename?: 'ContactBlock' }
       & { ' $fragmentRefs'?: { 'IContentData_ContactBlock_Fragment': IContentData_ContactBlock_Fragment;'PageData_ContactBlock_Fragment': PageData_ContactBlock_Fragment } }
+    ) | (
+      { __typename?: 'ContentRecsElement' }
+      & { ' $fragmentRefs'?: { 'IContentData_ContentRecsElement_Fragment': IContentData_ContentRecsElement_Fragment;'PageData_ContentRecsElement_Fragment': PageData_ContentRecsElement_Fragment } }
+    ) | (
+      { __typename?: 'ContinueReadingComponent' }
+      & { ' $fragmentRefs'?: { 'IContentData_ContinueReadingComponent_Fragment': IContentData_ContinueReadingComponent_Fragment;'PageData_ContinueReadingComponent_Fragment': PageData_ContinueReadingComponent_Fragment } }
     ) | (
       { __typename?: 'Footer' }
       & { ' $fragmentRefs'?: { 'IContentData_Footer_Fragment': IContentData_Footer_Fragment;'PageData_Footer_Fragment': PageData_Footer_Fragment;'FooterDataFragment': FooterDataFragment } }
@@ -9676,6 +14878,9 @@ export type getContentByPathQuery = { __typename?: 'Query', content?: { __typena
       { __typename?: 'Header' }
       & { ' $fragmentRefs'?: { 'IContentData_Header_Fragment': IContentData_Header_Fragment;'PageData_Header_Fragment': PageData_Header_Fragment;'HeaderDataFragment': HeaderDataFragment } }
     ) | (
+      { __typename?: 'HeadingElement' }
+      & { ' $fragmentRefs'?: { 'IContentData_HeadingElement_Fragment': IContentData_HeadingElement_Fragment;'PageData_HeadingElement_Fragment': PageData_HeadingElement_Fragment } }
+    ) | (
       { __typename?: 'HelloWorld' }
       & { ' $fragmentRefs'?: { 'IContentData_HelloWorld_Fragment': IContentData_HelloWorld_Fragment;'PageData_HelloWorld_Fragment': PageData_HelloWorld_Fragment } }
     ) | (
@@ -9685,8 +14890,17 @@ export type getContentByPathQuery = { __typename?: 'Query', content?: { __typena
       { __typename?: 'HomePage' }
       & { ' $fragmentRefs'?: { 'IContentData_HomePage_Fragment': IContentData_HomePage_Fragment;'PageData_HomePage_Fragment': PageData_HomePage_Fragment;'HomePageDataFragment': HomePageDataFragment } }
     ) | (
+      { __typename?: 'ImageElement' }
+      & { ' $fragmentRefs'?: { 'IContentData_ImageElement_Fragment': IContentData_ImageElement_Fragment;'PageData_ImageElement_Fragment': PageData_ImageElement_Fragment } }
+    ) | (
       { __typename?: 'ImageMedia' }
       & { ' $fragmentRefs'?: { 'IContentData_ImageMedia_Fragment': IContentData_ImageMedia_Fragment;'PageData_ImageMedia_Fragment': PageData_ImageMedia_Fragment } }
+    ) | (
+      { __typename?: 'LandingPage' }
+      & { ' $fragmentRefs'?: { 'IContentData_LandingPage_Fragment': IContentData_LandingPage_Fragment;'PageData_LandingPage_Fragment': PageData_LandingPage_Fragment } }
+    ) | (
+      { __typename?: 'LayoutSettingsBlock' }
+      & { ' $fragmentRefs'?: { 'IContentData_LayoutSettingsBlock_Fragment': IContentData_LayoutSettingsBlock_Fragment;'PageData_LayoutSettingsBlock_Fragment': PageData_LayoutSettingsBlock_Fragment } }
     ) | (
       { __typename?: 'LogoItemBlock' }
       & { ' $fragmentRefs'?: { 'IContentData_LogoItemBlock_Fragment': IContentData_LogoItemBlock_Fragment;'PageData_LogoItemBlock_Fragment': PageData_LogoItemBlock_Fragment } }
@@ -9694,8 +14908,23 @@ export type getContentByPathQuery = { __typename?: 'Query', content?: { __typena
       { __typename?: 'LogosBlock' }
       & { ' $fragmentRefs'?: { 'IContentData_LogosBlock_Fragment': IContentData_LogosBlock_Fragment;'PageData_LogosBlock_Fragment': PageData_LogosBlock_Fragment } }
     ) | (
+      { __typename?: 'MegaMenuGroupBlock' }
+      & { ' $fragmentRefs'?: { 'IContentData_MegaMenuGroupBlock_Fragment': IContentData_MegaMenuGroupBlock_Fragment;'PageData_MegaMenuGroupBlock_Fragment': PageData_MegaMenuGroupBlock_Fragment } }
+    ) | (
+      { __typename?: 'MenuNavigationBlock' }
+      & { ' $fragmentRefs'?: { 'IContentData_MenuNavigationBlock_Fragment': IContentData_MenuNavigationBlock_Fragment;'PageData_MenuNavigationBlock_Fragment': PageData_MenuNavigationBlock_Fragment } }
+    ) | (
       { __typename?: 'NavItem' }
       & { ' $fragmentRefs'?: { 'IContentData_NavItem_Fragment': IContentData_NavItem_Fragment;'PageData_NavItem_Fragment': PageData_NavItem_Fragment } }
+    ) | (
+      { __typename?: 'OdpEmbedBlock' }
+      & { ' $fragmentRefs'?: { 'IContentData_OdpEmbedBlock_Fragment': IContentData_OdpEmbedBlock_Fragment;'PageData_OdpEmbedBlock_Fragment': PageData_OdpEmbedBlock_Fragment } }
+    ) | (
+      { __typename?: 'PageSeoSettings' }
+      & { ' $fragmentRefs'?: { 'IContentData_PageSeoSettings_Fragment': IContentData_PageSeoSettings_Fragment;'PageData_PageSeoSettings_Fragment': PageData_PageSeoSettings_Fragment } }
+    ) | (
+      { __typename?: 'ParagraphElement' }
+      & { ' $fragmentRefs'?: { 'IContentData_ParagraphElement_Fragment': IContentData_ParagraphElement_Fragment;'PageData_ParagraphElement_Fragment': PageData_ParagraphElement_Fragment } }
     ) | (
       { __typename?: 'PortfolioGridBlock' }
       & { ' $fragmentRefs'?: { 'IContentData_PortfolioGridBlock_Fragment': IContentData_PortfolioGridBlock_Fragment;'PageData_PortfolioGridBlock_Fragment': PageData_PortfolioGridBlock_Fragment } }
@@ -9705,6 +14934,12 @@ export type getContentByPathQuery = { __typename?: 'Query', content?: { __typena
     ) | (
       { __typename?: 'ProfileBlock' }
       & { ' $fragmentRefs'?: { 'IContentData_ProfileBlock_Fragment': IContentData_ProfileBlock_Fragment;'PageData_ProfileBlock_Fragment': PageData_ProfileBlock_Fragment } }
+    ) | (
+      { __typename?: 'QuoteBlock' }
+      & { ' $fragmentRefs'?: { 'IContentData_QuoteBlock_Fragment': IContentData_QuoteBlock_Fragment;'PageData_QuoteBlock_Fragment': PageData_QuoteBlock_Fragment } }
+    ) | (
+      { __typename?: 'RichTextElement' }
+      & { ' $fragmentRefs'?: { 'IContentData_RichTextElement_Fragment': IContentData_RichTextElement_Fragment;'PageData_RichTextElement_Fragment': PageData_RichTextElement_Fragment } }
     ) | (
       { __typename?: 'SEOExperience' }
       & { ' $fragmentRefs'?: { 'IContentData_SEOExperience_Fragment': IContentData_SEOExperience_Fragment;'PageData_SEOExperience_Fragment': PageData_SEOExperience_Fragment;'SEOExperienceDataFragment': SEOExperienceDataFragment } }
@@ -9718,6 +14953,9 @@ export type getContentByPathQuery = { __typename?: 'Query', content?: { __typena
       { __typename?: 'SocialLink' }
       & { ' $fragmentRefs'?: { 'IContentData_SocialLink_Fragment': IContentData_SocialLink_Fragment;'PageData_SocialLink_Fragment': PageData_SocialLink_Fragment } }
     ) | (
+      { __typename?: 'SomeGreatNewPage' }
+      & { ' $fragmentRefs'?: { 'IContentData_SomeGreatNewPage_Fragment': IContentData_SomeGreatNewPage_Fragment;'PageData_SomeGreatNewPage_Fragment': PageData_SomeGreatNewPage_Fragment } }
+    ) | (
       { __typename?: 'StartPage' }
       & { ' $fragmentRefs'?: { 'IContentData_StartPage_Fragment': IContentData_StartPage_Fragment;'PageData_StartPage_Fragment': PageData_StartPage_Fragment;'StartPageDataFragment': StartPageDataFragment } }
     ) | (
@@ -9727,8 +14965,11 @@ export type getContentByPathQuery = { __typename?: 'Query', content?: { __typena
       { __typename?: 'SysContentFolder' }
       & { ' $fragmentRefs'?: { 'IContentData_SysContentFolder_Fragment': IContentData_SysContentFolder_Fragment;'PageData_SysContentFolder_Fragment': PageData_SysContentFolder_Fragment } }
     ) | (
-      { __typename?: 'TedTestBlock' }
-      & { ' $fragmentRefs'?: { 'IContentData_TedTestBlock_Fragment': IContentData_TedTestBlock_Fragment;'PageData_TedTestBlock_Fragment': PageData_TedTestBlock_Fragment } }
+      { __typename?: 'TestBlockPropertyGroup' }
+      & { ' $fragmentRefs'?: { 'IContentData_TestBlockPropertyGroup_Fragment': IContentData_TestBlockPropertyGroup_Fragment;'PageData_TestBlockPropertyGroup_Fragment': PageData_TestBlockPropertyGroup_Fragment } }
+    ) | (
+      { __typename?: 'TestimonialElement' }
+      & { ' $fragmentRefs'?: { 'IContentData_TestimonialElement_Fragment': IContentData_TestimonialElement_Fragment;'PageData_TestimonialElement_Fragment': PageData_TestimonialElement_Fragment } }
     ) | (
       { __typename?: 'TestimonialItem' }
       & { ' $fragmentRefs'?: { 'IContentData_TestimonialItem_Fragment': IContentData_TestimonialItem_Fragment;'PageData_TestimonialItem_Fragment': PageData_TestimonialItem_Fragment } }
@@ -9738,6 +14979,12 @@ export type getContentByPathQuery = { __typename?: 'Query', content?: { __typena
     ) | (
       { __typename?: 'TestimonialsBlock' }
       & { ' $fragmentRefs'?: { 'IContentData_TestimonialsBlock_Fragment': IContentData_TestimonialsBlock_Fragment;'PageData_TestimonialsBlock_Fragment': PageData_TestimonialsBlock_Fragment } }
+    ) | (
+      { __typename?: 'TextBlock' }
+      & { ' $fragmentRefs'?: { 'IContentData_TextBlock_Fragment': IContentData_TextBlock_Fragment;'PageData_TextBlock_Fragment': PageData_TextBlock_Fragment } }
+    ) | (
+      { __typename?: 'VideoElement' }
+      & { ' $fragmentRefs'?: { 'IContentData_VideoElement_Fragment': IContentData_VideoElement_Fragment;'PageData_VideoElement_Fragment': PageData_VideoElement_Fragment } }
     ) | (
       { __typename?: 'VideoMedia' }
       & { ' $fragmentRefs'?: { 'IContentData_VideoMedia_Fragment': IContentData_VideoMedia_Fragment;'PageData_VideoMedia_Fragment': PageData_VideoMedia_Fragment } }
@@ -9779,7 +15026,7 @@ export type getContentTypeQueryVariables = Exact<{
 }>;
 
 
-export type getContentTypeQuery = { __typename?: 'Query', content?: { __typename?: '_ContentOutput', total?: number | null, items?: { __typename?: 'AvailabilityBlock', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: 'BlankExperience', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: 'BlankSection', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: 'CMSPage', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: 'ContactBlock', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: 'Footer', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: 'FooterColumn', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: 'GenericMedia', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: 'GenericMedia123', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: 'Header', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: 'HelloWorld', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: 'HeroBlock', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: 'HomePage', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: 'ImageMedia', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: 'LogoItemBlock', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: 'LogosBlock', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: 'NavItem', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: 'PortfolioGridBlock', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: 'PortfolioItemBlock', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: 'ProfileBlock', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: 'SEOExperience', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: 'ServiceItem', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: 'ServicesBlock', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: 'SocialLink', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: 'StartPage', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: 'StoryBlock', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: 'SysContentFolder', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: 'TedTestBlock', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: 'TestimonialItem', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: 'TestimonialItemBlock', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: 'TestimonialsBlock', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: 'VideoMedia', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: '_Component', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: '_Content', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: '_Experience', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: '_Folder', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: '_Image', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: '_Media', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: '_Page', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: '_Section', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: '_Video', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | null } | null };
+export type getContentTypeQuery = { __typename?: 'Query', content?: { __typename?: '_ContentOutput', total?: number | null, items?: { __typename?: 'AnotherGreatPage', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: 'ArticleListElement', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: 'AvailabilityBlock', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: 'BlankExperience', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: 'BlankSection', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: 'BlogPostPage', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: 'BlogSectionExperience', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: 'ButtonBlock', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: 'CMSPage', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: 'CTAElement', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: 'CarouselBlock', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: 'ContactBlock', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: 'ContentRecsElement', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: 'ContinueReadingComponent', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: 'Footer', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: 'FooterColumn', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: 'GenericMedia', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: 'GenericMedia123', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: 'Header', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: 'HeadingElement', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: 'HelloWorld', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: 'HeroBlock', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: 'HomePage', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: 'ImageElement', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: 'ImageMedia', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: 'LandingPage', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: 'LayoutSettingsBlock', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: 'LogoItemBlock', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: 'LogosBlock', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: 'MegaMenuGroupBlock', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: 'MenuNavigationBlock', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: 'NavItem', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: 'OdpEmbedBlock', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: 'PageSeoSettings', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: 'ParagraphElement', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: 'PortfolioGridBlock', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: 'PortfolioItemBlock', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: 'ProfileBlock', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: 'QuoteBlock', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: 'RichTextElement', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: 'SEOExperience', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: 'ServiceItem', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: 'ServicesBlock', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: 'SocialLink', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: 'SomeGreatNewPage', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: 'StartPage', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: 'StoryBlock', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: 'SysContentFolder', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: 'TestBlockPropertyGroup', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: 'TestimonialElement', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: 'TestimonialItem', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: 'TestimonialItemBlock', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: 'TestimonialsBlock', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: 'TextBlock', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: 'VideoElement', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: 'VideoMedia', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: '_Component', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: '_Content', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: '_Experience', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: '_Folder', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: '_Image', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: '_Media', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: '_Page', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: '_Section', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | { __typename?: '_Video', _metadata?: { __typename?: 'ContentMetadata', types?: Array<string | null> | null } | { __typename?: 'InstanceMetadata', types?: Array<string | null> | null } | { __typename?: 'ItemMetadata', types?: Array<string | null> | null } | { __typename?: 'MediaMetadata', types?: Array<string | null> | null } | null } | null } | null };
 
 export const CompositionNodeDataFragmentDoc = {"kind":"Document","definitions":[{"kind":"FragmentDefinition","name":{"kind":"Name","value":"CompositionNodeData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ICompositionNode"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","alias":{"kind":"Name","value":"name"},"name":{"kind":"Name","value":"displayName"}},{"kind":"Field","alias":{"kind":"Name","value":"layoutType"},"name":{"kind":"Name","value":"nodeType"}},{"kind":"Field","name":{"kind":"Name","value":"type"}},{"kind":"Field","name":{"kind":"Name","value":"key"}},{"kind":"Field","alias":{"kind":"Name","value":"template"},"name":{"kind":"Name","value":"displayTemplateKey"}},{"kind":"Field","alias":{"kind":"Name","value":"settings"},"name":{"kind":"Name","value":"displaySettings"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"key"}},{"kind":"Field","name":{"kind":"Name","value":"value"}}]}}]}}]} as unknown as DocumentNode<CompositionNodeDataFragment, unknown>;
 export const LinkDataFragmentDoc = {"kind":"Document","definitions":[{"kind":"FragmentDefinition","name":{"kind":"Name","value":"LinkData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ContentUrl"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"type"}},{"kind":"Field","name":{"kind":"Name","value":"base"}},{"kind":"Field","name":{"kind":"Name","value":"default"}}]}}]} as unknown as DocumentNode<LinkDataFragment, unknown>;
@@ -9804,24 +15051,23 @@ export const ServiceItemDataFragmentDoc = {"kind":"Document","definitions":[{"ki
 export const ServicesBlockDataFragmentDoc = {"kind":"Document","definitions":[{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ServicesBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ServicesBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"services"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"LinkData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ContentUrl"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"type"}},{"kind":"Field","name":{"kind":"Name","value":"base"}},{"kind":"Field","name":{"kind":"Name","value":"default"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"IContentInfo"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"IContentMetadata"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"key"}},{"kind":"Field","name":{"kind":"Name","value":"locale"}},{"kind":"Field","name":{"kind":"Name","value":"types"}},{"kind":"Field","name":{"kind":"Name","value":"displayName"}},{"kind":"Field","name":{"kind":"Name","value":"version"}},{"kind":"Field","name":{"kind":"Name","value":"url"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"LinkData"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"IContentData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IContent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"_metadata"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentInfo"}}]}},{"kind":"Field","alias":{"kind":"Name","value":"_type"},"name":{"kind":"Name","value":"__typename"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"IContentListItem"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IContent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentData"}}]}}]} as unknown as DocumentNode<ServicesBlockDataFragment, unknown>;
 export const SocialLinkDataFragmentDoc = {"kind":"Document","definitions":[{"kind":"FragmentDefinition","name":{"kind":"Name","value":"SocialLinkData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"SocialLink"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"platform"}},{"kind":"Field","name":{"kind":"Name","value":"href"}}]}}]} as unknown as DocumentNode<SocialLinkDataFragment, unknown>;
 export const StoryBlockDataFragmentDoc = {"kind":"Document","definitions":[{"kind":"FragmentDefinition","name":{"kind":"Name","value":"StoryBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"StoryBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"story"}},{"kind":"Field","name":{"kind":"Name","value":"highlights"}}]}}]} as unknown as DocumentNode<StoryBlockDataFragment, unknown>;
-export const TedTestBlockDataFragmentDoc = {"kind":"Document","definitions":[{"kind":"FragmentDefinition","name":{"kind":"Name","value":"TedTestBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"TedTestBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"stringTest"}}]}}]} as unknown as DocumentNode<TedTestBlockDataFragment, unknown>;
-export const TestimonialItemDataFragmentDoc = {"kind":"Document","definitions":[{"kind":"FragmentDefinition","name":{"kind":"Name","value":"TestimonialItemData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"TestimonialItem"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"fullName"}},{"kind":"Field","name":{"kind":"Name","value":"position"}},{"kind":"Field","name":{"kind":"Name","value":"content"}},{"kind":"Field","name":{"kind":"Name","value":"avatarSrc"}}]}}]} as unknown as DocumentNode<TestimonialItemDataFragment, unknown>;
 export const TestimonialItemBlockDataFragmentDoc = {"kind":"Document","definitions":[{"kind":"FragmentDefinition","name":{"kind":"Name","value":"TestimonialItemBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"TestimonialItemBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"fullName"}},{"kind":"Field","name":{"kind":"Name","value":"position"}},{"kind":"Field","name":{"kind":"Name","value":"content"}},{"kind":"Field","name":{"kind":"Name","value":"avatarSrc"}}]}}]} as unknown as DocumentNode<TestimonialItemBlockDataFragment, unknown>;
 export const TestimonialsBlockDataFragmentDoc = {"kind":"Document","definitions":[{"kind":"FragmentDefinition","name":{"kind":"Name","value":"TestimonialsBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"TestimonialsBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"testimonials"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"LinkData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ContentUrl"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"type"}},{"kind":"Field","name":{"kind":"Name","value":"base"}},{"kind":"Field","name":{"kind":"Name","value":"default"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"IContentInfo"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"IContentMetadata"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"key"}},{"kind":"Field","name":{"kind":"Name","value":"locale"}},{"kind":"Field","name":{"kind":"Name","value":"types"}},{"kind":"Field","name":{"kind":"Name","value":"displayName"}},{"kind":"Field","name":{"kind":"Name","value":"version"}},{"kind":"Field","name":{"kind":"Name","value":"url"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"LinkData"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"IContentData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IContent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"_metadata"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentInfo"}}]}},{"kind":"Field","alias":{"kind":"Name","value":"_type"},"name":{"kind":"Name","value":"__typename"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"IContentListItem"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IContent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentData"}}]}}]} as unknown as DocumentNode<TestimonialsBlockDataFragment, unknown>;
-export const CompositionComponentNodeDataFragmentDoc = {"kind":"Document","definitions":[{"kind":"FragmentDefinition","name":{"kind":"Name","value":"CompositionComponentNodeData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ICompositionComponentNode"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"component"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"BlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ElementData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"AvailabilityBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ContactBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"FooterColumnData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HelloWorldData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HeroBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogoItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogosBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"NavItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioGridBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ProfileBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServiceItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServicesBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"SocialLinkData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"StoryBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TedTestBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialsBlockData"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"LinkData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ContentUrl"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"type"}},{"kind":"Field","name":{"kind":"Name","value":"base"}},{"kind":"Field","name":{"kind":"Name","value":"default"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"IContentInfo"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"IContentMetadata"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"key"}},{"kind":"Field","name":{"kind":"Name","value":"locale"}},{"kind":"Field","name":{"kind":"Name","value":"types"}},{"kind":"Field","name":{"kind":"Name","value":"displayName"}},{"kind":"Field","name":{"kind":"Name","value":"version"}},{"kind":"Field","name":{"kind":"Name","value":"url"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"LinkData"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"IContentData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IContent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"_metadata"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentInfo"}}]}},{"kind":"Field","alias":{"kind":"Name","value":"_type"},"name":{"kind":"Name","value":"__typename"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"IElementData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IComponent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"_metadata"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentInfo"}}]}},{"kind":"Field","alias":{"kind":"Name","value":"_type"},"name":{"kind":"Name","value":"__typename"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"IContentListItem"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IContent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentData"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"BlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IComponent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentData"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ElementData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IComponent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IElementData"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"AvailabilityBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"AvailabilityBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"availability"}},{"kind":"Field","name":{"kind":"Name","value":"projectTypes"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ContactBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ContactBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"FooterColumnData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"FooterColumn"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"links"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"HelloWorldData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"HelloWorld"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"message"}},{"kind":"Field","name":{"kind":"Name","value":"detailedmessage"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"HeroBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"HeroBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"subtitle"}},{"kind":"Field","name":{"kind":"Name","value":"showDecoration"}},{"kind":"Field","name":{"kind":"Name","value":"decorationColorsPrimary"}},{"kind":"Field","name":{"kind":"Name","value":"decorationColorsSecondary"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"LogoItemBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"LogoItemBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"src"}},{"kind":"Field","name":{"kind":"Name","value":"alt"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"LogosBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"LogosBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"logos"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"NavItemData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"NavItem"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"label"}},{"kind":"Field","name":{"kind":"Name","value":"href"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"PortfolioGridBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"PortfolioGridBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"items"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"PortfolioItemBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"PortfolioItemBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"imageUrl"}},{"kind":"Field","name":{"kind":"Name","value":"link"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ProfileBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ProfileBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"imageSrc"}},{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"bio"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ServiceItemData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ServiceItem"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"icon"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ServicesBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ServicesBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"services"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"SocialLinkData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"SocialLink"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"platform"}},{"kind":"Field","name":{"kind":"Name","value":"href"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"StoryBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"StoryBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"story"}},{"kind":"Field","name":{"kind":"Name","value":"highlights"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"TedTestBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"TedTestBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"stringTest"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"TestimonialItemData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"TestimonialItem"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"fullName"}},{"kind":"Field","name":{"kind":"Name","value":"position"}},{"kind":"Field","name":{"kind":"Name","value":"content"}},{"kind":"Field","name":{"kind":"Name","value":"avatarSrc"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"TestimonialItemBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"TestimonialItemBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"fullName"}},{"kind":"Field","name":{"kind":"Name","value":"position"}},{"kind":"Field","name":{"kind":"Name","value":"content"}},{"kind":"Field","name":{"kind":"Name","value":"avatarSrc"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"TestimonialsBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"TestimonialsBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"testimonials"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}}]} as unknown as DocumentNode<CompositionComponentNodeDataFragment, unknown>;
-export const ExperienceDataFragmentDoc = {"kind":"Document","definitions":[{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ExperienceData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IExperience"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"composition"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionNodeData"}},{"kind":"Field","name":{"kind":"Name","value":"nodes"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionNodeData"}},{"kind":"InlineFragment","typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ICompositionStructureNode"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"nodes"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionNodeData"}},{"kind":"InlineFragment","typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ICompositionStructureNode"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"nodes"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionNodeData"}},{"kind":"InlineFragment","typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ICompositionStructureNode"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"nodes"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionNodeData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionComponentNodeData"}},{"kind":"InlineFragment","typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ICompositionStructureNode"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"nodes"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionNodeData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionComponentNodeData"}}]}}]}}]}}]}}]}}]}}]}}]}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionComponentNodeData"}}]}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"LinkData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ContentUrl"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"type"}},{"kind":"Field","name":{"kind":"Name","value":"base"}},{"kind":"Field","name":{"kind":"Name","value":"default"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"IContentInfo"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"IContentMetadata"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"key"}},{"kind":"Field","name":{"kind":"Name","value":"locale"}},{"kind":"Field","name":{"kind":"Name","value":"types"}},{"kind":"Field","name":{"kind":"Name","value":"displayName"}},{"kind":"Field","name":{"kind":"Name","value":"version"}},{"kind":"Field","name":{"kind":"Name","value":"url"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"LinkData"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"IContentData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IContent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"_metadata"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentInfo"}}]}},{"kind":"Field","alias":{"kind":"Name","value":"_type"},"name":{"kind":"Name","value":"__typename"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"BlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IComponent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentData"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"IElementData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IComponent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"_metadata"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentInfo"}}]}},{"kind":"Field","alias":{"kind":"Name","value":"_type"},"name":{"kind":"Name","value":"__typename"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ElementData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IComponent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IElementData"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"AvailabilityBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"AvailabilityBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"availability"}},{"kind":"Field","name":{"kind":"Name","value":"projectTypes"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ContactBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ContactBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"IContentListItem"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IContent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentData"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"FooterColumnData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"FooterColumn"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"links"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"HelloWorldData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"HelloWorld"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"message"}},{"kind":"Field","name":{"kind":"Name","value":"detailedmessage"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"HeroBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"HeroBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"subtitle"}},{"kind":"Field","name":{"kind":"Name","value":"showDecoration"}},{"kind":"Field","name":{"kind":"Name","value":"decorationColorsPrimary"}},{"kind":"Field","name":{"kind":"Name","value":"decorationColorsSecondary"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"LogoItemBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"LogoItemBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"src"}},{"kind":"Field","name":{"kind":"Name","value":"alt"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"LogosBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"LogosBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"logos"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"NavItemData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"NavItem"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"label"}},{"kind":"Field","name":{"kind":"Name","value":"href"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"PortfolioGridBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"PortfolioGridBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"items"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"PortfolioItemBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"PortfolioItemBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"imageUrl"}},{"kind":"Field","name":{"kind":"Name","value":"link"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ProfileBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ProfileBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"imageSrc"}},{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"bio"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ServiceItemData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ServiceItem"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"icon"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ServicesBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ServicesBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"services"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"SocialLinkData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"SocialLink"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"platform"}},{"kind":"Field","name":{"kind":"Name","value":"href"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"StoryBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"StoryBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"story"}},{"kind":"Field","name":{"kind":"Name","value":"highlights"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"TedTestBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"TedTestBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"stringTest"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"TestimonialItemData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"TestimonialItem"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"fullName"}},{"kind":"Field","name":{"kind":"Name","value":"position"}},{"kind":"Field","name":{"kind":"Name","value":"content"}},{"kind":"Field","name":{"kind":"Name","value":"avatarSrc"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"TestimonialItemBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"TestimonialItemBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"fullName"}},{"kind":"Field","name":{"kind":"Name","value":"position"}},{"kind":"Field","name":{"kind":"Name","value":"content"}},{"kind":"Field","name":{"kind":"Name","value":"avatarSrc"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"TestimonialsBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"TestimonialsBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"testimonials"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"CompositionNodeData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ICompositionNode"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","alias":{"kind":"Name","value":"name"},"name":{"kind":"Name","value":"displayName"}},{"kind":"Field","alias":{"kind":"Name","value":"layoutType"},"name":{"kind":"Name","value":"nodeType"}},{"kind":"Field","name":{"kind":"Name","value":"type"}},{"kind":"Field","name":{"kind":"Name","value":"key"}},{"kind":"Field","alias":{"kind":"Name","value":"template"},"name":{"kind":"Name","value":"displayTemplateKey"}},{"kind":"Field","alias":{"kind":"Name","value":"settings"},"name":{"kind":"Name","value":"displaySettings"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"key"}},{"kind":"Field","name":{"kind":"Name","value":"value"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"CompositionComponentNodeData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ICompositionComponentNode"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"component"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"BlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ElementData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"AvailabilityBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ContactBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"FooterColumnData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HelloWorldData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HeroBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogoItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogosBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"NavItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioGridBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ProfileBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServiceItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServicesBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"SocialLinkData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"StoryBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TedTestBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialsBlockData"}}]}}]}}]} as unknown as DocumentNode<ExperienceDataFragment, unknown>;
-export const BlankExperienceDataFragmentDoc = {"kind":"Document","definitions":[{"kind":"FragmentDefinition","name":{"kind":"Name","value":"BlankExperienceData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"BlankExperience"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"ExperienceData"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"CompositionNodeData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ICompositionNode"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","alias":{"kind":"Name","value":"name"},"name":{"kind":"Name","value":"displayName"}},{"kind":"Field","alias":{"kind":"Name","value":"layoutType"},"name":{"kind":"Name","value":"nodeType"}},{"kind":"Field","name":{"kind":"Name","value":"type"}},{"kind":"Field","name":{"kind":"Name","value":"key"}},{"kind":"Field","alias":{"kind":"Name","value":"template"},"name":{"kind":"Name","value":"displayTemplateKey"}},{"kind":"Field","alias":{"kind":"Name","value":"settings"},"name":{"kind":"Name","value":"displaySettings"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"key"}},{"kind":"Field","name":{"kind":"Name","value":"value"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"LinkData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ContentUrl"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"type"}},{"kind":"Field","name":{"kind":"Name","value":"base"}},{"kind":"Field","name":{"kind":"Name","value":"default"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"IContentInfo"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"IContentMetadata"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"key"}},{"kind":"Field","name":{"kind":"Name","value":"locale"}},{"kind":"Field","name":{"kind":"Name","value":"types"}},{"kind":"Field","name":{"kind":"Name","value":"displayName"}},{"kind":"Field","name":{"kind":"Name","value":"version"}},{"kind":"Field","name":{"kind":"Name","value":"url"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"LinkData"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"IContentData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IContent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"_metadata"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentInfo"}}]}},{"kind":"Field","alias":{"kind":"Name","value":"_type"},"name":{"kind":"Name","value":"__typename"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"BlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IComponent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentData"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"IElementData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IComponent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"_metadata"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentInfo"}}]}},{"kind":"Field","alias":{"kind":"Name","value":"_type"},"name":{"kind":"Name","value":"__typename"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ElementData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IComponent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IElementData"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"AvailabilityBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"AvailabilityBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"availability"}},{"kind":"Field","name":{"kind":"Name","value":"projectTypes"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ContactBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ContactBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"IContentListItem"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IContent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentData"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"FooterColumnData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"FooterColumn"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"links"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"HelloWorldData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"HelloWorld"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"message"}},{"kind":"Field","name":{"kind":"Name","value":"detailedmessage"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"HeroBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"HeroBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"subtitle"}},{"kind":"Field","name":{"kind":"Name","value":"showDecoration"}},{"kind":"Field","name":{"kind":"Name","value":"decorationColorsPrimary"}},{"kind":"Field","name":{"kind":"Name","value":"decorationColorsSecondary"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"LogoItemBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"LogoItemBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"src"}},{"kind":"Field","name":{"kind":"Name","value":"alt"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"LogosBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"LogosBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"logos"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"NavItemData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"NavItem"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"label"}},{"kind":"Field","name":{"kind":"Name","value":"href"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"PortfolioGridBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"PortfolioGridBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"items"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"PortfolioItemBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"PortfolioItemBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"imageUrl"}},{"kind":"Field","name":{"kind":"Name","value":"link"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ProfileBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ProfileBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"imageSrc"}},{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"bio"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ServiceItemData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ServiceItem"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"icon"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ServicesBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ServicesBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"services"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"SocialLinkData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"SocialLink"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"platform"}},{"kind":"Field","name":{"kind":"Name","value":"href"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"StoryBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"StoryBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"story"}},{"kind":"Field","name":{"kind":"Name","value":"highlights"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"TedTestBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"TedTestBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"stringTest"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"TestimonialItemData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"TestimonialItem"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"fullName"}},{"kind":"Field","name":{"kind":"Name","value":"position"}},{"kind":"Field","name":{"kind":"Name","value":"content"}},{"kind":"Field","name":{"kind":"Name","value":"avatarSrc"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"TestimonialItemBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"TestimonialItemBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"fullName"}},{"kind":"Field","name":{"kind":"Name","value":"position"}},{"kind":"Field","name":{"kind":"Name","value":"content"}},{"kind":"Field","name":{"kind":"Name","value":"avatarSrc"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"TestimonialsBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"TestimonialsBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"testimonials"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"CompositionComponentNodeData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ICompositionComponentNode"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"component"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"BlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ElementData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"AvailabilityBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ContactBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"FooterColumnData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HelloWorldData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HeroBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogoItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogosBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"NavItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioGridBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ProfileBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServiceItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServicesBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"SocialLinkData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"StoryBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TedTestBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialsBlockData"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ExperienceData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IExperience"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"composition"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionNodeData"}},{"kind":"Field","name":{"kind":"Name","value":"nodes"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionNodeData"}},{"kind":"InlineFragment","typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ICompositionStructureNode"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"nodes"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionNodeData"}},{"kind":"InlineFragment","typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ICompositionStructureNode"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"nodes"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionNodeData"}},{"kind":"InlineFragment","typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ICompositionStructureNode"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"nodes"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionNodeData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionComponentNodeData"}},{"kind":"InlineFragment","typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ICompositionStructureNode"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"nodes"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionNodeData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionComponentNodeData"}}]}}]}}]}}]}}]}}]}}]}}]}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionComponentNodeData"}}]}}]}}]}}]} as unknown as DocumentNode<BlankExperienceDataFragment, unknown>;
-export const SEOExperienceDataFragmentDoc = {"kind":"Document","definitions":[{"kind":"FragmentDefinition","name":{"kind":"Name","value":"SEOExperienceData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"SEOExperience"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"shortDescription"}},{"kind":"Field","name":{"kind":"Name","value":"keywords"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ExperienceData"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"CompositionNodeData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ICompositionNode"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","alias":{"kind":"Name","value":"name"},"name":{"kind":"Name","value":"displayName"}},{"kind":"Field","alias":{"kind":"Name","value":"layoutType"},"name":{"kind":"Name","value":"nodeType"}},{"kind":"Field","name":{"kind":"Name","value":"type"}},{"kind":"Field","name":{"kind":"Name","value":"key"}},{"kind":"Field","alias":{"kind":"Name","value":"template"},"name":{"kind":"Name","value":"displayTemplateKey"}},{"kind":"Field","alias":{"kind":"Name","value":"settings"},"name":{"kind":"Name","value":"displaySettings"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"key"}},{"kind":"Field","name":{"kind":"Name","value":"value"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"LinkData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ContentUrl"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"type"}},{"kind":"Field","name":{"kind":"Name","value":"base"}},{"kind":"Field","name":{"kind":"Name","value":"default"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"IContentInfo"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"IContentMetadata"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"key"}},{"kind":"Field","name":{"kind":"Name","value":"locale"}},{"kind":"Field","name":{"kind":"Name","value":"types"}},{"kind":"Field","name":{"kind":"Name","value":"displayName"}},{"kind":"Field","name":{"kind":"Name","value":"version"}},{"kind":"Field","name":{"kind":"Name","value":"url"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"LinkData"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"IContentData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IContent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"_metadata"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentInfo"}}]}},{"kind":"Field","alias":{"kind":"Name","value":"_type"},"name":{"kind":"Name","value":"__typename"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"BlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IComponent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentData"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"IElementData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IComponent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"_metadata"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentInfo"}}]}},{"kind":"Field","alias":{"kind":"Name","value":"_type"},"name":{"kind":"Name","value":"__typename"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ElementData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IComponent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IElementData"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"AvailabilityBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"AvailabilityBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"availability"}},{"kind":"Field","name":{"kind":"Name","value":"projectTypes"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ContactBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ContactBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"IContentListItem"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IContent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentData"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"FooterColumnData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"FooterColumn"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"links"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"HelloWorldData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"HelloWorld"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"message"}},{"kind":"Field","name":{"kind":"Name","value":"detailedmessage"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"HeroBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"HeroBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"subtitle"}},{"kind":"Field","name":{"kind":"Name","value":"showDecoration"}},{"kind":"Field","name":{"kind":"Name","value":"decorationColorsPrimary"}},{"kind":"Field","name":{"kind":"Name","value":"decorationColorsSecondary"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"LogoItemBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"LogoItemBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"src"}},{"kind":"Field","name":{"kind":"Name","value":"alt"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"LogosBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"LogosBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"logos"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"NavItemData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"NavItem"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"label"}},{"kind":"Field","name":{"kind":"Name","value":"href"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"PortfolioGridBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"PortfolioGridBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"items"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"PortfolioItemBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"PortfolioItemBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"imageUrl"}},{"kind":"Field","name":{"kind":"Name","value":"link"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ProfileBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ProfileBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"imageSrc"}},{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"bio"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ServiceItemData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ServiceItem"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"icon"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ServicesBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ServicesBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"services"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"SocialLinkData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"SocialLink"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"platform"}},{"kind":"Field","name":{"kind":"Name","value":"href"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"StoryBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"StoryBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"story"}},{"kind":"Field","name":{"kind":"Name","value":"highlights"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"TedTestBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"TedTestBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"stringTest"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"TestimonialItemData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"TestimonialItem"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"fullName"}},{"kind":"Field","name":{"kind":"Name","value":"position"}},{"kind":"Field","name":{"kind":"Name","value":"content"}},{"kind":"Field","name":{"kind":"Name","value":"avatarSrc"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"TestimonialItemBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"TestimonialItemBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"fullName"}},{"kind":"Field","name":{"kind":"Name","value":"position"}},{"kind":"Field","name":{"kind":"Name","value":"content"}},{"kind":"Field","name":{"kind":"Name","value":"avatarSrc"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"TestimonialsBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"TestimonialsBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"testimonials"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"CompositionComponentNodeData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ICompositionComponentNode"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"component"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"BlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ElementData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"AvailabilityBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ContactBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"FooterColumnData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HelloWorldData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HeroBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogoItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogosBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"NavItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioGridBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ProfileBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServiceItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServicesBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"SocialLinkData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"StoryBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TedTestBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialsBlockData"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ExperienceData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IExperience"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"composition"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionNodeData"}},{"kind":"Field","name":{"kind":"Name","value":"nodes"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionNodeData"}},{"kind":"InlineFragment","typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ICompositionStructureNode"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"nodes"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionNodeData"}},{"kind":"InlineFragment","typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ICompositionStructureNode"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"nodes"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionNodeData"}},{"kind":"InlineFragment","typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ICompositionStructureNode"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"nodes"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionNodeData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionComponentNodeData"}},{"kind":"InlineFragment","typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ICompositionStructureNode"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"nodes"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionNodeData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionComponentNodeData"}}]}}]}}]}}]}}]}}]}}]}}]}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionComponentNodeData"}}]}}]}}]}}]} as unknown as DocumentNode<SEOExperienceDataFragment, unknown>;
+export const CompositionComponentNodeDataFragmentDoc = {"kind":"Document","definitions":[{"kind":"FragmentDefinition","name":{"kind":"Name","value":"CompositionComponentNodeData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ICompositionComponentNode"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"component"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"BlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ElementData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"AvailabilityBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ContactBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"FooterColumnData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HelloWorldData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HeroBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogoItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogosBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"NavItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioGridBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ProfileBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServiceItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServicesBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"SocialLinkData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"StoryBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialsBlockData"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"LinkData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ContentUrl"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"type"}},{"kind":"Field","name":{"kind":"Name","value":"base"}},{"kind":"Field","name":{"kind":"Name","value":"default"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"IContentInfo"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"IContentMetadata"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"key"}},{"kind":"Field","name":{"kind":"Name","value":"locale"}},{"kind":"Field","name":{"kind":"Name","value":"types"}},{"kind":"Field","name":{"kind":"Name","value":"displayName"}},{"kind":"Field","name":{"kind":"Name","value":"version"}},{"kind":"Field","name":{"kind":"Name","value":"url"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"LinkData"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"IContentData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IContent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"_metadata"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentInfo"}}]}},{"kind":"Field","alias":{"kind":"Name","value":"_type"},"name":{"kind":"Name","value":"__typename"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"IElementData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IComponent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"_metadata"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentInfo"}}]}},{"kind":"Field","alias":{"kind":"Name","value":"_type"},"name":{"kind":"Name","value":"__typename"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"IContentListItem"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IContent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentData"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"BlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IComponent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentData"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ElementData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IComponent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IElementData"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"AvailabilityBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"AvailabilityBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"availability"}},{"kind":"Field","name":{"kind":"Name","value":"projectTypes"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ContactBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ContactBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"FooterColumnData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"FooterColumn"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"links"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"HelloWorldData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"HelloWorld"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"message"}},{"kind":"Field","name":{"kind":"Name","value":"detailedmessage"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"HeroBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"HeroBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"subtitle"}},{"kind":"Field","name":{"kind":"Name","value":"showDecoration"}},{"kind":"Field","name":{"kind":"Name","value":"decorationColorsPrimary"}},{"kind":"Field","name":{"kind":"Name","value":"decorationColorsSecondary"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"LogoItemBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"LogoItemBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"src"}},{"kind":"Field","name":{"kind":"Name","value":"alt"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"LogosBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"LogosBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"logos"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"NavItemData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"NavItem"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"label"}},{"kind":"Field","name":{"kind":"Name","value":"href"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"PortfolioGridBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"PortfolioGridBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"items"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"PortfolioItemBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"PortfolioItemBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"imageUrl"}},{"kind":"Field","name":{"kind":"Name","value":"link"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ProfileBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ProfileBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"imageSrc"}},{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"bio"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ServiceItemData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ServiceItem"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"icon"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ServicesBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ServicesBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"services"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"SocialLinkData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"SocialLink"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"platform"}},{"kind":"Field","name":{"kind":"Name","value":"href"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"StoryBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"StoryBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"story"}},{"kind":"Field","name":{"kind":"Name","value":"highlights"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"TestimonialItemBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"TestimonialItemBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"fullName"}},{"kind":"Field","name":{"kind":"Name","value":"position"}},{"kind":"Field","name":{"kind":"Name","value":"content"}},{"kind":"Field","name":{"kind":"Name","value":"avatarSrc"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"TestimonialsBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"TestimonialsBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"testimonials"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}}]} as unknown as DocumentNode<CompositionComponentNodeDataFragment, unknown>;
+export const ExperienceDataFragmentDoc = {"kind":"Document","definitions":[{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ExperienceData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IExperience"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"composition"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionNodeData"}},{"kind":"Field","name":{"kind":"Name","value":"nodes"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionNodeData"}},{"kind":"InlineFragment","typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ICompositionStructureNode"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"nodes"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionNodeData"}},{"kind":"InlineFragment","typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ICompositionStructureNode"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"nodes"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionNodeData"}},{"kind":"InlineFragment","typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ICompositionStructureNode"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"nodes"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionNodeData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionComponentNodeData"}},{"kind":"InlineFragment","typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ICompositionStructureNode"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"nodes"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionNodeData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionComponentNodeData"}}]}}]}}]}}]}}]}}]}}]}}]}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionComponentNodeData"}}]}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"LinkData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ContentUrl"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"type"}},{"kind":"Field","name":{"kind":"Name","value":"base"}},{"kind":"Field","name":{"kind":"Name","value":"default"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"IContentInfo"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"IContentMetadata"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"key"}},{"kind":"Field","name":{"kind":"Name","value":"locale"}},{"kind":"Field","name":{"kind":"Name","value":"types"}},{"kind":"Field","name":{"kind":"Name","value":"displayName"}},{"kind":"Field","name":{"kind":"Name","value":"version"}},{"kind":"Field","name":{"kind":"Name","value":"url"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"LinkData"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"IContentData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IContent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"_metadata"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentInfo"}}]}},{"kind":"Field","alias":{"kind":"Name","value":"_type"},"name":{"kind":"Name","value":"__typename"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"BlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IComponent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentData"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"IElementData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IComponent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"_metadata"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentInfo"}}]}},{"kind":"Field","alias":{"kind":"Name","value":"_type"},"name":{"kind":"Name","value":"__typename"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ElementData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IComponent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IElementData"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"AvailabilityBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"AvailabilityBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"availability"}},{"kind":"Field","name":{"kind":"Name","value":"projectTypes"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ContactBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ContactBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"IContentListItem"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IContent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentData"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"FooterColumnData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"FooterColumn"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"links"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"HelloWorldData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"HelloWorld"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"message"}},{"kind":"Field","name":{"kind":"Name","value":"detailedmessage"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"HeroBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"HeroBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"subtitle"}},{"kind":"Field","name":{"kind":"Name","value":"showDecoration"}},{"kind":"Field","name":{"kind":"Name","value":"decorationColorsPrimary"}},{"kind":"Field","name":{"kind":"Name","value":"decorationColorsSecondary"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"LogoItemBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"LogoItemBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"src"}},{"kind":"Field","name":{"kind":"Name","value":"alt"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"LogosBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"LogosBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"logos"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"NavItemData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"NavItem"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"label"}},{"kind":"Field","name":{"kind":"Name","value":"href"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"PortfolioGridBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"PortfolioGridBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"items"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"PortfolioItemBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"PortfolioItemBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"imageUrl"}},{"kind":"Field","name":{"kind":"Name","value":"link"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ProfileBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ProfileBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"imageSrc"}},{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"bio"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ServiceItemData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ServiceItem"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"icon"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ServicesBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ServicesBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"services"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"SocialLinkData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"SocialLink"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"platform"}},{"kind":"Field","name":{"kind":"Name","value":"href"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"StoryBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"StoryBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"story"}},{"kind":"Field","name":{"kind":"Name","value":"highlights"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"TestimonialItemBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"TestimonialItemBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"fullName"}},{"kind":"Field","name":{"kind":"Name","value":"position"}},{"kind":"Field","name":{"kind":"Name","value":"content"}},{"kind":"Field","name":{"kind":"Name","value":"avatarSrc"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"TestimonialsBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"TestimonialsBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"testimonials"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"CompositionNodeData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ICompositionNode"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","alias":{"kind":"Name","value":"name"},"name":{"kind":"Name","value":"displayName"}},{"kind":"Field","alias":{"kind":"Name","value":"layoutType"},"name":{"kind":"Name","value":"nodeType"}},{"kind":"Field","name":{"kind":"Name","value":"type"}},{"kind":"Field","name":{"kind":"Name","value":"key"}},{"kind":"Field","alias":{"kind":"Name","value":"template"},"name":{"kind":"Name","value":"displayTemplateKey"}},{"kind":"Field","alias":{"kind":"Name","value":"settings"},"name":{"kind":"Name","value":"displaySettings"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"key"}},{"kind":"Field","name":{"kind":"Name","value":"value"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"CompositionComponentNodeData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ICompositionComponentNode"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"component"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"BlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ElementData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"AvailabilityBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ContactBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"FooterColumnData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HelloWorldData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HeroBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogoItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogosBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"NavItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioGridBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ProfileBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServiceItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServicesBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"SocialLinkData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"StoryBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialsBlockData"}}]}}]}}]} as unknown as DocumentNode<ExperienceDataFragment, unknown>;
+export const BlankExperienceDataFragmentDoc = {"kind":"Document","definitions":[{"kind":"FragmentDefinition","name":{"kind":"Name","value":"BlankExperienceData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"BlankExperience"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"ExperienceData"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"CompositionNodeData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ICompositionNode"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","alias":{"kind":"Name","value":"name"},"name":{"kind":"Name","value":"displayName"}},{"kind":"Field","alias":{"kind":"Name","value":"layoutType"},"name":{"kind":"Name","value":"nodeType"}},{"kind":"Field","name":{"kind":"Name","value":"type"}},{"kind":"Field","name":{"kind":"Name","value":"key"}},{"kind":"Field","alias":{"kind":"Name","value":"template"},"name":{"kind":"Name","value":"displayTemplateKey"}},{"kind":"Field","alias":{"kind":"Name","value":"settings"},"name":{"kind":"Name","value":"displaySettings"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"key"}},{"kind":"Field","name":{"kind":"Name","value":"value"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"LinkData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ContentUrl"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"type"}},{"kind":"Field","name":{"kind":"Name","value":"base"}},{"kind":"Field","name":{"kind":"Name","value":"default"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"IContentInfo"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"IContentMetadata"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"key"}},{"kind":"Field","name":{"kind":"Name","value":"locale"}},{"kind":"Field","name":{"kind":"Name","value":"types"}},{"kind":"Field","name":{"kind":"Name","value":"displayName"}},{"kind":"Field","name":{"kind":"Name","value":"version"}},{"kind":"Field","name":{"kind":"Name","value":"url"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"LinkData"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"IContentData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IContent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"_metadata"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentInfo"}}]}},{"kind":"Field","alias":{"kind":"Name","value":"_type"},"name":{"kind":"Name","value":"__typename"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"BlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IComponent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentData"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"IElementData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IComponent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"_metadata"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentInfo"}}]}},{"kind":"Field","alias":{"kind":"Name","value":"_type"},"name":{"kind":"Name","value":"__typename"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ElementData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IComponent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IElementData"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"AvailabilityBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"AvailabilityBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"availability"}},{"kind":"Field","name":{"kind":"Name","value":"projectTypes"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ContactBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ContactBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"IContentListItem"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IContent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentData"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"FooterColumnData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"FooterColumn"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"links"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"HelloWorldData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"HelloWorld"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"message"}},{"kind":"Field","name":{"kind":"Name","value":"detailedmessage"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"HeroBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"HeroBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"subtitle"}},{"kind":"Field","name":{"kind":"Name","value":"showDecoration"}},{"kind":"Field","name":{"kind":"Name","value":"decorationColorsPrimary"}},{"kind":"Field","name":{"kind":"Name","value":"decorationColorsSecondary"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"LogoItemBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"LogoItemBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"src"}},{"kind":"Field","name":{"kind":"Name","value":"alt"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"LogosBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"LogosBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"logos"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"NavItemData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"NavItem"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"label"}},{"kind":"Field","name":{"kind":"Name","value":"href"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"PortfolioGridBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"PortfolioGridBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"items"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"PortfolioItemBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"PortfolioItemBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"imageUrl"}},{"kind":"Field","name":{"kind":"Name","value":"link"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ProfileBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ProfileBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"imageSrc"}},{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"bio"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ServiceItemData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ServiceItem"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"icon"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ServicesBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ServicesBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"services"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"SocialLinkData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"SocialLink"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"platform"}},{"kind":"Field","name":{"kind":"Name","value":"href"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"StoryBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"StoryBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"story"}},{"kind":"Field","name":{"kind":"Name","value":"highlights"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"TestimonialItemBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"TestimonialItemBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"fullName"}},{"kind":"Field","name":{"kind":"Name","value":"position"}},{"kind":"Field","name":{"kind":"Name","value":"content"}},{"kind":"Field","name":{"kind":"Name","value":"avatarSrc"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"TestimonialsBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"TestimonialsBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"testimonials"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"CompositionComponentNodeData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ICompositionComponentNode"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"component"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"BlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ElementData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"AvailabilityBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ContactBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"FooterColumnData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HelloWorldData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HeroBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogoItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogosBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"NavItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioGridBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ProfileBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServiceItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServicesBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"SocialLinkData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"StoryBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialsBlockData"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ExperienceData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IExperience"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"composition"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionNodeData"}},{"kind":"Field","name":{"kind":"Name","value":"nodes"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionNodeData"}},{"kind":"InlineFragment","typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ICompositionStructureNode"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"nodes"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionNodeData"}},{"kind":"InlineFragment","typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ICompositionStructureNode"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"nodes"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionNodeData"}},{"kind":"InlineFragment","typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ICompositionStructureNode"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"nodes"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionNodeData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionComponentNodeData"}},{"kind":"InlineFragment","typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ICompositionStructureNode"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"nodes"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionNodeData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionComponentNodeData"}}]}}]}}]}}]}}]}}]}}]}}]}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionComponentNodeData"}}]}}]}}]}}]} as unknown as DocumentNode<BlankExperienceDataFragment, unknown>;
+export const SEOExperienceDataFragmentDoc = {"kind":"Document","definitions":[{"kind":"FragmentDefinition","name":{"kind":"Name","value":"SEOExperienceData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"SEOExperience"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"shortDescription"}},{"kind":"Field","name":{"kind":"Name","value":"keywords"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ExperienceData"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"CompositionNodeData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ICompositionNode"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","alias":{"kind":"Name","value":"name"},"name":{"kind":"Name","value":"displayName"}},{"kind":"Field","alias":{"kind":"Name","value":"layoutType"},"name":{"kind":"Name","value":"nodeType"}},{"kind":"Field","name":{"kind":"Name","value":"type"}},{"kind":"Field","name":{"kind":"Name","value":"key"}},{"kind":"Field","alias":{"kind":"Name","value":"template"},"name":{"kind":"Name","value":"displayTemplateKey"}},{"kind":"Field","alias":{"kind":"Name","value":"settings"},"name":{"kind":"Name","value":"displaySettings"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"key"}},{"kind":"Field","name":{"kind":"Name","value":"value"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"LinkData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ContentUrl"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"type"}},{"kind":"Field","name":{"kind":"Name","value":"base"}},{"kind":"Field","name":{"kind":"Name","value":"default"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"IContentInfo"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"IContentMetadata"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"key"}},{"kind":"Field","name":{"kind":"Name","value":"locale"}},{"kind":"Field","name":{"kind":"Name","value":"types"}},{"kind":"Field","name":{"kind":"Name","value":"displayName"}},{"kind":"Field","name":{"kind":"Name","value":"version"}},{"kind":"Field","name":{"kind":"Name","value":"url"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"LinkData"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"IContentData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IContent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"_metadata"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentInfo"}}]}},{"kind":"Field","alias":{"kind":"Name","value":"_type"},"name":{"kind":"Name","value":"__typename"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"BlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IComponent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentData"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"IElementData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IComponent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"_metadata"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentInfo"}}]}},{"kind":"Field","alias":{"kind":"Name","value":"_type"},"name":{"kind":"Name","value":"__typename"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ElementData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IComponent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IElementData"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"AvailabilityBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"AvailabilityBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"availability"}},{"kind":"Field","name":{"kind":"Name","value":"projectTypes"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ContactBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ContactBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"IContentListItem"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IContent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentData"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"FooterColumnData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"FooterColumn"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"links"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"HelloWorldData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"HelloWorld"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"message"}},{"kind":"Field","name":{"kind":"Name","value":"detailedmessage"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"HeroBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"HeroBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"subtitle"}},{"kind":"Field","name":{"kind":"Name","value":"showDecoration"}},{"kind":"Field","name":{"kind":"Name","value":"decorationColorsPrimary"}},{"kind":"Field","name":{"kind":"Name","value":"decorationColorsSecondary"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"LogoItemBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"LogoItemBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"src"}},{"kind":"Field","name":{"kind":"Name","value":"alt"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"LogosBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"LogosBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"logos"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"NavItemData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"NavItem"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"label"}},{"kind":"Field","name":{"kind":"Name","value":"href"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"PortfolioGridBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"PortfolioGridBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"items"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"PortfolioItemBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"PortfolioItemBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"imageUrl"}},{"kind":"Field","name":{"kind":"Name","value":"link"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ProfileBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ProfileBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"imageSrc"}},{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"bio"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ServiceItemData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ServiceItem"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"icon"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ServicesBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ServicesBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"services"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"SocialLinkData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"SocialLink"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"platform"}},{"kind":"Field","name":{"kind":"Name","value":"href"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"StoryBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"StoryBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"story"}},{"kind":"Field","name":{"kind":"Name","value":"highlights"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"TestimonialItemBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"TestimonialItemBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"fullName"}},{"kind":"Field","name":{"kind":"Name","value":"position"}},{"kind":"Field","name":{"kind":"Name","value":"content"}},{"kind":"Field","name":{"kind":"Name","value":"avatarSrc"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"TestimonialsBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"TestimonialsBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"testimonials"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"CompositionComponentNodeData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ICompositionComponentNode"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"component"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"BlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ElementData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"AvailabilityBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ContactBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"FooterColumnData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HelloWorldData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HeroBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogoItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogosBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"NavItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioGridBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ProfileBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServiceItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServicesBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"SocialLinkData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"StoryBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialsBlockData"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ExperienceData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IExperience"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"composition"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionNodeData"}},{"kind":"Field","name":{"kind":"Name","value":"nodes"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionNodeData"}},{"kind":"InlineFragment","typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ICompositionStructureNode"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"nodes"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionNodeData"}},{"kind":"InlineFragment","typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ICompositionStructureNode"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"nodes"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionNodeData"}},{"kind":"InlineFragment","typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ICompositionStructureNode"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"nodes"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionNodeData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionComponentNodeData"}},{"kind":"InlineFragment","typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ICompositionStructureNode"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"nodes"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionNodeData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionComponentNodeData"}}]}}]}}]}}]}}]}}]}}]}}]}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionComponentNodeData"}}]}}]}}]}}]} as unknown as DocumentNode<SEOExperienceDataFragment, unknown>;
 export const ImageMediaDataFragmentDoc = {"kind":"Document","definitions":[{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ImageMediaData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ImageMedia"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","alias":{"kind":"Name","value":"empty"},"name":{"kind":"Name","value":"_metadata"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"key"}}]}}]}}]} as unknown as DocumentNode<ImageMediaDataFragment, unknown>;
 export const GenericMediaDataFragmentDoc = {"kind":"Document","definitions":[{"kind":"FragmentDefinition","name":{"kind":"Name","value":"GenericMediaData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"GenericMedia"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","alias":{"kind":"Name","value":"empty"},"name":{"kind":"Name","value":"_metadata"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"key"}}]}}]}}]} as unknown as DocumentNode<GenericMediaDataFragment, unknown>;
-export const GenericMedia123DataFragmentDoc = {"kind":"Document","definitions":[{"kind":"FragmentDefinition","name":{"kind":"Name","value":"GenericMedia123Data"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"GenericMedia123"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","alias":{"kind":"Name","value":"empty"},"name":{"kind":"Name","value":"_metadata"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"key"}}]}}]}}]} as unknown as DocumentNode<GenericMedia123DataFragment, unknown>;
-export const CMSPageDataFragmentDoc = {"kind":"Document","definitions":[{"kind":"FragmentDefinition","name":{"kind":"Name","value":"CMSPageData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"CMSPage"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"shortDescription"}},{"kind":"Field","name":{"kind":"Name","value":"keywords"}},{"kind":"Field","name":{"kind":"Name","value":"blocks"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"BlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"AvailabilityBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ContactBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"FooterColumnData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HelloWorldData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HeroBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogoItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogosBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"NavItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioGridBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ProfileBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServiceItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServicesBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"SocialLinkData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"StoryBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TedTestBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialsBlockData"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"LinkData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ContentUrl"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"type"}},{"kind":"Field","name":{"kind":"Name","value":"base"}},{"kind":"Field","name":{"kind":"Name","value":"default"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"IContentInfo"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"IContentMetadata"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"key"}},{"kind":"Field","name":{"kind":"Name","value":"locale"}},{"kind":"Field","name":{"kind":"Name","value":"types"}},{"kind":"Field","name":{"kind":"Name","value":"displayName"}},{"kind":"Field","name":{"kind":"Name","value":"version"}},{"kind":"Field","name":{"kind":"Name","value":"url"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"LinkData"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"IContentData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IContent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"_metadata"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentInfo"}}]}},{"kind":"Field","alias":{"kind":"Name","value":"_type"},"name":{"kind":"Name","value":"__typename"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"IContentListItem"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IContent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentData"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"BlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IComponent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentData"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"AvailabilityBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"AvailabilityBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"availability"}},{"kind":"Field","name":{"kind":"Name","value":"projectTypes"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ContactBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ContactBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"FooterColumnData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"FooterColumn"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"links"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"HelloWorldData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"HelloWorld"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"message"}},{"kind":"Field","name":{"kind":"Name","value":"detailedmessage"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"HeroBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"HeroBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"subtitle"}},{"kind":"Field","name":{"kind":"Name","value":"showDecoration"}},{"kind":"Field","name":{"kind":"Name","value":"decorationColorsPrimary"}},{"kind":"Field","name":{"kind":"Name","value":"decorationColorsSecondary"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"LogoItemBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"LogoItemBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"src"}},{"kind":"Field","name":{"kind":"Name","value":"alt"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"LogosBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"LogosBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"logos"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"NavItemData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"NavItem"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"label"}},{"kind":"Field","name":{"kind":"Name","value":"href"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"PortfolioGridBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"PortfolioGridBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"items"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"PortfolioItemBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"PortfolioItemBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"imageUrl"}},{"kind":"Field","name":{"kind":"Name","value":"link"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ProfileBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ProfileBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"imageSrc"}},{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"bio"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ServiceItemData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ServiceItem"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"icon"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ServicesBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ServicesBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"services"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"SocialLinkData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"SocialLink"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"platform"}},{"kind":"Field","name":{"kind":"Name","value":"href"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"StoryBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"StoryBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"story"}},{"kind":"Field","name":{"kind":"Name","value":"highlights"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"TedTestBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"TedTestBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"stringTest"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"TestimonialItemData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"TestimonialItem"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"fullName"}},{"kind":"Field","name":{"kind":"Name","value":"position"}},{"kind":"Field","name":{"kind":"Name","value":"content"}},{"kind":"Field","name":{"kind":"Name","value":"avatarSrc"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"TestimonialItemBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"TestimonialItemBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"fullName"}},{"kind":"Field","name":{"kind":"Name","value":"position"}},{"kind":"Field","name":{"kind":"Name","value":"content"}},{"kind":"Field","name":{"kind":"Name","value":"avatarSrc"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"TestimonialsBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"TestimonialsBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"testimonials"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}}]} as unknown as DocumentNode<CMSPageDataFragment, unknown>;
-export const FooterDataFragmentDoc = {"kind":"Document","definitions":[{"kind":"FragmentDefinition","name":{"kind":"Name","value":"FooterData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"Footer"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"copyrightText"}},{"kind":"Field","name":{"kind":"Name","value":"columns"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"BlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"AvailabilityBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ContactBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"FooterColumnData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HelloWorldData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HeroBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogoItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogosBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"NavItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioGridBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ProfileBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServiceItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServicesBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"SocialLinkData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"StoryBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TedTestBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialsBlockData"}}]}},{"kind":"Field","name":{"kind":"Name","value":"socialLinks"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"BlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"AvailabilityBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ContactBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"FooterColumnData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HelloWorldData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HeroBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogoItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogosBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"NavItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioGridBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ProfileBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServiceItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServicesBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"SocialLinkData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"StoryBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TedTestBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialsBlockData"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"LinkData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ContentUrl"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"type"}},{"kind":"Field","name":{"kind":"Name","value":"base"}},{"kind":"Field","name":{"kind":"Name","value":"default"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"IContentInfo"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"IContentMetadata"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"key"}},{"kind":"Field","name":{"kind":"Name","value":"locale"}},{"kind":"Field","name":{"kind":"Name","value":"types"}},{"kind":"Field","name":{"kind":"Name","value":"displayName"}},{"kind":"Field","name":{"kind":"Name","value":"version"}},{"kind":"Field","name":{"kind":"Name","value":"url"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"LinkData"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"IContentData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IContent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"_metadata"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentInfo"}}]}},{"kind":"Field","alias":{"kind":"Name","value":"_type"},"name":{"kind":"Name","value":"__typename"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"IContentListItem"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IContent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentData"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"BlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IComponent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentData"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"AvailabilityBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"AvailabilityBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"availability"}},{"kind":"Field","name":{"kind":"Name","value":"projectTypes"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ContactBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ContactBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"FooterColumnData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"FooterColumn"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"links"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"HelloWorldData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"HelloWorld"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"message"}},{"kind":"Field","name":{"kind":"Name","value":"detailedmessage"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"HeroBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"HeroBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"subtitle"}},{"kind":"Field","name":{"kind":"Name","value":"showDecoration"}},{"kind":"Field","name":{"kind":"Name","value":"decorationColorsPrimary"}},{"kind":"Field","name":{"kind":"Name","value":"decorationColorsSecondary"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"LogoItemBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"LogoItemBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"src"}},{"kind":"Field","name":{"kind":"Name","value":"alt"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"LogosBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"LogosBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"logos"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"NavItemData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"NavItem"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"label"}},{"kind":"Field","name":{"kind":"Name","value":"href"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"PortfolioGridBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"PortfolioGridBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"items"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"PortfolioItemBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"PortfolioItemBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"imageUrl"}},{"kind":"Field","name":{"kind":"Name","value":"link"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ProfileBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ProfileBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"imageSrc"}},{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"bio"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ServiceItemData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ServiceItem"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"icon"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ServicesBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ServicesBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"services"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"SocialLinkData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"SocialLink"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"platform"}},{"kind":"Field","name":{"kind":"Name","value":"href"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"StoryBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"StoryBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"story"}},{"kind":"Field","name":{"kind":"Name","value":"highlights"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"TedTestBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"TedTestBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"stringTest"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"TestimonialItemData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"TestimonialItem"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"fullName"}},{"kind":"Field","name":{"kind":"Name","value":"position"}},{"kind":"Field","name":{"kind":"Name","value":"content"}},{"kind":"Field","name":{"kind":"Name","value":"avatarSrc"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"TestimonialItemBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"TestimonialItemBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"fullName"}},{"kind":"Field","name":{"kind":"Name","value":"position"}},{"kind":"Field","name":{"kind":"Name","value":"content"}},{"kind":"Field","name":{"kind":"Name","value":"avatarSrc"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"TestimonialsBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"TestimonialsBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"testimonials"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}}]} as unknown as DocumentNode<FooterDataFragment, unknown>;
-export const HeaderDataFragmentDoc = {"kind":"Document","definitions":[{"kind":"FragmentDefinition","name":{"kind":"Name","value":"HeaderData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"Header"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"logo"}},{"kind":"Field","name":{"kind":"Name","value":"navItems"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"BlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"AvailabilityBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ContactBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"FooterColumnData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HelloWorldData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HeroBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogoItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogosBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"NavItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioGridBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ProfileBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServiceItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServicesBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"SocialLinkData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"StoryBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TedTestBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialsBlockData"}}]}},{"kind":"Field","name":{"kind":"Name","value":"ctaText"}},{"kind":"Field","name":{"kind":"Name","value":"ctaHref"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"LinkData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ContentUrl"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"type"}},{"kind":"Field","name":{"kind":"Name","value":"base"}},{"kind":"Field","name":{"kind":"Name","value":"default"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"IContentInfo"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"IContentMetadata"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"key"}},{"kind":"Field","name":{"kind":"Name","value":"locale"}},{"kind":"Field","name":{"kind":"Name","value":"types"}},{"kind":"Field","name":{"kind":"Name","value":"displayName"}},{"kind":"Field","name":{"kind":"Name","value":"version"}},{"kind":"Field","name":{"kind":"Name","value":"url"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"LinkData"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"IContentData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IContent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"_metadata"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentInfo"}}]}},{"kind":"Field","alias":{"kind":"Name","value":"_type"},"name":{"kind":"Name","value":"__typename"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"IContentListItem"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IContent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentData"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"BlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IComponent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentData"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"AvailabilityBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"AvailabilityBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"availability"}},{"kind":"Field","name":{"kind":"Name","value":"projectTypes"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ContactBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ContactBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"FooterColumnData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"FooterColumn"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"links"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"HelloWorldData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"HelloWorld"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"message"}},{"kind":"Field","name":{"kind":"Name","value":"detailedmessage"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"HeroBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"HeroBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"subtitle"}},{"kind":"Field","name":{"kind":"Name","value":"showDecoration"}},{"kind":"Field","name":{"kind":"Name","value":"decorationColorsPrimary"}},{"kind":"Field","name":{"kind":"Name","value":"decorationColorsSecondary"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"LogoItemBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"LogoItemBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"src"}},{"kind":"Field","name":{"kind":"Name","value":"alt"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"LogosBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"LogosBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"logos"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"NavItemData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"NavItem"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"label"}},{"kind":"Field","name":{"kind":"Name","value":"href"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"PortfolioGridBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"PortfolioGridBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"items"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"PortfolioItemBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"PortfolioItemBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"imageUrl"}},{"kind":"Field","name":{"kind":"Name","value":"link"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ProfileBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ProfileBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"imageSrc"}},{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"bio"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ServiceItemData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ServiceItem"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"icon"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ServicesBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ServicesBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"services"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"SocialLinkData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"SocialLink"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"platform"}},{"kind":"Field","name":{"kind":"Name","value":"href"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"StoryBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"StoryBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"story"}},{"kind":"Field","name":{"kind":"Name","value":"highlights"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"TedTestBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"TedTestBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"stringTest"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"TestimonialItemData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"TestimonialItem"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"fullName"}},{"kind":"Field","name":{"kind":"Name","value":"position"}},{"kind":"Field","name":{"kind":"Name","value":"content"}},{"kind":"Field","name":{"kind":"Name","value":"avatarSrc"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"TestimonialItemBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"TestimonialItemBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"fullName"}},{"kind":"Field","name":{"kind":"Name","value":"position"}},{"kind":"Field","name":{"kind":"Name","value":"content"}},{"kind":"Field","name":{"kind":"Name","value":"avatarSrc"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"TestimonialsBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"TestimonialsBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"testimonials"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}}]} as unknown as DocumentNode<HeaderDataFragment, unknown>;
-export const HomePageDataFragmentDoc = {"kind":"Document","definitions":[{"kind":"FragmentDefinition","name":{"kind":"Name","value":"HomePageData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"HomePage"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"shortDescription"}},{"kind":"Field","name":{"kind":"Name","value":"keywords"}},{"kind":"Field","name":{"kind":"Name","value":"blocks"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"BlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"AvailabilityBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ContactBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"FooterColumnData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HelloWorldData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HeroBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogoItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogosBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"NavItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioGridBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ProfileBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServiceItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServicesBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"SocialLinkData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"StoryBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TedTestBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialsBlockData"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"LinkData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ContentUrl"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"type"}},{"kind":"Field","name":{"kind":"Name","value":"base"}},{"kind":"Field","name":{"kind":"Name","value":"default"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"IContentInfo"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"IContentMetadata"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"key"}},{"kind":"Field","name":{"kind":"Name","value":"locale"}},{"kind":"Field","name":{"kind":"Name","value":"types"}},{"kind":"Field","name":{"kind":"Name","value":"displayName"}},{"kind":"Field","name":{"kind":"Name","value":"version"}},{"kind":"Field","name":{"kind":"Name","value":"url"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"LinkData"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"IContentData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IContent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"_metadata"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentInfo"}}]}},{"kind":"Field","alias":{"kind":"Name","value":"_type"},"name":{"kind":"Name","value":"__typename"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"IContentListItem"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IContent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentData"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"BlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IComponent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentData"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"AvailabilityBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"AvailabilityBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"availability"}},{"kind":"Field","name":{"kind":"Name","value":"projectTypes"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ContactBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ContactBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"FooterColumnData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"FooterColumn"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"links"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"HelloWorldData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"HelloWorld"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"message"}},{"kind":"Field","name":{"kind":"Name","value":"detailedmessage"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"HeroBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"HeroBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"subtitle"}},{"kind":"Field","name":{"kind":"Name","value":"showDecoration"}},{"kind":"Field","name":{"kind":"Name","value":"decorationColorsPrimary"}},{"kind":"Field","name":{"kind":"Name","value":"decorationColorsSecondary"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"LogoItemBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"LogoItemBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"src"}},{"kind":"Field","name":{"kind":"Name","value":"alt"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"LogosBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"LogosBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"logos"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"NavItemData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"NavItem"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"label"}},{"kind":"Field","name":{"kind":"Name","value":"href"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"PortfolioGridBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"PortfolioGridBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"items"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"PortfolioItemBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"PortfolioItemBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"imageUrl"}},{"kind":"Field","name":{"kind":"Name","value":"link"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ProfileBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ProfileBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"imageSrc"}},{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"bio"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ServiceItemData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ServiceItem"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"icon"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ServicesBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ServicesBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"services"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"SocialLinkData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"SocialLink"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"platform"}},{"kind":"Field","name":{"kind":"Name","value":"href"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"StoryBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"StoryBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"story"}},{"kind":"Field","name":{"kind":"Name","value":"highlights"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"TedTestBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"TedTestBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"stringTest"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"TestimonialItemData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"TestimonialItem"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"fullName"}},{"kind":"Field","name":{"kind":"Name","value":"position"}},{"kind":"Field","name":{"kind":"Name","value":"content"}},{"kind":"Field","name":{"kind":"Name","value":"avatarSrc"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"TestimonialItemBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"TestimonialItemBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"fullName"}},{"kind":"Field","name":{"kind":"Name","value":"position"}},{"kind":"Field","name":{"kind":"Name","value":"content"}},{"kind":"Field","name":{"kind":"Name","value":"avatarSrc"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"TestimonialsBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"TestimonialsBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"testimonials"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}}]} as unknown as DocumentNode<HomePageDataFragment, unknown>;
-export const StartPageDataFragmentDoc = {"kind":"Document","definitions":[{"kind":"FragmentDefinition","name":{"kind":"Name","value":"StartPageData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"StartPage"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"shortDescription"}},{"kind":"Field","name":{"kind":"Name","value":"keywords"}},{"kind":"Field","name":{"kind":"Name","value":"blocks"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"BlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"AvailabilityBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ContactBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"FooterColumnData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HelloWorldData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HeroBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogoItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogosBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"NavItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioGridBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ProfileBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServiceItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServicesBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"SocialLinkData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"StoryBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TedTestBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialsBlockData"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"LinkData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ContentUrl"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"type"}},{"kind":"Field","name":{"kind":"Name","value":"base"}},{"kind":"Field","name":{"kind":"Name","value":"default"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"IContentInfo"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"IContentMetadata"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"key"}},{"kind":"Field","name":{"kind":"Name","value":"locale"}},{"kind":"Field","name":{"kind":"Name","value":"types"}},{"kind":"Field","name":{"kind":"Name","value":"displayName"}},{"kind":"Field","name":{"kind":"Name","value":"version"}},{"kind":"Field","name":{"kind":"Name","value":"url"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"LinkData"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"IContentData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IContent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"_metadata"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentInfo"}}]}},{"kind":"Field","alias":{"kind":"Name","value":"_type"},"name":{"kind":"Name","value":"__typename"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"IContentListItem"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IContent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentData"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"BlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IComponent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentData"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"AvailabilityBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"AvailabilityBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"availability"}},{"kind":"Field","name":{"kind":"Name","value":"projectTypes"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ContactBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ContactBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"FooterColumnData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"FooterColumn"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"links"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"HelloWorldData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"HelloWorld"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"message"}},{"kind":"Field","name":{"kind":"Name","value":"detailedmessage"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"HeroBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"HeroBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"subtitle"}},{"kind":"Field","name":{"kind":"Name","value":"showDecoration"}},{"kind":"Field","name":{"kind":"Name","value":"decorationColorsPrimary"}},{"kind":"Field","name":{"kind":"Name","value":"decorationColorsSecondary"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"LogoItemBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"LogoItemBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"src"}},{"kind":"Field","name":{"kind":"Name","value":"alt"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"LogosBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"LogosBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"logos"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"NavItemData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"NavItem"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"label"}},{"kind":"Field","name":{"kind":"Name","value":"href"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"PortfolioGridBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"PortfolioGridBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"items"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"PortfolioItemBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"PortfolioItemBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"imageUrl"}},{"kind":"Field","name":{"kind":"Name","value":"link"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ProfileBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ProfileBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"imageSrc"}},{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"bio"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ServiceItemData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ServiceItem"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"icon"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ServicesBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ServicesBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"services"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"SocialLinkData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"SocialLink"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"platform"}},{"kind":"Field","name":{"kind":"Name","value":"href"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"StoryBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"StoryBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"story"}},{"kind":"Field","name":{"kind":"Name","value":"highlights"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"TedTestBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"TedTestBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"stringTest"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"TestimonialItemData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"TestimonialItem"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"fullName"}},{"kind":"Field","name":{"kind":"Name","value":"position"}},{"kind":"Field","name":{"kind":"Name","value":"content"}},{"kind":"Field","name":{"kind":"Name","value":"avatarSrc"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"TestimonialItemBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"TestimonialItemBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"fullName"}},{"kind":"Field","name":{"kind":"Name","value":"position"}},{"kind":"Field","name":{"kind":"Name","value":"content"}},{"kind":"Field","name":{"kind":"Name","value":"avatarSrc"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"TestimonialsBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"TestimonialsBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"testimonials"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}}]} as unknown as DocumentNode<StartPageDataFragment, unknown>;
+export const CMSPageDataFragmentDoc = {"kind":"Document","definitions":[{"kind":"FragmentDefinition","name":{"kind":"Name","value":"CMSPageData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"CMSPage"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"shortDescription"}},{"kind":"Field","name":{"kind":"Name","value":"keywords"}},{"kind":"Field","name":{"kind":"Name","value":"blocks"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"BlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"AvailabilityBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ContactBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"FooterColumnData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HelloWorldData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HeroBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogoItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogosBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"NavItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioGridBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ProfileBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServiceItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServicesBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"SocialLinkData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"StoryBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialsBlockData"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"LinkData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ContentUrl"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"type"}},{"kind":"Field","name":{"kind":"Name","value":"base"}},{"kind":"Field","name":{"kind":"Name","value":"default"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"IContentInfo"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"IContentMetadata"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"key"}},{"kind":"Field","name":{"kind":"Name","value":"locale"}},{"kind":"Field","name":{"kind":"Name","value":"types"}},{"kind":"Field","name":{"kind":"Name","value":"displayName"}},{"kind":"Field","name":{"kind":"Name","value":"version"}},{"kind":"Field","name":{"kind":"Name","value":"url"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"LinkData"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"IContentData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IContent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"_metadata"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentInfo"}}]}},{"kind":"Field","alias":{"kind":"Name","value":"_type"},"name":{"kind":"Name","value":"__typename"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"IContentListItem"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IContent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentData"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"BlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IComponent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentData"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"AvailabilityBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"AvailabilityBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"availability"}},{"kind":"Field","name":{"kind":"Name","value":"projectTypes"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ContactBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ContactBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"FooterColumnData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"FooterColumn"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"links"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"HelloWorldData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"HelloWorld"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"message"}},{"kind":"Field","name":{"kind":"Name","value":"detailedmessage"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"HeroBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"HeroBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"subtitle"}},{"kind":"Field","name":{"kind":"Name","value":"showDecoration"}},{"kind":"Field","name":{"kind":"Name","value":"decorationColorsPrimary"}},{"kind":"Field","name":{"kind":"Name","value":"decorationColorsSecondary"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"LogoItemBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"LogoItemBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"src"}},{"kind":"Field","name":{"kind":"Name","value":"alt"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"LogosBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"LogosBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"logos"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"NavItemData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"NavItem"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"label"}},{"kind":"Field","name":{"kind":"Name","value":"href"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"PortfolioGridBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"PortfolioGridBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"items"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"PortfolioItemBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"PortfolioItemBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"imageUrl"}},{"kind":"Field","name":{"kind":"Name","value":"link"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ProfileBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ProfileBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"imageSrc"}},{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"bio"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ServiceItemData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ServiceItem"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"icon"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ServicesBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ServicesBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"services"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"SocialLinkData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"SocialLink"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"platform"}},{"kind":"Field","name":{"kind":"Name","value":"href"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"StoryBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"StoryBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"story"}},{"kind":"Field","name":{"kind":"Name","value":"highlights"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"TestimonialItemBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"TestimonialItemBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"fullName"}},{"kind":"Field","name":{"kind":"Name","value":"position"}},{"kind":"Field","name":{"kind":"Name","value":"content"}},{"kind":"Field","name":{"kind":"Name","value":"avatarSrc"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"TestimonialsBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"TestimonialsBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"testimonials"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}}]} as unknown as DocumentNode<CMSPageDataFragment, unknown>;
+export const FooterDataFragmentDoc = {"kind":"Document","definitions":[{"kind":"FragmentDefinition","name":{"kind":"Name","value":"FooterData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"Footer"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"copyrightText"}},{"kind":"Field","name":{"kind":"Name","value":"columns"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"BlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"AvailabilityBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ContactBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"FooterColumnData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HelloWorldData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HeroBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogoItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogosBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"NavItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioGridBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ProfileBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServiceItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServicesBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"SocialLinkData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"StoryBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialsBlockData"}}]}},{"kind":"Field","name":{"kind":"Name","value":"socialLinks"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"BlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"AvailabilityBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ContactBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"FooterColumnData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HelloWorldData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HeroBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogoItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogosBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"NavItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioGridBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ProfileBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServiceItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServicesBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"SocialLinkData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"StoryBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialsBlockData"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"LinkData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ContentUrl"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"type"}},{"kind":"Field","name":{"kind":"Name","value":"base"}},{"kind":"Field","name":{"kind":"Name","value":"default"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"IContentInfo"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"IContentMetadata"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"key"}},{"kind":"Field","name":{"kind":"Name","value":"locale"}},{"kind":"Field","name":{"kind":"Name","value":"types"}},{"kind":"Field","name":{"kind":"Name","value":"displayName"}},{"kind":"Field","name":{"kind":"Name","value":"version"}},{"kind":"Field","name":{"kind":"Name","value":"url"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"LinkData"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"IContentData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IContent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"_metadata"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentInfo"}}]}},{"kind":"Field","alias":{"kind":"Name","value":"_type"},"name":{"kind":"Name","value":"__typename"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"IContentListItem"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IContent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentData"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"BlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IComponent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentData"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"AvailabilityBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"AvailabilityBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"availability"}},{"kind":"Field","name":{"kind":"Name","value":"projectTypes"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ContactBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ContactBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"FooterColumnData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"FooterColumn"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"links"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"HelloWorldData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"HelloWorld"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"message"}},{"kind":"Field","name":{"kind":"Name","value":"detailedmessage"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"HeroBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"HeroBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"subtitle"}},{"kind":"Field","name":{"kind":"Name","value":"showDecoration"}},{"kind":"Field","name":{"kind":"Name","value":"decorationColorsPrimary"}},{"kind":"Field","name":{"kind":"Name","value":"decorationColorsSecondary"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"LogoItemBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"LogoItemBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"src"}},{"kind":"Field","name":{"kind":"Name","value":"alt"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"LogosBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"LogosBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"logos"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"NavItemData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"NavItem"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"label"}},{"kind":"Field","name":{"kind":"Name","value":"href"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"PortfolioGridBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"PortfolioGridBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"items"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"PortfolioItemBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"PortfolioItemBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"imageUrl"}},{"kind":"Field","name":{"kind":"Name","value":"link"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ProfileBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ProfileBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"imageSrc"}},{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"bio"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ServiceItemData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ServiceItem"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"icon"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ServicesBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ServicesBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"services"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"SocialLinkData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"SocialLink"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"platform"}},{"kind":"Field","name":{"kind":"Name","value":"href"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"StoryBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"StoryBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"story"}},{"kind":"Field","name":{"kind":"Name","value":"highlights"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"TestimonialItemBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"TestimonialItemBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"fullName"}},{"kind":"Field","name":{"kind":"Name","value":"position"}},{"kind":"Field","name":{"kind":"Name","value":"content"}},{"kind":"Field","name":{"kind":"Name","value":"avatarSrc"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"TestimonialsBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"TestimonialsBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"testimonials"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}}]} as unknown as DocumentNode<FooterDataFragment, unknown>;
+export const HeaderDataFragmentDoc = {"kind":"Document","definitions":[{"kind":"FragmentDefinition","name":{"kind":"Name","value":"HeaderData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"Header"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"logo"}},{"kind":"Field","name":{"kind":"Name","value":"navItems"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"BlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"AvailabilityBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ContactBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"FooterColumnData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HelloWorldData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HeroBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogoItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogosBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"NavItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioGridBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ProfileBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServiceItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServicesBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"SocialLinkData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"StoryBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialsBlockData"}}]}},{"kind":"Field","name":{"kind":"Name","value":"ctaText"}},{"kind":"Field","name":{"kind":"Name","value":"ctaHref"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"LinkData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ContentUrl"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"type"}},{"kind":"Field","name":{"kind":"Name","value":"base"}},{"kind":"Field","name":{"kind":"Name","value":"default"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"IContentInfo"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"IContentMetadata"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"key"}},{"kind":"Field","name":{"kind":"Name","value":"locale"}},{"kind":"Field","name":{"kind":"Name","value":"types"}},{"kind":"Field","name":{"kind":"Name","value":"displayName"}},{"kind":"Field","name":{"kind":"Name","value":"version"}},{"kind":"Field","name":{"kind":"Name","value":"url"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"LinkData"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"IContentData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IContent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"_metadata"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentInfo"}}]}},{"kind":"Field","alias":{"kind":"Name","value":"_type"},"name":{"kind":"Name","value":"__typename"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"IContentListItem"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IContent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentData"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"BlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IComponent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentData"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"AvailabilityBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"AvailabilityBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"availability"}},{"kind":"Field","name":{"kind":"Name","value":"projectTypes"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ContactBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ContactBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"FooterColumnData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"FooterColumn"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"links"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"HelloWorldData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"HelloWorld"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"message"}},{"kind":"Field","name":{"kind":"Name","value":"detailedmessage"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"HeroBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"HeroBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"subtitle"}},{"kind":"Field","name":{"kind":"Name","value":"showDecoration"}},{"kind":"Field","name":{"kind":"Name","value":"decorationColorsPrimary"}},{"kind":"Field","name":{"kind":"Name","value":"decorationColorsSecondary"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"LogoItemBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"LogoItemBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"src"}},{"kind":"Field","name":{"kind":"Name","value":"alt"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"LogosBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"LogosBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"logos"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"NavItemData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"NavItem"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"label"}},{"kind":"Field","name":{"kind":"Name","value":"href"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"PortfolioGridBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"PortfolioGridBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"items"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"PortfolioItemBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"PortfolioItemBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"imageUrl"}},{"kind":"Field","name":{"kind":"Name","value":"link"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ProfileBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ProfileBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"imageSrc"}},{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"bio"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ServiceItemData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ServiceItem"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"icon"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ServicesBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ServicesBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"services"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"SocialLinkData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"SocialLink"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"platform"}},{"kind":"Field","name":{"kind":"Name","value":"href"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"StoryBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"StoryBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"story"}},{"kind":"Field","name":{"kind":"Name","value":"highlights"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"TestimonialItemBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"TestimonialItemBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"fullName"}},{"kind":"Field","name":{"kind":"Name","value":"position"}},{"kind":"Field","name":{"kind":"Name","value":"content"}},{"kind":"Field","name":{"kind":"Name","value":"avatarSrc"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"TestimonialsBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"TestimonialsBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"testimonials"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}}]} as unknown as DocumentNode<HeaderDataFragment, unknown>;
+export const HomePageDataFragmentDoc = {"kind":"Document","definitions":[{"kind":"FragmentDefinition","name":{"kind":"Name","value":"HomePageData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"HomePage"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"shortDescription"}},{"kind":"Field","name":{"kind":"Name","value":"keywords"}},{"kind":"Field","name":{"kind":"Name","value":"blocks"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"BlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"AvailabilityBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ContactBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"FooterColumnData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HelloWorldData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HeroBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogoItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogosBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"NavItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioGridBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ProfileBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServiceItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServicesBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"SocialLinkData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"StoryBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialsBlockData"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"LinkData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ContentUrl"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"type"}},{"kind":"Field","name":{"kind":"Name","value":"base"}},{"kind":"Field","name":{"kind":"Name","value":"default"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"IContentInfo"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"IContentMetadata"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"key"}},{"kind":"Field","name":{"kind":"Name","value":"locale"}},{"kind":"Field","name":{"kind":"Name","value":"types"}},{"kind":"Field","name":{"kind":"Name","value":"displayName"}},{"kind":"Field","name":{"kind":"Name","value":"version"}},{"kind":"Field","name":{"kind":"Name","value":"url"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"LinkData"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"IContentData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IContent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"_metadata"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentInfo"}}]}},{"kind":"Field","alias":{"kind":"Name","value":"_type"},"name":{"kind":"Name","value":"__typename"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"IContentListItem"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IContent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentData"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"BlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IComponent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentData"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"AvailabilityBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"AvailabilityBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"availability"}},{"kind":"Field","name":{"kind":"Name","value":"projectTypes"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ContactBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ContactBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"FooterColumnData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"FooterColumn"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"links"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"HelloWorldData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"HelloWorld"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"message"}},{"kind":"Field","name":{"kind":"Name","value":"detailedmessage"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"HeroBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"HeroBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"subtitle"}},{"kind":"Field","name":{"kind":"Name","value":"showDecoration"}},{"kind":"Field","name":{"kind":"Name","value":"decorationColorsPrimary"}},{"kind":"Field","name":{"kind":"Name","value":"decorationColorsSecondary"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"LogoItemBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"LogoItemBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"src"}},{"kind":"Field","name":{"kind":"Name","value":"alt"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"LogosBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"LogosBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"logos"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"NavItemData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"NavItem"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"label"}},{"kind":"Field","name":{"kind":"Name","value":"href"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"PortfolioGridBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"PortfolioGridBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"items"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"PortfolioItemBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"PortfolioItemBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"imageUrl"}},{"kind":"Field","name":{"kind":"Name","value":"link"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ProfileBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ProfileBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"imageSrc"}},{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"bio"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ServiceItemData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ServiceItem"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"icon"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ServicesBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ServicesBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"services"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"SocialLinkData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"SocialLink"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"platform"}},{"kind":"Field","name":{"kind":"Name","value":"href"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"StoryBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"StoryBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"story"}},{"kind":"Field","name":{"kind":"Name","value":"highlights"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"TestimonialItemBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"TestimonialItemBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"fullName"}},{"kind":"Field","name":{"kind":"Name","value":"position"}},{"kind":"Field","name":{"kind":"Name","value":"content"}},{"kind":"Field","name":{"kind":"Name","value":"avatarSrc"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"TestimonialsBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"TestimonialsBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"testimonials"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}}]} as unknown as DocumentNode<HomePageDataFragment, unknown>;
+export const StartPageDataFragmentDoc = {"kind":"Document","definitions":[{"kind":"FragmentDefinition","name":{"kind":"Name","value":"StartPageData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"StartPage"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"shortDescription"}},{"kind":"Field","name":{"kind":"Name","value":"keywords"}},{"kind":"Field","name":{"kind":"Name","value":"blocks"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"BlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"AvailabilityBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ContactBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"FooterColumnData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HelloWorldData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HeroBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogoItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogosBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"NavItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioGridBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ProfileBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServiceItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServicesBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"SocialLinkData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"StoryBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialsBlockData"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"LinkData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ContentUrl"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"type"}},{"kind":"Field","name":{"kind":"Name","value":"base"}},{"kind":"Field","name":{"kind":"Name","value":"default"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"IContentInfo"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"IContentMetadata"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"key"}},{"kind":"Field","name":{"kind":"Name","value":"locale"}},{"kind":"Field","name":{"kind":"Name","value":"types"}},{"kind":"Field","name":{"kind":"Name","value":"displayName"}},{"kind":"Field","name":{"kind":"Name","value":"version"}},{"kind":"Field","name":{"kind":"Name","value":"url"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"LinkData"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"IContentData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IContent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"_metadata"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentInfo"}}]}},{"kind":"Field","alias":{"kind":"Name","value":"_type"},"name":{"kind":"Name","value":"__typename"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"IContentListItem"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IContent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentData"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"BlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IComponent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentData"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"AvailabilityBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"AvailabilityBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"availability"}},{"kind":"Field","name":{"kind":"Name","value":"projectTypes"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ContactBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ContactBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"FooterColumnData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"FooterColumn"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"links"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"HelloWorldData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"HelloWorld"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"message"}},{"kind":"Field","name":{"kind":"Name","value":"detailedmessage"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"HeroBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"HeroBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"subtitle"}},{"kind":"Field","name":{"kind":"Name","value":"showDecoration"}},{"kind":"Field","name":{"kind":"Name","value":"decorationColorsPrimary"}},{"kind":"Field","name":{"kind":"Name","value":"decorationColorsSecondary"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"LogoItemBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"LogoItemBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"src"}},{"kind":"Field","name":{"kind":"Name","value":"alt"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"LogosBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"LogosBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"logos"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"NavItemData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"NavItem"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"label"}},{"kind":"Field","name":{"kind":"Name","value":"href"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"PortfolioGridBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"PortfolioGridBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"items"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"PortfolioItemBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"PortfolioItemBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"imageUrl"}},{"kind":"Field","name":{"kind":"Name","value":"link"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ProfileBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ProfileBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"imageSrc"}},{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"bio"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ServiceItemData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ServiceItem"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"icon"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ServicesBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ServicesBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"services"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"SocialLinkData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"SocialLink"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"platform"}},{"kind":"Field","name":{"kind":"Name","value":"href"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"StoryBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"StoryBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"story"}},{"kind":"Field","name":{"kind":"Name","value":"highlights"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"TestimonialItemBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"TestimonialItemBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"fullName"}},{"kind":"Field","name":{"kind":"Name","value":"position"}},{"kind":"Field","name":{"kind":"Name","value":"content"}},{"kind":"Field","name":{"kind":"Name","value":"avatarSrc"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"TestimonialsBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"TestimonialsBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"testimonials"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}}]} as unknown as DocumentNode<StartPageDataFragment, unknown>;
 export const VideoMediaDataFragmentDoc = {"kind":"Document","definitions":[{"kind":"FragmentDefinition","name":{"kind":"Name","value":"VideoMediaData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"VideoMedia"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","alias":{"kind":"Name","value":"empty"},"name":{"kind":"Name","value":"_metadata"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"key"}}]}}]}}]} as unknown as DocumentNode<VideoMediaDataFragment, unknown>;
 export const PageDataFragmentDoc = {"kind":"Document","definitions":[{"kind":"FragmentDefinition","name":{"kind":"Name","value":"PageData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IContent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentData"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"LinkData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ContentUrl"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"type"}},{"kind":"Field","name":{"kind":"Name","value":"base"}},{"kind":"Field","name":{"kind":"Name","value":"default"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"IContentInfo"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"IContentMetadata"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"key"}},{"kind":"Field","name":{"kind":"Name","value":"locale"}},{"kind":"Field","name":{"kind":"Name","value":"types"}},{"kind":"Field","name":{"kind":"Name","value":"displayName"}},{"kind":"Field","name":{"kind":"Name","value":"version"}},{"kind":"Field","name":{"kind":"Name","value":"url"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"LinkData"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"IContentData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IContent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"_metadata"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentInfo"}}]}},{"kind":"Field","alias":{"kind":"Name","value":"_type"},"name":{"kind":"Name","value":"__typename"}}]}}]} as unknown as DocumentNode<PageDataFragment, unknown>;
-export const getContentByIdDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"getContentById"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"key"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}},{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"version"}},"type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}},{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"locale"}},"type":{"kind":"ListType","type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"Locales"}}}}},{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"path"}},"type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}},"defaultValue":{"kind":"StringValue","value":"-","block":false}},{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"domain"}},"type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}},{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"changeset"}},"type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","alias":{"kind":"Name","value":"content"},"name":{"kind":"Name","value":"_Content"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"variation"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"include"},"value":{"kind":"EnumValue","value":"ALL"}}]}},{"kind":"Argument","name":{"kind":"Name","value":"where"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"_or"},"value":{"kind":"ListValue","values":[{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"_metadata"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"key"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"eq"},"value":{"kind":"Variable","name":{"kind":"Name","value":"key"}}}]}},{"kind":"ObjectField","name":{"kind":"Name","value":"version"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"eq"},"value":{"kind":"Variable","name":{"kind":"Name","value":"version"}}}]}}]}}]},{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"_metadata"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"url"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"default"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"eq"},"value":{"kind":"Variable","name":{"kind":"Name","value":"path"}}}]}},{"kind":"ObjectField","name":{"kind":"Name","value":"base"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"eq"},"value":{"kind":"Variable","name":{"kind":"Name","value":"domain"}}}]}}]}},{"kind":"ObjectField","name":{"kind":"Name","value":"version"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"eq"},"value":{"kind":"Variable","name":{"kind":"Name","value":"version"}}}]}}]}}]}]}},{"kind":"ObjectField","name":{"kind":"Name","value":"_metadata"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"changeset"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"eq"},"value":{"kind":"Variable","name":{"kind":"Name","value":"changeset"}}}]}}]}}]}},{"kind":"Argument","name":{"kind":"Name","value":"locale"},"value":{"kind":"Variable","name":{"kind":"Name","value":"locale"}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"total"}},{"kind":"Field","alias":{"kind":"Name","value":"items"},"name":{"kind":"Name","value":"item"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"BlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PageData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"AvailabilityBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ContactBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"FooterColumnData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HelloWorldData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HeroBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogoItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogosBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"NavItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioGridBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ProfileBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServiceItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServicesBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"SocialLinkData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"StoryBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TedTestBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialsBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"BlankExperienceData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"SEOExperienceData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"CMSPageData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"FooterData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HeaderData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HomePageData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"StartPageData"}}]}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"LinkData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ContentUrl"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"type"}},{"kind":"Field","name":{"kind":"Name","value":"base"}},{"kind":"Field","name":{"kind":"Name","value":"default"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"IContentInfo"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"IContentMetadata"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"key"}},{"kind":"Field","name":{"kind":"Name","value":"locale"}},{"kind":"Field","name":{"kind":"Name","value":"types"}},{"kind":"Field","name":{"kind":"Name","value":"displayName"}},{"kind":"Field","name":{"kind":"Name","value":"version"}},{"kind":"Field","name":{"kind":"Name","value":"url"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"LinkData"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"IContentData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IContent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"_metadata"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentInfo"}}]}},{"kind":"Field","alias":{"kind":"Name","value":"_type"},"name":{"kind":"Name","value":"__typename"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"IContentListItem"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IContent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentData"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"CompositionNodeData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ICompositionNode"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","alias":{"kind":"Name","value":"name"},"name":{"kind":"Name","value":"displayName"}},{"kind":"Field","alias":{"kind":"Name","value":"layoutType"},"name":{"kind":"Name","value":"nodeType"}},{"kind":"Field","name":{"kind":"Name","value":"type"}},{"kind":"Field","name":{"kind":"Name","value":"key"}},{"kind":"Field","alias":{"kind":"Name","value":"template"},"name":{"kind":"Name","value":"displayTemplateKey"}},{"kind":"Field","alias":{"kind":"Name","value":"settings"},"name":{"kind":"Name","value":"displaySettings"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"key"}},{"kind":"Field","name":{"kind":"Name","value":"value"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"BlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IComponent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentData"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"IElementData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IComponent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"_metadata"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentInfo"}}]}},{"kind":"Field","alias":{"kind":"Name","value":"_type"},"name":{"kind":"Name","value":"__typename"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ElementData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IComponent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IElementData"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"AvailabilityBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"AvailabilityBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"availability"}},{"kind":"Field","name":{"kind":"Name","value":"projectTypes"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ContactBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ContactBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"FooterColumnData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"FooterColumn"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"links"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"HelloWorldData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"HelloWorld"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"message"}},{"kind":"Field","name":{"kind":"Name","value":"detailedmessage"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"HeroBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"HeroBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"subtitle"}},{"kind":"Field","name":{"kind":"Name","value":"showDecoration"}},{"kind":"Field","name":{"kind":"Name","value":"decorationColorsPrimary"}},{"kind":"Field","name":{"kind":"Name","value":"decorationColorsSecondary"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"LogoItemBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"LogoItemBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"src"}},{"kind":"Field","name":{"kind":"Name","value":"alt"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"LogosBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"LogosBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"logos"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"NavItemData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"NavItem"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"label"}},{"kind":"Field","name":{"kind":"Name","value":"href"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"PortfolioGridBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"PortfolioGridBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"items"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"PortfolioItemBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"PortfolioItemBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"imageUrl"}},{"kind":"Field","name":{"kind":"Name","value":"link"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ProfileBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ProfileBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"imageSrc"}},{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"bio"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ServiceItemData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ServiceItem"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"icon"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ServicesBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ServicesBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"services"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"SocialLinkData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"SocialLink"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"platform"}},{"kind":"Field","name":{"kind":"Name","value":"href"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"StoryBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"StoryBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"story"}},{"kind":"Field","name":{"kind":"Name","value":"highlights"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"TedTestBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"TedTestBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"stringTest"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"TestimonialItemData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"TestimonialItem"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"fullName"}},{"kind":"Field","name":{"kind":"Name","value":"position"}},{"kind":"Field","name":{"kind":"Name","value":"content"}},{"kind":"Field","name":{"kind":"Name","value":"avatarSrc"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"TestimonialItemBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"TestimonialItemBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"fullName"}},{"kind":"Field","name":{"kind":"Name","value":"position"}},{"kind":"Field","name":{"kind":"Name","value":"content"}},{"kind":"Field","name":{"kind":"Name","value":"avatarSrc"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"TestimonialsBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"TestimonialsBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"testimonials"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"CompositionComponentNodeData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ICompositionComponentNode"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"component"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"BlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ElementData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"AvailabilityBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ContactBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"FooterColumnData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HelloWorldData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HeroBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogoItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogosBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"NavItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioGridBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ProfileBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServiceItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServicesBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"SocialLinkData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"StoryBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TedTestBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialsBlockData"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ExperienceData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IExperience"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"composition"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionNodeData"}},{"kind":"Field","name":{"kind":"Name","value":"nodes"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionNodeData"}},{"kind":"InlineFragment","typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ICompositionStructureNode"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"nodes"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionNodeData"}},{"kind":"InlineFragment","typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ICompositionStructureNode"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"nodes"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionNodeData"}},{"kind":"InlineFragment","typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ICompositionStructureNode"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"nodes"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionNodeData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionComponentNodeData"}},{"kind":"InlineFragment","typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ICompositionStructureNode"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"nodes"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionNodeData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionComponentNodeData"}}]}}]}}]}}]}}]}}]}}]}}]}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionComponentNodeData"}}]}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"PageData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IContent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentData"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"BlankExperienceData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"BlankExperience"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"ExperienceData"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"SEOExperienceData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"SEOExperience"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"shortDescription"}},{"kind":"Field","name":{"kind":"Name","value":"keywords"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ExperienceData"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"CMSPageData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"CMSPage"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"shortDescription"}},{"kind":"Field","name":{"kind":"Name","value":"keywords"}},{"kind":"Field","name":{"kind":"Name","value":"blocks"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"BlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"AvailabilityBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ContactBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"FooterColumnData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HelloWorldData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HeroBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogoItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogosBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"NavItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioGridBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ProfileBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServiceItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServicesBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"SocialLinkData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"StoryBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TedTestBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialsBlockData"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"FooterData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"Footer"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"copyrightText"}},{"kind":"Field","name":{"kind":"Name","value":"columns"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"BlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"AvailabilityBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ContactBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"FooterColumnData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HelloWorldData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HeroBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogoItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogosBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"NavItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioGridBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ProfileBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServiceItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServicesBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"SocialLinkData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"StoryBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TedTestBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialsBlockData"}}]}},{"kind":"Field","name":{"kind":"Name","value":"socialLinks"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"BlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"AvailabilityBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ContactBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"FooterColumnData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HelloWorldData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HeroBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogoItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogosBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"NavItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioGridBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ProfileBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServiceItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServicesBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"SocialLinkData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"StoryBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TedTestBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialsBlockData"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"HeaderData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"Header"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"logo"}},{"kind":"Field","name":{"kind":"Name","value":"navItems"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"BlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"AvailabilityBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ContactBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"FooterColumnData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HelloWorldData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HeroBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogoItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogosBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"NavItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioGridBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ProfileBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServiceItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServicesBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"SocialLinkData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"StoryBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TedTestBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialsBlockData"}}]}},{"kind":"Field","name":{"kind":"Name","value":"ctaText"}},{"kind":"Field","name":{"kind":"Name","value":"ctaHref"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"HomePageData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"HomePage"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"shortDescription"}},{"kind":"Field","name":{"kind":"Name","value":"keywords"}},{"kind":"Field","name":{"kind":"Name","value":"blocks"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"BlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"AvailabilityBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ContactBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"FooterColumnData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HelloWorldData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HeroBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogoItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogosBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"NavItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioGridBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ProfileBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServiceItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServicesBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"SocialLinkData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"StoryBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TedTestBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialsBlockData"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"StartPageData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"StartPage"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"shortDescription"}},{"kind":"Field","name":{"kind":"Name","value":"keywords"}},{"kind":"Field","name":{"kind":"Name","value":"blocks"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"BlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"AvailabilityBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ContactBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"FooterColumnData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HelloWorldData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HeroBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogoItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogosBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"NavItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioGridBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ProfileBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServiceItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServicesBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"SocialLinkData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"StoryBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TedTestBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialsBlockData"}}]}}]}}]} as unknown as DocumentNode<getContentByIdQuery, getContentByIdQueryVariables>;
-export const getContentByPathDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"getContentByPath"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"path"}},"type":{"kind":"NonNullType","type":{"kind":"ListType","type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}}}},{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"locale"}},"type":{"kind":"ListType","type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"Locales"}}}}},{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"siteId"}},"type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}},{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"changeset"}},"type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}},"defaultValue":{"kind":"NullValue"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","alias":{"kind":"Name","value":"content"},"name":{"kind":"Name","value":"_Content"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"where"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"_metadata"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"url"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"default"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"in"},"value":{"kind":"Variable","name":{"kind":"Name","value":"path"}}}]}},{"kind":"ObjectField","name":{"kind":"Name","value":"base"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"eq"},"value":{"kind":"Variable","name":{"kind":"Name","value":"siteId"}}}]}}]}},{"kind":"ObjectField","name":{"kind":"Name","value":"changeset"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"eq"},"value":{"kind":"Variable","name":{"kind":"Name","value":"changeset"}}}]}}]}}]}},{"kind":"Argument","name":{"kind":"Name","value":"locale"},"value":{"kind":"Variable","name":{"kind":"Name","value":"locale"}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"total"}},{"kind":"Field","alias":{"kind":"Name","value":"items"},"name":{"kind":"Name","value":"item"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PageData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"BlankExperienceData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"SEOExperienceData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"CMSPageData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"FooterData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HeaderData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HomePageData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"StartPageData"}}]}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"LinkData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ContentUrl"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"type"}},{"kind":"Field","name":{"kind":"Name","value":"base"}},{"kind":"Field","name":{"kind":"Name","value":"default"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"IContentInfo"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"IContentMetadata"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"key"}},{"kind":"Field","name":{"kind":"Name","value":"locale"}},{"kind":"Field","name":{"kind":"Name","value":"types"}},{"kind":"Field","name":{"kind":"Name","value":"displayName"}},{"kind":"Field","name":{"kind":"Name","value":"version"}},{"kind":"Field","name":{"kind":"Name","value":"url"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"LinkData"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"IContentData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IContent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"_metadata"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentInfo"}}]}},{"kind":"Field","alias":{"kind":"Name","value":"_type"},"name":{"kind":"Name","value":"__typename"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"CompositionNodeData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ICompositionNode"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","alias":{"kind":"Name","value":"name"},"name":{"kind":"Name","value":"displayName"}},{"kind":"Field","alias":{"kind":"Name","value":"layoutType"},"name":{"kind":"Name","value":"nodeType"}},{"kind":"Field","name":{"kind":"Name","value":"type"}},{"kind":"Field","name":{"kind":"Name","value":"key"}},{"kind":"Field","alias":{"kind":"Name","value":"template"},"name":{"kind":"Name","value":"displayTemplateKey"}},{"kind":"Field","alias":{"kind":"Name","value":"settings"},"name":{"kind":"Name","value":"displaySettings"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"key"}},{"kind":"Field","name":{"kind":"Name","value":"value"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"BlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IComponent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentData"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"IElementData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IComponent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"_metadata"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentInfo"}}]}},{"kind":"Field","alias":{"kind":"Name","value":"_type"},"name":{"kind":"Name","value":"__typename"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ElementData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IComponent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IElementData"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"AvailabilityBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"AvailabilityBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"availability"}},{"kind":"Field","name":{"kind":"Name","value":"projectTypes"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ContactBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ContactBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"IContentListItem"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IContent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentData"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"FooterColumnData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"FooterColumn"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"links"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"HelloWorldData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"HelloWorld"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"message"}},{"kind":"Field","name":{"kind":"Name","value":"detailedmessage"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"HeroBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"HeroBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"subtitle"}},{"kind":"Field","name":{"kind":"Name","value":"showDecoration"}},{"kind":"Field","name":{"kind":"Name","value":"decorationColorsPrimary"}},{"kind":"Field","name":{"kind":"Name","value":"decorationColorsSecondary"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"LogoItemBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"LogoItemBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"src"}},{"kind":"Field","name":{"kind":"Name","value":"alt"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"LogosBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"LogosBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"logos"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"NavItemData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"NavItem"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"label"}},{"kind":"Field","name":{"kind":"Name","value":"href"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"PortfolioGridBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"PortfolioGridBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"items"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"PortfolioItemBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"PortfolioItemBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"imageUrl"}},{"kind":"Field","name":{"kind":"Name","value":"link"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ProfileBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ProfileBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"imageSrc"}},{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"bio"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ServiceItemData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ServiceItem"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"icon"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ServicesBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ServicesBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"services"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"SocialLinkData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"SocialLink"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"platform"}},{"kind":"Field","name":{"kind":"Name","value":"href"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"StoryBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"StoryBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"story"}},{"kind":"Field","name":{"kind":"Name","value":"highlights"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"TedTestBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"TedTestBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"stringTest"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"TestimonialItemData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"TestimonialItem"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"fullName"}},{"kind":"Field","name":{"kind":"Name","value":"position"}},{"kind":"Field","name":{"kind":"Name","value":"content"}},{"kind":"Field","name":{"kind":"Name","value":"avatarSrc"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"TestimonialItemBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"TestimonialItemBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"fullName"}},{"kind":"Field","name":{"kind":"Name","value":"position"}},{"kind":"Field","name":{"kind":"Name","value":"content"}},{"kind":"Field","name":{"kind":"Name","value":"avatarSrc"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"TestimonialsBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"TestimonialsBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"testimonials"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"CompositionComponentNodeData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ICompositionComponentNode"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"component"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"BlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ElementData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"AvailabilityBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ContactBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"FooterColumnData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HelloWorldData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HeroBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogoItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogosBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"NavItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioGridBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ProfileBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServiceItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServicesBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"SocialLinkData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"StoryBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TedTestBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialsBlockData"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ExperienceData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IExperience"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"composition"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionNodeData"}},{"kind":"Field","name":{"kind":"Name","value":"nodes"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionNodeData"}},{"kind":"InlineFragment","typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ICompositionStructureNode"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"nodes"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionNodeData"}},{"kind":"InlineFragment","typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ICompositionStructureNode"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"nodes"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionNodeData"}},{"kind":"InlineFragment","typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ICompositionStructureNode"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"nodes"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionNodeData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionComponentNodeData"}},{"kind":"InlineFragment","typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ICompositionStructureNode"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"nodes"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionNodeData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionComponentNodeData"}}]}}]}}]}}]}}]}}]}}]}}]}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionComponentNodeData"}}]}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"PageData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IContent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentData"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"BlankExperienceData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"BlankExperience"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"ExperienceData"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"SEOExperienceData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"SEOExperience"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"shortDescription"}},{"kind":"Field","name":{"kind":"Name","value":"keywords"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ExperienceData"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"CMSPageData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"CMSPage"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"shortDescription"}},{"kind":"Field","name":{"kind":"Name","value":"keywords"}},{"kind":"Field","name":{"kind":"Name","value":"blocks"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"BlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"AvailabilityBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ContactBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"FooterColumnData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HelloWorldData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HeroBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogoItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogosBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"NavItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioGridBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ProfileBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServiceItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServicesBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"SocialLinkData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"StoryBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TedTestBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialsBlockData"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"FooterData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"Footer"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"copyrightText"}},{"kind":"Field","name":{"kind":"Name","value":"columns"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"BlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"AvailabilityBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ContactBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"FooterColumnData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HelloWorldData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HeroBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogoItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogosBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"NavItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioGridBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ProfileBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServiceItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServicesBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"SocialLinkData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"StoryBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TedTestBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialsBlockData"}}]}},{"kind":"Field","name":{"kind":"Name","value":"socialLinks"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"BlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"AvailabilityBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ContactBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"FooterColumnData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HelloWorldData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HeroBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogoItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogosBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"NavItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioGridBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ProfileBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServiceItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServicesBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"SocialLinkData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"StoryBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TedTestBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialsBlockData"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"HeaderData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"Header"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"logo"}},{"kind":"Field","name":{"kind":"Name","value":"navItems"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"BlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"AvailabilityBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ContactBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"FooterColumnData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HelloWorldData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HeroBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogoItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogosBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"NavItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioGridBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ProfileBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServiceItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServicesBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"SocialLinkData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"StoryBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TedTestBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialsBlockData"}}]}},{"kind":"Field","name":{"kind":"Name","value":"ctaText"}},{"kind":"Field","name":{"kind":"Name","value":"ctaHref"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"HomePageData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"HomePage"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"shortDescription"}},{"kind":"Field","name":{"kind":"Name","value":"keywords"}},{"kind":"Field","name":{"kind":"Name","value":"blocks"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"BlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"AvailabilityBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ContactBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"FooterColumnData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HelloWorldData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HeroBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogoItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogosBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"NavItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioGridBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ProfileBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServiceItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServicesBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"SocialLinkData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"StoryBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TedTestBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialsBlockData"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"StartPageData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"StartPage"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"shortDescription"}},{"kind":"Field","name":{"kind":"Name","value":"keywords"}},{"kind":"Field","name":{"kind":"Name","value":"blocks"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"BlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"AvailabilityBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ContactBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"FooterColumnData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HelloWorldData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HeroBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogoItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogosBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"NavItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioGridBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ProfileBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServiceItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServicesBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"SocialLinkData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"StoryBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TedTestBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialsBlockData"}}]}}]}}]} as unknown as DocumentNode<getContentByPathQuery, getContentByPathQueryVariables>;
+export const ReferenceDataFragmentDoc = {"kind":"Document","definitions":[{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ReferenceData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ContentReference"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"key"}},{"kind":"Field","name":{"kind":"Name","value":"url"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"LinkData"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"LinkData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ContentUrl"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"type"}},{"kind":"Field","name":{"kind":"Name","value":"base"}},{"kind":"Field","name":{"kind":"Name","value":"default"}}]}}]} as unknown as DocumentNode<ReferenceDataFragment, unknown>;
+export const LinkItemDataFragmentDoc = {"kind":"Document","definitions":[{"kind":"FragmentDefinition","name":{"kind":"Name","value":"LinkItemData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"Link"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"text"}},{"kind":"Field","name":{"kind":"Name","value":"target"}},{"kind":"Field","name":{"kind":"Name","value":"url"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"LinkData"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"LinkData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ContentUrl"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"type"}},{"kind":"Field","name":{"kind":"Name","value":"base"}},{"kind":"Field","name":{"kind":"Name","value":"default"}}]}}]} as unknown as DocumentNode<LinkItemDataFragment, unknown>;
+export const getContentByIdDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"getContentById"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"key"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}},{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"version"}},"type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}},{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"locale"}},"type":{"kind":"ListType","type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"Locales"}}}}},{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"path"}},"type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}},"defaultValue":{"kind":"StringValue","value":"-","block":false}},{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"domain"}},"type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}},{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"changeset"}},"type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","alias":{"kind":"Name","value":"content"},"name":{"kind":"Name","value":"_Content"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"variation"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"include"},"value":{"kind":"EnumValue","value":"ALL"}}]}},{"kind":"Argument","name":{"kind":"Name","value":"where"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"_or"},"value":{"kind":"ListValue","values":[{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"_metadata"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"key"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"eq"},"value":{"kind":"Variable","name":{"kind":"Name","value":"key"}}}]}},{"kind":"ObjectField","name":{"kind":"Name","value":"version"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"eq"},"value":{"kind":"Variable","name":{"kind":"Name","value":"version"}}}]}}]}}]},{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"_metadata"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"url"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"default"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"eq"},"value":{"kind":"Variable","name":{"kind":"Name","value":"path"}}}]}},{"kind":"ObjectField","name":{"kind":"Name","value":"base"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"eq"},"value":{"kind":"Variable","name":{"kind":"Name","value":"domain"}}}]}}]}},{"kind":"ObjectField","name":{"kind":"Name","value":"version"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"eq"},"value":{"kind":"Variable","name":{"kind":"Name","value":"version"}}}]}}]}}]}]}},{"kind":"ObjectField","name":{"kind":"Name","value":"_metadata"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"changeset"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"eq"},"value":{"kind":"Variable","name":{"kind":"Name","value":"changeset"}}}]}}]}}]}},{"kind":"Argument","name":{"kind":"Name","value":"locale"},"value":{"kind":"Variable","name":{"kind":"Name","value":"locale"}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"total"}},{"kind":"Field","alias":{"kind":"Name","value":"items"},"name":{"kind":"Name","value":"item"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"BlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PageData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"AvailabilityBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ContactBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"FooterColumnData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HelloWorldData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HeroBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogoItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogosBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"NavItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioGridBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ProfileBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServiceItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServicesBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"SocialLinkData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"StoryBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialsBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"BlankExperienceData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"SEOExperienceData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"CMSPageData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"FooterData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HeaderData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HomePageData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"StartPageData"}}]}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"LinkData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ContentUrl"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"type"}},{"kind":"Field","name":{"kind":"Name","value":"base"}},{"kind":"Field","name":{"kind":"Name","value":"default"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"IContentInfo"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"IContentMetadata"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"key"}},{"kind":"Field","name":{"kind":"Name","value":"locale"}},{"kind":"Field","name":{"kind":"Name","value":"types"}},{"kind":"Field","name":{"kind":"Name","value":"displayName"}},{"kind":"Field","name":{"kind":"Name","value":"version"}},{"kind":"Field","name":{"kind":"Name","value":"url"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"LinkData"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"IContentData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IContent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"_metadata"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentInfo"}}]}},{"kind":"Field","alias":{"kind":"Name","value":"_type"},"name":{"kind":"Name","value":"__typename"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"IContentListItem"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IContent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentData"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"CompositionNodeData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ICompositionNode"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","alias":{"kind":"Name","value":"name"},"name":{"kind":"Name","value":"displayName"}},{"kind":"Field","alias":{"kind":"Name","value":"layoutType"},"name":{"kind":"Name","value":"nodeType"}},{"kind":"Field","name":{"kind":"Name","value":"type"}},{"kind":"Field","name":{"kind":"Name","value":"key"}},{"kind":"Field","alias":{"kind":"Name","value":"template"},"name":{"kind":"Name","value":"displayTemplateKey"}},{"kind":"Field","alias":{"kind":"Name","value":"settings"},"name":{"kind":"Name","value":"displaySettings"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"key"}},{"kind":"Field","name":{"kind":"Name","value":"value"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"BlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IComponent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentData"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"IElementData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IComponent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"_metadata"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentInfo"}}]}},{"kind":"Field","alias":{"kind":"Name","value":"_type"},"name":{"kind":"Name","value":"__typename"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ElementData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IComponent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IElementData"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"AvailabilityBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"AvailabilityBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"availability"}},{"kind":"Field","name":{"kind":"Name","value":"projectTypes"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ContactBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ContactBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"FooterColumnData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"FooterColumn"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"links"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"HelloWorldData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"HelloWorld"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"message"}},{"kind":"Field","name":{"kind":"Name","value":"detailedmessage"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"HeroBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"HeroBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"subtitle"}},{"kind":"Field","name":{"kind":"Name","value":"showDecoration"}},{"kind":"Field","name":{"kind":"Name","value":"decorationColorsPrimary"}},{"kind":"Field","name":{"kind":"Name","value":"decorationColorsSecondary"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"LogoItemBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"LogoItemBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"src"}},{"kind":"Field","name":{"kind":"Name","value":"alt"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"LogosBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"LogosBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"logos"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"NavItemData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"NavItem"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"label"}},{"kind":"Field","name":{"kind":"Name","value":"href"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"PortfolioGridBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"PortfolioGridBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"items"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"PortfolioItemBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"PortfolioItemBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"imageUrl"}},{"kind":"Field","name":{"kind":"Name","value":"link"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ProfileBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ProfileBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"imageSrc"}},{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"bio"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ServiceItemData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ServiceItem"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"icon"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ServicesBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ServicesBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"services"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"SocialLinkData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"SocialLink"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"platform"}},{"kind":"Field","name":{"kind":"Name","value":"href"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"StoryBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"StoryBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"story"}},{"kind":"Field","name":{"kind":"Name","value":"highlights"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"TestimonialItemBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"TestimonialItemBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"fullName"}},{"kind":"Field","name":{"kind":"Name","value":"position"}},{"kind":"Field","name":{"kind":"Name","value":"content"}},{"kind":"Field","name":{"kind":"Name","value":"avatarSrc"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"TestimonialsBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"TestimonialsBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"testimonials"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"CompositionComponentNodeData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ICompositionComponentNode"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"component"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"BlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ElementData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"AvailabilityBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ContactBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"FooterColumnData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HelloWorldData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HeroBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogoItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogosBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"NavItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioGridBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ProfileBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServiceItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServicesBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"SocialLinkData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"StoryBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialsBlockData"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ExperienceData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IExperience"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"composition"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionNodeData"}},{"kind":"Field","name":{"kind":"Name","value":"nodes"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionNodeData"}},{"kind":"InlineFragment","typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ICompositionStructureNode"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"nodes"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionNodeData"}},{"kind":"InlineFragment","typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ICompositionStructureNode"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"nodes"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionNodeData"}},{"kind":"InlineFragment","typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ICompositionStructureNode"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"nodes"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionNodeData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionComponentNodeData"}},{"kind":"InlineFragment","typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ICompositionStructureNode"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"nodes"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionNodeData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionComponentNodeData"}}]}}]}}]}}]}}]}}]}}]}}]}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionComponentNodeData"}}]}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"PageData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IContent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentData"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"BlankExperienceData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"BlankExperience"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"ExperienceData"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"SEOExperienceData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"SEOExperience"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"shortDescription"}},{"kind":"Field","name":{"kind":"Name","value":"keywords"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ExperienceData"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"CMSPageData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"CMSPage"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"shortDescription"}},{"kind":"Field","name":{"kind":"Name","value":"keywords"}},{"kind":"Field","name":{"kind":"Name","value":"blocks"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"BlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"AvailabilityBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ContactBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"FooterColumnData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HelloWorldData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HeroBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogoItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogosBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"NavItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioGridBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ProfileBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServiceItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServicesBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"SocialLinkData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"StoryBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialsBlockData"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"FooterData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"Footer"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"copyrightText"}},{"kind":"Field","name":{"kind":"Name","value":"columns"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"BlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"AvailabilityBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ContactBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"FooterColumnData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HelloWorldData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HeroBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogoItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogosBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"NavItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioGridBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ProfileBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServiceItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServicesBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"SocialLinkData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"StoryBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialsBlockData"}}]}},{"kind":"Field","name":{"kind":"Name","value":"socialLinks"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"BlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"AvailabilityBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ContactBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"FooterColumnData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HelloWorldData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HeroBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogoItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogosBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"NavItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioGridBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ProfileBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServiceItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServicesBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"SocialLinkData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"StoryBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialsBlockData"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"HeaderData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"Header"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"logo"}},{"kind":"Field","name":{"kind":"Name","value":"navItems"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"BlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"AvailabilityBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ContactBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"FooterColumnData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HelloWorldData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HeroBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogoItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogosBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"NavItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioGridBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ProfileBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServiceItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServicesBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"SocialLinkData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"StoryBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialsBlockData"}}]}},{"kind":"Field","name":{"kind":"Name","value":"ctaText"}},{"kind":"Field","name":{"kind":"Name","value":"ctaHref"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"HomePageData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"HomePage"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"shortDescription"}},{"kind":"Field","name":{"kind":"Name","value":"keywords"}},{"kind":"Field","name":{"kind":"Name","value":"blocks"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"BlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"AvailabilityBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ContactBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"FooterColumnData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HelloWorldData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HeroBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogoItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogosBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"NavItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioGridBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ProfileBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServiceItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServicesBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"SocialLinkData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"StoryBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialsBlockData"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"StartPageData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"StartPage"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"shortDescription"}},{"kind":"Field","name":{"kind":"Name","value":"keywords"}},{"kind":"Field","name":{"kind":"Name","value":"blocks"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"BlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"AvailabilityBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ContactBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"FooterColumnData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HelloWorldData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HeroBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogoItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogosBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"NavItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioGridBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ProfileBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServiceItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServicesBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"SocialLinkData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"StoryBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialsBlockData"}}]}}]}}]} as unknown as DocumentNode<getContentByIdQuery, getContentByIdQueryVariables>;
+export const getContentByPathDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"getContentByPath"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"path"}},"type":{"kind":"NonNullType","type":{"kind":"ListType","type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}}}},{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"locale"}},"type":{"kind":"ListType","type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"Locales"}}}}},{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"siteId"}},"type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}},{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"changeset"}},"type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}},"defaultValue":{"kind":"NullValue"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","alias":{"kind":"Name","value":"content"},"name":{"kind":"Name","value":"_Content"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"where"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"_metadata"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"url"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"default"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"in"},"value":{"kind":"Variable","name":{"kind":"Name","value":"path"}}}]}},{"kind":"ObjectField","name":{"kind":"Name","value":"base"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"eq"},"value":{"kind":"Variable","name":{"kind":"Name","value":"siteId"}}}]}}]}},{"kind":"ObjectField","name":{"kind":"Name","value":"changeset"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"eq"},"value":{"kind":"Variable","name":{"kind":"Name","value":"changeset"}}}]}}]}}]}},{"kind":"Argument","name":{"kind":"Name","value":"locale"},"value":{"kind":"Variable","name":{"kind":"Name","value":"locale"}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"total"}},{"kind":"Field","alias":{"kind":"Name","value":"items"},"name":{"kind":"Name","value":"item"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PageData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"BlankExperienceData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"SEOExperienceData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"CMSPageData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"FooterData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HeaderData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HomePageData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"StartPageData"}}]}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"LinkData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ContentUrl"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"type"}},{"kind":"Field","name":{"kind":"Name","value":"base"}},{"kind":"Field","name":{"kind":"Name","value":"default"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"IContentInfo"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"IContentMetadata"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"key"}},{"kind":"Field","name":{"kind":"Name","value":"locale"}},{"kind":"Field","name":{"kind":"Name","value":"types"}},{"kind":"Field","name":{"kind":"Name","value":"displayName"}},{"kind":"Field","name":{"kind":"Name","value":"version"}},{"kind":"Field","name":{"kind":"Name","value":"url"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"LinkData"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"IContentData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IContent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"_metadata"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentInfo"}}]}},{"kind":"Field","alias":{"kind":"Name","value":"_type"},"name":{"kind":"Name","value":"__typename"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"CompositionNodeData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ICompositionNode"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","alias":{"kind":"Name","value":"name"},"name":{"kind":"Name","value":"displayName"}},{"kind":"Field","alias":{"kind":"Name","value":"layoutType"},"name":{"kind":"Name","value":"nodeType"}},{"kind":"Field","name":{"kind":"Name","value":"type"}},{"kind":"Field","name":{"kind":"Name","value":"key"}},{"kind":"Field","alias":{"kind":"Name","value":"template"},"name":{"kind":"Name","value":"displayTemplateKey"}},{"kind":"Field","alias":{"kind":"Name","value":"settings"},"name":{"kind":"Name","value":"displaySettings"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"key"}},{"kind":"Field","name":{"kind":"Name","value":"value"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"BlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IComponent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentData"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"IElementData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IComponent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"_metadata"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentInfo"}}]}},{"kind":"Field","alias":{"kind":"Name","value":"_type"},"name":{"kind":"Name","value":"__typename"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ElementData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IComponent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IElementData"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"AvailabilityBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"AvailabilityBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"availability"}},{"kind":"Field","name":{"kind":"Name","value":"projectTypes"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ContactBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ContactBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"IContentListItem"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IContent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentData"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"FooterColumnData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"FooterColumn"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"links"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"HelloWorldData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"HelloWorld"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"message"}},{"kind":"Field","name":{"kind":"Name","value":"detailedmessage"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"HeroBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"HeroBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"subtitle"}},{"kind":"Field","name":{"kind":"Name","value":"showDecoration"}},{"kind":"Field","name":{"kind":"Name","value":"decorationColorsPrimary"}},{"kind":"Field","name":{"kind":"Name","value":"decorationColorsSecondary"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"LogoItemBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"LogoItemBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"src"}},{"kind":"Field","name":{"kind":"Name","value":"alt"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"LogosBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"LogosBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"logos"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"NavItemData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"NavItem"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"label"}},{"kind":"Field","name":{"kind":"Name","value":"href"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"PortfolioGridBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"PortfolioGridBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"items"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"PortfolioItemBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"PortfolioItemBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"imageUrl"}},{"kind":"Field","name":{"kind":"Name","value":"link"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ProfileBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ProfileBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"imageSrc"}},{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"bio"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ServiceItemData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ServiceItem"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"icon"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ServicesBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ServicesBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"services"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"SocialLinkData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"SocialLink"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"platform"}},{"kind":"Field","name":{"kind":"Name","value":"href"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"StoryBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"StoryBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"story"}},{"kind":"Field","name":{"kind":"Name","value":"highlights"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"TestimonialItemBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"TestimonialItemBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"fullName"}},{"kind":"Field","name":{"kind":"Name","value":"position"}},{"kind":"Field","name":{"kind":"Name","value":"content"}},{"kind":"Field","name":{"kind":"Name","value":"avatarSrc"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"TestimonialsBlockData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"TestimonialsBlock"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"testimonials"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentListItem"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"CompositionComponentNodeData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ICompositionComponentNode"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"component"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"BlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ElementData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"AvailabilityBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ContactBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"FooterColumnData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HelloWorldData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HeroBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogoItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogosBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"NavItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioGridBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ProfileBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServiceItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServicesBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"SocialLinkData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"StoryBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialsBlockData"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"ExperienceData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IExperience"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"composition"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionNodeData"}},{"kind":"Field","name":{"kind":"Name","value":"nodes"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionNodeData"}},{"kind":"InlineFragment","typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ICompositionStructureNode"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"nodes"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionNodeData"}},{"kind":"InlineFragment","typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ICompositionStructureNode"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"nodes"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionNodeData"}},{"kind":"InlineFragment","typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ICompositionStructureNode"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"nodes"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionNodeData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionComponentNodeData"}},{"kind":"InlineFragment","typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"ICompositionStructureNode"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"nodes"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionNodeData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionComponentNodeData"}}]}}]}}]}}]}}]}}]}}]}}]}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"CompositionComponentNodeData"}}]}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"PageData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"_IContent"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"IContentData"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"BlankExperienceData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"BlankExperience"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"ExperienceData"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"SEOExperienceData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"SEOExperience"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"shortDescription"}},{"kind":"Field","name":{"kind":"Name","value":"keywords"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ExperienceData"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"CMSPageData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"CMSPage"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"shortDescription"}},{"kind":"Field","name":{"kind":"Name","value":"keywords"}},{"kind":"Field","name":{"kind":"Name","value":"blocks"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"BlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"AvailabilityBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ContactBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"FooterColumnData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HelloWorldData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HeroBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogoItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogosBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"NavItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioGridBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ProfileBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServiceItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServicesBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"SocialLinkData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"StoryBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialsBlockData"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"FooterData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"Footer"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"copyrightText"}},{"kind":"Field","name":{"kind":"Name","value":"columns"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"BlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"AvailabilityBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ContactBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"FooterColumnData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HelloWorldData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HeroBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogoItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogosBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"NavItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioGridBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ProfileBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServiceItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServicesBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"SocialLinkData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"StoryBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialsBlockData"}}]}},{"kind":"Field","name":{"kind":"Name","value":"socialLinks"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"BlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"AvailabilityBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ContactBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"FooterColumnData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HelloWorldData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HeroBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogoItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogosBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"NavItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioGridBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ProfileBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServiceItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServicesBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"SocialLinkData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"StoryBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialsBlockData"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"HeaderData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"Header"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"logo"}},{"kind":"Field","name":{"kind":"Name","value":"navItems"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"BlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"AvailabilityBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ContactBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"FooterColumnData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HelloWorldData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HeroBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogoItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogosBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"NavItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioGridBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ProfileBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServiceItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServicesBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"SocialLinkData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"StoryBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialsBlockData"}}]}},{"kind":"Field","name":{"kind":"Name","value":"ctaText"}},{"kind":"Field","name":{"kind":"Name","value":"ctaHref"}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"HomePageData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"HomePage"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"shortDescription"}},{"kind":"Field","name":{"kind":"Name","value":"keywords"}},{"kind":"Field","name":{"kind":"Name","value":"blocks"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"BlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"AvailabilityBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ContactBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"FooterColumnData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HelloWorldData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HeroBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogoItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogosBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"NavItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioGridBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ProfileBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServiceItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServicesBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"SocialLinkData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"StoryBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialsBlockData"}}]}}]}},{"kind":"FragmentDefinition","name":{"kind":"Name","value":"StartPageData"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"StartPage"}},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"shortDescription"}},{"kind":"Field","name":{"kind":"Name","value":"keywords"}},{"kind":"Field","name":{"kind":"Name","value":"blocks"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"BlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"AvailabilityBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ContactBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"FooterColumnData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HelloWorldData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"HeroBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogoItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"LogosBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"NavItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioGridBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"PortfolioItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ProfileBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServiceItemData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"ServicesBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"SocialLinkData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"StoryBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialItemBlockData"}},{"kind":"FragmentSpread","name":{"kind":"Name","value":"TestimonialsBlockData"}}]}}]}}]} as unknown as DocumentNode<getContentByPathQuery, getContentByPathQueryVariables>;
 export const getContentTypeDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"getContentType"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"key"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}},{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"version"}},"type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}},{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"locale"}},"type":{"kind":"ListType","type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"Locales"}}}}},{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"path"}},"type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}},"defaultValue":{"kind":"StringValue","value":"-","block":false}},{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"domain"}},"type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","alias":{"kind":"Name","value":"content"},"name":{"kind":"Name","value":"_Content"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"variation"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"include"},"value":{"kind":"EnumValue","value":"ALL"}}]}},{"kind":"Argument","name":{"kind":"Name","value":"where"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"_or"},"value":{"kind":"ListValue","values":[{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"_metadata"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"key"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"eq"},"value":{"kind":"Variable","name":{"kind":"Name","value":"key"}}}]}},{"kind":"ObjectField","name":{"kind":"Name","value":"version"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"eq"},"value":{"kind":"Variable","name":{"kind":"Name","value":"version"}}}]}}]}}]},{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"_metadata"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"url"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"hierarchical"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"eq"},"value":{"kind":"Variable","name":{"kind":"Name","value":"path"}}}]}},{"kind":"ObjectField","name":{"kind":"Name","value":"base"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"eq"},"value":{"kind":"Variable","name":{"kind":"Name","value":"domain"}}}]}}]}},{"kind":"ObjectField","name":{"kind":"Name","value":"version"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"eq"},"value":{"kind":"Variable","name":{"kind":"Name","value":"version"}}}]}}]}}]}]}}]}},{"kind":"Argument","name":{"kind":"Name","value":"locale"},"value":{"kind":"Variable","name":{"kind":"Name","value":"locale"}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"total"}},{"kind":"Field","alias":{"kind":"Name","value":"items"},"name":{"kind":"Name","value":"item"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"_metadata"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"types"}}]}}]}}]}}]}}]} as unknown as DocumentNode<getContentTypeQuery, getContentTypeQueryVariables>;

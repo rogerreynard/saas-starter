@@ -17,8 +17,6 @@ import ServiceItemComponent from './../component/ServiceItem';
 import ServicesBlockComponent from './../component/ServicesBlock';
 import SocialLinkComponent from './../component/SocialLink';
 import StoryBlockComponent from './../component/StoryBlock';
-import TedTestBlockComponent from './../component/TedTestBlock';
-import TestimonialItemComponent from './../component/TestimonialItem';
 import TestimonialItemBlockComponent from './../component/TestimonialItemBlock';
 import TestimonialsBlockComponent from './../component/TestimonialsBlock';
 
@@ -83,14 +81,6 @@ export const ComponentFactory : ComponentTypeDictionary = [
   {
     type: 'StoryBlock',
     component: StoryBlockComponent
-  },
-  {
-    type: 'TedTestBlock',
-    component: TedTestBlockComponent
-  },
-  {
-    type: 'TestimonialItem',
-    component: TestimonialItemComponent
   },
   {
     type: 'TestimonialItemBlock',

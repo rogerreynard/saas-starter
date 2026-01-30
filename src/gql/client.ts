@@ -169,19 +169,6 @@ export const StoryBlockDataFragmentDoc = gql`
   highlights
 }
     `;
-export const TedTestBlockDataFragmentDoc = gql`
-    fragment TedTestBlockData on TedTestBlock {
-  stringTest
-}
-    `;
-export const TestimonialItemDataFragmentDoc = gql`
-    fragment TestimonialItemData on TestimonialItem {
-  fullName
-  position
-  content
-  avatarSrc
-}
-    `;
 export const TestimonialItemBlockDataFragmentDoc = gql`
     fragment TestimonialItemBlockData on TestimonialItemBlock {
   fullName
@@ -218,8 +205,6 @@ export const CompositionComponentNodeDataFragmentDoc = gql`
     ...ServicesBlockData
     ...SocialLinkData
     ...StoryBlockData
-    ...TedTestBlockData
-    ...TestimonialItemData
     ...TestimonialItemBlockData
     ...TestimonialsBlockData
   }
@@ -285,13 +270,6 @@ export const GenericMediaDataFragmentDoc = gql`
   }
 }
     `;
-export const GenericMedia123DataFragmentDoc = gql`
-    fragment GenericMedia123Data on GenericMedia123 {
-  empty: _metadata {
-    key
-  }
-}
-    `;
 export const CMSPageDataFragmentDoc = gql`
     fragment CMSPageData on CMSPage {
   title
@@ -314,8 +292,6 @@ export const CMSPageDataFragmentDoc = gql`
     ...ServicesBlockData
     ...SocialLinkData
     ...StoryBlockData
-    ...TedTestBlockData
-    ...TestimonialItemData
     ...TestimonialItemBlockData
     ...TestimonialsBlockData
   }
@@ -341,8 +317,6 @@ export const FooterDataFragmentDoc = gql`
     ...ServicesBlockData
     ...SocialLinkData
     ...StoryBlockData
-    ...TedTestBlockData
-    ...TestimonialItemData
     ...TestimonialItemBlockData
     ...TestimonialsBlockData
   }
@@ -363,8 +337,6 @@ export const FooterDataFragmentDoc = gql`
     ...ServicesBlockData
     ...SocialLinkData
     ...StoryBlockData
-    ...TedTestBlockData
-    ...TestimonialItemData
     ...TestimonialItemBlockData
     ...TestimonialsBlockData
   }
@@ -390,8 +362,6 @@ export const HeaderDataFragmentDoc = gql`
     ...ServicesBlockData
     ...SocialLinkData
     ...StoryBlockData
-    ...TedTestBlockData
-    ...TestimonialItemData
     ...TestimonialItemBlockData
     ...TestimonialsBlockData
   }
@@ -421,8 +391,6 @@ export const HomePageDataFragmentDoc = gql`
     ...ServicesBlockData
     ...SocialLinkData
     ...StoryBlockData
-    ...TedTestBlockData
-    ...TestimonialItemData
     ...TestimonialItemBlockData
     ...TestimonialsBlockData
   }
@@ -450,8 +418,6 @@ export const StartPageDataFragmentDoc = gql`
     ...ServicesBlockData
     ...SocialLinkData
     ...StoryBlockData
-    ...TedTestBlockData
-    ...TestimonialItemData
     ...TestimonialItemBlockData
     ...TestimonialsBlockData
   }
@@ -467,6 +433,24 @@ export const VideoMediaDataFragmentDoc = gql`
 export const PageDataFragmentDoc = gql`
     fragment PageData on _IContent {
   ...IContentData
+}
+    `;
+export const ReferenceDataFragmentDoc = gql`
+    fragment ReferenceData on ContentReference {
+  key
+  url {
+    ...LinkData
+  }
+}
+    `;
+export const LinkItemDataFragmentDoc = gql`
+    fragment LinkItemData on Link {
+  title
+  text
+  target
+  url {
+    ...LinkData
+  }
 }
     `;
 export const getContentByIdDocument = gql`
@@ -496,8 +480,6 @@ export const getContentByIdDocument = gql`
       ...ServicesBlockData
       ...SocialLinkData
       ...StoryBlockData
-      ...TedTestBlockData
-      ...TestimonialItemData
       ...TestimonialItemBlockData
       ...TestimonialsBlockData
       ...BlankExperienceData
@@ -531,8 +513,6 @@ ${ServiceItemDataFragmentDoc}
 ${ServicesBlockDataFragmentDoc}
 ${SocialLinkDataFragmentDoc}
 ${StoryBlockDataFragmentDoc}
-${TedTestBlockDataFragmentDoc}
-${TestimonialItemDataFragmentDoc}
 ${TestimonialItemBlockDataFragmentDoc}
 ${TestimonialsBlockDataFragmentDoc}
 ${BlankExperienceDataFragmentDoc}
@@ -594,8 +574,6 @@ ${ServiceItemDataFragmentDoc}
 ${ServicesBlockDataFragmentDoc}
 ${SocialLinkDataFragmentDoc}
 ${StoryBlockDataFragmentDoc}
-${TedTestBlockDataFragmentDoc}
-${TestimonialItemDataFragmentDoc}
 ${TestimonialItemBlockDataFragmentDoc}
 ${TestimonialsBlockDataFragmentDoc}
 ${SEOExperienceDataFragmentDoc}

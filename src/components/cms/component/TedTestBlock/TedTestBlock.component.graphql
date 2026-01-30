@@ -1,3 +1,0 @@
-fragment TedTestBlockData on TedTestBlock {
-  stringTest
-}

@@ -1,3 +1,0 @@
-fragment GenericMedia123Data on GenericMedia123 {
-  empty: _metadata { key }
-}
