@@ -1570,14 +1570,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@remkoj/optimizely-cms-api@npm:^5.1.7":
+"@remkoj/optimizely-cms-api@npm:^5.2.0":
   version: 5.2.0
   resolution: "@remkoj/optimizely-cms-api@npm:5.2.0"
   checksum: 10c0/34cd30cc62cf7ac751bc193e17920d67e7807cd14ab921dab7b41b7ec6130d90d65ca6b48a3c9a7864b42e04effc9db1271341cf59392fc8939c6fe802af8ee2
   languageName: node
   linkType: hard
 
-"@remkoj/optimizely-cms-cli@npm:^5.1.7":
+"@remkoj/optimizely-cms-cli@npm:^5.2.0":
   version: 5.2.0
   resolution: "@remkoj/optimizely-cms-cli@npm:5.2.0"
   dependencies:
@@ -6126,8 +6126,8 @@ __metadata:
     "@graphql-codegen/cli": "npm:^5.0.7"
     "@graphql-codegen/fragment-matcher": "npm:^5.1.0"
     "@graphql-typed-document-node/core": "npm:^3.2.0"
-    "@remkoj/optimizely-cms-api": "npm:^5.1.7"
-    "@remkoj/optimizely-cms-cli": "npm:^5.1.7"
+    "@remkoj/optimizely-cms-api": "npm:^5.2.0"
+    "@remkoj/optimizely-cms-cli": "npm:^5.2.0"
     "@remkoj/optimizely-cms-nextjs": "npm:^5.2.0"
     "@remkoj/optimizely-cms-react": "npm:^5.2.0"
     "@remkoj/optimizely-graph-cli": "npm:^5.2.0"
