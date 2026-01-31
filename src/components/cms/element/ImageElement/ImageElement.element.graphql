@@ -1,0 +1,8 @@
+fragment ImageElementData on ImageElement {
+  altText
+  imageLink {
+    url {
+      default
+    }
+  }
+}

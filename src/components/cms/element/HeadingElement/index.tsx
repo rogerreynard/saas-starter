@@ -18,6 +18,7 @@ HeadingElementComponent.displayName = "Heading Element (Element/HeadingElement)"
 
 interface HeadingElementProps {
     headingText?: string;
+    [key: string]: unknown;
 }
 
 export default HeadingElementComponent;

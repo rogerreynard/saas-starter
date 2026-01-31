@@ -1,0 +1,13 @@
+fragment VideoElementData on VideoElement {
+  title
+  video {
+    url {
+      default
+    }
+  }
+  placeholder {
+    url {
+      default
+    }
+  }
+}

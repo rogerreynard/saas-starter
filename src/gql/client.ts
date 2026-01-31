@@ -185,6 +185,93 @@ export const TestimonialsBlockDataFragmentDoc = gql`
   }
 }
     `;
+export const ArticleListElementDataFragmentDoc = gql`
+    fragment ArticleListElementData on ArticleListElement {
+  articleListCount
+  topics
+}
+    `;
+export const CTAElementDataFragmentDoc = gql`
+    fragment CTAElementData on CTAElement {
+  Text
+  Link {
+    default
+  }
+}
+    `;
+export const ContentRecsElementDataFragmentDoc = gql`
+    fragment ContentRecsElementData on ContentRecsElement {
+  ElementDeliveryApiKey
+  ElementRecommendationCount
+}
+    `;
+export const HeadingElementDataFragmentDoc = gql`
+    fragment HeadingElementData on HeadingElement {
+  headingText
+}
+    `;
+export const ImageElementDataFragmentDoc = gql`
+    fragment ImageElementData on ImageElement {
+  altText
+  imageLink {
+    url {
+      default
+    }
+  }
+}
+    `;
+export const OdpEmbedBlockDataFragmentDoc = gql`
+    fragment OdpEmbedBlockData on OdpEmbedBlock {
+  ContentId
+}
+    `;
+export const ParagraphElementDataFragmentDoc = gql`
+    fragment ParagraphElementData on ParagraphElement {
+  text {
+    html
+    json
+  }
+}
+    `;
+export const RichTextElementDataFragmentDoc = gql`
+    fragment RichTextElementData on RichTextElement {
+  text {
+    html
+    json
+  }
+}
+    `;
+export const TestimonialElementDataFragmentDoc = gql`
+    fragment TestimonialElementData on TestimonialElement {
+  customerName
+  customerLocation
+  customerImage {
+    url {
+      default
+    }
+  }
+  referenceTitle
+  referenceText {
+    html
+    json
+  }
+}
+    `;
+export const VideoElementDataFragmentDoc = gql`
+    fragment VideoElementData on VideoElement {
+  title
+  video {
+    url {
+      default
+    }
+  }
+  placeholder {
+    url {
+      default
+    }
+  }
+}
+    `;
 export const CompositionComponentNodeDataFragmentDoc = gql`
     fragment CompositionComponentNodeData on ICompositionComponentNode {
   component {
@@ -207,6 +294,16 @@ export const CompositionComponentNodeDataFragmentDoc = gql`
     ...StoryBlockData
     ...TestimonialItemBlockData
     ...TestimonialsBlockData
+    ...ArticleListElementData
+    ...CTAElementData
+    ...ContentRecsElementData
+    ...HeadingElementData
+    ...ImageElementData
+    ...OdpEmbedBlockData
+    ...ParagraphElementData
+    ...RichTextElementData
+    ...TestimonialElementData
+    ...VideoElementData
   }
 }
     `;
@@ -521,6 +618,16 @@ ${CompositionNodeDataFragmentDoc}
 ${CompositionComponentNodeDataFragmentDoc}
 ${ElementDataFragmentDoc}
 ${IElementDataFragmentDoc}
+${ArticleListElementDataFragmentDoc}
+${CTAElementDataFragmentDoc}
+${ContentRecsElementDataFragmentDoc}
+${HeadingElementDataFragmentDoc}
+${ImageElementDataFragmentDoc}
+${OdpEmbedBlockDataFragmentDoc}
+${ParagraphElementDataFragmentDoc}
+${RichTextElementDataFragmentDoc}
+${TestimonialElementDataFragmentDoc}
+${VideoElementDataFragmentDoc}
 ${SEOExperienceDataFragmentDoc}
 ${CMSPageDataFragmentDoc}
 ${FooterDataFragmentDoc}
@@ -576,6 +683,16 @@ ${SocialLinkDataFragmentDoc}
 ${StoryBlockDataFragmentDoc}
 ${TestimonialItemBlockDataFragmentDoc}
 ${TestimonialsBlockDataFragmentDoc}
+${ArticleListElementDataFragmentDoc}
+${CTAElementDataFragmentDoc}
+${ContentRecsElementDataFragmentDoc}
+${HeadingElementDataFragmentDoc}
+${ImageElementDataFragmentDoc}
+${OdpEmbedBlockDataFragmentDoc}
+${ParagraphElementDataFragmentDoc}
+${RichTextElementDataFragmentDoc}
+${TestimonialElementDataFragmentDoc}
+${VideoElementDataFragmentDoc}
 ${SEOExperienceDataFragmentDoc}
 ${CMSPageDataFragmentDoc}
 ${FooterDataFragmentDoc}

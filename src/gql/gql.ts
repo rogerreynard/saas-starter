@@ -31,6 +31,16 @@ type Documents = {
     "fragment StoryBlockData on StoryBlock {\n  story\n  highlights\n}": typeof types.StoryBlockDataFragmentDoc,
     "fragment TestimonialItemBlockData on TestimonialItemBlock {\n  fullName\n  position\n  content\n  avatarSrc\n}": typeof types.TestimonialItemBlockDataFragmentDoc,
     "fragment TestimonialsBlockData on TestimonialsBlock {\n  title\n  testimonials {\n    ...IContentListItem\n  }\n}": typeof types.TestimonialsBlockDataFragmentDoc,
+    "fragment ArticleListElementData on ArticleListElement {\n  articleListCount\n  topics\n}": typeof types.ArticleListElementDataFragmentDoc,
+    "fragment CTAElementData on CTAElement {\n  Text\n  Link {\n    default\n  }\n}": typeof types.CTAElementDataFragmentDoc,
+    "fragment ContentRecsElementData on ContentRecsElement {\n  ElementDeliveryApiKey\n  ElementRecommendationCount\n}": typeof types.ContentRecsElementDataFragmentDoc,
+    "fragment HeadingElementData on HeadingElement {\n  headingText\n}": typeof types.HeadingElementDataFragmentDoc,
+    "fragment ImageElementData on ImageElement {\n  altText\n  imageLink {\n    url {\n      default\n    }\n  }\n}": typeof types.ImageElementDataFragmentDoc,
+    "fragment OdpEmbedBlockData on OdpEmbedBlock {\n  ContentId\n}": typeof types.OdpEmbedBlockDataFragmentDoc,
+    "fragment ParagraphElementData on ParagraphElement {\n  text {\n    html\n    json\n  }\n}": typeof types.ParagraphElementDataFragmentDoc,
+    "fragment RichTextElementData on RichTextElement {\n  text {\n    html\n    json\n  }\n}": typeof types.RichTextElementDataFragmentDoc,
+    "fragment TestimonialElementData on TestimonialElement {\n  customerName\n  customerLocation\n  customerImage {\n    url {\n      default\n    }\n  }\n  referenceTitle\n  referenceText {\n    html\n    json\n  }\n}": typeof types.TestimonialElementDataFragmentDoc,
+    "fragment VideoElementData on VideoElement {\n  title\n  video {\n    url {\n      default\n    }\n  }\n  placeholder {\n    url {\n      default\n    }\n  }\n}": typeof types.VideoElementDataFragmentDoc,
     "fragment BlankExperienceData on BlankExperience {\n  ...ExperienceData\n}": typeof types.BlankExperienceDataFragmentDoc,
     "fragment SEOExperienceData on SEOExperience {\n  title\n  shortDescription\n  keywords\n  ...ExperienceData\n}": typeof types.SEOExperienceDataFragmentDoc,
     "fragment ImageMediaData on ImageMedia {\n  empty: _metadata {\n    key\n  }\n}": typeof types.ImageMediaDataFragmentDoc,
@@ -62,6 +72,16 @@ const documents: Documents = {
     "fragment StoryBlockData on StoryBlock {\n  story\n  highlights\n}": types.StoryBlockDataFragmentDoc,
     "fragment TestimonialItemBlockData on TestimonialItemBlock {\n  fullName\n  position\n  content\n  avatarSrc\n}": types.TestimonialItemBlockDataFragmentDoc,
     "fragment TestimonialsBlockData on TestimonialsBlock {\n  title\n  testimonials {\n    ...IContentListItem\n  }\n}": types.TestimonialsBlockDataFragmentDoc,
+    "fragment ArticleListElementData on ArticleListElement {\n  articleListCount\n  topics\n}": types.ArticleListElementDataFragmentDoc,
+    "fragment CTAElementData on CTAElement {\n  Text\n  Link {\n    default\n  }\n}": types.CTAElementDataFragmentDoc,
+    "fragment ContentRecsElementData on ContentRecsElement {\n  ElementDeliveryApiKey\n  ElementRecommendationCount\n}": types.ContentRecsElementDataFragmentDoc,
+    "fragment HeadingElementData on HeadingElement {\n  headingText\n}": types.HeadingElementDataFragmentDoc,
+    "fragment ImageElementData on ImageElement {\n  altText\n  imageLink {\n    url {\n      default\n    }\n  }\n}": types.ImageElementDataFragmentDoc,
+    "fragment OdpEmbedBlockData on OdpEmbedBlock {\n  ContentId\n}": types.OdpEmbedBlockDataFragmentDoc,
+    "fragment ParagraphElementData on ParagraphElement {\n  text {\n    html\n    json\n  }\n}": types.ParagraphElementDataFragmentDoc,
+    "fragment RichTextElementData on RichTextElement {\n  text {\n    html\n    json\n  }\n}": types.RichTextElementDataFragmentDoc,
+    "fragment TestimonialElementData on TestimonialElement {\n  customerName\n  customerLocation\n  customerImage {\n    url {\n      default\n    }\n  }\n  referenceTitle\n  referenceText {\n    html\n    json\n  }\n}": types.TestimonialElementDataFragmentDoc,
+    "fragment VideoElementData on VideoElement {\n  title\n  video {\n    url {\n      default\n    }\n  }\n  placeholder {\n    url {\n      default\n    }\n  }\n}": types.VideoElementDataFragmentDoc,
     "fragment BlankExperienceData on BlankExperience {\n  ...ExperienceData\n}": types.BlankExperienceDataFragmentDoc,
     "fragment SEOExperienceData on SEOExperience {\n  title\n  shortDescription\n  keywords\n  ...ExperienceData\n}": types.SEOExperienceDataFragmentDoc,
     "fragment ImageMediaData on ImageMedia {\n  empty: _metadata {\n    key\n  }\n}": types.ImageMediaDataFragmentDoc,
@@ -158,6 +178,46 @@ export function gql(source: "fragment TestimonialItemBlockData on TestimonialIte
  * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */
 export function gql(source: "fragment TestimonialsBlockData on TestimonialsBlock {\n  title\n  testimonials {\n    ...IContentListItem\n  }\n}"): (typeof documents)["fragment TestimonialsBlockData on TestimonialsBlock {\n  title\n  testimonials {\n    ...IContentListItem\n  }\n}"];
+/**
+ * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
+ */
+export function gql(source: "fragment ArticleListElementData on ArticleListElement {\n  articleListCount\n  topics\n}"): (typeof documents)["fragment ArticleListElementData on ArticleListElement {\n  articleListCount\n  topics\n}"];
+/**
+ * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
+ */
+export function gql(source: "fragment CTAElementData on CTAElement {\n  Text\n  Link {\n    default\n  }\n}"): (typeof documents)["fragment CTAElementData on CTAElement {\n  Text\n  Link {\n    default\n  }\n}"];
+/**
+ * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
+ */
+export function gql(source: "fragment ContentRecsElementData on ContentRecsElement {\n  ElementDeliveryApiKey\n  ElementRecommendationCount\n}"): (typeof documents)["fragment ContentRecsElementData on ContentRecsElement {\n  ElementDeliveryApiKey\n  ElementRecommendationCount\n}"];
+/**
+ * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
+ */
+export function gql(source: "fragment HeadingElementData on HeadingElement {\n  headingText\n}"): (typeof documents)["fragment HeadingElementData on HeadingElement {\n  headingText\n}"];
+/**
+ * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
+ */
+export function gql(source: "fragment ImageElementData on ImageElement {\n  altText\n  imageLink {\n    url {\n      default\n    }\n  }\n}"): (typeof documents)["fragment ImageElementData on ImageElement {\n  altText\n  imageLink {\n    url {\n      default\n    }\n  }\n}"];
+/**
+ * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
+ */
+export function gql(source: "fragment OdpEmbedBlockData on OdpEmbedBlock {\n  ContentId\n}"): (typeof documents)["fragment OdpEmbedBlockData on OdpEmbedBlock {\n  ContentId\n}"];
+/**
+ * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
+ */
+export function gql(source: "fragment ParagraphElementData on ParagraphElement {\n  text {\n    html\n    json\n  }\n}"): (typeof documents)["fragment ParagraphElementData on ParagraphElement {\n  text {\n    html\n    json\n  }\n}"];
+/**
+ * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
+ */
+export function gql(source: "fragment RichTextElementData on RichTextElement {\n  text {\n    html\n    json\n  }\n}"): (typeof documents)["fragment RichTextElementData on RichTextElement {\n  text {\n    html\n    json\n  }\n}"];
+/**
+ * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
+ */
+export function gql(source: "fragment TestimonialElementData on TestimonialElement {\n  customerName\n  customerLocation\n  customerImage {\n    url {\n      default\n    }\n  }\n  referenceTitle\n  referenceText {\n    html\n    json\n  }\n}"): (typeof documents)["fragment TestimonialElementData on TestimonialElement {\n  customerName\n  customerLocation\n  customerImage {\n    url {\n      default\n    }\n  }\n  referenceTitle\n  referenceText {\n    html\n    json\n  }\n}"];
+/**
+ * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
+ */
+export function gql(source: "fragment VideoElementData on VideoElement {\n  title\n  video {\n    url {\n      default\n    }\n  }\n  placeholder {\n    url {\n      default\n    }\n  }\n}"): (typeof documents)["fragment VideoElementData on VideoElement {\n  title\n  video {\n    url {\n      default\n    }\n  }\n  placeholder {\n    url {\n      default\n    }\n  }\n}"];
 /**
  * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */

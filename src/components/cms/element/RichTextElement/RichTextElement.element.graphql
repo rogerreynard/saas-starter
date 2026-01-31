@@ -1,0 +1,6 @@
+fragment RichTextElementData on RichTextElement {
+  text {
+    html
+    json
+  }
+}
